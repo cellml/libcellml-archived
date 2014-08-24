@@ -12,15 +12,20 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_wTTX0Cm2EeS1l5ItWCavDw" name="Component">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_0MLG0Cm2EeS1l5ItWCavDw" name="variable" type="_xl7dUCm2EeS1l5ItWCavDw" association="_0MLt4Cm2EeS1l5ItWCavDw">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0MLG0Sm2EeS1l5ItWCavDw" value="1"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0MLG0im2EeS1l5ItWCavDw" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0MLG0Sm2EeS1l5ItWCavDw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0MLG0im2EeS1l5ItWCavDw" value="*"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_80oQYCvlEeST3-COdeKWPg" name="maths" type="_60PF8CvlEeST3-COdeKWPg" association="_80o3cCvlEeST3-COdeKWPg">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_80oQYSvlEeST3-COdeKWPg" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_80oQYivlEeST3-COdeKWPg" value="1"/>
     </ownedAttribute>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_xl7dUCm2EeS1l5ItWCavDw" name="Variable"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xl7dUCm2EeS1l5ItWCavDw" name="Variable">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_19IFsCvoEeSjn_t6tVwd-Q" name="connectedVariables" type="_xl7dUCm2EeS1l5ItWCavDw" association="_19IswCvoEeSjn_t6tVwd-Q">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_19IFsSvoEeSjn_t6tVwd-Q"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_19IFsivoEeSjn_t6tVwd-Q" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_zVCDcCm2EeS1l5ItWCavDw" name="A_model_component_1" memberEnd="_zVCDcSm2EeS1l5ItWCavDw _zVBcYCm2EeS1l5ItWCavDw" navigableOwnedEnd="_zVCDcSm2EeS1l5ItWCavDw">
     <ownedEnd xmi:type="uml:Property" xmi:id="_zVCDcSm2EeS1l5ItWCavDw" name="model" type="_u8pG4Cm2EeS1l5ItWCavDw" association="_zVCDcCm2EeS1l5ItWCavDw">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zVCDcim2EeS1l5ItWCavDw" value="1"/>
@@ -45,6 +50,12 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_80o3cSvlEeST3-COdeKWPg" name="component" type="_wTTX0Cm2EeS1l5ItWCavDw" association="_80o3cCvlEeST3-COdeKWPg">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_80o3civlEeST3-COdeKWPg" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_80o3cyvlEeST3-COdeKWPg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_19IswCvoEeSjn_t6tVwd-Q" name="connectedVariables" memberEnd="_19IswSvoEeSjn_t6tVwd-Q _19IFsCvoEeSjn_t6tVwd-Q">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_19IswSvoEeSjn_t6tVwd-Q" name="thisVariable" type="_xl7dUCm2EeS1l5ItWCavDw" association="_19IswCvoEeSjn_t6tVwd-Q">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_19IswivoEeSjn_t6tVwd-Q" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_19IswyvoEeSjn_t6tVwd-Q" value="1"/>
     </ownedEnd>
   </packagedElement>
 </uml:Model>
