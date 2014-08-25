@@ -25,6 +25,8 @@ Not necessarily in order of priority, but probably close, since order taken from
       #. Use case: connect variables that were not previously connected (in effect adding a connection)
    #. Use case: Delete something
       #. Use case: disconnect variables that were previously connected (in effect removing a connection)
+   #. Use case: Change units of an algebraic identifier
+   #. Use case: Change units of a literal constant
    #. todo: add more here
 
 #. Use case: Load XML, reformat it with standard indentation, save result.
@@ -36,7 +38,24 @@ Not necessarily in order of priority, but probably close, since order taken from
    #. todo: ad more here
    #. Required feature: libCellML should have a validation framework based on the core specification and then secondary specs can add their specific rules
 
+#. Use case: list algebraic identifier nature (avoiding calling it a variable, which seems incorrect if it is a constant).
+   #. Nature is one of:
+      #. Variable of integration (VOI)
+      #. Constant set to literal value
+      #. Constant determined from algebraic expression, all terms of which are constant
+      #. State variable
+      #. Algebraic variable
+      #. Boolean constant (? depends on spec handling of events)
+      #. Boolean variable (? depends on spec handling of events)
+      #. todo: add more here
 
+#. Category: code generation
+   #. Use cases: Generate code for the following variations
+      #. CVODE style 1: Initial Value Problem (IVP) Ordinary Differential Equation (ODE) System, no algebraic equations (i.e. truly an ODE system)
+      #. CVODE style 2: IVP-ODE with explicit algebraic equations (e.g. y' = a, a = x, x' = b, b = - y). This case has the subtelty that the algebraic calculations need to be rerun over the final solution to get correct "time"-varying values.
+      #. IDA style: Differential Albebraic Equation (DAE) system in implicit form (i.e. F(y', y, v, t) = 0 where y and v are a list of real valued "time"-varying quantities (or constants), and usually there is not a trivial transformation to the from of an IVP-ODE with explicit algebraic equations.
+      #. All of the preceding variations with the addition of "reset rules", (e.g. if y > k1 then y = k2, etc)
+ 
 #. Todo: rework the following text from roadmap into the form of use cases, and delete lines that are not use cases.
 #. Todo: (Initial planning already mostly done, but some use cases needed fleshing out.) Prioritise the use cases (e.g. as per Rational Unified Process, or eXtreme Programming iteration planning, i.e. between iterations, revise future iteration plans). Todo: put this comment into libCellML project methodology doc (still to be started at time of writing this).
 
