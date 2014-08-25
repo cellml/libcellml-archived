@@ -23,6 +23,11 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_VBbfsCvzEeSW35zA5Q87UQ" name="addImport">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_enpzECvzEeSW35zA5Q87UQ" name="URL">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_wTTX0Cm2EeS1l5ItWCavDw" name="Component">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_0MLG0Cm2EeS1l5ItWCavDw" name="variable" type="_xl7dUCm2EeS1l5ItWCavDw" association="_0MLt4Cm2EeS1l5ItWCavDw">
@@ -63,8 +68,8 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_hQPbYCvyEeSW35zA5Q87UQ" name="importedComponent" type="_WEl3wCvxEeSW35zA5Q87UQ" association="_hQQCcCvyEeSW35zA5Q87UQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hQPbYSvyEeSW35zA5Q87UQ" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hQPbYivyEeSW35zA5Q87UQ" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hQPbYSvyEeSW35zA5Q87UQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hQPbYivyEeSW35zA5Q87UQ" value="*"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_0xgHcCvlEeST3-COdeKWPg" name="A_model_import_1" memberEnd="_0xgHcSvlEeST3-COdeKWPg _0xe5UCvlEeST3-COdeKWPg" navigableOwnedEnd="_0xgHcSvlEeST3-COdeKWPg">
@@ -86,8 +91,13 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_19IswyvoEeSjn_t6tVwd-Q" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_WEl3wCvxEeSW35zA5Q87UQ" name="ImportedComponent"/>
-    <packagedElement xmi:type="uml:Association" xmi:id="_hQQCcCvyEeSW35zA5Q87UQ" name="A_import_importedComponent_1" memberEnd="_hQQCcSvyEeSW35zA5Q87UQ _hQPbYCvyEeSW35zA5Q87UQ">
+    <packagedElement xmi:type="uml:Class" xmi:id="_WEl3wCvxEeSW35zA5Q87UQ" name="ImportedComponent">
+      <generalization xmi:type="uml:Generalization" xmi:id="_I37-UCvzEeSW35zA5Q87UQ" general="_wTTX0Cm2EeS1l5ItWCavDw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_QecnQCv0EeSW35zA5Q87UQ" name="remoteName">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hQQCcCvyEeSW35zA5Q87UQ" name="A_import_importedComponent_1" memberEnd="_hQQCcSvyEeSW35zA5Q87UQ _hQPbYCvyEeSW35zA5Q87UQ" navigableOwnedEnd="_hQQCcSvyEeSW35zA5Q87UQ">
       <ownedEnd xmi:type="uml:Property" xmi:id="_hQQCcSvyEeSW35zA5Q87UQ" name="import" type="_utGVACvlEeST3-COdeKWPg" association="_hQQCcCvyEeSW35zA5Q87UQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hQQCcivyEeSW35zA5Q87UQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hQQCcyvyEeSW35zA5Q87UQ" value="1"/>
