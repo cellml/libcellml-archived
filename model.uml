@@ -41,6 +41,10 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_q84KsCvwEeSW35zA5Q87UQ" name="name">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZQxvkCykEeSW35zA5Q87UQ" name="children" type="_wTTX0Cm2EeS1l5ItWCavDw" association="_ZQyWoCykEeSW35zA5Q87UQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZQxvkSykEeSW35zA5Q87UQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZQxvkiykEeSW35zA5Q87UQ" value="*"/>
+      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_xl7dUCm2EeS1l5ItWCavDw" name="Variable">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_19IFsCvoEeSjn_t6tVwd-Q" name="connectedVariables" type="_xl7dUCm2EeS1l5ItWCavDw" association="_19IswCvoEeSjn_t6tVwd-Q">
@@ -101,6 +105,12 @@
       <ownedEnd xmi:type="uml:Property" xmi:id="_hQQCcSvyEeSW35zA5Q87UQ" name="import" type="_utGVACvlEeST3-COdeKWPg" association="_hQQCcCvyEeSW35zA5Q87UQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hQQCcivyEeSW35zA5Q87UQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hQQCcyvyEeSW35zA5Q87UQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ZQyWoCykEeSW35zA5Q87UQ" name="Encapsulation" memberEnd="_ZQyWoSykEeSW35zA5Q87UQ _ZQxvkCykEeSW35zA5Q87UQ" navigableOwnedEnd="_ZQyWoSykEeSW35zA5Q87UQ">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ZQyWoSykEeSW35zA5Q87UQ" name="parent" type="_wTTX0Cm2EeS1l5ItWCavDw" association="_ZQyWoCykEeSW35zA5Q87UQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZQyWoiykEeSW35zA5Q87UQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZQyWoyykEeSW35zA5Q87UQ" value="1"/>
       </ownedEnd>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_rtz4YCvwEeSW35zA5Q87UQ">
