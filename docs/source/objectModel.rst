@@ -28,6 +28,10 @@ Shown in this overview:
 #.  A component has a collection of variables, and a collection of "Maths" objects.  This design does not yet have any details for how maths is represented, it will probably be the abstract syntax tree (AST) of the MathML.
 #.  A component also has a collection of the units defined within the component.
 
+Model class
+-----------
+.. figure:: /imageExports/Model_Class.PNG
+
 
 Details for variable object model
 ---------------------------------
