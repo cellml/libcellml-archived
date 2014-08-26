@@ -46,6 +46,12 @@ Details for variable object model
 #. Only real variables have units.
 #. Variables have a collection (which may be empty) of the variables to which they are connected. Note that this is not normalised at this conceptual level, (i.e. From A you can see B in the list of connected variables, and from B you can see A in the set of connected variables.  Nevertheless, the implementation is likely to be normalised, and the XML representation likewise will have a normalised representation, where a connection element indicates that A is connected to B.
 
+Encapsulation
+-------------
+.. figure:: /imageExports/Encapsulation.PNG
+
+#. A component object has a collection of components that are encapsulated by it.  This is recursive.  Note: the design allows for cycles, but the spec does not.
+
 Stand alone methods
 -------------------
 Methods not shown on UML yet, but would be useful.
