@@ -8,7 +8,7 @@ Randall Britten, 26 August 2014
 
 Introduction
 ------------
-The object model is (currently) a very high level conceptual design.
+The object model is (currently) a very high level conceptual design. The focus has been on a design to support the initial use case from the roadmap (i.e. Create model, save as XML.  An "isValid" method does not yet exist in the design, since the "validate" use case follows later).
 
 
 Conventions
@@ -18,6 +18,8 @@ Collections are often indicated as an association from one class to another (or 
 Often, some of the member operations and properties of a class are hidden on some of the diagrams on which it appears.  Also, a class may be shown multiple times on the same diagram.
 
 Remember to pay attention to the arrows indicating navigability of associations, as well as the cardinality of the association ends.
+
+
 
 Overview of object model
 ------------------------
@@ -32,11 +34,26 @@ Model class
 -----------
 .. figure:: /imageExports/Model_Class.PNG
 
+#. getXML returns the XML serialisation for the model as text (alternate representations should be considered, e.g. AST or DOM).
+#. addImport creates the Import object with just the URL provided as a string.
+
 
 Details for variable object model
 ---------------------------------
 .. figure:: /imageExports/Variable.PNG
 
-#.  Variables may be real or boolean.  (Real is taken to mean that the codomain is real.  Thus state variables are treated as real variables, even though they are actually real valued functions of the variable of integration (VOI). Constant real values fall into this category (i.e. real is isomorphic to () → ℝ, where () is the nullary cartesian product).
+#.  Variables may be real or boolean.  (Real is taken to mean that the codomain is real.  Thus state variables are treated as real variables, even though they are actually real valued functions of the variable of integration (VOI). Constant real values fall into this category (i.e. real is isomorphic to () → ℝ, where () is the nullary Cartesian product).
 #. Only real variables have units.
-#. Varibles have a collection (which may be empty) of the variables to which they are connected. Note that this is not normalised at this conceptual level, (i.e. From A you can see B in the list of connected variables, and from B you can see A in the set of connected variables.  Nevertheless, the implementation is likely to be normalised, and the XML representation likewise will have a normalised representation, where a connection element indicates that A is connected to B.
+#. Variables have a collection (which may be empty) of the variables to which they are connected. Note that this is not normalised at this conceptual level, (i.e. From A you can see B in the list of connected variables, and from B you can see A in the set of connected variables.  Nevertheless, the implementation is likely to be normalised, and the XML representation likewise will have a normalised representation, where a connection element indicates that A is connected to B.
+
+Stand alone methods
+-------------------
+Methods not shown on UML yet, but would be useful.
+
+
+Todo
+----
+#. Some documentation of classes, operations etc in this document probably belong as documentation in the Papyrus model, and eventually as the Doxygen comments on the C++ code, Python docs, Java docs etc.
+#. Details of math representation an utilities
+#. Details of XML representation and utilities
+
