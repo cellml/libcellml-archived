@@ -52,10 +52,19 @@ Encapsulation
 
 #. A component object has a collection of components that are encapsulated by it.  This is recursive.  Note: the design allows for cycles, but the spec does not.
 
+Units of measure
+----------------
+.. figure:: /imageExports/Units_of_measure.PNG
+
+#. The base class has a property for the unit name, and a boolean flag to indicate whether the unit is built-in.
+#. Units may be either base units or derived units.  
+#. A derived unit has a collection of "UnitsReference" objects that represent the definition of the derived unit.
+
+
 Stand alone methods
 -------------------
 Methods not shown on UML yet, but would be useful.
-
+#. getBuiltinUnits() : [Unit] - returns a collection of the built-in units.
 
 Todo
 ----
