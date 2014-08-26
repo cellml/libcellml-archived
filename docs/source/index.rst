@@ -14,7 +14,7 @@ Contents:
    :titlesonly:
 
    roadmap
-
+   objectModel
 
 
 Indices and tables
