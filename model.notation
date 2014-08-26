@@ -310,6 +310,10 @@
     <children xmi:type="notation:Shape" xmi:id="_XOC9sCvyEeSW35zA5Q87UQ" type="2008">
       <children xmi:type="notation:DecorationNode" xmi:id="_XODkwCvyEeSW35zA5Q87UQ" type="5029"/>
       <children xmi:type="notation:BasicCompartment" xmi:id="_XODkwSvyEeSW35zA5Q87UQ" type="7017">
+        <children xmi:type="notation:Shape" xmi:id="_doqP0CzmEeSW35zA5Q87UQ" type="3012">
+          <element xmi:type="uml:Property" href="model.uml#_q84KsCvwEeSW35zA5Q87UQ"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_doqP0SzmEeSW35zA5Q87UQ"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_XODkwivyEeSW35zA5Q87UQ"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_XODkwyvyEeSW35zA5Q87UQ"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_XODkxCvyEeSW35zA5Q87UQ"/>

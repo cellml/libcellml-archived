@@ -61,6 +61,12 @@ Units of measure
 #. Units may be either base units or derived units.  
 #. A derived unit has a collection of "UnitsReference" objects that represent the definition of the derived unit.
 
+Imports
+-------
+.. figure:: /imageExports/Imports.PNG
+
+#. The component class has a subtype for imported components.  
+#. An imported component's local name is the stored by the inherited name attribute, the name of the component in the imported file is stored in the "remoteName" attribute.
 
 Stand alone methods
 -------------------
