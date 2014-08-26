@@ -24,7 +24,7 @@ It was realised recently that some cases where UML classes have been specified s
 
 Overview of object model
 ------------------------
-.. figure:: /imageExports/libCellML_01_01.PNG
+.. figure:: imageExports/libCellML_01_01.PNG
 
 Shown in this overview:
 #.  A model has a collection of components and a collection of units.
@@ -33,7 +33,7 @@ Shown in this overview:
 
 Model class
 -----------
-.. figure:: /imageExports/Model_Class.PNG
+.. figure:: imageExports/Model_Class.PNG
 
 #. getXML returns the XML serialisation for the model as text (alternate representations should be considered, e.g. AST or DOM).
 #. addImport creates the Import object with just the URL provided as a string.
@@ -41,7 +41,7 @@ Model class
 
 Details for variable object model
 ---------------------------------
-.. figure:: /imageExports/Variable.PNG
+.. figure:: imageExports/Variable.PNG
 
 #.  Variables may be real or boolean.  (Real is taken to mean that the codomain is real.  Thus state variables are treated as real variables, even though they are actually real valued functions of the variable of integration (VOI). Constant real values fall into this category (i.e. real is isomorphic to () → ℝ, where () is the nullary Cartesian product).
 #. Only real variables have units.
@@ -49,13 +49,13 @@ Details for variable object model
 
 Encapsulation
 -------------
-.. figure:: /imageExports/Encapsulation.PNG
+.. figure:: imageExports/Encapsulation.PNG
 
 #. A component object has a collection of components that are encapsulated by it.  This is recursive.  Note: the design allows for cycles, but the spec does not.
 
 Units of measure
 ----------------
-.. figure:: /imageExports/Units_of_measure.PNG
+.. figure:: imageExports/Units_of_measure.PNG
 
 #. The base class has a property for the unit name, and a boolean flag to indicate whether the unit is built-in.
 #. Units may be either base units or derived units.  
@@ -63,7 +63,7 @@ Units of measure
 
 Imports
 -------
-.. figure:: /imageExports/Imports.PNG
+.. figure:: imageExports/Imports.PNG
 
 #. The component class has a subtype for imported components.  
 #. An imported component's local name is the stored by the inherited name attribute, the name of the component in the imported file is stored in the "remoteName" attribute.
