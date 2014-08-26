@@ -11,14 +11,15 @@ Introduction
 The object model is (currently) a very high level conceptual design. The focus has been on a design to support the initial use case from the roadmap (i.e. Create model, save as XML.  An "isValid" method does not yet exist in the design, since the "validate" use case follows later).
 
 
-Conventions
------------
+Preamble
+--------
 UML images are created using Eclipse/Papyrus. Some detail may not show in the diagrams, or be explained in this text, so if you are in doubt, please refer to the model details in Eclipse/Papyrus.
 Collections are often indicated as an association from one class to another (or the same class if the containment is recursive) on a class diagram.  At this stage, methods for adding and removing from the collection are omitted from the diagram.
 Often, some of the member operations and properties of a class are hidden on some of the diagrams on which it appears.  Also, a class may be shown multiple times on the same diagram.
 
 Remember to pay attention to the arrows indicating navigability of associations, as well as the cardinality of the association ends.
 
+It was realised recently that some cases where UML classes have been specified should perhaps be interfaces.
 
 
 Overview of object model
@@ -71,4 +72,4 @@ Todo
 #. Some documentation of classes, operations etc in this document probably belong as documentation in the Papyrus model, and eventually as the Doxygen comments on the C++ code, Python docs, Java docs etc.
 #. Details of math representation an utilities
 #. Details of XML representation and utilities
-
+#. Change classes to interfaces where appropriate
