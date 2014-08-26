@@ -62,10 +62,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_2dOocCvwEeSW35zA5Q87UQ" name="name">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_Phu1YCy6EeSW35zA5Q87UQ" name="unit" type="_vg2o8CywEeSW35zA5Q87UQ" association="_PhvccCy6EeSW35zA5Q87UQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Phu1YSy6EeSW35zA5Q87UQ" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Phu1Yiy6EeSW35zA5Q87UQ" value="1"/>
-      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_zVCDcCm2EeS1l5ItWCavDw" name="A_model_component_1" memberEnd="_zVCDcSm2EeS1l5ItWCavDw _zVBcYCm2EeS1l5ItWCavDw" navigableOwnedEnd="_zVCDcSm2EeS1l5ItWCavDw">
       <ownedEnd xmi:type="uml:Property" xmi:id="_zVCDcSm2EeS1l5ItWCavDw" name="model" type="_u8pG4Cm2EeS1l5ItWCavDw" association="_zVCDcCm2EeS1l5ItWCavDw">
@@ -126,6 +122,9 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_vg2o8CywEeSW35zA5Q87UQ" name="Unit">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_3SKewCzUEeSW35zA5Q87UQ" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_9j9XUCywEeSW35zA5Q87UQ" name="builtIn" isReadOnly="true">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedAttribute>
@@ -210,12 +209,6 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5FGiMyy3EeSW35zA5Q87UQ" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_PhvccCy6EeSW35zA5Q87UQ" name="A_variable_unit_1" memberEnd="_PhvccSy6EeSW35zA5Q87UQ _Phu1YCy6EeSW35zA5Q87UQ">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_PhvccSy6EeSW35zA5Q87UQ" name="variable" type="_xl7dUCm2EeS1l5ItWCavDw" association="_PhvccCy6EeSW35zA5Q87UQ">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Phvcciy6EeSW35zA5Q87UQ"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Phvccyy6EeSW35zA5Q87UQ" value="*"/>
-      </ownedEnd>
-    </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_QIy_8Cy7EeSW35zA5Q87UQ" name="A_component_unit_1" memberEnd="_QIy_8Sy7EeSW35zA5Q87UQ _QIyY4Cy7EeSW35zA5Q87UQ" navigableOwnedEnd="_QIy_8Sy7EeSW35zA5Q87UQ">
       <ownedEnd xmi:type="uml:Property" xmi:id="_QIy_8Sy7EeSW35zA5Q87UQ" name="definingComponent" type="_wTTX0Cm2EeS1l5ItWCavDw" association="_QIy_8Cy7EeSW35zA5Q87UQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QIy_8iy7EeSW35zA5Q87UQ" value="1"/>
@@ -226,6 +219,22 @@
       <ownedEnd xmi:type="uml:Property" xmi:id="_isqjwSy7EeSW35zA5Q87UQ" name="definingModel" type="_u8pG4Cm2EeS1l5ItWCavDw" association="_isqjwCy7EeSW35zA5Q87UQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_isqjwiy7EeSW35zA5Q87UQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_isqjwyy7EeSW35zA5Q87UQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_WjO_4CzTEeSW35zA5Q87UQ" name="RealCodomainVar">
+      <generalization xmi:type="uml:Generalization" xmi:id="_eRivYCzTEeSW35zA5Q87UQ" general="_xl7dUCm2EeS1l5ItWCavDw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_5zIcICzTEeSW35zA5Q87UQ" name="unit" type="_vg2o8CywEeSW35zA5Q87UQ" association="_5zIcIyzTEeSW35zA5Q87UQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5zIcISzTEeSW35zA5Q87UQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5zIcIizTEeSW35zA5Q87UQ" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_YxXEUCzTEeSW35zA5Q87UQ" name="BooleanCodomainVar">
+      <generalization xmi:type="uml:Generalization" xmi:id="_jMK2UCzTEeSW35zA5Q87UQ" general="_xl7dUCm2EeS1l5ItWCavDw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_5zIcIyzTEeSW35zA5Q87UQ" name="A_realCodomainVar_unit_1" memberEnd="_5zIcJCzTEeSW35zA5Q87UQ _5zIcICzTEeSW35zA5Q87UQ">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_5zIcJCzTEeSW35zA5Q87UQ" name="realCodomainVar" type="_WjO_4CzTEeSW35zA5Q87UQ" association="_5zIcIyzTEeSW35zA5Q87UQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5zIcJSzTEeSW35zA5Q87UQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5zIcJizTEeSW35zA5Q87UQ" value="*"/>
       </ownedEnd>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_rtz4YCvwEeSW35zA5Q87UQ">
