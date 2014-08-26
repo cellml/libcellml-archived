@@ -27,6 +27,7 @@ Overview of object model
 .. figure:: imageExports/libCellML_01_01.PNG
 
 Shown in this overview:
+
 #.  A model has a collection of components and a collection of units.
 #.  A component has a collection of variables, and a collection of "Maths" objects.  This design does not yet have any details for how maths is represented, it will probably be the abstract syntax tree (AST) of the MathML.
 #.  A component also has a collection of the units defined within the component.
@@ -68,9 +69,10 @@ Imports
 #. The component class has a subtype for imported components.  
 #. An imported component's local name is the stored by the inherited name attribute, the name of the component in the imported file is stored in the "remoteName" attribute.
 
-Stand alone methods
+Stand-alone methods
 -------------------
 Methods not shown on UML yet, but would be useful.
+
 #. getBuiltinUnits() : [Unit] - returns a collection of the built-in units.
 
 Todo
