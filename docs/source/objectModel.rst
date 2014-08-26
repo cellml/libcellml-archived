@@ -43,7 +43,7 @@ Details for variable object model
 ---------------------------------
 .. figure:: imageExports/Variable.PNG
 
-#.  Variables may be real or boolean.  (Real is taken to mean that the codomain is real.  Thus state variables are treated as real variables, even though they are actually real valued functions of the variable of integration (VOI). Constant real values fall into this category (i.e. real is isomorphic to () → ℝ, where () is the nullary Cartesian product).
+#.  Variables may be real or boolean.  (Real is taken to mean that the codomain is real.  Thus state variables are treated as real variables, even though they are actually real valued functions of the variable of integration (VOI). Constant real values fall into this category (i.e. real is isomorphic to () -> reals, where () is the nullary Cartesian product).
 #. Only real variables have units.
 #. Variables have a collection (which may be empty) of the variables to which they are connected. Note that this is not normalised at this conceptual level, (i.e. From A you can see B in the list of connected variables, and from B you can see A in the set of connected variables.  Nevertheless, the implementation is likely to be normalised, and the XML representation likewise will have a normalised representation, where a connection element indicates that A is connected to B.
 
