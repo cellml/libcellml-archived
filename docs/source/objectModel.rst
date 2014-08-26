@@ -15,3 +15,4 @@ High level objectives
   #. Some more text, testing how to use ReadTheDocs
 
 
+image:: /imageExports/Connections.PNG
