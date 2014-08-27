@@ -29,10 +29,19 @@ Not necessarily in order of priority, but probably close, since order taken from
    #. Use case: Change units of a literal constant
    #. todo: add more here
 
+#. Category: Refactoring a CellML 1.2 model
+   #. Use cases: rename some item, and corresponding references to that item get renamed, where "some item" is any of:
+      #. Variable of a component (renames include ci's in maths)
+      #. Component
+      #. Unit
+      #. Local name of imported component
+   #. Rename across imports: Rename some item in one file, and automatic renames cascade to references in imported or importing files. Need to define scope of files that can be changed in this way
+
+#. Use case: Conversion of numerical value in units A to value in compatible units B.
+
 #. Use case: Load XML, reformat it with standard indentation, save result.
 
 #. Category: Load a CellML 1.2 model and validate it
-   
    #. Use case: detect units errors
    #. Use case: detect invalid mathematics.
    #. todo: ad more here
