@@ -44,11 +44,13 @@ Not necessarily in order of priority, but probably close, since order taken from
 #. Category: Load a CellML 1.2 model and validate it
    #. Use case: detect units errors
    #. Use case: detect invalid mathematics.
-   #. todo: ad more here
+   #. todo: add more here
    #. Required feature: libCellML should have a validation framework based on the core specification and then secondary specs can add their specific rules
 
-#. Use case: list algebraic identifier nature (avoiding calling it a variable, which seems incorrect if it is a constant).
+#. Use case: list symbol nature
+
    #. Nature is one of:
+
       #. Variable of integration (VOI)
       #. Constant set to literal value
       #. Constant determined from algebraic expression, all terms of which are constant
@@ -56,6 +58,8 @@ Not necessarily in order of priority, but probably close, since order taken from
       #. Algebraic variable
       #. Boolean constant (? depends on spec handling of events)
       #. Boolean variable (? depends on spec handling of events)
+      #. "Built-in" function (e.g. sin, exp, +, >) 
+      #. User defined function (if CellML ever permits that in future)
       #. todo: add more here
 
 #. Category: code generation
