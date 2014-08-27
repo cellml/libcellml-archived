@@ -73,13 +73,26 @@ Not necessarily in order of priority, but probably close, since order taken from
 #. Todo: rework the following text from roadmap into the form of use cases, and delete lines that are not use cases.
 #. Todo: (Initial planning already mostly done, but some use cases needed fleshing out.) Prioritise the use cases (e.g. as per Rational Unified Process, or eXtreme Programming iteration planning, i.e. between iterations, revise future iteration plans). Todo: put this comment into libCellML project methodology doc (still to be started at time of writing this).
 
+#. Category: support legacy CellML versions
+   #. Notes: 
+      #. Export to older versions allows the use of model in existing tools (e.g., simulation, annotation, NeSI), 
+      #. Preserve model and XML structure/ordering/modularity/annotations where possible.
+
+   #. Use cases: Read in CellML version A model, save as CellML version B, where A and B are:
+
+===== =====
+  A     B
+===== =====
+ 1.1   1.2
+ 1.0   1.2
+ 1.2   1.1
+ 1.2   1.0
+===== =====
 
 The following is Text copied from roadmap and will still be digested into use case itemisation.
 ===============================================================================================
 
-#. Import CellML 1.0/1.1 models.
 
-#. Export to CellML 1.1 in order to use model in existing tools (e.g., simulation, annotation, NeSI), preserving model and XML structure/ordering/modularity where possible.
 
 #. Install libCellML on: OS X, Linux, Windows
    
