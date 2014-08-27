@@ -7,7 +7,11 @@ Randall Britten, 25 August 2014
 
 (The roadmoap was used as the starting point for this document, so see there for its contributors.)
 
-Not necessarily in order of priority, but probably close, since order taken from version of roadmap as at time this doc was created.
+Notes:
+
+#. Not necessarily in order of priority, but probably close, since order taken from version of roadmap as at time this doc was created.
+#. Some use case descriptions actually describe multiple use cases, and in that case, the line header is "Use cases".
+#. Where a use case description describes multiple use cases, it does not mean that all individual use cases share the same priority.
 
 #. Category: Create a CellML 1.2 model from scratch and save it to XML
    #. Use Case: With only built-in units, only one component, (i.e. no imports, or connections)
