@@ -64,7 +64,9 @@ Not necessarily in order of priority, but probably close, since order taken from
       #. todo: add more here
 
 #. Category: code generation
+
    #. Use cases: Generate code for the following variations
+
       #. CVODE style 1: Initial Value Problem (IVP) Ordinary Differential Equation (ODE) System, no algebraic equations (i.e. truly an ODE system)
       #. CVODE style 2: IVP-ODE with explicit algebraic equations (e.g. y' = a, a = x, x' = b, b = - y). This case has the subtelty that the algebraic calculations need to be rerun over the final solution to get correct "time"-varying values.
       #. IDA style: Differential Albebraic Equation (DAE) system in implicit form (i.e. F(y', y, v, t) = 0 where y and v are a list of real valued "time"-varying quantities (or constants), and usually there is not a trivial transformation to the from of an IVP-ODE with explicit algebraic equations.
@@ -89,6 +91,14 @@ Not necessarily in order of priority, but probably close, since order taken from
  1.2   1.0
 ===== =====
 
+#. Category: Installation for developer of 3rd party software, or scripter, that will use libCellML
+   #. Notes: 
+      #. native installers (using CPack, pip)
+      #. easy to setup build environment (good documentation)
+
+   #. Use cases for combinations of OS (i.e. Mac OS X, Linux, Windows) and client language (C++, Python, Java, Matlab)
+
+   
 The following is Text copied from roadmap and will still be digested into use case itemisation.
 ===============================================================================================
 
@@ -96,8 +106,6 @@ The following is Text copied from roadmap and will still be digested into use ca
 
 #. Install libCellML on: OS X, Linux, Windows
    
-   #. native installers (using CPack, pip)
-   #. easy to setup build environment (good documentation)
 
 #. Language support: C++, Python, Java, Matlab
 
