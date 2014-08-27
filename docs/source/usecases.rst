@@ -41,7 +41,7 @@ Not necessarily in order of priority, but probably close, since order taken from
 
 #. Use case: Load XML, reformat it with standard indentation, save result.
 
-#. Category: Load a CellML 1.2 model and validate it
+#. Category: Validate a CellML 1.2 model
    #. Use case: detect units errors
    #. Use case: detect invalid mathematics.
    #. todo: add more here
