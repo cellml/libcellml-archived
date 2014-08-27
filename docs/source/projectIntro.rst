@@ -7,7 +7,7 @@ The libCellML project aims to provide a library for working with CellML, focusse
 The motivation for the libCellML project
 ----------------------------------------
 
-A fresh start at creating core software support for tool developers that would like to make use of the CellML standard in their tools. LibCellML will be implemented in a manner that makes it easier and more natural to work with than the `previous CellML API project <http://cellml-api.sf.net>`_. Some further information is available in the :ref: libcellmlRoadmap `libCellML roadmap`.
+A fresh start at creating core software support for tool developers that would like to make use of the CellML standard in their tools. LibCellML will be implemented in a manner that makes it easier and more natural to work with than the `previous CellML API project <http://cellml-api.sf.net>`_. Some further information is available in the :ref:`libcellmlRoadmap`.
 
 Status of CellML 1.2
 --------------------
