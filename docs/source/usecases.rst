@@ -67,14 +67,29 @@ Notes:
       #. User defined function (if CellML ever permits that in future)
       #. todo: add more here
 
-#. Category: code generation
+#. Category: Conversion to intermediate representation
+   #. Use case: Conversion to CellML structureless mathematics (just the maths) into an intermediate representation that can be transformed / analysed by other tools. With units.
+      #. Notes:
+          #. Ability to maintain the CellML structure (as much as possible), perhaps via object annotation (e.g., COR)
+          #. Will form the basis for tools using libCellML to perform numerical simulation. See also code generation use case.
 
-   #. Use cases: Generate code for the following variations
+#. Category: code generation
+   #. Notes:
+      #. See also "Conversion to intermediate representation" use case.
+      #. Proposed approach: generate procedural code from the intermediate representation
+      #. Generic code vs solver specific code.
+      #. Could be a role for being informed from SED-ML what solver is to be used and customising generated code appropriately.
+      #. Would be a tool sitting on top of libCellML, not directly part of it.
+
+   #. Use cases: Generate code for the following languages (C, MATLAB, Fortran, JavaScript) and the following variations:
 
       #. CVODE style 1: Initial Value Problem (IVP) Ordinary Differential Equation (ODE) System, no algebraic equations (i.e. truly an ODE system)
       #. CVODE style 2: IVP-ODE with explicit algebraic equations (e.g. y' = a, a = x, x' = b, b = - y). This case has the subtelty that the algebraic calculations need to be rerun over the final solution to get correct "time"-varying values.
       #. IDA style: Differential Albebraic Equation (DAE) system in implicit form (i.e. F(y', y, v, t) = 0 where y and v are a list of real valued "time"-varying quantities (or constants), and usually there is not a trivial transformation to the from of an IVP-ODE with explicit algebraic equations.
       #. All of the preceding variations with the addition of "reset rules", (e.g. if y > k1 then y = k2, etc)
+
+
+
  
 #. Todo: rework the following text from roadmap into the form of use cases, and delete lines that are not use cases.
 #. Todo: (Initial planning already mostly done, but some use cases needed fleshing out.) Prioritise the use cases (e.g. as per Rational Unified Process, or eXtreme Programming iteration planning, i.e. between iterations, revise future iteration plans). Todo: put this comment into libCellML project methodology doc (still to be started at time of writing this).
@@ -108,24 +123,15 @@ Notes:
       #. Target platform: Android, iOS
 
    
+
+
 The following is Text copied from roadmap and will still be digested into use case itemisation.
 ===============================================================================================
 
-#. Conversion to intermediate representation
-   
-   #. Conversion to CellMLstructureless mathematics (just the maths) into an intermediate representation that can be transformed / analysed by other tools. With units.
-   #. Ability to maintain the CellML structure (as much as possible), perhaps via object annotation (e.g., COR)
-   #. Will form the basis for tools using libCellML to perform numerical simulation.
-
 #. Provide an events system to monitor changes in the model
-   #. provide access to data contained in CellML models in external namespaces (RDF, extensions, etc).
+#. Provide access to data contained in CellML models in external namespaces (RDF, extensions, etc).
 
 
-#. Establish the process/API required to generate procedural code from the intermediate representation
-
-   #. Generic code vs solver specific code.
-   #. Could be a role for being informed from SED-ML what solver is to be used and customising generated code appropriately.
-   #. Would be a tool sitting on top of libCellML, not directly part of it.
 
 #. Being able to run simulations with CellML 1.2
 
