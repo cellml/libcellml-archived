@@ -99,19 +99,17 @@ Notes:
    #. Notes: 
       #. native installers (using CPack, pip)
       #. easy to setup build environment (good documentation)
+      #. Supported languages and platforms as per lists below.
 
-   #. Use cases for combinations of OS (i.e. Mac OS X, Linux, Windows) and client language (C++, Python, Java, Matlab)
+   #. Use cases for combinations of OS (not cross-compilation) (i.e. Mac OS X, Linux, Windows) and client language (C++, Python, Java, Matlab, JavaScript, C#/.Net, C, Fortran[77|90|20XX])
+   #. Use cases for cross-compilation scenarios targetting mobile platforms: applicable combinations of 
+      #. Cost OS (i.e. Mac OS X, Linux, Windows)
+      #. Client language (C++, Java, Objective-C, Swift?)
+      #. Target platform: Android, iOS
 
    
 The following is Text copied from roadmap and will still be digested into use case itemisation.
 ===============================================================================================
-
-
-
-#. Install libCellML on: OS X, Linux, Windows
-   
-
-#. Language support: C++, Python, Java, Matlab
 
 #. Conversion to intermediate representation
    
@@ -140,15 +138,4 @@ Milestone 4: advanced capabilities (timeframe: ? months)
 #. High order model manipulation (recall discussion with Andrew McCulloch at the 8th workshop)
    
    #. again, outside core libCellML, but helping tool developers provide these kinds of services is very important.
-
-Milestone 5: broadening accessibility (timeframe: ? months)
------------------------------------------------------------
-
-#. Support for more platforms
-
-   #. Android, iOS
-
-#. and languages
-   
-   #. JS, C#/.NET, C, Fortran[77|90|20XX]
 
