@@ -1,7 +1,7 @@
 .. _libcellmlUseCases:
 
 Use cases
-=================
+=========
 
 Randall Britten, 25 August 2014
 
@@ -89,11 +89,6 @@ Notes:
       #. All of the preceding variations with the addition of "reset rules", (e.g. if y > k1 then y = k2, etc)
 
 
-
- 
-#. Todo: rework the following text from roadmap into the form of use cases, and delete lines that are not use cases.
-#. Todo: (Initial planning already mostly done, but some use cases needed fleshing out.) Prioritise the use cases (e.g. as per Rational Unified Process, or eXtreme Programming iteration planning, i.e. between iterations, revise future iteration plans). Todo: put this comment into libCellML project methodology doc (still to be started at time of writing this).
-
 #. Category: support legacy CellML versions
    #. Notes: 
       #. Export to older versions allows the use of model in existing tools (e.g., simulation, annotation, NeSI), 
@@ -123,23 +118,26 @@ Notes:
       #. Target platform: Android, iOS
 
    
+#. Use case: Access data contained in CellML models in external namespaces (RDF, extensions, etc).
+   #. Todo: needs fleshing out
 
 
-The following is Text copied from roadmap and will still be digested into use case itemisation.
-===============================================================================================
+#. Use case: Run simulations with CellML 1.2
+   #. Notes:
+      #. while not directly part of libCellML, helping tool developers get to the point where they can execute simulations is critically important.
+      #. CellML 1.2 will not be released until we can do this (in addition to the other requirements above)
+
+
+Todo
+----
+#. Todo: rework the following text from roadmap into the form of use cases, and delete lines that are not use cases.
+#. Todo: (Initial planning already mostly done, but some use cases needed fleshing out.) Prioritise the use cases (e.g. as per Rational Unified Process, or eXtreme Programming iteration planning, i.e. between iterations, revise future iteration plans). Todo: put this comment into libCellML project methodology doc (still to be started at time of writing this).
+
+
+The following is Text copied from roadmap and will still be digested into use case itemisation
+----------------------------------------------------------------------------------------------
 
 #. Provide an events system to monitor changes in the model
-#. Provide access to data contained in CellML models in external namespaces (RDF, extensions, etc).
-
-
-
-#. Being able to run simulations with CellML 1.2
-
-   #. while not directly part of libCellML, helping tool developers get to the point where they can execute simulations is critically important.
-   #. CellML 1.2 will not be released until we can do this (in addition to the other requirements above)
-
-Milestone 4: advanced capabilities (timeframe: ? months)
---------------------------------------------------------
 
 #. High order model manipulation (recall discussion with Andrew McCulloch at the 8th workshop)
    
