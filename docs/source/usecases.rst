@@ -42,8 +42,9 @@ Not necessarily in order of priority, but probably close, since order taken from
 #. Use case: Load XML, reformat it with standard indentation, save result.
 
 #. Category: Validate a CellML 1.2 model
-   #. Use case: detect units errors
-   #. Use case: detect invalid mathematics.
+   #. Use case: detect invalid mathematics. For 1.2, the actual restricted subset of mathml from the secondary spec is needed.
+   #. Use case: detect units errors. Again, the actual restricted subset of mathml from the secondary spec is needed.
+
    #. todo: add more here
    #. Required feature: libCellML should have a validation framework based on the core specification and then secondary specs can add their specific rules
 
@@ -76,7 +77,6 @@ Not necessarily in order of priority, but probably close, since order taken from
 The following is Text copied from roadmap and will still be digested into use case itemisation.
 ===============================================================================================
 
-#. for 1.2 this is mainly the mathematics, so core validation can probably validate the model but need the actual restricted subset of mathml from the secondary spec is needed to fully validate units consistency.
 #. Import CellML 1.0/1.1 models.
 
 #. Export to CellML 1.1 in order to use model in existing tools (e.g., simulation, annotation, NeSI), preserving model and XML structure/ordering/modularity where possible.
