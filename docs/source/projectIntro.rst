@@ -1,4 +1,4 @@
-.. _introducingLibcellml:
+.. _projectIntro:
 
 Introducing the libCellML project
 ---------------------------------
