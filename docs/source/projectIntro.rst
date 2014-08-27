@@ -1,7 +1,10 @@
 .. _projectIntro:
 
 Introducing the libCellML project
----------------------------------
+=================================
+
+Randall Britten, 27 August 2014
+
 The libCellML project aims to provide a library for working with CellML, focussed on CellML 1.2, but with limited support for older formats (i.e. CellML 1.0 and 1.1). 
 
 The motivation for the libCellML project
