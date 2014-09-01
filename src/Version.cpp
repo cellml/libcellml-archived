@@ -7,6 +7,6 @@ using namespace std;
 
 const string libcellml::general::getVersion() {
     ostringstream os;
-    os << LIBCELLML_VERSION_MAJOR << "." << LIBCELLML_VERSION_MAJOR << endl;
+    os << LIBCELLML_VERSION_MAJOR << "." << LIBCELLML_VERSION_MINOR << endl;
     return os.str();
 }
