@@ -29,7 +29,7 @@ Note: All of the GitHub steps can be done using just a browser and GitHub, which
 
 #. Create GitHub issue, and/or branch on your fork and an associated pull request 
 
-If you have already created an issue and/or pull request for discussion of the proposal, then skip this step.  Note: directly creating a pull request without first creating an issue perfectly acceptable.
+   * If you have already created an issue and/or pull request for discussion of the proposal, then skip this step.  Note: directly creating a pull request without first creating an issue perfectly acceptable.
 
    * The branch label name should be short but descriptive, and it is usually best to suffix it with two digits, "01" for the first time the label is used, and sequential numbering thereafter.
 
