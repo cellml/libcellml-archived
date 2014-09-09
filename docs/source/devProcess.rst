@@ -1,5 +1,7 @@
+.. _devProcess:
+
 libCellML development process
------------------------------
+=============================
 
 DRAFT for discussion
 
@@ -46,7 +48,10 @@ Guidelines:
 
      * First line is a brief summary.
      * Optional: Leave second line blank, and then provide more details.
-     * Mention any relevant issue numbers (e.g. use "#3593" to refer to issue number 3593)
+     * Mention any relevant issue numbers. 
+  
+       Note: GitHub allows two styles, short (e.g. use "#3593" to refer to issue number 3593) and qualified (e.g. use "cellml/libcellml#3593).  While the short style usually suffices, there are some edge cases where it may be ambiguous, (e.g. fork is target of pull request allocated that number, or fork has enabled issues and has a colliding issue number).  GitHub currently resolves these in a sensible way, but there are still some glitches, e.g. if a pull request is made, the resolution has an affinity for the target of the pull request.
+
      * If you believe that a commit results in an issue being resolved, include e.g. "closes #3593" to close issue 3593.  The issue only actually becomes closed when the pull request is merged into master.
 
 #. Tests first
