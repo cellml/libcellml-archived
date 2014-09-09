@@ -1,6 +1,6 @@
 .. _devProcess:
 
-libCellML development process
+libCellML Development Process
 =============================
 
 DRAFT for discussion
