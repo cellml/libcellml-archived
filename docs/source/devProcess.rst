@@ -49,6 +49,7 @@ Guidelines:
      * First line is a brief summary.
      * Optional: Leave second line blank, and then provide more details.
      * Mention any relevant issue numbers
+
        * Use the qualified/cross-repository syntax (e.g. use "cellml/libcellml#3593 to refer to issue number 3593)
   
      * If you believe that a commit results in an issue being resolved, include e.g. "closes #3593" to close issue 3593.  The issue only actually becomes closed when the pull request is merged into master.
