@@ -23,7 +23,7 @@ Note: All of the GitHub steps can be done using just a browser and GitHub, which
    * Use any combination of the following "channels":
 
      * GitHub issue 
-     * GitHub pull request from a topic branch
+     * GitHub pull request from a branch in a fork of the github.com/cellml/libcellml repo.
      * Mailing list (cellml-tools-developers@cellml.org).  
      * Face-to-face discussions, Skype/Hangouts, phone calls.  These are exceedingly valuable, and encouraged, but please summarise online.
 
