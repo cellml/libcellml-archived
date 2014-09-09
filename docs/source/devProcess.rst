@@ -21,6 +21,7 @@ Note: All of the GitHub steps can be done using just a browser and GitHub, which
 
    * Discuss the proposed changes online (at least in part) so that others can contribute.
    * Use any combination of the following "channels":
+
      * GitHub issue 
      * GitHub pull request from a topic branch
      * Mailing list (cellml-tools-developers@cellml.org).  
