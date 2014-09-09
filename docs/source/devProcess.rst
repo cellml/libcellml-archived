@@ -17,13 +17,15 @@ Development process
 See https://guides.github.com/introduction/flow/ for a comprehensive description of the workflow used for libCellML.  Some additional adaptations are briefly summarised below.
 Note: All of the GitHub steps can be done using just a browser and GitHub, which makes it easier for even very small changes to be contributed.
 
+The main libCellML repository is at https://github.com/cellml/libcellml . 
+
 #. Discuss proposed changes
 
    * Discuss the proposed changes online (at least in part) so that others can contribute.
    * Use any combination of the following "channels":
 
      * GitHub issue 
-     * GitHub pull request from a branch in a fork of the github.com/cellml/libcellml repo.
+     * GitHub pull request from a branch in a fork of the main libCellML repo.
      * Mailing list (cellml-tools-developers@cellml.org).  
      * Face-to-face discussions, Skype/Hangouts, phone calls.  These are exceedingly valuable, and encouraged, but please summarise online.
 
