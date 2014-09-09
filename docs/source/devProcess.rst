@@ -52,7 +52,7 @@ Guidelines:
 
        * Use the qualified/cross-repository syntax (e.g. use "cellml/libcellml#3593 to refer to issue number 3593)
   
-     * If you believe that a commit results in an issue being resolved, include e.g. "closes cellml/libcellml#3593" to close issue 3593.  (If the qualified/cross-repo syntax is not used, the issue only becomes closed when the pull request is merged into the upstream repo.)
+     * If you believe that a commit results in an issue being resolved, include e.g. "closes cellml/libcellml#3593" to close issue 3593.  (Unless the qualified/cross-repo syntax is used, the issue only becomes closed when the pull request is merged into the upstream repo.)
 
 #. Tests first
 
