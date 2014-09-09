@@ -48,7 +48,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'libCellML'
-copyright = u'2014, David Nickerson, University of Auckland'
+copyright = u'2014, David Nickerson; 2014, University of Auckland'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
