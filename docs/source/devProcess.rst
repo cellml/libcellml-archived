@@ -5,7 +5,7 @@ libCellML Development Process
 
 DRAFT for discussion
 
-By Randall Britten
+.. sectionauthor:: Randall Britten
 8 September 2014
 
 See also:
