@@ -84,8 +84,8 @@ Notes:
 
       #. Notes:
 
-          #. Ability to maintain the CellML structure (as much as possible), perhaps via object annotation (e.g., COR)
-          #. Will form the basis for tools using libCellML to perform numerical simulation. See also code generation use case.
+         #. Ability to maintain the CellML structure (as much as possible), perhaps via object annotation (e.g., COR)
+         #. Will form the basis for tools using libCellML to perform numerical simulation. See also code generation use case.
 
 #. Category: code generation
 
@@ -114,14 +114,14 @@ Notes:
 
    #. Use cases: Read in CellML version A model, save as CellML version B, where A and B are:
 
-===== =====
-  A     B
-===== =====
- 1.1   1.2
- 1.0   1.2
- 1.2   1.1
- 1.2   1.0
-===== =====
+      ===== =====
+      A     B
+      ===== =====
+      1.1   1.2
+      1.0   1.2
+      1.2   1.1
+      1.2   1.0
+      ===== =====
 
 #. Category: Installation for developer of 3rd party software, or scripter, that will use libCellML
 
