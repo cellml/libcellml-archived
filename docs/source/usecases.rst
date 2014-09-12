@@ -156,7 +156,7 @@ Todo
 ----
 
 #. Todo: rework the following text from roadmap into the form of use cases, and delete lines that are not use cases.
-#. Todo: (Initial planning already mostly done, but some use cases needed fleshing out.) Prioritise the use cases (e.g. as per Rational Unified Process, or eXtreme Programming iteration planning, i.e. between iterations, revise future iteration plans). Todo: put this comment into libCellML project methodology doc (still to be started at time of writing this).
+#. Todo: (Initial planning already mostly done, but some use cases needed fleshing out.) Prioritise the use cases (e.g. as per Rational Unified Process, or eXtreme Programming iteration planning, i.e. between iterations, revise future iteration plans). Todo: put this comment into libCellML project methodology doc.
 
 
 The following is Text copied from roadmap and will still be digested into use case itemisation
