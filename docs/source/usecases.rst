@@ -13,7 +13,13 @@ Notes:
 #. Some use case descriptions actually describe multiple use cases, and in that case, the line header is "Use cases".
 #. Where a use case description describes multiple use cases, it does not mean that all individual use cases share the same priority.
 
-#. Category: Create a CellML 1.2 model from scratch and save it to XML
+#. Category: Create a CellML 1.2 model from scratch and serialise it to specified format
+
+   #. Use cases for each of the following options for "specified format":
+
+      #. XML
+      #. JSON
+      #. RDF
 
    #. Use Case: With only built-in units, only one component, (i.e. no imports, or connections)
    #. Use Case: With only built-in units, multiple components with connections, no imports
