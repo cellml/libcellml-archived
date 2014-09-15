@@ -141,7 +141,7 @@ Notes:
    #. Use cases for combinations of OS (not cross-compilation) (i.e. Mac OS X, Linux, Windows) and client language (C++, Python, Java, Matlab, JavaScript, C#/.Net, C, Fortran[77|90|20XX])
    #. Use cases for cross-compilation scenarios targetting mobile platforms: applicable combinations of 
 
-      #. Cost OS (i.e. Mac OS X, Linux, Windows)
+      #. Host OS (i.e. Mac OS X, Linux, Windows)
       #. Client language (C++, Java, Objective-C, Swift?)
       #. Target platform: Android, iOS
 
