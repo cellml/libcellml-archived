@@ -44,6 +44,7 @@ Notes:
 
    #. Use case: Change units of an algebraic identifier
    #. Use case: Change units of a literal constant
+   #. Use case: Unlimited undo/redo of changes to models
    #. todo: add more here
 
 #. Category: Refactoring a CellML 1.2 model
