@@ -1,9 +1,14 @@
 #include <iostream>
 #include "Version.h"
 
-using namespace std;
+#include "gtest/gtest.h"
 
-int main() {
-  cout << "Version " << libcellml::general::getVersion() << endl;
-  return 0;
+
+// IndependentMethod is a test case - here, we have 2 tests for this 1 test case
+TEST(Version, Version) {
+    auto v1 = libcellml::general::getVersion();
+    auto v2 = libcellml::general::getVersion();
+    EXPECT_EQ(v1, v2);
 }
+
+
