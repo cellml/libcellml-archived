@@ -64,11 +64,6 @@ if (test)
   # Extra linking for the project.
   target_link_libraries(libcellmlTest Libcellml)
 
-  # This is so you can do 'make test' to see all your tests run, instead of
-  # manually running the executable libcellmlTest to see those specific tests.
-  add_test(NAME that-test-I-made COMMAND libcellmlTest)
-
-  # You can also omit NAME and COMMAND. The second argument could be some other
   # test executable.
-  add_test(that-other-test-I-made libcellmlTest)
+  add_test(libcellmlTest libcellmlTest)
 endif()
