@@ -45,7 +45,7 @@ endif()
 ################################
 if (test)
   # This adds another subdirectory, which has 'project(gtest)'.
-  add_subdirectory(lib/gtest-1.7.0)
+  add_subdirectory(extdep/gtest-1.7.0)
 
   enable_testing()
 
