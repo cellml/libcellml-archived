@@ -3,7 +3,7 @@ compiler:
   - gcc
   - clang
 
-script: cmake -G "Unix Makefiles" . && make
+script: cmake -G "Unix Makefiles" -Dtest=true . && make && make test
 
 os:
   - linux
