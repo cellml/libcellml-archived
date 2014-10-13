@@ -7,6 +7,11 @@ project(${PROJECT_NAME})
 # Normal Libraries & Executables
 ################################
 
+if (MSVC)
+  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
+endif()
+
+
 # The version number.
 set (Libcellml_VERSION_MAJOR 0)
 set (Libcellml_VERSION_MINOR 1)
