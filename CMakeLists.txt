@@ -16,7 +16,11 @@ endif()
 set (Libcellml_VERSION_MAJOR 0)
 set (Libcellml_VERSION_MINOR 1)
 
-set(HEADER_FILES ${PROJECT_SOURCE_DIR}/src/Version.h)
+set(HEADER_FILES 
+  ${PROJECT_SOURCE_DIR}/src/Version.h
+  ${PROJECT_SOURCE_DIR}/src/Manager.h
+  ${PROJECT_SOURCE_DIR}/src/Model.h
+)
 
 configure_file (
   "${PROJECT_SOURCE_DIR}/src/LibcellmlConfig.h.in"
@@ -25,7 +29,12 @@ configure_file (
 
 include_directories("${PROJECT_BINARY_DIR}/src")
 
-add_library(Libcellml src/Version.cpp ${HEADER_FILES})
+add_library(Libcellml 
+  src/Version.cpp 
+#  src/Manager.cpp 
+#  src/Model.cpp 
+  ${HEADER_FILES}
+)
 
 
 # Options. Turn on with 'cmake -Dmyvarname=ON'.
@@ -63,8 +72,11 @@ if (test)
   ##############
   add_executable (libcellmlTest 
     ${PROJECT_SOURCE_DIR}/tests/VersionTest.cpp 
+    ${PROJECT_SOURCE_DIR}/tests/ManagerTest.cpp 
     ${HEADER_FILES}
   )
+
+
 
   # Standard linking to gtest stuff.
   target_link_libraries(libcellmlTest gtest gtest_main)
