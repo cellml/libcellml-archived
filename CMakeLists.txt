@@ -61,7 +61,10 @@ if (test)
   ##############
   # Unit Tests
   ##############
-  add_executable (libcellmlTest ${PROJECT_SOURCE_DIR}/tests/Test.cpp ${HEADER_FILES})
+  add_executable (libcellmlTest 
+    ${PROJECT_SOURCE_DIR}/tests/VersionTest.cpp 
+    ${HEADER_FILES}
+  )
 
   # Standard linking to gtest stuff.
   target_link_libraries(libcellmlTest gtest gtest_main)
