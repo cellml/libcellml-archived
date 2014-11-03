@@ -1,3 +1,6 @@
+#ifndef Libcellml_Version_h
+#define Libcellml_Version_h
+
 #include <string>
 
 namespace libcellml {
@@ -9,3 +12,4 @@ namespace libcellml {
   }
 }
 
+#endif
