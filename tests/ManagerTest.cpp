@@ -9,6 +9,7 @@ using namespace libcellml::general;
 TEST(Manager, CreateEmptyModel) {
   Manager m;
   auto v1 = m.createModel();
+  ASSERT_FALSE(v1 == nullptr);
 }
 
 

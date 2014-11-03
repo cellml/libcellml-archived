@@ -10,7 +10,8 @@ namespace general {
 class Manager {
 public:
   std::shared_ptr<libcellml::model::Model> createModel(){
-    return std::make_shared<libcellml::model::Model>();
+//    return std::make_shared<libcellml::model::Model>();
+    return nullptr;
   }
 };
 
