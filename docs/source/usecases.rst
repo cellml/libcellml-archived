@@ -9,9 +9,9 @@ Randall Britten, 25 August 2014
 
 Notes:
 
-#. Not necessarily in order of priority, but probably close, since order taken from version of roadmap as at time this doc was created.
-#. Some use case descriptions actually describe multiple use cases, and in that case, the line header is "Use cases".
-#. Where a use case description describes multiple use cases, it does not mean that all individual use cases share the same priority.
+* Not necessarily in order of priority, but probably close, since order taken from version of roadmap as at time this doc was created.
+* Some use case descriptions actually describe multiple use cases, and in that case, the line header is "Use cases".
+* Where a use case description describes multiple use cases, it does not mean that all individual use cases share the same priority.
 
 #. Category: Create a CellML 1.2 model from scratch and serialise it to specified format
 
