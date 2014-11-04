@@ -31,8 +31,8 @@ include_directories("${PROJECT_BINARY_DIR}/src")
 
 add_library(Libcellml 
   src/Version.cpp 
-#  src/Manager.cpp 
-#  src/Model.cpp 
+  src/Manager.cpp 
+  src/Model.cpp 
   ${HEADER_FILES}
 )
 
