@@ -45,7 +45,7 @@ public:
    * Create a child B object, of which this object is the parent
    * \return a pointer the newly created child object.
    */
-  const std::shared_ptr<const libcellml::model::Model> createModel();
+  const std::shared_ptr<const libcellml::model::Model> createModel(std::wstring modelName);
 };
 
 

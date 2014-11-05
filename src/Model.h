@@ -25,14 +25,17 @@ class Model {
   };
 
   //! make_shared workaround: create only accessible to friend. \see Manager::createModel
-  static std::shared_ptr<Model> create(
+  static std::shared_ptr<Model> create(std::wstring name,
       std::weak_ptr<libcellml::general::Manager> manager) {
-    return std::make_shared<Model>(manager, this_is_private { });
+    return std::make_shared<Model>(name, manager, this_is_private { });
   }
 
   //! Reference from child model back to parent manager.
   //! This needs to be a weak_ptr to avoid circular ref counting issue.
   std::weak_ptr<libcellml::general::Manager> manager_;
+
+  //! Model name
+  std::wstring name_;
 
 public:
 
@@ -40,7 +43,7 @@ public:
 
    \see Manager::createModel
    */
-  explicit Model(std::weak_ptr<general::Manager> manager,
+  explicit Model(std::wstring name, std::weak_ptr<general::Manager> manager,
       const this_is_private &);
 
   //! Get a weak reference to parent manager object.
@@ -50,7 +53,7 @@ public:
    * \return model name
    */
   std::wstring getName() const {
-    return L"Name not set yet.";
+    return name_;
   }
 };
 
