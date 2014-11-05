@@ -33,6 +33,15 @@ TEST(Manager, ModelPointsToCreator) {
   auto v1 = m->createModel();
   ASSERT_EQ(v1->getManager().lock(), m);
 }
+
+
+// Test that 2 different managers are distinct from the point of view of a child model of each
+TEST(Manager, ManagersDistinct) {
+  shared_ptr<Manager> m1 = make_shared<Manager>();
+  shared_ptr<Manager> m2 = make_shared<Manager>();
+  auto v1 = m1->createModel();
+  auto v2 = m2->createModel();
+  ASSERT_NE(v1->getManager().lock(), v2->getManager().lock());
 }
 
 
