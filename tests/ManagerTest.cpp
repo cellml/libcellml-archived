@@ -8,7 +8,7 @@
 using namespace libcellml::general;
 using namespace std;
 
-// Test creation of empty model using manager
+//! Test creation of empty model using manager
 TEST(Manager, CreateEmptyModel) {
   shared_ptr<Manager> m = make_shared<Manager>();
   const auto v1 = m->createModel();
@@ -16,7 +16,7 @@ TEST(Manager, CreateEmptyModel) {
 }
 
 
-// Test that creating 2 empty models results in two different objects
+//! Test that creating 2 empty models results in two different objects
 TEST(Manager, Create2EmptyModels) {
   shared_ptr<Manager> m = make_shared<Manager>();
   const auto v1 = m->createModel();
@@ -27,7 +27,7 @@ TEST(Manager, Create2EmptyModels) {
 }
 
 
-// Test that creating 2 empty models results in two different objects
+//! Test that creating 2 empty models results in two different objects
 TEST(Manager, ModelPointsToCreator) {
   shared_ptr<Manager> m = make_shared<Manager>();
   const auto v1 = m->createModel();
@@ -35,7 +35,7 @@ TEST(Manager, ModelPointsToCreator) {
 }
 
 
-// Test that 2 different managers are distinct from the point of view of a child model of each
+//! Test that 2 different managers are distinct from the point of view of a child model of each
 TEST(Manager, ManagersDistinct) {
   shared_ptr<Manager> m1 = make_shared<Manager>();
   shared_ptr<Manager> m2 = make_shared<Manager>();

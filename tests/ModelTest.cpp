@@ -9,7 +9,7 @@
 using namespace libcellml::general;
 using namespace std;
 
-// Test creation of empty model using manager
+//! Test creation of empty model using manager
 TEST(Model, ModelNaming) {
   shared_ptr<Manager> m = make_shared<Manager>();
   auto m1 = m->createModel();
