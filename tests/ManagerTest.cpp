@@ -12,7 +12,7 @@ using namespace std;
 TEST(Manager, CreateEmptyModel) {
   shared_ptr<Manager> m = make_shared<Manager>();
   auto v1 = m->createModel();
-  ASSERT_FALSE(v1 == nullptr);
+  ASSERT_NE(v1, nullptr);
 }
 
 
@@ -21,7 +21,9 @@ TEST(Manager, Create2EmptyModels) {
   shared_ptr<Manager> m = make_shared<Manager>();
   auto v1 = m->createModel();
   auto v2 = m->createModel();
-  ASSERT_FALSE(v1 == v2);
+  ASSERT_NE(v1, nullptr);
+  ASSERT_NE(v2, nullptr);
+  ASSERT_NE(v1, v2);
 }
 
 
@@ -29,7 +31,8 @@ TEST(Manager, Create2EmptyModels) {
 TEST(Manager, ModelPointsToCreator) {
   shared_ptr<Manager> m = make_shared<Manager>();
   auto v1 = m->createModel();
-  ASSERT_TRUE(v1->getManager().lock() == m);
+  ASSERT_EQ(v1->getManager().lock(), m);
+}
 }
 
 
