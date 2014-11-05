@@ -73,6 +73,7 @@ if (test)
   add_executable (libcellmlTest 
     ${PROJECT_SOURCE_DIR}/tests/VersionTest.cpp 
     ${PROJECT_SOURCE_DIR}/tests/ManagerTest.cpp 
+    ${PROJECT_SOURCE_DIR}/tests/ModelTest.cpp 
     ${HEADER_FILES}
   )
 

@@ -2,6 +2,7 @@
 #define Libcellml_Model_h
 
 #include <memory>
+#include <string>
 
 namespace libcellml {
 
@@ -45,6 +46,12 @@ public:
   //! Get a weak reference to parent manager object.
   const std::weak_ptr<const general::Manager> getManager() const;
 
+  /**! Model name attribute
+   * \return model name
+   */
+  std::wstring getName() const {
+    return L"Name not set yet.";
+  }
 };
 
 } // namespace model
