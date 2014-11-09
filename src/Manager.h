@@ -11,11 +11,11 @@ namespace libcellml {
 namespace general {
 
 
-//! For collection of const children (i.e. each element immutable).
+//! For collection of const children models (i.e. each child model immutable).
 //! Overall collection is also not mutable
 using modelCollectionConstT = std::vector<std::shared_ptr<const libcellml::model::Model>> const;
 
-//! Overall collection is not mutable, but each element is mutable
+//! Overall collection is not mutable, but each child model is mutable
 using modelCollectionT = std::vector<std::shared_ptr<libcellml::model::Model>> const;
 
 
