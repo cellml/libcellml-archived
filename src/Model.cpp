@@ -7,8 +7,8 @@ using namespace libcellml::general;
 
 
 Model::Model(wstring name, weak_ptr<Manager> manager, const this_is_private &):
-  name_(move(name)),
-  manager_(manager)
+  manager_(manager),
+  name_(move(name))
 {}
 
 
