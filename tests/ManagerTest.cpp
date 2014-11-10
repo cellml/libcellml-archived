@@ -27,7 +27,7 @@ TEST(Manager, Create2EmptyModels) {
 }
 
 
-//! Test that creating 2 empty models results in two different objects
+//! Test that created model points back to it's creator
 TEST(Manager, ModelPointsToCreator) {
   shared_ptr<Manager> m = make_shared<Manager>();
   const auto v1 = m->createModel(L"test model");
