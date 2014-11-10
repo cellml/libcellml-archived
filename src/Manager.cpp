@@ -18,7 +18,7 @@ modelCollectionT Manager::getModels() {
   return models;
 }
 
-const shared_ptr<const Model> Manager::createModel(std::wstring modelName) {
+const shared_ptr<Model> Manager::createModel(std::wstring modelName) {
   shared_ptr<Model> modelp(Model::create(modelName, shared_from_this()));
   models.push_back(modelp);
   return models.back();

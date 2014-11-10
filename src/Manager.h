@@ -20,7 +20,8 @@ using modelCollectionT = std::vector<std::shared_ptr<libcellml::model::Model>> c
 
 
 //! The class for a parent object
-class Manager: public std::enable_shared_from_this<libcellml::general::Manager> // Needed so that a reference to the Manager parent object creating the child Model object can be stored by the child Model object.
+class Manager
+  : public std::enable_shared_from_this<libcellml::general::Manager> // Needed so that a reference to the Manager parent object creating the child Model object can be stored by the child Model object.
 {
   //! Children models
   std::vector<std::shared_ptr<libcellml::model::Model>> models;
@@ -42,10 +43,11 @@ public:
   modelCollectionT getModels();
 
   /**
-   * Create a child B object, of which this object is the parent
+   * Create a child model object, of which this manager object is the parent
+   * \param modelName The name of the new model
    * \return a pointer the newly created child object.
    */
-  const std::shared_ptr<const libcellml::model::Model> createModel(std::wstring modelName);
+  const std::shared_ptr<libcellml::model::Model> createModel(std::wstring modelName);
 };
 
 
