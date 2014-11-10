@@ -23,6 +23,7 @@ TEST(Model, ComponentCreation) {
   ASSERT_EQ(m1->getName(), L"test model");
   auto c1 = m1->createComponent(L"test component");
   ASSERT_NE(c1, nullptr);
+  ASSERT_EQ(c1->getName(), L"test component");
 }
 
 

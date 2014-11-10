@@ -20,6 +20,7 @@ set(HEADER_FILES
   ${PROJECT_SOURCE_DIR}/src/Version.h
   ${PROJECT_SOURCE_DIR}/src/Manager.h
   ${PROJECT_SOURCE_DIR}/src/Model.h
+  ${PROJECT_SOURCE_DIR}/src/Component.h
 )
 
 configure_file (
@@ -33,6 +34,7 @@ add_library(Libcellml
   src/Version.cpp 
   src/Manager.cpp 
   src/Model.cpp 
+  src/Component.cpp 
   ${HEADER_FILES}
 )
 

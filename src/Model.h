@@ -5,15 +5,17 @@
 #include <string>
 #include <vector>
 
+#include "Component.h"
+
 namespace libcellml {
 
 namespace general {
 class Manager;
 }
 
-class Component;
-
 namespace model {
+
+class Component;
 
 //! For collection of const child components (i.e. each child component immutable).
 //! Overall collection is also not mutable
@@ -88,9 +90,7 @@ public:
    * \param componentName The name of the new component
    * \return a pointer the newly created child model object.
    */
-  const std::shared_ptr<Component> createComponent(std::wstring componentName){
-    return nullptr;
-  }
+  const std::shared_ptr<Component> createComponent(std::wstring componentName);
 };
 
 } // namespace model
