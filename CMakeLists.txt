@@ -21,6 +21,8 @@ set(HEADER_FILES
   ${PROJECT_SOURCE_DIR}/src/Manager.h
   ${PROJECT_SOURCE_DIR}/src/Model.h
   ${PROJECT_SOURCE_DIR}/src/Component.h
+  ${PROJECT_SOURCE_DIR}/src/Parent.h
+  ${PROJECT_SOURCE_DIR}/src/Child.h
 )
 
 configure_file (
