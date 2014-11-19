@@ -31,7 +31,7 @@ TEST(Manager, Create2EmptyModels) {
 TEST(Manager, ModelPointsToCreator) {
   shared_ptr<Manager> m = make_shared<Manager>();
   const auto v1 = m->createModel(L"test model");
-  ASSERT_EQ(v1->getManager().lock(), m);
+  ASSERT_EQ(v1->getParent().lock(), m);
 }
 
 
@@ -41,7 +41,7 @@ TEST(Manager, ManagersDistinct) {
   shared_ptr<Manager> m2 = make_shared<Manager>();
   const auto v1 = m1->createModel(L"test model 1");
   const auto v2 = m2->createModel(L"test model 2");
-  ASSERT_NE(v1->getManager().lock(), v2->getManager().lock());
+  ASSERT_NE(v1->getParent().lock(), v2->getParent().lock());
 }
 
 
