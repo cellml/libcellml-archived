@@ -32,8 +32,9 @@ public:
      */
     childCollectionConstT<parent, child> getChildrenReadOnly() const {
       childCollectionConstT<parent, child> childrenConst(children.begin(), children.end()); // Have to copy to get const version.
-      return childrenConst;
+      return std::move(childrenConst);
     }
+
     /** Get collection of mutable children
      *
      * Each child element is mutable.
