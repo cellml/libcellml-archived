@@ -14,7 +14,7 @@ using childCollectionConstT = std::vector<std::shared_ptr<const child>> const;
 
 //! Overall collection is not mutable, but each element is mutable
 template<typename parent, typename child>
-using childCollectionT = std::vector<std::shared_ptr<child>> const;
+using childCollectionT = std::vector<std::shared_ptr<child>> const&;
 
 //! The class for a parent object
 template<typename parent, typename child>
