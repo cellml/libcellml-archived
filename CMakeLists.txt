@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 2.8)
+cmake_minimum_required (VERSION 3.1)
 
 set(PROJECT_NAME libCellML)
 project(${PROJECT_NAME})
@@ -19,10 +19,12 @@ set (Libcellml_VERSION_MINOR 1)
 set(HEADER_FILES 
   ${PROJECT_SOURCE_DIR}/src/Version.h
   ${PROJECT_SOURCE_DIR}/src/Manager.h
+  ${PROJECT_SOURCE_DIR}/src/Serialiser.h
   ${PROJECT_SOURCE_DIR}/src/Model.h
   ${PROJECT_SOURCE_DIR}/src/Component.h
   ${PROJECT_SOURCE_DIR}/src/Parent.h
   ${PROJECT_SOURCE_DIR}/src/Child.h
+  ${PROJECT_SOURCE_DIR}/src/Cellml_1_2.hxx  
 )
 
 configure_file (
@@ -30,13 +32,18 @@ configure_file (
   "${PROJECT_BINARY_DIR}/src/LibcellmlConfig.h"
 )
 
-include_directories("${PROJECT_BINARY_DIR}/src")
+include_directories(
+  "${PROJECT_BINARY_DIR}/src"
+  "${PROJECT_SOURCE_DIR}/extdep/libxsd"
+)
 
 add_library(Libcellml 
   src/Version.cpp 
   src/Manager.cpp 
+  src/Serialiser.cpp 
   src/Model.cpp 
   src/Component.cpp 
+  src/Cellml_1_2.cxx 
   ${HEADER_FILES}
 )
 
@@ -56,6 +63,12 @@ elseif(COMPILER_SUPPORTS_CXX0X)
 else()
         message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
 endif()
+
+find_package (XercesC)
+if (XercesC_FOUND)
+  include_directories(${XercesC_INCLUDE_DIR})
+  target_link_libraries (Libcellml ${XercesC_LIBRARY})
+endif (XercesC_FOUND)
 
 
 ################################
@@ -78,6 +91,7 @@ if (test)
     ${PROJECT_SOURCE_DIR}/tests/VersionTest.cpp 
     ${PROJECT_SOURCE_DIR}/tests/ManagerTest.cpp 
     ${PROJECT_SOURCE_DIR}/tests/ModelTest.cpp 
+    ${PROJECT_SOURCE_DIR}/tests/SerialiserTest.cpp 
     ${HEADER_FILES}
   )
 
