@@ -92,6 +92,7 @@ if (test)
     ${PROJECT_SOURCE_DIR}/tests/ManagerTest.cpp 
     ${PROJECT_SOURCE_DIR}/tests/ModelTest.cpp 
     ${PROJECT_SOURCE_DIR}/tests/SerialiserTest.cpp 
+    ${PROJECT_SOURCE_DIR}/tests/XmlBindingsSerialisationTest.cpp
     ${HEADER_FILES}
   )
 
