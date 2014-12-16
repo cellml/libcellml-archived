@@ -9,22 +9,20 @@ using namespace cellml12;
 
 //! Test creation of empty model using manager
 TEST(XmlBindingsSerialisation, DummyXmlOutput) {
-  cellml12::model m("blah");
-  cellml12::component c1("c1");
-  cellml12::variable v1("v1", "kg", "real");
+  cellml12::Model m("blah");
+  cellml12::Component c1("c1");
+  cellml12::Variable v1("v1", "kg", "real");
 
-  v1.public_interface(cellml12::yesno::value::yes);
-  v1.private_interface(cellml12::yesno::value::yes);
+  v1.setPublic_interface(cellml12::Yesno::Value::yes);
+  c1.getVariable().push_back(v1);
+  m.getComponent().push_back(c1);
 
-  c1.variable().push_back(v1);
-  m.component().push_back(c1);
+  cellml12::Component c2("c2");
+  m.getComponent().push_back(c2);
 
-  cellml12::component c2("c2");
-  m.component().push_back(c2);
+  serializeModel(cout, m);
 
-  model_(cout, m);
-
-//  auto m2 = model_("example01.xml");
+  auto m2 = parseModel("example01.xml");
   cout << endl;
 //  cout << "Read in model name: " << m2->name() << endl;
 

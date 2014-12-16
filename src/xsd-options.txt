@@ -4,3 +4,6 @@
 --std c++11
 --generate-serialization
 --generate-doxygen
+--type-naming java
+--function-naming java
+

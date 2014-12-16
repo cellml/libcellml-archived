@@ -116,18 +116,18 @@ namespace xml_schema
    * @brief C++ type corresponding to the anyType XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::type type;
+  typedef ::xsd::cxx::tree::type Type;
 
   /**
    * @brief C++ type corresponding to the anySimpleType XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::simple_type< char, type > simple_type;
+  typedef ::xsd::cxx::tree::simple_type< char, Type > SimpleType;
 
   /**
    * @brief Alias for the anyType type.
    */
-  typedef ::xsd::cxx::tree::type container;
+  typedef ::xsd::cxx::tree::type Container;
 
 
   // 8-bit
@@ -137,13 +137,13 @@ namespace xml_schema
    * @brief C++ type corresponding to the byte XML Schema
    * built-in type.
    */
-  typedef signed char byte;
+  typedef signed char Byte;
 
   /**
    * @brief C++ type corresponding to the unsignedByte XML Schema
    * built-in type.
    */
-  typedef unsigned char unsigned_byte;
+  typedef unsigned char UnsignedByte;
 
 
   // 16-bit
@@ -153,13 +153,13 @@ namespace xml_schema
    * @brief C++ type corresponding to the short XML Schema
    * built-in type.
    */
-  typedef short short_;
+  typedef short Short;
 
   /**
    * @brief C++ type corresponding to the unsignedShort XML Schema
    * built-in type.
    */
-  typedef unsigned short unsigned_short;
+  typedef unsigned short UnsignedShort;
 
 
   // 32-bit
@@ -169,13 +169,13 @@ namespace xml_schema
    * @brief C++ type corresponding to the int XML Schema
    * built-in type.
    */
-  typedef int int_;
+  typedef int Int;
 
   /**
    * @brief C++ type corresponding to the unsignedInt XML Schema
    * built-in type.
    */
-  typedef unsigned int unsigned_int;
+  typedef unsigned int UnsignedInt;
 
 
   // 64-bit
@@ -185,13 +185,13 @@ namespace xml_schema
    * @brief C++ type corresponding to the long XML Schema
    * built-in type.
    */
-  typedef long long long_;
+  typedef long long Long;
 
   /**
    * @brief C++ type corresponding to the unsignedLong XML Schema
    * built-in type.
    */
-  typedef unsigned long long unsigned_long;
+  typedef unsigned long long UnsignedLong;
 
 
   // Supposed to be arbitrary-length integral types.
@@ -201,31 +201,31 @@ namespace xml_schema
    * @brief C++ type corresponding to the integer XML Schema
    * built-in type.
    */
-  typedef long long integer;
+  typedef long long Integer;
 
   /**
    * @brief C++ type corresponding to the nonPositiveInteger XML Schema
    * built-in type.
    */
-  typedef long long non_positive_integer;
+  typedef long long NonPositiveInteger;
 
   /**
    * @brief C++ type corresponding to the nonNegativeInteger XML Schema
    * built-in type.
    */
-  typedef unsigned long long non_negative_integer;
+  typedef unsigned long long NonNegativeInteger;
 
   /**
    * @brief C++ type corresponding to the positiveInteger XML Schema
    * built-in type.
    */
-  typedef unsigned long long positive_integer;
+  typedef unsigned long long PositiveInteger;
 
   /**
    * @brief C++ type corresponding to the negativeInteger XML Schema
    * built-in type.
    */
-  typedef long long negative_integer;
+  typedef long long NegativeInteger;
 
 
   // Boolean.
@@ -235,7 +235,7 @@ namespace xml_schema
    * @brief C++ type corresponding to the boolean XML Schema
    * built-in type.
    */
-  typedef bool boolean;
+  typedef bool Boolean;
 
 
   // Floating-point types.
@@ -245,19 +245,19 @@ namespace xml_schema
    * @brief C++ type corresponding to the float XML Schema
    * built-in type.
    */
-  typedef float float_;
+  typedef float Float;
 
   /**
    * @brief C++ type corresponding to the double XML Schema
    * built-in type.
    */
-  typedef double double_;
+  typedef double Double;
 
   /**
    * @brief C++ type corresponding to the decimal XML Schema
    * built-in type.
    */
-  typedef double decimal;
+  typedef double Decimal;
 
 
   // String types.
@@ -267,49 +267,49 @@ namespace xml_schema
    * @brief C++ type corresponding to the string XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::string< char, simple_type > string;
+  typedef ::xsd::cxx::tree::string< char, SimpleType > String;
 
   /**
    * @brief C++ type corresponding to the normalizedString XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::normalized_string< char, string > normalized_string;
+  typedef ::xsd::cxx::tree::normalized_string< char, String > NormalizedString;
 
   /**
    * @brief C++ type corresponding to the token XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::token< char, normalized_string > token;
+  typedef ::xsd::cxx::tree::token< char, NormalizedString > Token;
 
   /**
    * @brief C++ type corresponding to the Name XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::name< char, token > name;
+  typedef ::xsd::cxx::tree::name< char, Token > Name;
 
   /**
    * @brief C++ type corresponding to the NMTOKEN XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::nmtoken< char, token > nmtoken;
+  typedef ::xsd::cxx::tree::nmtoken< char, Token > Nmtoken;
 
   /**
    * @brief C++ type corresponding to the NMTOKENS XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::nmtokens< char, simple_type, nmtoken > nmtokens;
+  typedef ::xsd::cxx::tree::nmtokens< char, SimpleType, Nmtoken > Nmtokens;
 
   /**
    * @brief C++ type corresponding to the NCName XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::ncname< char, name > ncname;
+  typedef ::xsd::cxx::tree::ncname< char, Name > Ncname;
 
   /**
    * @brief C++ type corresponding to the language XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::language< char, token > language;
+  typedef ::xsd::cxx::tree::language< char, Token > Language;
 
 
   // ID/IDREF.
@@ -319,19 +319,19 @@ namespace xml_schema
    * @brief C++ type corresponding to the ID XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::id< char, ncname > id;
+  typedef ::xsd::cxx::tree::id< char, Ncname > Id;
 
   /**
    * @brief C++ type corresponding to the IDREF XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::idref< char, ncname, type > idref;
+  typedef ::xsd::cxx::tree::idref< char, Ncname, Type > Idref;
 
   /**
    * @brief C++ type corresponding to the IDREFS XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::idrefs< char, simple_type, idref > idrefs;
+  typedef ::xsd::cxx::tree::idrefs< char, SimpleType, Idref > Idrefs;
 
 
   // URI.
@@ -341,7 +341,7 @@ namespace xml_schema
    * @brief C++ type corresponding to the anyURI XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::uri< char, simple_type > uri;
+  typedef ::xsd::cxx::tree::uri< char, SimpleType > Uri;
 
 
   // Qualified name.
@@ -351,7 +351,7 @@ namespace xml_schema
    * @brief C++ type corresponding to the QName XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::qname< char, simple_type, uri, ncname > qname;
+  typedef ::xsd::cxx::tree::qname< char, SimpleType, Uri, Ncname > Qname;
 
 
   // Binary.
@@ -360,19 +360,19 @@ namespace xml_schema
   /**
    * @brief Binary buffer type.
    */
-  typedef ::xsd::cxx::tree::buffer< char > buffer;
+  typedef ::xsd::cxx::tree::buffer< char > Buffer;
 
   /**
    * @brief C++ type corresponding to the base64Binary XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::base64_binary< char, simple_type > base64_binary;
+  typedef ::xsd::cxx::tree::base64_binary< char, SimpleType > Base64Binary;
 
   /**
    * @brief C++ type corresponding to the hexBinary XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::hex_binary< char, simple_type > hex_binary;
+  typedef ::xsd::cxx::tree::hex_binary< char, SimpleType > HexBinary;
 
 
   // Date/time.
@@ -381,61 +381,61 @@ namespace xml_schema
   /**
    * @brief Time zone type.
    */
-  typedef ::xsd::cxx::tree::time_zone time_zone;
+  typedef ::xsd::cxx::tree::time_zone TimeZone;
 
   /**
    * @brief C++ type corresponding to the date XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::date< char, simple_type > date;
+  typedef ::xsd::cxx::tree::date< char, SimpleType > Date;
 
   /**
    * @brief C++ type corresponding to the dateTime XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::date_time< char, simple_type > date_time;
+  typedef ::xsd::cxx::tree::date_time< char, SimpleType > DateTime;
 
   /**
    * @brief C++ type corresponding to the duration XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::duration< char, simple_type > duration;
+  typedef ::xsd::cxx::tree::duration< char, SimpleType > Duration;
 
   /**
    * @brief C++ type corresponding to the gDay XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::gday< char, simple_type > gday;
+  typedef ::xsd::cxx::tree::gday< char, SimpleType > Gday;
 
   /**
    * @brief C++ type corresponding to the gMonth XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::gmonth< char, simple_type > gmonth;
+  typedef ::xsd::cxx::tree::gmonth< char, SimpleType > Gmonth;
 
   /**
    * @brief C++ type corresponding to the gMonthDay XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::gmonth_day< char, simple_type > gmonth_day;
+  typedef ::xsd::cxx::tree::gmonth_day< char, SimpleType > GmonthDay;
 
   /**
    * @brief C++ type corresponding to the gYear XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::gyear< char, simple_type > gyear;
+  typedef ::xsd::cxx::tree::gyear< char, SimpleType > Gyear;
 
   /**
    * @brief C++ type corresponding to the gYearMonth XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::gyear_month< char, simple_type > gyear_month;
+  typedef ::xsd::cxx::tree::gyear_month< char, SimpleType > GyearMonth;
 
   /**
    * @brief C++ type corresponding to the time XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::time< char, simple_type > time;
+  typedef ::xsd::cxx::tree::time< char, SimpleType > Time;
 
 
   // Entity.
@@ -445,52 +445,52 @@ namespace xml_schema
    * @brief C++ type corresponding to the ENTITY XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::entity< char, ncname > entity;
+  typedef ::xsd::cxx::tree::entity< char, Ncname > Entity;
 
   /**
    * @brief C++ type corresponding to the ENTITIES XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::entities< char, simple_type, entity > entities;
+  typedef ::xsd::cxx::tree::entities< char, SimpleType, Entity > Entities;
 
 
 
   /**
    * @brief Content order sequence entry.
    */
-  typedef ::xsd::cxx::tree::content_order content_order;
+  typedef ::xsd::cxx::tree::content_order ContentOrder;
   // Namespace information and list stream. Used in
   // serialization functions.
   //
   /**
    * @brief Namespace serialization information.
    */
-  typedef ::xsd::cxx::xml::dom::namespace_info< char > namespace_info;
+  typedef ::xsd::cxx::xml::dom::namespace_info< char > NamespaceInfo;
 
   /**
    * @brief Namespace serialization information map.
    */
-  typedef ::xsd::cxx::xml::dom::namespace_infomap< char > namespace_infomap;
+  typedef ::xsd::cxx::xml::dom::namespace_infomap< char > NamespaceInfomap;
 
   /**
    * @brief List serialization stream.
    */
-  typedef ::xsd::cxx::tree::list_stream< char > list_stream;
+  typedef ::xsd::cxx::tree::list_stream< char > ListStream;
 
   /**
    * @brief Serialization wrapper for the %double type.
    */
-  typedef ::xsd::cxx::tree::as_double< double_ > as_double;
+  typedef ::xsd::cxx::tree::as_double< Double > AsDouble;
 
   /**
    * @brief Serialization wrapper for the %decimal type.
    */
-  typedef ::xsd::cxx::tree::as_decimal< decimal > as_decimal;
+  typedef ::xsd::cxx::tree::as_decimal< Decimal > AsDecimal;
 
   /**
    * @brief Simple type facet.
    */
-  typedef ::xsd::cxx::tree::facet facet;
+  typedef ::xsd::cxx::tree::facet Facet;
 
   // Flags and properties.
   //
@@ -498,12 +498,12 @@ namespace xml_schema
   /**
    * @brief Parsing and serialization flags.
    */
-  typedef ::xsd::cxx::tree::flags flags;
+  typedef ::xsd::cxx::tree::flags Flags;
 
   /**
    * @brief Parsing properties.
    */
-  typedef ::xsd::cxx::tree::properties< char > properties;
+  typedef ::xsd::cxx::tree::properties< char > Properties;
 
   // Parsing/serialization diagnostics.
   //
@@ -511,17 +511,17 @@ namespace xml_schema
   /**
    * @brief Error severity.
    */
-  typedef ::xsd::cxx::tree::severity severity;
+  typedef ::xsd::cxx::tree::severity Severity;
 
   /**
    * @brief Error condition.
    */
-  typedef ::xsd::cxx::tree::error< char > error;
+  typedef ::xsd::cxx::tree::error< char > Error;
 
   /**
    * @brief List of %error conditions.
    */
-  typedef ::xsd::cxx::tree::diagnostics< char > diagnostics;
+  typedef ::xsd::cxx::tree::diagnostics< char > Diagnostics;
 
   // Exceptions.
   //
@@ -529,70 +529,70 @@ namespace xml_schema
   /**
    * @brief Root of the C++/Tree %exception hierarchy.
    */
-  typedef ::xsd::cxx::tree::exception< char > exception;
+  typedef ::xsd::cxx::tree::exception< char > Exception;
 
   /**
    * @brief Exception indicating that the size argument exceeds
    * the capacity argument.
    */
-  typedef ::xsd::cxx::tree::bounds< char > bounds;
+  typedef ::xsd::cxx::tree::bounds< char > Bounds;
 
   /**
    * @brief Exception indicating that a duplicate ID value
    * was encountered in the object model.
    */
-  typedef ::xsd::cxx::tree::duplicate_id< char > duplicate_id;
+  typedef ::xsd::cxx::tree::duplicate_id< char > DuplicateId;
 
   /**
    * @brief Exception indicating a parsing failure.
    */
-  typedef ::xsd::cxx::tree::parsing< char > parsing;
+  typedef ::xsd::cxx::tree::parsing< char > Parsing;
 
   /**
    * @brief Exception indicating that an expected element
    * was not encountered.
    */
-  typedef ::xsd::cxx::tree::expected_element< char > expected_element;
+  typedef ::xsd::cxx::tree::expected_element< char > ExpectedElement;
 
   /**
    * @brief Exception indicating that an unexpected element
    * was encountered.
    */
-  typedef ::xsd::cxx::tree::unexpected_element< char > unexpected_element;
+  typedef ::xsd::cxx::tree::unexpected_element< char > UnexpectedElement;
 
   /**
    * @brief Exception indicating that an expected attribute
    * was not encountered.
    */
-  typedef ::xsd::cxx::tree::expected_attribute< char > expected_attribute;
+  typedef ::xsd::cxx::tree::expected_attribute< char > ExpectedAttribute;
 
   /**
    * @brief Exception indicating that an unexpected enumerator
    * was encountered.
    */
-  typedef ::xsd::cxx::tree::unexpected_enumerator< char > unexpected_enumerator;
+  typedef ::xsd::cxx::tree::unexpected_enumerator< char > UnexpectedEnumerator;
 
   /**
    * @brief Exception indicating that the text content was
    * expected for an element.
    */
-  typedef ::xsd::cxx::tree::expected_text_content< char > expected_text_content;
+  typedef ::xsd::cxx::tree::expected_text_content< char > ExpectedTextContent;
 
   /**
    * @brief Exception indicating that a prefix-namespace
    * mapping was not provided.
    */
-  typedef ::xsd::cxx::tree::no_prefix_mapping< char > no_prefix_mapping;
+  typedef ::xsd::cxx::tree::no_prefix_mapping< char > NoPrefixMapping;
 
   /**
    * @brief Exception indicating a serialization failure.
    */
-  typedef ::xsd::cxx::tree::serialization< char > serialization;
+  typedef ::xsd::cxx::tree::serialization< char > Serialization;
 
   /**
    * @brief Error handler callback interface.
    */
-  typedef ::xsd::cxx::xml::error_handler< char > error_handler;
+  typedef ::xsd::cxx::xml::error_handler< char > ErrorHandler;
 
   /**
    * @brief DOM interaction.
@@ -609,7 +609,7 @@ namespace xml_schema
     /**
      * @brief DOM user data key for back pointers to tree nodes.
      */
-    const XMLCh* const tree_node_key = ::xsd::cxx::tree::user_data_keys::node;
+    const XMLCh* const treeNodeKey = ::xsd::cxx::tree::user_data_keys::node;
 #endif
   }
 }
@@ -618,24 +618,24 @@ namespace xml_schema
 //
 namespace cellml12
 {
-  class model;
-  class import;
-  class units;
-  class unit;
-  class component;
-  class encapsulation;
-  class toplevelComponentRef;
-  class componentRef;
-  class connection;
-  class importedUnits;
-  class importedComponent;
-  class variable;
-  class mapVariables;
-  class cellMLIdentifier;
-  class unitPrefix;
-  class yesno;
-  class unitPrefix_member;
-  class unitPrefix_member1;
+  class Model;
+  class Import;
+  class Units;
+  class Unit;
+  class Component;
+  class Encapsulation;
+  class ToplevelComponentRef;
+  class ComponentRef;
+  class Connection;
+  class ImportedUnits;
+  class ImportedComponent;
+  class Variable;
+  class MapVariables;
+  class CellMLIdentifier;
+  class UnitPrefix;
+  class Yesno;
+  class UnitPrefix_member;
+  class UnitPrefix_member1;
 }
 
 
@@ -664,7 +664,7 @@ namespace cellml12
    *
    * @nosubgrouping
    */
-  class model: public ::xml_schema::type
+  class Model: public ::xml_schema::Type
   {
     public:
     /**
@@ -678,27 +678,27 @@ namespace cellml12
     /**
      * @brief Element type.
      */
-    typedef ::cellml12::import import_type;
+    typedef ::cellml12::Import ImportType;
 
     /**
      * @brief Element sequence container type.
      */
-    typedef ::xsd::cxx::tree::sequence< import_type > import_sequence;
+    typedef ::xsd::cxx::tree::sequence< ImportType > ImportSequence;
 
     /**
      * @brief Element iterator type.
      */
-    typedef import_sequence::iterator import_iterator;
+    typedef ImportSequence::iterator ImportIterator;
 
     /**
      * @brief Element constant iterator type.
      */
-    typedef import_sequence::const_iterator import_const_iterator;
+    typedef ImportSequence::const_iterator ImportConstIterator;
 
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< import_type, char > import_traits;
+    typedef ::xsd::cxx::tree::traits< ImportType, char > ImportTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -706,16 +706,16 @@ namespace cellml12
      *
      * @return A constant reference to the sequence container.
      */
-    const import_sequence&
-    import () const;
+    const ImportSequence&
+    getImport () const;
 
     /**
      * @brief Return a read-write reference to the element sequence.
      *
      * @return A reference to the sequence container.
      */
-    import_sequence&
-    import ();
+    ImportSequence&
+    getImport ();
 
     /**
      * @brief Copy elements from a given sequence.
@@ -727,7 +727,7 @@ namespace cellml12
      * sequence and all old elements will be lost.
      */
     void
-    import (const import_sequence& s);
+    setImport (const ImportSequence& s);
 
     //@}
 
@@ -742,27 +742,27 @@ namespace cellml12
     /**
      * @brief Element type.
      */
-    typedef ::cellml12::units units_type;
+    typedef ::cellml12::Units UnitsType;
 
     /**
      * @brief Element sequence container type.
      */
-    typedef ::xsd::cxx::tree::sequence< units_type > units_sequence;
+    typedef ::xsd::cxx::tree::sequence< UnitsType > UnitsSequence;
 
     /**
      * @brief Element iterator type.
      */
-    typedef units_sequence::iterator units_iterator;
+    typedef UnitsSequence::iterator UnitsIterator;
 
     /**
      * @brief Element constant iterator type.
      */
-    typedef units_sequence::const_iterator units_const_iterator;
+    typedef UnitsSequence::const_iterator UnitsConstIterator;
 
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< units_type, char > units_traits;
+    typedef ::xsd::cxx::tree::traits< UnitsType, char > UnitsTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -770,16 +770,16 @@ namespace cellml12
      *
      * @return A constant reference to the sequence container.
      */
-    const units_sequence&
-    units () const;
+    const UnitsSequence&
+    getUnits () const;
 
     /**
      * @brief Return a read-write reference to the element sequence.
      *
      * @return A reference to the sequence container.
      */
-    units_sequence&
-    units ();
+    UnitsSequence&
+    getUnits ();
 
     /**
      * @brief Copy elements from a given sequence.
@@ -791,7 +791,7 @@ namespace cellml12
      * sequence and all old elements will be lost.
      */
     void
-    units (const units_sequence& s);
+    setUnits (const UnitsSequence& s);
 
     //@}
 
@@ -806,27 +806,27 @@ namespace cellml12
     /**
      * @brief Element type.
      */
-    typedef ::cellml12::component component_type;
+    typedef ::cellml12::Component ComponentType;
 
     /**
      * @brief Element sequence container type.
      */
-    typedef ::xsd::cxx::tree::sequence< component_type > component_sequence;
+    typedef ::xsd::cxx::tree::sequence< ComponentType > ComponentSequence;
 
     /**
      * @brief Element iterator type.
      */
-    typedef component_sequence::iterator component_iterator;
+    typedef ComponentSequence::iterator ComponentIterator;
 
     /**
      * @brief Element constant iterator type.
      */
-    typedef component_sequence::const_iterator component_const_iterator;
+    typedef ComponentSequence::const_iterator ComponentConstIterator;
 
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< component_type, char > component_traits;
+    typedef ::xsd::cxx::tree::traits< ComponentType, char > ComponentTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -834,16 +834,16 @@ namespace cellml12
      *
      * @return A constant reference to the sequence container.
      */
-    const component_sequence&
-    component () const;
+    const ComponentSequence&
+    getComponent () const;
 
     /**
      * @brief Return a read-write reference to the element sequence.
      *
      * @return A reference to the sequence container.
      */
-    component_sequence&
-    component ();
+    ComponentSequence&
+    getComponent ();
 
     /**
      * @brief Copy elements from a given sequence.
@@ -855,7 +855,7 @@ namespace cellml12
      * sequence and all old elements will be lost.
      */
     void
-    component (const component_sequence& s);
+    setComponent (const ComponentSequence& s);
 
     //@}
 
@@ -870,27 +870,27 @@ namespace cellml12
     /**
      * @brief Element type.
      */
-    typedef ::cellml12::encapsulation encapsulation_type;
+    typedef ::cellml12::Encapsulation EncapsulationType;
 
     /**
      * @brief Element sequence container type.
      */
-    typedef ::xsd::cxx::tree::sequence< encapsulation_type > encapsulation_sequence;
+    typedef ::xsd::cxx::tree::sequence< EncapsulationType > EncapsulationSequence;
 
     /**
      * @brief Element iterator type.
      */
-    typedef encapsulation_sequence::iterator encapsulation_iterator;
+    typedef EncapsulationSequence::iterator EncapsulationIterator;
 
     /**
      * @brief Element constant iterator type.
      */
-    typedef encapsulation_sequence::const_iterator encapsulation_const_iterator;
+    typedef EncapsulationSequence::const_iterator EncapsulationConstIterator;
 
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< encapsulation_type, char > encapsulation_traits;
+    typedef ::xsd::cxx::tree::traits< EncapsulationType, char > EncapsulationTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -898,16 +898,16 @@ namespace cellml12
      *
      * @return A constant reference to the sequence container.
      */
-    const encapsulation_sequence&
-    encapsulation () const;
+    const EncapsulationSequence&
+    getEncapsulation () const;
 
     /**
      * @brief Return a read-write reference to the element sequence.
      *
      * @return A reference to the sequence container.
      */
-    encapsulation_sequence&
-    encapsulation ();
+    EncapsulationSequence&
+    getEncapsulation ();
 
     /**
      * @brief Copy elements from a given sequence.
@@ -919,7 +919,7 @@ namespace cellml12
      * sequence and all old elements will be lost.
      */
     void
-    encapsulation (const encapsulation_sequence& s);
+    setEncapsulation (const EncapsulationSequence& s);
 
     //@}
 
@@ -934,27 +934,27 @@ namespace cellml12
     /**
      * @brief Element type.
      */
-    typedef ::cellml12::connection connection_type;
+    typedef ::cellml12::Connection ConnectionType;
 
     /**
      * @brief Element sequence container type.
      */
-    typedef ::xsd::cxx::tree::sequence< connection_type > connection_sequence;
+    typedef ::xsd::cxx::tree::sequence< ConnectionType > ConnectionSequence;
 
     /**
      * @brief Element iterator type.
      */
-    typedef connection_sequence::iterator connection_iterator;
+    typedef ConnectionSequence::iterator ConnectionIterator;
 
     /**
      * @brief Element constant iterator type.
      */
-    typedef connection_sequence::const_iterator connection_const_iterator;
+    typedef ConnectionSequence::const_iterator ConnectionConstIterator;
 
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< connection_type, char > connection_traits;
+    typedef ::xsd::cxx::tree::traits< ConnectionType, char > ConnectionTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -962,16 +962,16 @@ namespace cellml12
      *
      * @return A constant reference to the sequence container.
      */
-    const connection_sequence&
-    connection () const;
+    const ConnectionSequence&
+    getConnection () const;
 
     /**
      * @brief Return a read-write reference to the element sequence.
      *
      * @return A reference to the sequence container.
      */
-    connection_sequence&
-    connection ();
+    ConnectionSequence&
+    getConnection ();
 
     /**
      * @brief Copy elements from a given sequence.
@@ -983,7 +983,7 @@ namespace cellml12
      * sequence and all old elements will be lost.
      */
     void
-    connection (const connection_sequence& s);
+    setConnection (const ConnectionSequence& s);
 
     //@}
 
@@ -998,28 +998,28 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::cellMLIdentifier name_type;
+    typedef ::cellml12::CellMLIdentifier NameType;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< name_type, char > name_traits;
+    typedef ::xsd::cxx::tree::traits< NameType, char > NameTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
      *
      * @return A constant reference to the attribute.
      */
-    const name_type&
-    name () const;
+    const NameType&
+    getName () const;
 
     /**
      * @brief Return a read-write reference to the attribute.
      *
      * @return A reference to the attribute.
      */
-    name_type&
-    name ();
+    NameType&
+    getName ();
 
     /**
      * @brief Set the attribute value.
@@ -1030,7 +1030,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    name (const name_type& x);
+    setName (const NameType& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -1041,7 +1041,7 @@ namespace cellml12
      * instead of making a copy.
      */
     void
-    name (::std::unique_ptr< name_type > p);
+    setName (::std::unique_ptr< NameType > p);
 
     //@}
 
@@ -1054,7 +1054,7 @@ namespace cellml12
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    model (const name_type&);
+    Model (const NameType&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -1064,9 +1064,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    model (const ::xercesc::DOMElement& e,
-           ::xml_schema::flags f = 0,
-           ::xml_schema::container* c = 0);
+    Model (const ::xercesc::DOMElement& e,
+           ::xml_schema::Flags f = 0,
+           ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -1077,9 +1077,9 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    model (const model& x,
-           ::xml_schema::flags f = 0,
-           ::xml_schema::container* c = 0);
+    Model (const Model& x,
+           ::xml_schema::Flags f = 0,
+           ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -1092,9 +1092,9 @@ namespace cellml12
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual model*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
+    virtual Model*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
 
     /**
      * @brief Copy assignment operator.
@@ -1104,8 +1104,8 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    model&
-    operator= (const model& x);
+    Model&
+    operator= (const Model& x);
 
     //@}
 
@@ -1113,7 +1113,7 @@ namespace cellml12
      * @brief Destructor.
      */
     virtual 
-    ~model ();
+    ~Model ();
 
     // Implementation.
     //
@@ -1123,15 +1123,15 @@ namespace cellml12
     protected:
     void
     parse (::xsd::cxx::xml::dom::parser< char >&,
-           ::xml_schema::flags);
+           ::xml_schema::Flags);
 
     protected:
-    import_sequence import_;
-    units_sequence units_;
-    component_sequence component_;
-    encapsulation_sequence encapsulation_;
-    connection_sequence connection_;
-    ::xsd::cxx::tree::one< name_type > name_;
+    ImportSequence import_;
+    UnitsSequence units_;
+    ComponentSequence component_;
+    EncapsulationSequence encapsulation_;
+    ConnectionSequence connection_;
+    ::xsd::cxx::tree::one< NameType > name_;
 
     //@endcond
   };
@@ -1141,7 +1141,7 @@ namespace cellml12
    *
    * @nosubgrouping
    */
-  class import: public ::xml_schema::type
+  class Import: public ::xml_schema::Type
   {
     public:
     /**
@@ -1155,27 +1155,27 @@ namespace cellml12
     /**
      * @brief Element type.
      */
-    typedef ::cellml12::importedUnits units_type;
+    typedef ::cellml12::ImportedUnits UnitsType;
 
     /**
      * @brief Element sequence container type.
      */
-    typedef ::xsd::cxx::tree::sequence< units_type > units_sequence;
+    typedef ::xsd::cxx::tree::sequence< UnitsType > UnitsSequence;
 
     /**
      * @brief Element iterator type.
      */
-    typedef units_sequence::iterator units_iterator;
+    typedef UnitsSequence::iterator UnitsIterator;
 
     /**
      * @brief Element constant iterator type.
      */
-    typedef units_sequence::const_iterator units_const_iterator;
+    typedef UnitsSequence::const_iterator UnitsConstIterator;
 
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< units_type, char > units_traits;
+    typedef ::xsd::cxx::tree::traits< UnitsType, char > UnitsTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -1183,16 +1183,16 @@ namespace cellml12
      *
      * @return A constant reference to the sequence container.
      */
-    const units_sequence&
-    units () const;
+    const UnitsSequence&
+    getUnits () const;
 
     /**
      * @brief Return a read-write reference to the element sequence.
      *
      * @return A reference to the sequence container.
      */
-    units_sequence&
-    units ();
+    UnitsSequence&
+    getUnits ();
 
     /**
      * @brief Copy elements from a given sequence.
@@ -1204,7 +1204,7 @@ namespace cellml12
      * sequence and all old elements will be lost.
      */
     void
-    units (const units_sequence& s);
+    setUnits (const UnitsSequence& s);
 
     //@}
 
@@ -1219,27 +1219,27 @@ namespace cellml12
     /**
      * @brief Element type.
      */
-    typedef ::cellml12::importedComponent component_type;
+    typedef ::cellml12::ImportedComponent ComponentType;
 
     /**
      * @brief Element sequence container type.
      */
-    typedef ::xsd::cxx::tree::sequence< component_type > component_sequence;
+    typedef ::xsd::cxx::tree::sequence< ComponentType > ComponentSequence;
 
     /**
      * @brief Element iterator type.
      */
-    typedef component_sequence::iterator component_iterator;
+    typedef ComponentSequence::iterator ComponentIterator;
 
     /**
      * @brief Element constant iterator type.
      */
-    typedef component_sequence::const_iterator component_const_iterator;
+    typedef ComponentSequence::const_iterator ComponentConstIterator;
 
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< component_type, char > component_traits;
+    typedef ::xsd::cxx::tree::traits< ComponentType, char > ComponentTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -1247,16 +1247,16 @@ namespace cellml12
      *
      * @return A constant reference to the sequence container.
      */
-    const component_sequence&
-    component () const;
+    const ComponentSequence&
+    getComponent () const;
 
     /**
      * @brief Return a read-write reference to the element sequence.
      *
      * @return A reference to the sequence container.
      */
-    component_sequence&
-    component ();
+    ComponentSequence&
+    getComponent ();
 
     /**
      * @brief Copy elements from a given sequence.
@@ -1268,7 +1268,7 @@ namespace cellml12
      * sequence and all old elements will be lost.
      */
     void
-    component (const component_sequence& s);
+    setComponent (const ComponentSequence& s);
 
     //@}
 
@@ -1283,28 +1283,28 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::xml_schema::simple_type href_type;
+    typedef ::xml_schema::SimpleType HrefType;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< href_type, char > href_traits;
+    typedef ::xsd::cxx::tree::traits< HrefType, char > HrefTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
      *
      * @return A constant reference to the attribute.
      */
-    const href_type&
-    href () const;
+    const HrefType&
+    getHref () const;
 
     /**
      * @brief Return a read-write reference to the attribute.
      *
      * @return A reference to the attribute.
      */
-    href_type&
-    href ();
+    HrefType&
+    getHref ();
 
     /**
      * @brief Set the attribute value.
@@ -1315,7 +1315,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    href (const href_type& x);
+    setHref (const HrefType& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -1326,7 +1326,7 @@ namespace cellml12
      * instead of making a copy.
      */
     void
-    href (::std::unique_ptr< href_type > p);
+    setHref (::std::unique_ptr< HrefType > p);
 
     //@}
 
@@ -1339,7 +1339,7 @@ namespace cellml12
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    import (const href_type&);
+    Import (const HrefType&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -1349,9 +1349,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    import (const ::xercesc::DOMElement& e,
-            ::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0);
+    Import (const ::xercesc::DOMElement& e,
+            ::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -1362,9 +1362,9 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    import (const import& x,
-            ::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0);
+    Import (const Import& x,
+            ::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -1377,9 +1377,9 @@ namespace cellml12
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual import*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
+    virtual Import*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
 
     /**
      * @brief Copy assignment operator.
@@ -1389,8 +1389,8 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    import&
-    operator= (const import& x);
+    Import&
+    operator= (const Import& x);
 
     //@}
 
@@ -1398,7 +1398,7 @@ namespace cellml12
      * @brief Destructor.
      */
     virtual 
-    ~import ();
+    ~Import ();
 
     // Implementation.
     //
@@ -1408,12 +1408,12 @@ namespace cellml12
     protected:
     void
     parse (::xsd::cxx::xml::dom::parser< char >&,
-           ::xml_schema::flags);
+           ::xml_schema::Flags);
 
     protected:
-    units_sequence units_;
-    component_sequence component_;
-    ::xsd::cxx::tree::one< href_type > href_;
+    UnitsSequence units_;
+    ComponentSequence component_;
+    ::xsd::cxx::tree::one< HrefType > href_;
 
     //@endcond
   };
@@ -1423,7 +1423,7 @@ namespace cellml12
    *
    * @nosubgrouping
    */
-  class units: public ::xml_schema::type
+  class Units: public ::xml_schema::Type
   {
     public:
     /**
@@ -1437,27 +1437,27 @@ namespace cellml12
     /**
      * @brief Element type.
      */
-    typedef ::cellml12::unit unit_type;
+    typedef ::cellml12::Unit UnitType;
 
     /**
      * @brief Element sequence container type.
      */
-    typedef ::xsd::cxx::tree::sequence< unit_type > unit_sequence;
+    typedef ::xsd::cxx::tree::sequence< UnitType > UnitSequence;
 
     /**
      * @brief Element iterator type.
      */
-    typedef unit_sequence::iterator unit_iterator;
+    typedef UnitSequence::iterator UnitIterator;
 
     /**
      * @brief Element constant iterator type.
      */
-    typedef unit_sequence::const_iterator unit_const_iterator;
+    typedef UnitSequence::const_iterator UnitConstIterator;
 
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< unit_type, char > unit_traits;
+    typedef ::xsd::cxx::tree::traits< UnitType, char > UnitTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -1465,16 +1465,16 @@ namespace cellml12
      *
      * @return A constant reference to the sequence container.
      */
-    const unit_sequence&
-    unit () const;
+    const UnitSequence&
+    getUnit () const;
 
     /**
      * @brief Return a read-write reference to the element sequence.
      *
      * @return A reference to the sequence container.
      */
-    unit_sequence&
-    unit ();
+    UnitSequence&
+    getUnit ();
 
     /**
      * @brief Copy elements from a given sequence.
@@ -1486,7 +1486,7 @@ namespace cellml12
      * sequence and all old elements will be lost.
      */
     void
-    unit (const unit_sequence& s);
+    setUnit (const UnitSequence& s);
 
     //@}
 
@@ -1501,28 +1501,28 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::cellMLIdentifier name_type;
+    typedef ::cellml12::CellMLIdentifier NameType;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< name_type, char > name_traits;
+    typedef ::xsd::cxx::tree::traits< NameType, char > NameTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
      *
      * @return A constant reference to the attribute.
      */
-    const name_type&
-    name () const;
+    const NameType&
+    getName () const;
 
     /**
      * @brief Return a read-write reference to the attribute.
      *
      * @return A reference to the attribute.
      */
-    name_type&
-    name ();
+    NameType&
+    getName ();
 
     /**
      * @brief Set the attribute value.
@@ -1533,7 +1533,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    name (const name_type& x);
+    setName (const NameType& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -1544,7 +1544,7 @@ namespace cellml12
      * instead of making a copy.
      */
     void
-    name (::std::unique_ptr< name_type > p);
+    setName (::std::unique_ptr< NameType > p);
 
     //@}
 
@@ -1559,17 +1559,17 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::yesno base_units_type;
+    typedef ::cellml12::Yesno Base_unitsType;
 
     /**
      * @brief Attribute optional container type.
      */
-    typedef ::xsd::cxx::tree::optional< base_units_type > base_units_optional;
+    typedef ::xsd::cxx::tree::optional< Base_unitsType > Base_unitsOptional;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< base_units_type, char > base_units_traits;
+    typedef ::xsd::cxx::tree::traits< Base_unitsType, char > Base_unitsTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute
@@ -1577,16 +1577,16 @@ namespace cellml12
      *
      * @return A constant reference to the optional container.
      */
-    const base_units_optional&
-    base_units () const;
+    const Base_unitsOptional&
+    getBase_units () const;
 
     /**
      * @brief Return a read-write reference to the attribute container.
      *
      * @return A reference to the optional container.
      */
-    base_units_optional&
-    base_units ();
+    Base_unitsOptional&
+    getBase_units ();
 
     /**
      * @brief Set the attribute value.
@@ -1597,7 +1597,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    base_units (const base_units_type& x);
+    setBase_units (const Base_unitsType& x);
 
     /**
      * @brief Set the attribute value.
@@ -1609,7 +1609,7 @@ namespace cellml12
      * Otherwise the attribute container is set the 'not present' state.
      */
     void
-    base_units (const base_units_optional& x);
+    setBase_units (const Base_unitsOptional& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -1620,7 +1620,7 @@ namespace cellml12
      * of making a copy.
      */
     void
-    base_units (::std::unique_ptr< base_units_type > p);
+    setBase_units (::std::unique_ptr< Base_unitsType > p);
 
     //@}
 
@@ -1633,7 +1633,7 @@ namespace cellml12
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    units (const name_type&);
+    Units (const NameType&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -1643,9 +1643,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    units (const ::xercesc::DOMElement& e,
-           ::xml_schema::flags f = 0,
-           ::xml_schema::container* c = 0);
+    Units (const ::xercesc::DOMElement& e,
+           ::xml_schema::Flags f = 0,
+           ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -1656,9 +1656,9 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    units (const units& x,
-           ::xml_schema::flags f = 0,
-           ::xml_schema::container* c = 0);
+    Units (const Units& x,
+           ::xml_schema::Flags f = 0,
+           ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -1671,9 +1671,9 @@ namespace cellml12
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual units*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
+    virtual Units*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
 
     /**
      * @brief Copy assignment operator.
@@ -1683,8 +1683,8 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    units&
-    operator= (const units& x);
+    Units&
+    operator= (const Units& x);
 
     //@}
 
@@ -1692,7 +1692,7 @@ namespace cellml12
      * @brief Destructor.
      */
     virtual 
-    ~units ();
+    ~Units ();
 
     // Implementation.
     //
@@ -1702,12 +1702,12 @@ namespace cellml12
     protected:
     void
     parse (::xsd::cxx::xml::dom::parser< char >&,
-           ::xml_schema::flags);
+           ::xml_schema::Flags);
 
     protected:
-    unit_sequence unit_;
-    ::xsd::cxx::tree::one< name_type > name_;
-    base_units_optional base_units_;
+    UnitSequence unit_;
+    ::xsd::cxx::tree::one< NameType > name_;
+    Base_unitsOptional base_units_;
 
     //@endcond
   };
@@ -1717,7 +1717,7 @@ namespace cellml12
    *
    * @nosubgrouping
    */
-  class unit: public ::xml_schema::type
+  class Unit: public ::xml_schema::Type
   {
     public:
     /**
@@ -1731,28 +1731,28 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::cellMLIdentifier units_type;
+    typedef ::cellml12::CellMLIdentifier UnitsType;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< units_type, char > units_traits;
+    typedef ::xsd::cxx::tree::traits< UnitsType, char > UnitsTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
      *
      * @return A constant reference to the attribute.
      */
-    const units_type&
-    units () const;
+    const UnitsType&
+    getUnits () const;
 
     /**
      * @brief Return a read-write reference to the attribute.
      *
      * @return A reference to the attribute.
      */
-    units_type&
-    units ();
+    UnitsType&
+    getUnits ();
 
     /**
      * @brief Set the attribute value.
@@ -1763,7 +1763,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    units (const units_type& x);
+    setUnits (const UnitsType& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -1774,7 +1774,7 @@ namespace cellml12
      * instead of making a copy.
      */
     void
-    units (::std::unique_ptr< units_type > p);
+    setUnits (::std::unique_ptr< UnitsType > p);
 
     //@}
 
@@ -1789,17 +1789,17 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::xml_schema::double_ multiplier_type;
+    typedef ::xml_schema::Double MultiplierType;
 
     /**
      * @brief Attribute optional container type.
      */
-    typedef ::xsd::cxx::tree::optional< multiplier_type > multiplier_optional;
+    typedef ::xsd::cxx::tree::optional< MultiplierType > MultiplierOptional;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< multiplier_type, char, ::xsd::cxx::tree::schema_type::double_ > multiplier_traits;
+    typedef ::xsd::cxx::tree::traits< MultiplierType, char, ::xsd::cxx::tree::schema_type::double_ > MultiplierTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute
@@ -1807,16 +1807,16 @@ namespace cellml12
      *
      * @return A constant reference to the optional container.
      */
-    const multiplier_optional&
-    multiplier () const;
+    const MultiplierOptional&
+    getMultiplier () const;
 
     /**
      * @brief Return a read-write reference to the attribute container.
      *
      * @return A reference to the optional container.
      */
-    multiplier_optional&
-    multiplier ();
+    MultiplierOptional&
+    getMultiplier ();
 
     /**
      * @brief Set the attribute value.
@@ -1827,7 +1827,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    multiplier (const multiplier_type& x);
+    setMultiplier (const MultiplierType& x);
 
     /**
      * @brief Set the attribute value.
@@ -1839,7 +1839,7 @@ namespace cellml12
      * Otherwise the attribute container is set the 'not present' state.
      */
     void
-    multiplier (const multiplier_optional& x);
+    setMultiplier (const MultiplierOptional& x);
 
     //@}
 
@@ -1854,17 +1854,17 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::unitPrefix prefix_type;
+    typedef ::cellml12::UnitPrefix PrefixType;
 
     /**
      * @brief Attribute optional container type.
      */
-    typedef ::xsd::cxx::tree::optional< prefix_type > prefix_optional;
+    typedef ::xsd::cxx::tree::optional< PrefixType > PrefixOptional;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< prefix_type, char > prefix_traits;
+    typedef ::xsd::cxx::tree::traits< PrefixType, char > PrefixTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute
@@ -1872,16 +1872,16 @@ namespace cellml12
      *
      * @return A constant reference to the optional container.
      */
-    const prefix_optional&
-    prefix () const;
+    const PrefixOptional&
+    getPrefix () const;
 
     /**
      * @brief Return a read-write reference to the attribute container.
      *
      * @return A reference to the optional container.
      */
-    prefix_optional&
-    prefix ();
+    PrefixOptional&
+    getPrefix ();
 
     /**
      * @brief Set the attribute value.
@@ -1892,7 +1892,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    prefix (const prefix_type& x);
+    setPrefix (const PrefixType& x);
 
     /**
      * @brief Set the attribute value.
@@ -1904,7 +1904,7 @@ namespace cellml12
      * Otherwise the attribute container is set the 'not present' state.
      */
     void
-    prefix (const prefix_optional& x);
+    setPrefix (const PrefixOptional& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -1915,7 +1915,7 @@ namespace cellml12
      * of making a copy.
      */
     void
-    prefix (::std::unique_ptr< prefix_type > p);
+    setPrefix (::std::unique_ptr< PrefixType > p);
 
     //@}
 
@@ -1930,17 +1930,17 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::xml_schema::double_ offset_type;
+    typedef ::xml_schema::Double OffsetType;
 
     /**
      * @brief Attribute optional container type.
      */
-    typedef ::xsd::cxx::tree::optional< offset_type > offset_optional;
+    typedef ::xsd::cxx::tree::optional< OffsetType > OffsetOptional;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< offset_type, char, ::xsd::cxx::tree::schema_type::double_ > offset_traits;
+    typedef ::xsd::cxx::tree::traits< OffsetType, char, ::xsd::cxx::tree::schema_type::double_ > OffsetTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute
@@ -1948,16 +1948,16 @@ namespace cellml12
      *
      * @return A constant reference to the optional container.
      */
-    const offset_optional&
-    offset () const;
+    const OffsetOptional&
+    getOffset () const;
 
     /**
      * @brief Return a read-write reference to the attribute container.
      *
      * @return A reference to the optional container.
      */
-    offset_optional&
-    offset ();
+    OffsetOptional&
+    getOffset ();
 
     /**
      * @brief Set the attribute value.
@@ -1968,7 +1968,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    offset (const offset_type& x);
+    setOffset (const OffsetType& x);
 
     /**
      * @brief Set the attribute value.
@@ -1980,7 +1980,7 @@ namespace cellml12
      * Otherwise the attribute container is set the 'not present' state.
      */
     void
-    offset (const offset_optional& x);
+    setOffset (const OffsetOptional& x);
 
     //@}
 
@@ -1995,17 +1995,17 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::xml_schema::double_ exponent_type;
+    typedef ::xml_schema::Double ExponentType;
 
     /**
      * @brief Attribute optional container type.
      */
-    typedef ::xsd::cxx::tree::optional< exponent_type > exponent_optional;
+    typedef ::xsd::cxx::tree::optional< ExponentType > ExponentOptional;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< exponent_type, char, ::xsd::cxx::tree::schema_type::double_ > exponent_traits;
+    typedef ::xsd::cxx::tree::traits< ExponentType, char, ::xsd::cxx::tree::schema_type::double_ > ExponentTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute
@@ -2013,16 +2013,16 @@ namespace cellml12
      *
      * @return A constant reference to the optional container.
      */
-    const exponent_optional&
-    exponent () const;
+    const ExponentOptional&
+    getExponent () const;
 
     /**
      * @brief Return a read-write reference to the attribute container.
      *
      * @return A reference to the optional container.
      */
-    exponent_optional&
-    exponent ();
+    ExponentOptional&
+    getExponent ();
 
     /**
      * @brief Set the attribute value.
@@ -2033,7 +2033,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    exponent (const exponent_type& x);
+    setExponent (const ExponentType& x);
 
     /**
      * @brief Set the attribute value.
@@ -2045,7 +2045,7 @@ namespace cellml12
      * Otherwise the attribute container is set the 'not present' state.
      */
     void
-    exponent (const exponent_optional& x);
+    setExponent (const ExponentOptional& x);
 
     //@}
 
@@ -2058,7 +2058,7 @@ namespace cellml12
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    unit (const units_type&);
+    Unit (const UnitsType&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -2068,9 +2068,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    unit (const ::xercesc::DOMElement& e,
-          ::xml_schema::flags f = 0,
-          ::xml_schema::container* c = 0);
+    Unit (const ::xercesc::DOMElement& e,
+          ::xml_schema::Flags f = 0,
+          ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -2081,9 +2081,9 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    unit (const unit& x,
-          ::xml_schema::flags f = 0,
-          ::xml_schema::container* c = 0);
+    Unit (const Unit& x,
+          ::xml_schema::Flags f = 0,
+          ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -2096,9 +2096,9 @@ namespace cellml12
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual unit*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
+    virtual Unit*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
 
     /**
      * @brief Copy assignment operator.
@@ -2108,8 +2108,8 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    unit&
-    operator= (const unit& x);
+    Unit&
+    operator= (const Unit& x);
 
     //@}
 
@@ -2117,7 +2117,7 @@ namespace cellml12
      * @brief Destructor.
      */
     virtual 
-    ~unit ();
+    ~Unit ();
 
     // Implementation.
     //
@@ -2127,14 +2127,14 @@ namespace cellml12
     protected:
     void
     parse (::xsd::cxx::xml::dom::parser< char >&,
-           ::xml_schema::flags);
+           ::xml_schema::Flags);
 
     protected:
-    ::xsd::cxx::tree::one< units_type > units_;
-    multiplier_optional multiplier_;
-    prefix_optional prefix_;
-    offset_optional offset_;
-    exponent_optional exponent_;
+    ::xsd::cxx::tree::one< UnitsType > units_;
+    MultiplierOptional multiplier_;
+    PrefixOptional prefix_;
+    OffsetOptional offset_;
+    ExponentOptional exponent_;
 
     //@endcond
   };
@@ -2144,7 +2144,7 @@ namespace cellml12
    *
    * @nosubgrouping
    */
-  class component: public ::xml_schema::type
+  class Component: public ::xml_schema::Type
   {
     public:
     /**
@@ -2158,27 +2158,27 @@ namespace cellml12
     /**
      * @brief Element type.
      */
-    typedef ::cellml12::units units_type;
+    typedef ::cellml12::Units UnitsType;
 
     /**
      * @brief Element sequence container type.
      */
-    typedef ::xsd::cxx::tree::sequence< units_type > units_sequence;
+    typedef ::xsd::cxx::tree::sequence< UnitsType > UnitsSequence;
 
     /**
      * @brief Element iterator type.
      */
-    typedef units_sequence::iterator units_iterator;
+    typedef UnitsSequence::iterator UnitsIterator;
 
     /**
      * @brief Element constant iterator type.
      */
-    typedef units_sequence::const_iterator units_const_iterator;
+    typedef UnitsSequence::const_iterator UnitsConstIterator;
 
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< units_type, char > units_traits;
+    typedef ::xsd::cxx::tree::traits< UnitsType, char > UnitsTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -2186,16 +2186,16 @@ namespace cellml12
      *
      * @return A constant reference to the sequence container.
      */
-    const units_sequence&
-    units () const;
+    const UnitsSequence&
+    getUnits () const;
 
     /**
      * @brief Return a read-write reference to the element sequence.
      *
      * @return A reference to the sequence container.
      */
-    units_sequence&
-    units ();
+    UnitsSequence&
+    getUnits ();
 
     /**
      * @brief Copy elements from a given sequence.
@@ -2207,7 +2207,7 @@ namespace cellml12
      * sequence and all old elements will be lost.
      */
     void
-    units (const units_sequence& s);
+    setUnits (const UnitsSequence& s);
 
     //@}
 
@@ -2222,27 +2222,27 @@ namespace cellml12
     /**
      * @brief Element type.
      */
-    typedef ::cellml12::variable variable_type;
+    typedef ::cellml12::Variable VariableType;
 
     /**
      * @brief Element sequence container type.
      */
-    typedef ::xsd::cxx::tree::sequence< variable_type > variable_sequence;
+    typedef ::xsd::cxx::tree::sequence< VariableType > VariableSequence;
 
     /**
      * @brief Element iterator type.
      */
-    typedef variable_sequence::iterator variable_iterator;
+    typedef VariableSequence::iterator VariableIterator;
 
     /**
      * @brief Element constant iterator type.
      */
-    typedef variable_sequence::const_iterator variable_const_iterator;
+    typedef VariableSequence::const_iterator VariableConstIterator;
 
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< variable_type, char > variable_traits;
+    typedef ::xsd::cxx::tree::traits< VariableType, char > VariableTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -2250,16 +2250,16 @@ namespace cellml12
      *
      * @return A constant reference to the sequence container.
      */
-    const variable_sequence&
-    variable () const;
+    const VariableSequence&
+    getVariable () const;
 
     /**
      * @brief Return a read-write reference to the element sequence.
      *
      * @return A reference to the sequence container.
      */
-    variable_sequence&
-    variable ();
+    VariableSequence&
+    getVariable ();
 
     /**
      * @brief Copy elements from a given sequence.
@@ -2271,7 +2271,7 @@ namespace cellml12
      * sequence and all old elements will be lost.
      */
     void
-    variable (const variable_sequence& s);
+    setVariable (const VariableSequence& s);
 
     //@}
 
@@ -2286,27 +2286,27 @@ namespace cellml12
     /**
      * @brief Element type.
      */
-    typedef ::xml_schema::type math_type;
+    typedef ::xml_schema::Type MathType;
 
     /**
      * @brief Element sequence container type.
      */
-    typedef ::xsd::cxx::tree::sequence< math_type > math_sequence;
+    typedef ::xsd::cxx::tree::sequence< MathType > MathSequence;
 
     /**
      * @brief Element iterator type.
      */
-    typedef math_sequence::iterator math_iterator;
+    typedef MathSequence::iterator MathIterator;
 
     /**
      * @brief Element constant iterator type.
      */
-    typedef math_sequence::const_iterator math_const_iterator;
+    typedef MathSequence::const_iterator MathConstIterator;
 
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< math_type, char > math_traits;
+    typedef ::xsd::cxx::tree::traits< MathType, char > MathTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -2314,16 +2314,16 @@ namespace cellml12
      *
      * @return A constant reference to the sequence container.
      */
-    const math_sequence&
-    math () const;
+    const MathSequence&
+    getMath () const;
 
     /**
      * @brief Return a read-write reference to the element sequence.
      *
      * @return A reference to the sequence container.
      */
-    math_sequence&
-    math ();
+    MathSequence&
+    getMath ();
 
     /**
      * @brief Copy elements from a given sequence.
@@ -2335,7 +2335,7 @@ namespace cellml12
      * sequence and all old elements will be lost.
      */
     void
-    math (const math_sequence& s);
+    setMath (const MathSequence& s);
 
     //@}
 
@@ -2350,28 +2350,28 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::cellMLIdentifier name_type;
+    typedef ::cellml12::CellMLIdentifier NameType;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< name_type, char > name_traits;
+    typedef ::xsd::cxx::tree::traits< NameType, char > NameTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
      *
      * @return A constant reference to the attribute.
      */
-    const name_type&
-    name () const;
+    const NameType&
+    getName () const;
 
     /**
      * @brief Return a read-write reference to the attribute.
      *
      * @return A reference to the attribute.
      */
-    name_type&
-    name ();
+    NameType&
+    getName ();
 
     /**
      * @brief Set the attribute value.
@@ -2382,7 +2382,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    name (const name_type& x);
+    setName (const NameType& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -2393,7 +2393,7 @@ namespace cellml12
      * instead of making a copy.
      */
     void
-    name (::std::unique_ptr< name_type > p);
+    setName (::std::unique_ptr< NameType > p);
 
     //@}
 
@@ -2406,7 +2406,7 @@ namespace cellml12
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    component (const name_type&);
+    Component (const NameType&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -2416,9 +2416,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    component (const ::xercesc::DOMElement& e,
-               ::xml_schema::flags f = 0,
-               ::xml_schema::container* c = 0);
+    Component (const ::xercesc::DOMElement& e,
+               ::xml_schema::Flags f = 0,
+               ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -2429,9 +2429,9 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    component (const component& x,
-               ::xml_schema::flags f = 0,
-               ::xml_schema::container* c = 0);
+    Component (const Component& x,
+               ::xml_schema::Flags f = 0,
+               ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -2444,9 +2444,9 @@ namespace cellml12
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual component*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
+    virtual Component*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
 
     /**
      * @brief Copy assignment operator.
@@ -2456,8 +2456,8 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    component&
-    operator= (const component& x);
+    Component&
+    operator= (const Component& x);
 
     //@}
 
@@ -2465,7 +2465,7 @@ namespace cellml12
      * @brief Destructor.
      */
     virtual 
-    ~component ();
+    ~Component ();
 
     // Implementation.
     //
@@ -2475,13 +2475,13 @@ namespace cellml12
     protected:
     void
     parse (::xsd::cxx::xml::dom::parser< char >&,
-           ::xml_schema::flags);
+           ::xml_schema::Flags);
 
     protected:
-    units_sequence units_;
-    variable_sequence variable_;
-    math_sequence math_;
-    ::xsd::cxx::tree::one< name_type > name_;
+    UnitsSequence units_;
+    VariableSequence variable_;
+    MathSequence math_;
+    ::xsd::cxx::tree::one< NameType > name_;
 
     //@endcond
   };
@@ -2491,7 +2491,7 @@ namespace cellml12
    *
    * @nosubgrouping
    */
-  class encapsulation: public ::xml_schema::type
+  class Encapsulation: public ::xml_schema::Type
   {
     public:
     /**
@@ -2505,27 +2505,27 @@ namespace cellml12
     /**
      * @brief Element type.
      */
-    typedef ::cellml12::toplevelComponentRef component_ref_type;
+    typedef ::cellml12::ToplevelComponentRef Component_refType;
 
     /**
      * @brief Element sequence container type.
      */
-    typedef ::xsd::cxx::tree::sequence< component_ref_type > component_ref_sequence;
+    typedef ::xsd::cxx::tree::sequence< Component_refType > Component_refSequence;
 
     /**
      * @brief Element iterator type.
      */
-    typedef component_ref_sequence::iterator component_ref_iterator;
+    typedef Component_refSequence::iterator Component_refIterator;
 
     /**
      * @brief Element constant iterator type.
      */
-    typedef component_ref_sequence::const_iterator component_ref_const_iterator;
+    typedef Component_refSequence::const_iterator Component_refConstIterator;
 
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< component_ref_type, char > component_ref_traits;
+    typedef ::xsd::cxx::tree::traits< Component_refType, char > Component_refTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -2533,16 +2533,16 @@ namespace cellml12
      *
      * @return A constant reference to the sequence container.
      */
-    const component_ref_sequence&
-    component_ref () const;
+    const Component_refSequence&
+    getComponent_ref () const;
 
     /**
      * @brief Return a read-write reference to the element sequence.
      *
      * @return A reference to the sequence container.
      */
-    component_ref_sequence&
-    component_ref ();
+    Component_refSequence&
+    getComponent_ref ();
 
     /**
      * @brief Copy elements from a given sequence.
@@ -2554,7 +2554,7 @@ namespace cellml12
      * sequence and all old elements will be lost.
      */
     void
-    component_ref (const component_ref_sequence& s);
+    setComponent_ref (const Component_refSequence& s);
 
     //@}
 
@@ -2567,7 +2567,7 @@ namespace cellml12
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    encapsulation ();
+    Encapsulation ();
 
     /**
      * @brief Create an instance from a DOM element.
@@ -2577,9 +2577,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    encapsulation (const ::xercesc::DOMElement& e,
-                   ::xml_schema::flags f = 0,
-                   ::xml_schema::container* c = 0);
+    Encapsulation (const ::xercesc::DOMElement& e,
+                   ::xml_schema::Flags f = 0,
+                   ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -2590,9 +2590,9 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    encapsulation (const encapsulation& x,
-                   ::xml_schema::flags f = 0,
-                   ::xml_schema::container* c = 0);
+    Encapsulation (const Encapsulation& x,
+                   ::xml_schema::Flags f = 0,
+                   ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -2605,9 +2605,9 @@ namespace cellml12
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual encapsulation*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
+    virtual Encapsulation*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
 
     /**
      * @brief Copy assignment operator.
@@ -2617,8 +2617,8 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    encapsulation&
-    operator= (const encapsulation& x);
+    Encapsulation&
+    operator= (const Encapsulation& x);
 
     //@}
 
@@ -2626,7 +2626,7 @@ namespace cellml12
      * @brief Destructor.
      */
     virtual 
-    ~encapsulation ();
+    ~Encapsulation ();
 
     // Implementation.
     //
@@ -2636,10 +2636,10 @@ namespace cellml12
     protected:
     void
     parse (::xsd::cxx::xml::dom::parser< char >&,
-           ::xml_schema::flags);
+           ::xml_schema::Flags);
 
     protected:
-    component_ref_sequence component_ref_;
+    Component_refSequence component_ref_;
 
     //@endcond
   };
@@ -2649,7 +2649,7 @@ namespace cellml12
    *
    * @nosubgrouping
    */
-  class toplevelComponentRef: public ::xml_schema::type
+  class ToplevelComponentRef: public ::xml_schema::Type
   {
     public:
     /**
@@ -2663,27 +2663,27 @@ namespace cellml12
     /**
      * @brief Element type.
      */
-    typedef ::cellml12::componentRef component_ref_type;
+    typedef ::cellml12::ComponentRef Component_refType;
 
     /**
      * @brief Element sequence container type.
      */
-    typedef ::xsd::cxx::tree::sequence< component_ref_type > component_ref_sequence;
+    typedef ::xsd::cxx::tree::sequence< Component_refType > Component_refSequence;
 
     /**
      * @brief Element iterator type.
      */
-    typedef component_ref_sequence::iterator component_ref_iterator;
+    typedef Component_refSequence::iterator Component_refIterator;
 
     /**
      * @brief Element constant iterator type.
      */
-    typedef component_ref_sequence::const_iterator component_ref_const_iterator;
+    typedef Component_refSequence::const_iterator Component_refConstIterator;
 
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< component_ref_type, char > component_ref_traits;
+    typedef ::xsd::cxx::tree::traits< Component_refType, char > Component_refTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -2691,16 +2691,16 @@ namespace cellml12
      *
      * @return A constant reference to the sequence container.
      */
-    const component_ref_sequence&
-    component_ref () const;
+    const Component_refSequence&
+    getComponent_ref () const;
 
     /**
      * @brief Return a read-write reference to the element sequence.
      *
      * @return A reference to the sequence container.
      */
-    component_ref_sequence&
-    component_ref ();
+    Component_refSequence&
+    getComponent_ref ();
 
     /**
      * @brief Copy elements from a given sequence.
@@ -2712,7 +2712,7 @@ namespace cellml12
      * sequence and all old elements will be lost.
      */
     void
-    component_ref (const component_ref_sequence& s);
+    setComponent_ref (const Component_refSequence& s);
 
     //@}
 
@@ -2727,28 +2727,28 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::cellMLIdentifier component_type;
+    typedef ::cellml12::CellMLIdentifier ComponentType;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< component_type, char > component_traits;
+    typedef ::xsd::cxx::tree::traits< ComponentType, char > ComponentTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
      *
      * @return A constant reference to the attribute.
      */
-    const component_type&
-    component () const;
+    const ComponentType&
+    getComponent () const;
 
     /**
      * @brief Return a read-write reference to the attribute.
      *
      * @return A reference to the attribute.
      */
-    component_type&
-    component ();
+    ComponentType&
+    getComponent ();
 
     /**
      * @brief Set the attribute value.
@@ -2759,7 +2759,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    component (const component_type& x);
+    setComponent (const ComponentType& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -2770,7 +2770,7 @@ namespace cellml12
      * instead of making a copy.
      */
     void
-    component (::std::unique_ptr< component_type > p);
+    setComponent (::std::unique_ptr< ComponentType > p);
 
     //@}
 
@@ -2783,7 +2783,7 @@ namespace cellml12
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    toplevelComponentRef (const component_type&);
+    ToplevelComponentRef (const ComponentType&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -2793,9 +2793,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    toplevelComponentRef (const ::xercesc::DOMElement& e,
-                          ::xml_schema::flags f = 0,
-                          ::xml_schema::container* c = 0);
+    ToplevelComponentRef (const ::xercesc::DOMElement& e,
+                          ::xml_schema::Flags f = 0,
+                          ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -2806,9 +2806,9 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    toplevelComponentRef (const toplevelComponentRef& x,
-                          ::xml_schema::flags f = 0,
-                          ::xml_schema::container* c = 0);
+    ToplevelComponentRef (const ToplevelComponentRef& x,
+                          ::xml_schema::Flags f = 0,
+                          ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -2821,9 +2821,9 @@ namespace cellml12
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual toplevelComponentRef*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
+    virtual ToplevelComponentRef*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
 
     /**
      * @brief Copy assignment operator.
@@ -2833,8 +2833,8 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    toplevelComponentRef&
-    operator= (const toplevelComponentRef& x);
+    ToplevelComponentRef&
+    operator= (const ToplevelComponentRef& x);
 
     //@}
 
@@ -2842,7 +2842,7 @@ namespace cellml12
      * @brief Destructor.
      */
     virtual 
-    ~toplevelComponentRef ();
+    ~ToplevelComponentRef ();
 
     // Implementation.
     //
@@ -2852,11 +2852,11 @@ namespace cellml12
     protected:
     void
     parse (::xsd::cxx::xml::dom::parser< char >&,
-           ::xml_schema::flags);
+           ::xml_schema::Flags);
 
     protected:
-    component_ref_sequence component_ref_;
-    ::xsd::cxx::tree::one< component_type > component_;
+    Component_refSequence component_ref_;
+    ::xsd::cxx::tree::one< ComponentType > component_;
 
     //@endcond
   };
@@ -2866,7 +2866,7 @@ namespace cellml12
    *
    * @nosubgrouping
    */
-  class componentRef: public ::xml_schema::type
+  class ComponentRef: public ::xml_schema::Type
   {
     public:
     /**
@@ -2880,27 +2880,27 @@ namespace cellml12
     /**
      * @brief Element type.
      */
-    typedef ::cellml12::componentRef component_ref_type;
+    typedef ::cellml12::ComponentRef Component_refType;
 
     /**
      * @brief Element sequence container type.
      */
-    typedef ::xsd::cxx::tree::sequence< component_ref_type > component_ref_sequence;
+    typedef ::xsd::cxx::tree::sequence< Component_refType > Component_refSequence;
 
     /**
      * @brief Element iterator type.
      */
-    typedef component_ref_sequence::iterator component_ref_iterator;
+    typedef Component_refSequence::iterator Component_refIterator;
 
     /**
      * @brief Element constant iterator type.
      */
-    typedef component_ref_sequence::const_iterator component_ref_const_iterator;
+    typedef Component_refSequence::const_iterator Component_refConstIterator;
 
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< component_ref_type, char > component_ref_traits;
+    typedef ::xsd::cxx::tree::traits< Component_refType, char > Component_refTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -2908,16 +2908,16 @@ namespace cellml12
      *
      * @return A constant reference to the sequence container.
      */
-    const component_ref_sequence&
-    component_ref () const;
+    const Component_refSequence&
+    getComponent_ref () const;
 
     /**
      * @brief Return a read-write reference to the element sequence.
      *
      * @return A reference to the sequence container.
      */
-    component_ref_sequence&
-    component_ref ();
+    Component_refSequence&
+    getComponent_ref ();
 
     /**
      * @brief Copy elements from a given sequence.
@@ -2929,7 +2929,7 @@ namespace cellml12
      * sequence and all old elements will be lost.
      */
     void
-    component_ref (const component_ref_sequence& s);
+    setComponent_ref (const Component_refSequence& s);
 
     //@}
 
@@ -2944,28 +2944,28 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::cellMLIdentifier component_type;
+    typedef ::cellml12::CellMLIdentifier ComponentType;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< component_type, char > component_traits;
+    typedef ::xsd::cxx::tree::traits< ComponentType, char > ComponentTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
      *
      * @return A constant reference to the attribute.
      */
-    const component_type&
-    component () const;
+    const ComponentType&
+    getComponent () const;
 
     /**
      * @brief Return a read-write reference to the attribute.
      *
      * @return A reference to the attribute.
      */
-    component_type&
-    component ();
+    ComponentType&
+    getComponent ();
 
     /**
      * @brief Set the attribute value.
@@ -2976,7 +2976,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    component (const component_type& x);
+    setComponent (const ComponentType& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -2987,7 +2987,7 @@ namespace cellml12
      * instead of making a copy.
      */
     void
-    component (::std::unique_ptr< component_type > p);
+    setComponent (::std::unique_ptr< ComponentType > p);
 
     //@}
 
@@ -3000,7 +3000,7 @@ namespace cellml12
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    componentRef (const component_type&);
+    ComponentRef (const ComponentType&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -3010,9 +3010,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    componentRef (const ::xercesc::DOMElement& e,
-                  ::xml_schema::flags f = 0,
-                  ::xml_schema::container* c = 0);
+    ComponentRef (const ::xercesc::DOMElement& e,
+                  ::xml_schema::Flags f = 0,
+                  ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -3023,9 +3023,9 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    componentRef (const componentRef& x,
-                  ::xml_schema::flags f = 0,
-                  ::xml_schema::container* c = 0);
+    ComponentRef (const ComponentRef& x,
+                  ::xml_schema::Flags f = 0,
+                  ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -3038,9 +3038,9 @@ namespace cellml12
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual componentRef*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
+    virtual ComponentRef*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
 
     /**
      * @brief Copy assignment operator.
@@ -3050,8 +3050,8 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    componentRef&
-    operator= (const componentRef& x);
+    ComponentRef&
+    operator= (const ComponentRef& x);
 
     //@}
 
@@ -3059,7 +3059,7 @@ namespace cellml12
      * @brief Destructor.
      */
     virtual 
-    ~componentRef ();
+    ~ComponentRef ();
 
     // Implementation.
     //
@@ -3069,11 +3069,11 @@ namespace cellml12
     protected:
     void
     parse (::xsd::cxx::xml::dom::parser< char >&,
-           ::xml_schema::flags);
+           ::xml_schema::Flags);
 
     protected:
-    component_ref_sequence component_ref_;
-    ::xsd::cxx::tree::one< component_type > component_;
+    Component_refSequence component_ref_;
+    ::xsd::cxx::tree::one< ComponentType > component_;
 
     //@endcond
   };
@@ -3083,7 +3083,7 @@ namespace cellml12
    *
    * @nosubgrouping
    */
-  class connection: public ::xml_schema::type
+  class Connection: public ::xml_schema::Type
   {
     public:
     /**
@@ -3097,27 +3097,27 @@ namespace cellml12
     /**
      * @brief Element type.
      */
-    typedef ::cellml12::mapVariables map_variables_type;
+    typedef ::cellml12::MapVariables Map_variablesType;
 
     /**
      * @brief Element sequence container type.
      */
-    typedef ::xsd::cxx::tree::sequence< map_variables_type > map_variables_sequence;
+    typedef ::xsd::cxx::tree::sequence< Map_variablesType > Map_variablesSequence;
 
     /**
      * @brief Element iterator type.
      */
-    typedef map_variables_sequence::iterator map_variables_iterator;
+    typedef Map_variablesSequence::iterator Map_variablesIterator;
 
     /**
      * @brief Element constant iterator type.
      */
-    typedef map_variables_sequence::const_iterator map_variables_const_iterator;
+    typedef Map_variablesSequence::const_iterator Map_variablesConstIterator;
 
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< map_variables_type, char > map_variables_traits;
+    typedef ::xsd::cxx::tree::traits< Map_variablesType, char > Map_variablesTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -3125,16 +3125,16 @@ namespace cellml12
      *
      * @return A constant reference to the sequence container.
      */
-    const map_variables_sequence&
-    map_variables () const;
+    const Map_variablesSequence&
+    getMap_variables () const;
 
     /**
      * @brief Return a read-write reference to the element sequence.
      *
      * @return A reference to the sequence container.
      */
-    map_variables_sequence&
-    map_variables ();
+    Map_variablesSequence&
+    getMap_variables ();
 
     /**
      * @brief Copy elements from a given sequence.
@@ -3146,7 +3146,7 @@ namespace cellml12
      * sequence and all old elements will be lost.
      */
     void
-    map_variables (const map_variables_sequence& s);
+    setMap_variables (const Map_variablesSequence& s);
 
     //@}
 
@@ -3161,28 +3161,28 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::cellMLIdentifier component_1_type;
+    typedef ::cellml12::CellMLIdentifier Component_1Type;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< component_1_type, char > component_1_traits;
+    typedef ::xsd::cxx::tree::traits< Component_1Type, char > Component_1Traits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
      *
      * @return A constant reference to the attribute.
      */
-    const component_1_type&
-    component_1 () const;
+    const Component_1Type&
+    getComponent_1 () const;
 
     /**
      * @brief Return a read-write reference to the attribute.
      *
      * @return A reference to the attribute.
      */
-    component_1_type&
-    component_1 ();
+    Component_1Type&
+    getComponent_1 ();
 
     /**
      * @brief Set the attribute value.
@@ -3193,7 +3193,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    component_1 (const component_1_type& x);
+    setComponent_1 (const Component_1Type& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -3204,7 +3204,7 @@ namespace cellml12
      * instead of making a copy.
      */
     void
-    component_1 (::std::unique_ptr< component_1_type > p);
+    setComponent_1 (::std::unique_ptr< Component_1Type > p);
 
     //@}
 
@@ -3219,28 +3219,28 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::cellMLIdentifier component_2_type;
+    typedef ::cellml12::CellMLIdentifier Component_2Type;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< component_2_type, char > component_2_traits;
+    typedef ::xsd::cxx::tree::traits< Component_2Type, char > Component_2Traits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
      *
      * @return A constant reference to the attribute.
      */
-    const component_2_type&
-    component_2 () const;
+    const Component_2Type&
+    getComponent_2 () const;
 
     /**
      * @brief Return a read-write reference to the attribute.
      *
      * @return A reference to the attribute.
      */
-    component_2_type&
-    component_2 ();
+    Component_2Type&
+    getComponent_2 ();
 
     /**
      * @brief Set the attribute value.
@@ -3251,7 +3251,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    component_2 (const component_2_type& x);
+    setComponent_2 (const Component_2Type& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -3262,7 +3262,7 @@ namespace cellml12
      * instead of making a copy.
      */
     void
-    component_2 (::std::unique_ptr< component_2_type > p);
+    setComponent_2 (::std::unique_ptr< Component_2Type > p);
 
     //@}
 
@@ -3275,8 +3275,8 @@ namespace cellml12
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    connection (const component_1_type&,
-                const component_2_type&);
+    Connection (const Component_1Type&,
+                const Component_2Type&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -3286,9 +3286,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    connection (const ::xercesc::DOMElement& e,
-                ::xml_schema::flags f = 0,
-                ::xml_schema::container* c = 0);
+    Connection (const ::xercesc::DOMElement& e,
+                ::xml_schema::Flags f = 0,
+                ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -3299,9 +3299,9 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    connection (const connection& x,
-                ::xml_schema::flags f = 0,
-                ::xml_schema::container* c = 0);
+    Connection (const Connection& x,
+                ::xml_schema::Flags f = 0,
+                ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -3314,9 +3314,9 @@ namespace cellml12
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual connection*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
+    virtual Connection*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
 
     /**
      * @brief Copy assignment operator.
@@ -3326,8 +3326,8 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    connection&
-    operator= (const connection& x);
+    Connection&
+    operator= (const Connection& x);
 
     //@}
 
@@ -3335,7 +3335,7 @@ namespace cellml12
      * @brief Destructor.
      */
     virtual 
-    ~connection ();
+    ~Connection ();
 
     // Implementation.
     //
@@ -3345,12 +3345,12 @@ namespace cellml12
     protected:
     void
     parse (::xsd::cxx::xml::dom::parser< char >&,
-           ::xml_schema::flags);
+           ::xml_schema::Flags);
 
     protected:
-    map_variables_sequence map_variables_;
-    ::xsd::cxx::tree::one< component_1_type > component_1_;
-    ::xsd::cxx::tree::one< component_2_type > component_2_;
+    Map_variablesSequence map_variables_;
+    ::xsd::cxx::tree::one< Component_1Type > component_1_;
+    ::xsd::cxx::tree::one< Component_2Type > component_2_;
 
     //@endcond
   };
@@ -3360,7 +3360,7 @@ namespace cellml12
    *
    * @nosubgrouping
    */
-  class importedUnits: public ::xml_schema::type
+  class ImportedUnits: public ::xml_schema::Type
   {
     public:
     /**
@@ -3374,28 +3374,28 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::cellMLIdentifier name_type;
+    typedef ::cellml12::CellMLIdentifier NameType;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< name_type, char > name_traits;
+    typedef ::xsd::cxx::tree::traits< NameType, char > NameTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
      *
      * @return A constant reference to the attribute.
      */
-    const name_type&
-    name () const;
+    const NameType&
+    getName () const;
 
     /**
      * @brief Return a read-write reference to the attribute.
      *
      * @return A reference to the attribute.
      */
-    name_type&
-    name ();
+    NameType&
+    getName ();
 
     /**
      * @brief Set the attribute value.
@@ -3406,7 +3406,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    name (const name_type& x);
+    setName (const NameType& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -3417,7 +3417,7 @@ namespace cellml12
      * instead of making a copy.
      */
     void
-    name (::std::unique_ptr< name_type > p);
+    setName (::std::unique_ptr< NameType > p);
 
     //@}
 
@@ -3432,28 +3432,28 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::cellMLIdentifier units_ref_type;
+    typedef ::cellml12::CellMLIdentifier Units_refType;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< units_ref_type, char > units_ref_traits;
+    typedef ::xsd::cxx::tree::traits< Units_refType, char > Units_refTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
      *
      * @return A constant reference to the attribute.
      */
-    const units_ref_type&
-    units_ref () const;
+    const Units_refType&
+    getUnits_ref () const;
 
     /**
      * @brief Return a read-write reference to the attribute.
      *
      * @return A reference to the attribute.
      */
-    units_ref_type&
-    units_ref ();
+    Units_refType&
+    getUnits_ref ();
 
     /**
      * @brief Set the attribute value.
@@ -3464,7 +3464,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    units_ref (const units_ref_type& x);
+    setUnits_ref (const Units_refType& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -3475,7 +3475,7 @@ namespace cellml12
      * instead of making a copy.
      */
     void
-    units_ref (::std::unique_ptr< units_ref_type > p);
+    setUnits_ref (::std::unique_ptr< Units_refType > p);
 
     //@}
 
@@ -3488,8 +3488,8 @@ namespace cellml12
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    importedUnits (const name_type&,
-                   const units_ref_type&);
+    ImportedUnits (const NameType&,
+                   const Units_refType&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -3499,9 +3499,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    importedUnits (const ::xercesc::DOMElement& e,
-                   ::xml_schema::flags f = 0,
-                   ::xml_schema::container* c = 0);
+    ImportedUnits (const ::xercesc::DOMElement& e,
+                   ::xml_schema::Flags f = 0,
+                   ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -3512,9 +3512,9 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    importedUnits (const importedUnits& x,
-                   ::xml_schema::flags f = 0,
-                   ::xml_schema::container* c = 0);
+    ImportedUnits (const ImportedUnits& x,
+                   ::xml_schema::Flags f = 0,
+                   ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -3527,9 +3527,9 @@ namespace cellml12
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual importedUnits*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
+    virtual ImportedUnits*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
 
     /**
      * @brief Copy assignment operator.
@@ -3539,8 +3539,8 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    importedUnits&
-    operator= (const importedUnits& x);
+    ImportedUnits&
+    operator= (const ImportedUnits& x);
 
     //@}
 
@@ -3548,7 +3548,7 @@ namespace cellml12
      * @brief Destructor.
      */
     virtual 
-    ~importedUnits ();
+    ~ImportedUnits ();
 
     // Implementation.
     //
@@ -3558,11 +3558,11 @@ namespace cellml12
     protected:
     void
     parse (::xsd::cxx::xml::dom::parser< char >&,
-           ::xml_schema::flags);
+           ::xml_schema::Flags);
 
     protected:
-    ::xsd::cxx::tree::one< name_type > name_;
-    ::xsd::cxx::tree::one< units_ref_type > units_ref_;
+    ::xsd::cxx::tree::one< NameType > name_;
+    ::xsd::cxx::tree::one< Units_refType > units_ref_;
 
     //@endcond
   };
@@ -3572,7 +3572,7 @@ namespace cellml12
    *
    * @nosubgrouping
    */
-  class importedComponent: public ::xml_schema::type
+  class ImportedComponent: public ::xml_schema::Type
   {
     public:
     /**
@@ -3586,28 +3586,28 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::cellMLIdentifier name_type;
+    typedef ::cellml12::CellMLIdentifier NameType;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< name_type, char > name_traits;
+    typedef ::xsd::cxx::tree::traits< NameType, char > NameTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
      *
      * @return A constant reference to the attribute.
      */
-    const name_type&
-    name () const;
+    const NameType&
+    getName () const;
 
     /**
      * @brief Return a read-write reference to the attribute.
      *
      * @return A reference to the attribute.
      */
-    name_type&
-    name ();
+    NameType&
+    getName ();
 
     /**
      * @brief Set the attribute value.
@@ -3618,7 +3618,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    name (const name_type& x);
+    setName (const NameType& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -3629,7 +3629,7 @@ namespace cellml12
      * instead of making a copy.
      */
     void
-    name (::std::unique_ptr< name_type > p);
+    setName (::std::unique_ptr< NameType > p);
 
     //@}
 
@@ -3644,28 +3644,28 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::cellMLIdentifier component_ref_type;
+    typedef ::cellml12::CellMLIdentifier Component_refType;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< component_ref_type, char > component_ref_traits;
+    typedef ::xsd::cxx::tree::traits< Component_refType, char > Component_refTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
      *
      * @return A constant reference to the attribute.
      */
-    const component_ref_type&
-    component_ref () const;
+    const Component_refType&
+    getComponent_ref () const;
 
     /**
      * @brief Return a read-write reference to the attribute.
      *
      * @return A reference to the attribute.
      */
-    component_ref_type&
-    component_ref ();
+    Component_refType&
+    getComponent_ref ();
 
     /**
      * @brief Set the attribute value.
@@ -3676,7 +3676,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    component_ref (const component_ref_type& x);
+    setComponent_ref (const Component_refType& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -3687,7 +3687,7 @@ namespace cellml12
      * instead of making a copy.
      */
     void
-    component_ref (::std::unique_ptr< component_ref_type > p);
+    setComponent_ref (::std::unique_ptr< Component_refType > p);
 
     //@}
 
@@ -3700,8 +3700,8 @@ namespace cellml12
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    importedComponent (const name_type&,
-                       const component_ref_type&);
+    ImportedComponent (const NameType&,
+                       const Component_refType&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -3711,9 +3711,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    importedComponent (const ::xercesc::DOMElement& e,
-                       ::xml_schema::flags f = 0,
-                       ::xml_schema::container* c = 0);
+    ImportedComponent (const ::xercesc::DOMElement& e,
+                       ::xml_schema::Flags f = 0,
+                       ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -3724,9 +3724,9 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    importedComponent (const importedComponent& x,
-                       ::xml_schema::flags f = 0,
-                       ::xml_schema::container* c = 0);
+    ImportedComponent (const ImportedComponent& x,
+                       ::xml_schema::Flags f = 0,
+                       ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -3739,9 +3739,9 @@ namespace cellml12
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual importedComponent*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
+    virtual ImportedComponent*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
 
     /**
      * @brief Copy assignment operator.
@@ -3751,8 +3751,8 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    importedComponent&
-    operator= (const importedComponent& x);
+    ImportedComponent&
+    operator= (const ImportedComponent& x);
 
     //@}
 
@@ -3760,7 +3760,7 @@ namespace cellml12
      * @brief Destructor.
      */
     virtual 
-    ~importedComponent ();
+    ~ImportedComponent ();
 
     // Implementation.
     //
@@ -3770,11 +3770,11 @@ namespace cellml12
     protected:
     void
     parse (::xsd::cxx::xml::dom::parser< char >&,
-           ::xml_schema::flags);
+           ::xml_schema::Flags);
 
     protected:
-    ::xsd::cxx::tree::one< name_type > name_;
-    ::xsd::cxx::tree::one< component_ref_type > component_ref_;
+    ::xsd::cxx::tree::one< NameType > name_;
+    ::xsd::cxx::tree::one< Component_refType > component_ref_;
 
     //@endcond
   };
@@ -3784,7 +3784,7 @@ namespace cellml12
    *
    * @nosubgrouping
    */
-  class variable: public ::xml_schema::type
+  class Variable: public ::xml_schema::Type
   {
     public:
     /**
@@ -3798,28 +3798,28 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::cellMLIdentifier name_type;
+    typedef ::cellml12::CellMLIdentifier NameType;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< name_type, char > name_traits;
+    typedef ::xsd::cxx::tree::traits< NameType, char > NameTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
      *
      * @return A constant reference to the attribute.
      */
-    const name_type&
-    name () const;
+    const NameType&
+    getName () const;
 
     /**
      * @brief Return a read-write reference to the attribute.
      *
      * @return A reference to the attribute.
      */
-    name_type&
-    name ();
+    NameType&
+    getName ();
 
     /**
      * @brief Set the attribute value.
@@ -3830,7 +3830,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    name (const name_type& x);
+    setName (const NameType& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -3841,7 +3841,7 @@ namespace cellml12
      * instead of making a copy.
      */
     void
-    name (::std::unique_ptr< name_type > p);
+    setName (::std::unique_ptr< NameType > p);
 
     //@}
 
@@ -3856,28 +3856,28 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::cellMLIdentifier units_type;
+    typedef ::cellml12::CellMLIdentifier UnitsType;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< units_type, char > units_traits;
+    typedef ::xsd::cxx::tree::traits< UnitsType, char > UnitsTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
      *
      * @return A constant reference to the attribute.
      */
-    const units_type&
-    units () const;
+    const UnitsType&
+    getUnits () const;
 
     /**
      * @brief Return a read-write reference to the attribute.
      *
      * @return A reference to the attribute.
      */
-    units_type&
-    units ();
+    UnitsType&
+    getUnits ();
 
     /**
      * @brief Set the attribute value.
@@ -3888,7 +3888,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    units (const units_type& x);
+    setUnits (const UnitsType& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -3899,7 +3899,7 @@ namespace cellml12
      * instead of making a copy.
      */
     void
-    units (::std::unique_ptr< units_type > p);
+    setUnits (::std::unique_ptr< UnitsType > p);
 
     //@}
 
@@ -3914,17 +3914,17 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::yesno public_interface_type;
+    typedef ::cellml12::Yesno Public_interfaceType;
 
     /**
      * @brief Attribute optional container type.
      */
-    typedef ::xsd::cxx::tree::optional< public_interface_type > public_interface_optional;
+    typedef ::xsd::cxx::tree::optional< Public_interfaceType > Public_interfaceOptional;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< public_interface_type, char > public_interface_traits;
+    typedef ::xsd::cxx::tree::traits< Public_interfaceType, char > Public_interfaceTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute
@@ -3932,16 +3932,16 @@ namespace cellml12
      *
      * @return A constant reference to the optional container.
      */
-    const public_interface_optional&
-    public_interface () const;
+    const Public_interfaceOptional&
+    getPublic_interface () const;
 
     /**
      * @brief Return a read-write reference to the attribute container.
      *
      * @return A reference to the optional container.
      */
-    public_interface_optional&
-    public_interface ();
+    Public_interfaceOptional&
+    getPublic_interface ();
 
     /**
      * @brief Set the attribute value.
@@ -3952,7 +3952,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    public_interface (const public_interface_type& x);
+    setPublic_interface (const Public_interfaceType& x);
 
     /**
      * @brief Set the attribute value.
@@ -3964,7 +3964,7 @@ namespace cellml12
      * Otherwise the attribute container is set the 'not present' state.
      */
     void
-    public_interface (const public_interface_optional& x);
+    setPublic_interface (const Public_interfaceOptional& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -3975,7 +3975,7 @@ namespace cellml12
      * of making a copy.
      */
     void
-    public_interface (::std::unique_ptr< public_interface_type > p);
+    setPublic_interface (::std::unique_ptr< Public_interfaceType > p);
 
     //@}
 
@@ -3990,17 +3990,17 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::yesno private_interface_type;
+    typedef ::cellml12::Yesno Private_interfaceType;
 
     /**
      * @brief Attribute optional container type.
      */
-    typedef ::xsd::cxx::tree::optional< private_interface_type > private_interface_optional;
+    typedef ::xsd::cxx::tree::optional< Private_interfaceType > Private_interfaceOptional;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< private_interface_type, char > private_interface_traits;
+    typedef ::xsd::cxx::tree::traits< Private_interfaceType, char > Private_interfaceTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute
@@ -4008,16 +4008,16 @@ namespace cellml12
      *
      * @return A constant reference to the optional container.
      */
-    const private_interface_optional&
-    private_interface () const;
+    const Private_interfaceOptional&
+    getPrivate_interface () const;
 
     /**
      * @brief Return a read-write reference to the attribute container.
      *
      * @return A reference to the optional container.
      */
-    private_interface_optional&
-    private_interface ();
+    Private_interfaceOptional&
+    getPrivate_interface ();
 
     /**
      * @brief Set the attribute value.
@@ -4028,7 +4028,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    private_interface (const private_interface_type& x);
+    setPrivate_interface (const Private_interfaceType& x);
 
     /**
      * @brief Set the attribute value.
@@ -4040,7 +4040,7 @@ namespace cellml12
      * Otherwise the attribute container is set the 'not present' state.
      */
     void
-    private_interface (const private_interface_optional& x);
+    setPrivate_interface (const Private_interfaceOptional& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -4051,7 +4051,7 @@ namespace cellml12
      * of making a copy.
      */
     void
-    private_interface (::std::unique_ptr< private_interface_type > p);
+    setPrivate_interface (::std::unique_ptr< Private_interfaceType > p);
 
     //@}
 
@@ -4066,28 +4066,28 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::xml_schema::string type_type;
+    typedef ::xml_schema::String TypeType;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< type_type, char > type_traits;
+    typedef ::xsd::cxx::tree::traits< TypeType, char > TypeTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
      *
      * @return A constant reference to the attribute.
      */
-    const type_type&
-    type () const;
+    const TypeType&
+    getType () const;
 
     /**
      * @brief Return a read-write reference to the attribute.
      *
      * @return A reference to the attribute.
      */
-    type_type&
-    type ();
+    TypeType&
+    getType ();
 
     /**
      * @brief Set the attribute value.
@@ -4098,7 +4098,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    type (const type_type& x);
+    setType (const TypeType& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -4109,7 +4109,7 @@ namespace cellml12
      * instead of making a copy.
      */
     void
-    type (::std::unique_ptr< type_type > p);
+    setType (::std::unique_ptr< TypeType > p);
 
     //@}
 
@@ -4122,9 +4122,9 @@ namespace cellml12
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    variable (const name_type&,
-              const units_type&,
-              const type_type&);
+    Variable (const NameType&,
+              const UnitsType&,
+              const TypeType&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -4134,9 +4134,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    variable (const ::xercesc::DOMElement& e,
-              ::xml_schema::flags f = 0,
-              ::xml_schema::container* c = 0);
+    Variable (const ::xercesc::DOMElement& e,
+              ::xml_schema::Flags f = 0,
+              ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -4147,9 +4147,9 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    variable (const variable& x,
-              ::xml_schema::flags f = 0,
-              ::xml_schema::container* c = 0);
+    Variable (const Variable& x,
+              ::xml_schema::Flags f = 0,
+              ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -4162,9 +4162,9 @@ namespace cellml12
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual variable*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
+    virtual Variable*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
 
     /**
      * @brief Copy assignment operator.
@@ -4174,8 +4174,8 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    variable&
-    operator= (const variable& x);
+    Variable&
+    operator= (const Variable& x);
 
     //@}
 
@@ -4183,7 +4183,7 @@ namespace cellml12
      * @brief Destructor.
      */
     virtual 
-    ~variable ();
+    ~Variable ();
 
     // Implementation.
     //
@@ -4193,14 +4193,14 @@ namespace cellml12
     protected:
     void
     parse (::xsd::cxx::xml::dom::parser< char >&,
-           ::xml_schema::flags);
+           ::xml_schema::Flags);
 
     protected:
-    ::xsd::cxx::tree::one< name_type > name_;
-    ::xsd::cxx::tree::one< units_type > units_;
-    public_interface_optional public_interface_;
-    private_interface_optional private_interface_;
-    ::xsd::cxx::tree::one< type_type > type_;
+    ::xsd::cxx::tree::one< NameType > name_;
+    ::xsd::cxx::tree::one< UnitsType > units_;
+    Public_interfaceOptional public_interface_;
+    Private_interfaceOptional private_interface_;
+    ::xsd::cxx::tree::one< TypeType > type_;
 
     //@endcond
   };
@@ -4210,7 +4210,7 @@ namespace cellml12
    *
    * @nosubgrouping
    */
-  class mapVariables: public ::xml_schema::type
+  class MapVariables: public ::xml_schema::Type
   {
     public:
     /**
@@ -4224,28 +4224,28 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::cellMLIdentifier variable_1_type;
+    typedef ::cellml12::CellMLIdentifier Variable_1Type;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< variable_1_type, char > variable_1_traits;
+    typedef ::xsd::cxx::tree::traits< Variable_1Type, char > Variable_1Traits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
      *
      * @return A constant reference to the attribute.
      */
-    const variable_1_type&
-    variable_1 () const;
+    const Variable_1Type&
+    getVariable_1 () const;
 
     /**
      * @brief Return a read-write reference to the attribute.
      *
      * @return A reference to the attribute.
      */
-    variable_1_type&
-    variable_1 ();
+    Variable_1Type&
+    getVariable_1 ();
 
     /**
      * @brief Set the attribute value.
@@ -4256,7 +4256,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    variable_1 (const variable_1_type& x);
+    setVariable_1 (const Variable_1Type& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -4267,7 +4267,7 @@ namespace cellml12
      * instead of making a copy.
      */
     void
-    variable_1 (::std::unique_ptr< variable_1_type > p);
+    setVariable_1 (::std::unique_ptr< Variable_1Type > p);
 
     //@}
 
@@ -4282,28 +4282,28 @@ namespace cellml12
     /**
      * @brief Attribute type.
      */
-    typedef ::cellml12::cellMLIdentifier variable_2_type;
+    typedef ::cellml12::CellMLIdentifier Variable_2Type;
 
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< variable_2_type, char > variable_2_traits;
+    typedef ::xsd::cxx::tree::traits< Variable_2Type, char > Variable_2Traits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
      *
      * @return A constant reference to the attribute.
      */
-    const variable_2_type&
-    variable_2 () const;
+    const Variable_2Type&
+    getVariable_2 () const;
 
     /**
      * @brief Return a read-write reference to the attribute.
      *
      * @return A reference to the attribute.
      */
-    variable_2_type&
-    variable_2 ();
+    Variable_2Type&
+    getVariable_2 ();
 
     /**
      * @brief Set the attribute value.
@@ -4314,7 +4314,7 @@ namespace cellml12
      * the new value of the attribute.
      */
     void
-    variable_2 (const variable_2_type& x);
+    setVariable_2 (const Variable_2Type& x);
 
     /**
      * @brief Set the attribute value without copying.
@@ -4325,7 +4325,7 @@ namespace cellml12
      * instead of making a copy.
      */
     void
-    variable_2 (::std::unique_ptr< variable_2_type > p);
+    setVariable_2 (::std::unique_ptr< Variable_2Type > p);
 
     //@}
 
@@ -4338,8 +4338,8 @@ namespace cellml12
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    mapVariables (const variable_1_type&,
-                  const variable_2_type&);
+    MapVariables (const Variable_1Type&,
+                  const Variable_2Type&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -4349,9 +4349,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    mapVariables (const ::xercesc::DOMElement& e,
-                  ::xml_schema::flags f = 0,
-                  ::xml_schema::container* c = 0);
+    MapVariables (const ::xercesc::DOMElement& e,
+                  ::xml_schema::Flags f = 0,
+                  ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -4362,9 +4362,9 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    mapVariables (const mapVariables& x,
-                  ::xml_schema::flags f = 0,
-                  ::xml_schema::container* c = 0);
+    MapVariables (const MapVariables& x,
+                  ::xml_schema::Flags f = 0,
+                  ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -4377,9 +4377,9 @@ namespace cellml12
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual mapVariables*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
+    virtual MapVariables*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
 
     /**
      * @brief Copy assignment operator.
@@ -4389,8 +4389,8 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    mapVariables&
-    operator= (const mapVariables& x);
+    MapVariables&
+    operator= (const MapVariables& x);
 
     //@}
 
@@ -4398,7 +4398,7 @@ namespace cellml12
      * @brief Destructor.
      */
     virtual 
-    ~mapVariables ();
+    ~MapVariables ();
 
     // Implementation.
     //
@@ -4408,11 +4408,11 @@ namespace cellml12
     protected:
     void
     parse (::xsd::cxx::xml::dom::parser< char >&,
-           ::xml_schema::flags);
+           ::xml_schema::Flags);
 
     protected:
-    ::xsd::cxx::tree::one< variable_1_type > variable_1_;
-    ::xsd::cxx::tree::one< variable_2_type > variable_2_;
+    ::xsd::cxx::tree::one< Variable_1Type > variable_1_;
+    ::xsd::cxx::tree::one< Variable_2Type > variable_2_;
 
     //@endcond
   };
@@ -4422,7 +4422,7 @@ namespace cellml12
    *
    * @nosubgrouping
    */
-  class cellMLIdentifier: public ::xml_schema::string
+  class CellMLIdentifier: public ::xml_schema::String
   {
     public:
     /**
@@ -4434,25 +4434,25 @@ namespace cellml12
      * @brief Create an instance from initializers for required 
      * elements and attributes.
      */
-    cellMLIdentifier ();
+    CellMLIdentifier ();
 
     /**
      * @brief Create an instance from a C string and initializers
      * for required elements and attributes.
      */
-    cellMLIdentifier (const char*);
+    CellMLIdentifier (const char*);
 
     /**
      * @brief Create an instance from a string andinitializers
      * for required elements and attributes.
      */
-    cellMLIdentifier (const ::std::string&);
+    CellMLIdentifier (const ::std::string&);
 
     /**
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    cellMLIdentifier (const ::xml_schema::string&);
+    CellMLIdentifier (const ::xml_schema::String&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -4462,9 +4462,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    cellMLIdentifier (const ::xercesc::DOMElement& e,
-                      ::xml_schema::flags f = 0,
-                      ::xml_schema::container* c = 0);
+    CellMLIdentifier (const ::xercesc::DOMElement& e,
+                      ::xml_schema::Flags f = 0,
+                      ::xml_schema::Container* c = 0);
 
     /**
      * @brief Create an instance from a DOM attribute.
@@ -4474,9 +4474,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    cellMLIdentifier (const ::xercesc::DOMAttr& a,
-                      ::xml_schema::flags f = 0,
-                      ::xml_schema::container* c = 0);
+    CellMLIdentifier (const ::xercesc::DOMAttr& a,
+                      ::xml_schema::Flags f = 0,
+                      ::xml_schema::Container* c = 0);
 
     /**
      * @brief Create an instance from a string fragment.
@@ -4487,10 +4487,10 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    cellMLIdentifier (const ::std::string& s,
+    CellMLIdentifier (const ::std::string& s,
                       const ::xercesc::DOMElement* e,
-                      ::xml_schema::flags f = 0,
-                      ::xml_schema::container* c = 0);
+                      ::xml_schema::Flags f = 0,
+                      ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -4501,9 +4501,9 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    cellMLIdentifier (const cellMLIdentifier& x,
-                      ::xml_schema::flags f = 0,
-                      ::xml_schema::container* c = 0);
+    CellMLIdentifier (const CellMLIdentifier& x,
+                      ::xml_schema::Flags f = 0,
+                      ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -4516,9 +4516,9 @@ namespace cellml12
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual cellMLIdentifier*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
+    virtual CellMLIdentifier*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
 
     //@}
 
@@ -4526,7 +4526,7 @@ namespace cellml12
      * @brief Destructor.
      */
     virtual 
-    ~cellMLIdentifier ();
+    ~CellMLIdentifier ();
   };
 
   /**
@@ -4535,7 +4535,7 @@ namespace cellml12
    *
    * The mapping represents unions as strings.
    */
-  class unitPrefix: public ::xml_schema::string
+  class UnitPrefix: public ::xml_schema::String
   {
     public:
 
@@ -4544,14 +4544,14 @@ namespace cellml12
      *
      * @param v A string value.
      */
-    unitPrefix (const char* v);
+    UnitPrefix (const char* v);
 
     /**
      * @brief Create an instance from a string.
      *
      * @param v A string value.
      */
-    unitPrefix (const ::std::string& v);
+    UnitPrefix (const ::std::string& v);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -4561,9 +4561,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    unitPrefix (const ::xercesc::DOMElement& e,
-                ::xml_schema::flags f = 0,
-                ::xml_schema::container* c = 0);
+    UnitPrefix (const ::xercesc::DOMElement& e,
+                ::xml_schema::Flags f = 0,
+                ::xml_schema::Container* c = 0);
 
     /**
      * @brief Create an instance from a DOM attribute.
@@ -4573,9 +4573,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    unitPrefix (const ::xercesc::DOMAttr& a,
-                ::xml_schema::flags f = 0,
-                ::xml_schema::container* c = 0);
+    UnitPrefix (const ::xercesc::DOMAttr& a,
+                ::xml_schema::Flags f = 0,
+                ::xml_schema::Container* c = 0);
 
     /**
      * @brief Create an instance from a string fragment.
@@ -4586,10 +4586,10 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    unitPrefix (const ::std::string& s,
+    UnitPrefix (const ::std::string& s,
                 const ::xercesc::DOMElement* e,
-                ::xml_schema::flags f = 0,
-                ::xml_schema::container* c = 0);
+                ::xml_schema::Flags f = 0,
+                ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -4600,9 +4600,9 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    unitPrefix (const unitPrefix& x,
-                ::xml_schema::flags f = 0,
-                ::xml_schema::container* c = 0);
+    UnitPrefix (const UnitPrefix& x,
+                ::xml_schema::Flags f = 0,
+                ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -4615,23 +4615,23 @@ namespace cellml12
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual unitPrefix*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
+    virtual UnitPrefix*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
   };
 
   /**
    * @brief Enumeration class corresponding to the %yesno
    * schema type.
    */
-  class yesno: public ::xml_schema::string
+  class Yesno: public ::xml_schema::String
   {
     public:
 
     /**
      * @brief Underlying enum type.
      */
-    enum value
+    enum Value
     {
       yes,
       no
@@ -4642,28 +4642,28 @@ namespace cellml12
      *
      * @param v A enum value.
      */
-    yesno (value v);
+    Yesno (Value v);
 
     /**
      * @brief Create an instance from a C string.
      *
      * @param v A string value.
      */
-    yesno (const char* v);
+    Yesno (const char* v);
 
     /**
      * @brief Create an instance from a string.
      *
      * @param v A string value.
      */
-    yesno (const ::std::string& v);
+    Yesno (const ::std::string& v);
 
     /**
      * @brief Create an instance from the base value.
      *
      * @param v A base value.
      */
-    yesno (const ::xml_schema::string& v);
+    Yesno (const ::xml_schema::String& v);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -4673,9 +4673,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    yesno (const ::xercesc::DOMElement& e,
-           ::xml_schema::flags f = 0,
-           ::xml_schema::container* c = 0);
+    Yesno (const ::xercesc::DOMElement& e,
+           ::xml_schema::Flags f = 0,
+           ::xml_schema::Container* c = 0);
 
     /**
      * @brief Create an instance from a DOM attribute.
@@ -4685,9 +4685,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    yesno (const ::xercesc::DOMAttr& a,
-           ::xml_schema::flags f = 0,
-           ::xml_schema::container* c = 0);
+    Yesno (const ::xercesc::DOMAttr& a,
+           ::xml_schema::Flags f = 0,
+           ::xml_schema::Container* c = 0);
 
     /**
      * @brief Create an instance from a string fragment.
@@ -4698,10 +4698,10 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    yesno (const ::std::string& s,
+    Yesno (const ::std::string& s,
            const ::xercesc::DOMElement* e,
-           ::xml_schema::flags f = 0,
-           ::xml_schema::container* c = 0);
+           ::xml_schema::Flags f = 0,
+           ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -4712,9 +4712,9 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    yesno (const yesno& x,
-           ::xml_schema::flags f = 0,
-           ::xml_schema::container* c = 0);
+    Yesno (const Yesno& x,
+           ::xml_schema::Flags f = 0,
+           ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -4727,9 +4727,9 @@ namespace cellml12
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual yesno*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
+    virtual Yesno*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
 
     /**
      * @brief Assign the underlying enum value.
@@ -4737,8 +4737,8 @@ namespace cellml12
      * @param v A enum value.
      * @return A refernce to the instance.
      */
-    yesno&
-    operator= (value v);
+    Yesno&
+    operator= (Value v);
 
     /**
      * @brief Implicit conversion operator to the underlying
@@ -4747,20 +4747,20 @@ namespace cellml12
      * @return A enum value.
      */
     virtual
-    operator value () const
+    operator Value () const
     {
-      return _xsd_yesno_convert ();
+      return _xsd_Yesno_convert ();
     }
 
     //@cond
 
     protected:
-    value
-    _xsd_yesno_convert () const;
+    Value
+    _xsd_Yesno_convert () const;
 
     public:
-    static const char* const _xsd_yesno_literals_[2];
-    static const value _xsd_yesno_indexes_[2];
+    static const char* const _xsd_Yesno_literals_[2];
+    static const Value _xsd_Yesno_indexes_[2];
 
     //@endcond
   };
@@ -4769,14 +4769,14 @@ namespace cellml12
    * @brief Enumeration class corresponding to the %unitPrefix_member
    * schema type.
    */
-  class unitPrefix_member: public ::xml_schema::string
+  class UnitPrefix_member: public ::xml_schema::String
   {
     public:
 
     /**
      * @brief Underlying enum type.
      */
-    enum value
+    enum Value
     {
       yotta,
       zetta,
@@ -4805,28 +4805,28 @@ namespace cellml12
      *
      * @param v A enum value.
      */
-    unitPrefix_member (value v);
+    UnitPrefix_member (Value v);
 
     /**
      * @brief Create an instance from a C string.
      *
      * @param v A string value.
      */
-    unitPrefix_member (const char* v);
+    UnitPrefix_member (const char* v);
 
     /**
      * @brief Create an instance from a string.
      *
      * @param v A string value.
      */
-    unitPrefix_member (const ::std::string& v);
+    UnitPrefix_member (const ::std::string& v);
 
     /**
      * @brief Create an instance from the base value.
      *
      * @param v A base value.
      */
-    unitPrefix_member (const ::xml_schema::string& v);
+    UnitPrefix_member (const ::xml_schema::String& v);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -4836,9 +4836,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    unitPrefix_member (const ::xercesc::DOMElement& e,
-                       ::xml_schema::flags f = 0,
-                       ::xml_schema::container* c = 0);
+    UnitPrefix_member (const ::xercesc::DOMElement& e,
+                       ::xml_schema::Flags f = 0,
+                       ::xml_schema::Container* c = 0);
 
     /**
      * @brief Create an instance from a DOM attribute.
@@ -4848,9 +4848,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    unitPrefix_member (const ::xercesc::DOMAttr& a,
-                       ::xml_schema::flags f = 0,
-                       ::xml_schema::container* c = 0);
+    UnitPrefix_member (const ::xercesc::DOMAttr& a,
+                       ::xml_schema::Flags f = 0,
+                       ::xml_schema::Container* c = 0);
 
     /**
      * @brief Create an instance from a string fragment.
@@ -4861,10 +4861,10 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    unitPrefix_member (const ::std::string& s,
+    UnitPrefix_member (const ::std::string& s,
                        const ::xercesc::DOMElement* e,
-                       ::xml_schema::flags f = 0,
-                       ::xml_schema::container* c = 0);
+                       ::xml_schema::Flags f = 0,
+                       ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -4875,9 +4875,9 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    unitPrefix_member (const unitPrefix_member& x,
-                       ::xml_schema::flags f = 0,
-                       ::xml_schema::container* c = 0);
+    UnitPrefix_member (const UnitPrefix_member& x,
+                       ::xml_schema::Flags f = 0,
+                       ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -4890,9 +4890,9 @@ namespace cellml12
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual unitPrefix_member*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
+    virtual UnitPrefix_member*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
 
     /**
      * @brief Assign the underlying enum value.
@@ -4900,8 +4900,8 @@ namespace cellml12
      * @param v A enum value.
      * @return A refernce to the instance.
      */
-    unitPrefix_member&
-    operator= (value v);
+    UnitPrefix_member&
+    operator= (Value v);
 
     /**
      * @brief Implicit conversion operator to the underlying
@@ -4910,20 +4910,20 @@ namespace cellml12
      * @return A enum value.
      */
     virtual
-    operator value () const
+    operator Value () const
     {
-      return _xsd_unitPrefix_member_convert ();
+      return _xsd_UnitPrefix_member_convert ();
     }
 
     //@cond
 
     protected:
-    value
-    _xsd_unitPrefix_member_convert () const;
+    Value
+    _xsd_UnitPrefix_member_convert () const;
 
     public:
-    static const char* const _xsd_unitPrefix_member_literals_[20];
-    static const value _xsd_unitPrefix_member_indexes_[20];
+    static const char* const _xsd_UnitPrefix_member_literals_[20];
+    static const Value _xsd_UnitPrefix_member_indexes_[20];
 
     //@endcond
   };
@@ -4933,7 +4933,7 @@ namespace cellml12
    *
    * @nosubgrouping
    */
-  class unitPrefix_member1: public ::xsd::cxx::tree::fundamental_base< ::xml_schema::integer, char, ::xml_schema::simple_type >
+  class UnitPrefix_member1: public ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, char, ::xml_schema::SimpleType >
   {
     public:
     /**
@@ -4945,7 +4945,7 @@ namespace cellml12
      * @brief Create an instance from the ultimate base and
      * initializers for required elements and attributes.
      */
-    unitPrefix_member1 (const ::xml_schema::integer&);
+    UnitPrefix_member1 (const ::xml_schema::Integer&);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -4955,9 +4955,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    unitPrefix_member1 (const ::xercesc::DOMElement& e,
-                        ::xml_schema::flags f = 0,
-                        ::xml_schema::container* c = 0);
+    UnitPrefix_member1 (const ::xercesc::DOMElement& e,
+                        ::xml_schema::Flags f = 0,
+                        ::xml_schema::Container* c = 0);
 
     /**
      * @brief Create an instance from a DOM attribute.
@@ -4967,9 +4967,9 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    unitPrefix_member1 (const ::xercesc::DOMAttr& a,
-                        ::xml_schema::flags f = 0,
-                        ::xml_schema::container* c = 0);
+    UnitPrefix_member1 (const ::xercesc::DOMAttr& a,
+                        ::xml_schema::Flags f = 0,
+                        ::xml_schema::Container* c = 0);
 
     /**
      * @brief Create an instance from a string fragment.
@@ -4980,10 +4980,10 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    unitPrefix_member1 (const ::std::string& s,
+    UnitPrefix_member1 (const ::std::string& s,
                         const ::xercesc::DOMElement* e,
-                        ::xml_schema::flags f = 0,
-                        ::xml_schema::container* c = 0);
+                        ::xml_schema::Flags f = 0,
+                        ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy constructor.
@@ -4994,9 +4994,9 @@ namespace cellml12
      *
      * For polymorphic object models use the @c _clone function instead.
      */
-    unitPrefix_member1 (const unitPrefix_member1& x,
-                        ::xml_schema::flags f = 0,
-                        ::xml_schema::container* c = 0);
+    UnitPrefix_member1 (const UnitPrefix_member1& x,
+                        ::xml_schema::Flags f = 0,
+                        ::xml_schema::Container* c = 0);
 
     /**
      * @brief Copy the instance polymorphically.
@@ -5009,9 +5009,9 @@ namespace cellml12
      * used for copying and should be used for polymorphic object
      * models instead of the copy constructor.
      */
-    virtual unitPrefix_member1*
-    _clone (::xml_schema::flags f = 0,
-            ::xml_schema::container* c = 0) const;
+    virtual UnitPrefix_member1*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
 
     //@}
 
@@ -5019,7 +5019,7 @@ namespace cellml12
      * @brief Destructor.
      */
     virtual 
-    ~unitPrefix_member1 ();
+    ~UnitPrefix_member1 ();
   };
 }
 
@@ -5046,10 +5046,10 @@ namespace cellml12
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (const ::std::string& uri,
-          ::xml_schema::flags f = 0,
-          const ::xml_schema::properties& p = ::xml_schema::properties ());
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (const ::std::string& uri,
+              ::xml_schema::Flags f = 0,
+              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
 
   /**
    * @brief Parse a URI or a local file with an error handler.
@@ -5062,11 +5062,11 @@ namespace cellml12
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (const ::std::string& uri,
-          ::xml_schema::error_handler& eh,
-          ::xml_schema::flags f = 0,
-          const ::xml_schema::properties& p = ::xml_schema::properties ());
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (const ::std::string& uri,
+              ::xml_schema::ErrorHandler& eh,
+              ::xml_schema::Flags f = 0,
+              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
 
   /**
    * @brief Parse a URI or a local file with a Xerces-C++ DOM error
@@ -5080,11 +5080,11 @@ namespace cellml12
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (const ::std::string& uri,
-          ::xercesc::DOMErrorHandler& eh,
-          ::xml_schema::flags f = 0,
-          const ::xml_schema::properties& p = ::xml_schema::properties ());
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (const ::std::string& uri,
+              ::xercesc::DOMErrorHandler& eh,
+              ::xml_schema::Flags f = 0,
+              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
 
   /**
    * @brief Parse a standard input stream.
@@ -5096,10 +5096,10 @@ namespace cellml12
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::std::istream& is,
-          ::xml_schema::flags f = 0,
-          const ::xml_schema::properties& p = ::xml_schema::properties ());
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::std::istream& is,
+              ::xml_schema::Flags f = 0,
+              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
 
   /**
    * @brief Parse a standard input stream with an error handler.
@@ -5112,11 +5112,11 @@ namespace cellml12
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::std::istream& is,
-          ::xml_schema::error_handler& eh,
-          ::xml_schema::flags f = 0,
-          const ::xml_schema::properties& p = ::xml_schema::properties ());
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::std::istream& is,
+              ::xml_schema::ErrorHandler& eh,
+              ::xml_schema::Flags f = 0,
+              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
 
   /**
    * @brief Parse a standard input stream with a Xerces-C++ DOM error
@@ -5130,11 +5130,11 @@ namespace cellml12
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::std::istream& is,
-          ::xercesc::DOMErrorHandler& eh,
-          ::xml_schema::flags f = 0,
-          const ::xml_schema::properties& p = ::xml_schema::properties ());
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::std::istream& is,
+              ::xercesc::DOMErrorHandler& eh,
+              ::xml_schema::Flags f = 0,
+              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
 
   /**
    * @brief Parse a standard input stream with a resource id.
@@ -5150,11 +5150,11 @@ namespace cellml12
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::std::istream& is,
-          const ::std::string& id,
-          ::xml_schema::flags f = 0,
-          const ::xml_schema::properties& p = ::xml_schema::properties ());
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::std::istream& is,
+              const ::std::string& id,
+              ::xml_schema::Flags f = 0,
+              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
 
   /**
    * @brief Parse a standard input stream with a resource id and an
@@ -5172,12 +5172,12 @@ namespace cellml12
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::std::istream& is,
-          const ::std::string& id,
-          ::xml_schema::error_handler& eh,
-          ::xml_schema::flags f = 0,
-          const ::xml_schema::properties& p = ::xml_schema::properties ());
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::std::istream& is,
+              const ::std::string& id,
+              ::xml_schema::ErrorHandler& eh,
+              ::xml_schema::Flags f = 0,
+              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
 
   /**
    * @brief Parse a standard input stream with a resource id and a
@@ -5195,12 +5195,12 @@ namespace cellml12
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::std::istream& is,
-          const ::std::string& id,
-          ::xercesc::DOMErrorHandler& eh,
-          ::xml_schema::flags f = 0,
-          const ::xml_schema::properties& p = ::xml_schema::properties ());
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::std::istream& is,
+              const ::std::string& id,
+              ::xercesc::DOMErrorHandler& eh,
+              ::xml_schema::Flags f = 0,
+              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
 
   /**
    * @brief Parse a Xerces-C++ input source.
@@ -5212,10 +5212,10 @@ namespace cellml12
    *
    * This function uses exceptions to report parsing errors.
    */
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::xercesc::InputSource& is,
-          ::xml_schema::flags f = 0,
-          const ::xml_schema::properties& p = ::xml_schema::properties ());
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::xercesc::InputSource& is,
+              ::xml_schema::Flags f = 0,
+              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
 
   /**
    * @brief Parse a Xerces-C++ input source with an error handler.
@@ -5228,11 +5228,11 @@ namespace cellml12
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::xercesc::InputSource& is,
-          ::xml_schema::error_handler& eh,
-          ::xml_schema::flags f = 0,
-          const ::xml_schema::properties& p = ::xml_schema::properties ());
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::xercesc::InputSource& is,
+              ::xml_schema::ErrorHandler& eh,
+              ::xml_schema::Flags f = 0,
+              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
 
   /**
    * @brief Parse a Xerces-C++ input source with a Xerces-C++ DOM
@@ -5246,11 +5246,11 @@ namespace cellml12
    *
    * This function reports parsing errors by calling the error handler.
    */
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::xercesc::InputSource& is,
-          ::xercesc::DOMErrorHandler& eh,
-          ::xml_schema::flags f = 0,
-          const ::xml_schema::properties& p = ::xml_schema::properties ());
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::xercesc::InputSource& is,
+              ::xercesc::DOMErrorHandler& eh,
+              ::xml_schema::Flags f = 0,
+              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
 
   /**
    * @brief Parse a Xerces-C++ DOM document.
@@ -5260,10 +5260,10 @@ namespace cellml12
    * @param p Parsing properties. 
    * @return A pointer to the root of the object model.
    */
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (const ::xercesc::DOMDocument& d,
-          ::xml_schema::flags f = 0,
-          const ::xml_schema::properties& p = ::xml_schema::properties ());
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (const ::xercesc::DOMDocument& d,
+              ::xml_schema::Flags f = 0,
+              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
 
   /**
    * @brief Parse a Xerces-C++ DOM document.
@@ -5277,10 +5277,10 @@ namespace cellml12
    * own_dom parsing flags to assign ownership of the DOM document
    * to the object model.
    */
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
-          ::xml_schema::flags f = 0,
-          const ::xml_schema::properties& p = ::xml_schema::properties ());
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
+              ::xml_schema::Flags f = 0,
+              const ::xml_schema::Properties& p = ::xml_schema::Properties ());
 
   //@}
 }
@@ -5312,11 +5312,11 @@ namespace cellml12
    * This function uses exceptions to report serialization errors.
    */
   void
-  model_ (::std::ostream& os,
-          const ::cellml12::model& x, 
-          const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
-          const ::std::string& e = "UTF-8",
-          ::xml_schema::flags f = 0);
+  serializeModel (::std::ostream& os,
+                  const ::cellml12::Model& x, 
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
 
   /**
    * @brief Serialize to a standard output stream with an error handler.
@@ -5332,12 +5332,12 @@ namespace cellml12
    * handler.
    */
   void
-  model_ (::std::ostream& os,
-          const ::cellml12::model& x, 
-          ::xml_schema::error_handler& eh,
-          const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
-          const ::std::string& e = "UTF-8",
-          ::xml_schema::flags f = 0);
+  serializeModel (::std::ostream& os,
+                  const ::cellml12::Model& x, 
+                  ::xml_schema::ErrorHandler& eh,
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
 
   /**
    * @brief Serialize to a standard output stream with a Xerces-C++ DOM
@@ -5354,12 +5354,12 @@ namespace cellml12
    * handler.
    */
   void
-  model_ (::std::ostream& os,
-          const ::cellml12::model& x, 
-          ::xercesc::DOMErrorHandler& eh,
-          const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
-          const ::std::string& e = "UTF-8",
-          ::xml_schema::flags f = 0);
+  serializeModel (::std::ostream& os,
+                  const ::cellml12::Model& x, 
+                  ::xercesc::DOMErrorHandler& eh,
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
 
   /**
    * @brief Serialize to a Xerces-C++ XML format target.
@@ -5373,11 +5373,11 @@ namespace cellml12
    * This function uses exceptions to report serialization errors.
    */
   void
-  model_ (::xercesc::XMLFormatTarget& ft,
-          const ::cellml12::model& x, 
-          const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
-          const ::std::string& e = "UTF-8",
-          ::xml_schema::flags f = 0);
+  serializeModel (::xercesc::XMLFormatTarget& ft,
+                  const ::cellml12::Model& x, 
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
 
   /**
    * @brief Serialize to a Xerces-C++ XML format target with an error
@@ -5394,12 +5394,12 @@ namespace cellml12
    * handler.
    */
   void
-  model_ (::xercesc::XMLFormatTarget& ft,
-          const ::cellml12::model& x, 
-          ::xml_schema::error_handler& eh,
-          const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
-          const ::std::string& e = "UTF-8",
-          ::xml_schema::flags f = 0);
+  serializeModel (::xercesc::XMLFormatTarget& ft,
+                  const ::cellml12::Model& x, 
+                  ::xml_schema::ErrorHandler& eh,
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
 
   /**
    * @brief Serialize to a Xerces-C++ XML format target with a
@@ -5416,12 +5416,12 @@ namespace cellml12
    * handler.
    */
   void
-  model_ (::xercesc::XMLFormatTarget& ft,
-          const ::cellml12::model& x, 
-          ::xercesc::DOMErrorHandler& eh,
-          const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
-          const ::std::string& e = "UTF-8",
-          ::xml_schema::flags f = 0);
+  serializeModel (::xercesc::XMLFormatTarget& ft,
+                  const ::cellml12::Model& x, 
+                  ::xercesc::DOMErrorHandler& eh,
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  const ::std::string& e = "UTF-8",
+                  ::xml_schema::Flags f = 0);
 
   /**
    * @brief Serialize to an existing Xerces-C++ DOM document.
@@ -5435,9 +5435,9 @@ namespace cellml12
    * namespace mapping attributes.
    */
   void
-  model_ (::xercesc::DOMDocument& d,
-          const ::cellml12::model& x,
-          ::xml_schema::flags f = 0);
+  serializeModel (::xercesc::DOMDocument& d,
+                  const ::cellml12::Model& x,
+                  ::xml_schema::Flags f = 0);
 
   /**
    * @brief Serialize to a new Xerces-C++ DOM document.
@@ -5448,100 +5448,100 @@ namespace cellml12
    * @return A pointer to the new Xerces-C++ DOM document.
    */
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  model_ (const ::cellml12::model& x, 
-          const ::xml_schema::namespace_infomap& m = ::xml_schema::namespace_infomap (),
-          ::xml_schema::flags f = 0);
+  serializeModel (const ::cellml12::Model& x, 
+                  const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
+                  ::xml_schema::Flags f = 0);
 
   //@}
 
   void
-  operator<< (::xercesc::DOMElement&, const model&);
+  operator<< (::xercesc::DOMElement&, const Model&);
 
   void
-  operator<< (::xercesc::DOMElement&, const import&);
+  operator<< (::xercesc::DOMElement&, const Import&);
 
   void
-  operator<< (::xercesc::DOMElement&, const units&);
+  operator<< (::xercesc::DOMElement&, const Units&);
 
   void
-  operator<< (::xercesc::DOMElement&, const unit&);
+  operator<< (::xercesc::DOMElement&, const Unit&);
 
   void
-  operator<< (::xercesc::DOMElement&, const component&);
+  operator<< (::xercesc::DOMElement&, const Component&);
 
   void
-  operator<< (::xercesc::DOMElement&, const encapsulation&);
+  operator<< (::xercesc::DOMElement&, const Encapsulation&);
 
   void
-  operator<< (::xercesc::DOMElement&, const toplevelComponentRef&);
+  operator<< (::xercesc::DOMElement&, const ToplevelComponentRef&);
 
   void
-  operator<< (::xercesc::DOMElement&, const componentRef&);
+  operator<< (::xercesc::DOMElement&, const ComponentRef&);
 
   void
-  operator<< (::xercesc::DOMElement&, const connection&);
+  operator<< (::xercesc::DOMElement&, const Connection&);
 
   void
-  operator<< (::xercesc::DOMElement&, const importedUnits&);
+  operator<< (::xercesc::DOMElement&, const ImportedUnits&);
 
   void
-  operator<< (::xercesc::DOMElement&, const importedComponent&);
+  operator<< (::xercesc::DOMElement&, const ImportedComponent&);
 
   void
-  operator<< (::xercesc::DOMElement&, const variable&);
+  operator<< (::xercesc::DOMElement&, const Variable&);
 
   void
-  operator<< (::xercesc::DOMElement&, const mapVariables&);
+  operator<< (::xercesc::DOMElement&, const MapVariables&);
 
   void
-  operator<< (::xercesc::DOMElement&, const cellMLIdentifier&);
+  operator<< (::xercesc::DOMElement&, const CellMLIdentifier&);
 
   void
-  operator<< (::xercesc::DOMAttr&, const cellMLIdentifier&);
+  operator<< (::xercesc::DOMAttr&, const CellMLIdentifier&);
 
   void
-  operator<< (::xml_schema::list_stream&,
-              const cellMLIdentifier&);
+  operator<< (::xml_schema::ListStream&,
+              const CellMLIdentifier&);
 
   void
-  operator<< (::xercesc::DOMElement&, const unitPrefix&);
+  operator<< (::xercesc::DOMElement&, const UnitPrefix&);
 
   void
-  operator<< (::xercesc::DOMAttr&, const unitPrefix&);
+  operator<< (::xercesc::DOMAttr&, const UnitPrefix&);
 
   void
-  operator<< (::xml_schema::list_stream&,
-              const unitPrefix&);
+  operator<< (::xml_schema::ListStream&,
+              const UnitPrefix&);
 
   void
-  operator<< (::xercesc::DOMElement&, const yesno&);
+  operator<< (::xercesc::DOMElement&, const Yesno&);
 
   void
-  operator<< (::xercesc::DOMAttr&, const yesno&);
+  operator<< (::xercesc::DOMAttr&, const Yesno&);
 
   void
-  operator<< (::xml_schema::list_stream&,
-              const yesno&);
+  operator<< (::xml_schema::ListStream&,
+              const Yesno&);
 
   void
-  operator<< (::xercesc::DOMElement&, const unitPrefix_member&);
+  operator<< (::xercesc::DOMElement&, const UnitPrefix_member&);
 
   void
-  operator<< (::xercesc::DOMAttr&, const unitPrefix_member&);
+  operator<< (::xercesc::DOMAttr&, const UnitPrefix_member&);
 
   void
-  operator<< (::xml_schema::list_stream&,
-              const unitPrefix_member&);
+  operator<< (::xml_schema::ListStream&,
+              const UnitPrefix_member&);
 
   void
-  operator<< (::xercesc::DOMElement&, const unitPrefix_member1&);
+  operator<< (::xercesc::DOMElement&, const UnitPrefix_member1&);
 
   void
-  operator<< (::xercesc::DOMAttr&, const unitPrefix_member1&);
+  operator<< (::xercesc::DOMAttr&, const UnitPrefix_member1&);
 
   void
-  operator<< (::xml_schema::list_stream&,
-              const unitPrefix_member1&);
+  operator<< (::xml_schema::ListStream&,
+              const UnitPrefix_member1&);
 }
 
 #include <xsd/cxx/post.hxx>

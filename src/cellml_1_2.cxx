@@ -42,1070 +42,1070 @@
 
 namespace cellml12
 {
-  // model
+  // Model
   // 
 
-  const model::import_sequence& model::
-  import () const
+  const Model::ImportSequence& Model::
+  getImport () const
   {
     return this->import_;
   }
 
-  model::import_sequence& model::
-  import ()
+  Model::ImportSequence& Model::
+  getImport ()
   {
     return this->import_;
   }
 
-  void model::
-  import (const import_sequence& s)
+  void Model::
+  setImport (const ImportSequence& s)
   {
     this->import_ = s;
   }
 
-  const model::units_sequence& model::
-  units () const
+  const Model::UnitsSequence& Model::
+  getUnits () const
   {
     return this->units_;
   }
 
-  model::units_sequence& model::
-  units ()
+  Model::UnitsSequence& Model::
+  getUnits ()
   {
     return this->units_;
   }
 
-  void model::
-  units (const units_sequence& s)
+  void Model::
+  setUnits (const UnitsSequence& s)
   {
     this->units_ = s;
   }
 
-  const model::component_sequence& model::
-  component () const
+  const Model::ComponentSequence& Model::
+  getComponent () const
   {
     return this->component_;
   }
 
-  model::component_sequence& model::
-  component ()
+  Model::ComponentSequence& Model::
+  getComponent ()
   {
     return this->component_;
   }
 
-  void model::
-  component (const component_sequence& s)
+  void Model::
+  setComponent (const ComponentSequence& s)
   {
     this->component_ = s;
   }
 
-  const model::encapsulation_sequence& model::
-  encapsulation () const
+  const Model::EncapsulationSequence& Model::
+  getEncapsulation () const
   {
     return this->encapsulation_;
   }
 
-  model::encapsulation_sequence& model::
-  encapsulation ()
+  Model::EncapsulationSequence& Model::
+  getEncapsulation ()
   {
     return this->encapsulation_;
   }
 
-  void model::
-  encapsulation (const encapsulation_sequence& s)
+  void Model::
+  setEncapsulation (const EncapsulationSequence& s)
   {
     this->encapsulation_ = s;
   }
 
-  const model::connection_sequence& model::
-  connection () const
+  const Model::ConnectionSequence& Model::
+  getConnection () const
   {
     return this->connection_;
   }
 
-  model::connection_sequence& model::
-  connection ()
+  Model::ConnectionSequence& Model::
+  getConnection ()
   {
     return this->connection_;
   }
 
-  void model::
-  connection (const connection_sequence& s)
+  void Model::
+  setConnection (const ConnectionSequence& s)
   {
     this->connection_ = s;
   }
 
-  const model::name_type& model::
-  name () const
+  const Model::NameType& Model::
+  getName () const
   {
     return this->name_.get ();
   }
 
-  model::name_type& model::
-  name ()
+  Model::NameType& Model::
+  getName ()
   {
     return this->name_.get ();
   }
 
-  void model::
-  name (const name_type& x)
+  void Model::
+  setName (const NameType& x)
   {
     this->name_.set (x);
   }
 
-  void model::
-  name (::std::unique_ptr< name_type > x)
+  void Model::
+  setName (::std::unique_ptr< NameType > x)
   {
     this->name_.set (std::move (x));
   }
 
 
-  // import
+  // Import
   // 
 
-  const import::units_sequence& import::
-  units () const
+  const Import::UnitsSequence& Import::
+  getUnits () const
   {
     return this->units_;
   }
 
-  import::units_sequence& import::
-  units ()
+  Import::UnitsSequence& Import::
+  getUnits ()
   {
     return this->units_;
   }
 
-  void import::
-  units (const units_sequence& s)
+  void Import::
+  setUnits (const UnitsSequence& s)
   {
     this->units_ = s;
   }
 
-  const import::component_sequence& import::
-  component () const
+  const Import::ComponentSequence& Import::
+  getComponent () const
   {
     return this->component_;
   }
 
-  import::component_sequence& import::
-  component ()
+  Import::ComponentSequence& Import::
+  getComponent ()
   {
     return this->component_;
   }
 
-  void import::
-  component (const component_sequence& s)
+  void Import::
+  setComponent (const ComponentSequence& s)
   {
     this->component_ = s;
   }
 
-  const import::href_type& import::
-  href () const
+  const Import::HrefType& Import::
+  getHref () const
   {
     return this->href_.get ();
   }
 
-  import::href_type& import::
-  href ()
+  Import::HrefType& Import::
+  getHref ()
   {
     return this->href_.get ();
   }
 
-  void import::
-  href (const href_type& x)
+  void Import::
+  setHref (const HrefType& x)
   {
     this->href_.set (x);
   }
 
-  void import::
-  href (::std::unique_ptr< href_type > x)
+  void Import::
+  setHref (::std::unique_ptr< HrefType > x)
   {
     this->href_.set (std::move (x));
   }
 
 
-  // units
+  // Units
   // 
 
-  const units::unit_sequence& units::
-  unit () const
+  const Units::UnitSequence& Units::
+  getUnit () const
   {
     return this->unit_;
   }
 
-  units::unit_sequence& units::
-  unit ()
+  Units::UnitSequence& Units::
+  getUnit ()
   {
     return this->unit_;
   }
 
-  void units::
-  unit (const unit_sequence& s)
+  void Units::
+  setUnit (const UnitSequence& s)
   {
     this->unit_ = s;
   }
 
-  const units::name_type& units::
-  name () const
+  const Units::NameType& Units::
+  getName () const
   {
     return this->name_.get ();
   }
 
-  units::name_type& units::
-  name ()
+  Units::NameType& Units::
+  getName ()
   {
     return this->name_.get ();
   }
 
-  void units::
-  name (const name_type& x)
+  void Units::
+  setName (const NameType& x)
   {
     this->name_.set (x);
   }
 
-  void units::
-  name (::std::unique_ptr< name_type > x)
+  void Units::
+  setName (::std::unique_ptr< NameType > x)
   {
     this->name_.set (std::move (x));
   }
 
-  const units::base_units_optional& units::
-  base_units () const
+  const Units::Base_unitsOptional& Units::
+  getBase_units () const
   {
     return this->base_units_;
   }
 
-  units::base_units_optional& units::
-  base_units ()
+  Units::Base_unitsOptional& Units::
+  getBase_units ()
   {
     return this->base_units_;
   }
 
-  void units::
-  base_units (const base_units_type& x)
+  void Units::
+  setBase_units (const Base_unitsType& x)
   {
     this->base_units_.set (x);
   }
 
-  void units::
-  base_units (const base_units_optional& x)
+  void Units::
+  setBase_units (const Base_unitsOptional& x)
   {
     this->base_units_ = x;
   }
 
-  void units::
-  base_units (::std::unique_ptr< base_units_type > x)
+  void Units::
+  setBase_units (::std::unique_ptr< Base_unitsType > x)
   {
     this->base_units_.set (std::move (x));
   }
 
 
-  // unit
+  // Unit
   // 
 
-  const unit::units_type& unit::
-  units () const
+  const Unit::UnitsType& Unit::
+  getUnits () const
   {
     return this->units_.get ();
   }
 
-  unit::units_type& unit::
-  units ()
+  Unit::UnitsType& Unit::
+  getUnits ()
   {
     return this->units_.get ();
   }
 
-  void unit::
-  units (const units_type& x)
+  void Unit::
+  setUnits (const UnitsType& x)
   {
     this->units_.set (x);
   }
 
-  void unit::
-  units (::std::unique_ptr< units_type > x)
+  void Unit::
+  setUnits (::std::unique_ptr< UnitsType > x)
   {
     this->units_.set (std::move (x));
   }
 
-  const unit::multiplier_optional& unit::
-  multiplier () const
+  const Unit::MultiplierOptional& Unit::
+  getMultiplier () const
   {
     return this->multiplier_;
   }
 
-  unit::multiplier_optional& unit::
-  multiplier ()
+  Unit::MultiplierOptional& Unit::
+  getMultiplier ()
   {
     return this->multiplier_;
   }
 
-  void unit::
-  multiplier (const multiplier_type& x)
+  void Unit::
+  setMultiplier (const MultiplierType& x)
   {
     this->multiplier_.set (x);
   }
 
-  void unit::
-  multiplier (const multiplier_optional& x)
+  void Unit::
+  setMultiplier (const MultiplierOptional& x)
   {
     this->multiplier_ = x;
   }
 
-  const unit::prefix_optional& unit::
-  prefix () const
+  const Unit::PrefixOptional& Unit::
+  getPrefix () const
   {
     return this->prefix_;
   }
 
-  unit::prefix_optional& unit::
-  prefix ()
+  Unit::PrefixOptional& Unit::
+  getPrefix ()
   {
     return this->prefix_;
   }
 
-  void unit::
-  prefix (const prefix_type& x)
+  void Unit::
+  setPrefix (const PrefixType& x)
   {
     this->prefix_.set (x);
   }
 
-  void unit::
-  prefix (const prefix_optional& x)
+  void Unit::
+  setPrefix (const PrefixOptional& x)
   {
     this->prefix_ = x;
   }
 
-  void unit::
-  prefix (::std::unique_ptr< prefix_type > x)
+  void Unit::
+  setPrefix (::std::unique_ptr< PrefixType > x)
   {
     this->prefix_.set (std::move (x));
   }
 
-  const unit::offset_optional& unit::
-  offset () const
+  const Unit::OffsetOptional& Unit::
+  getOffset () const
   {
     return this->offset_;
   }
 
-  unit::offset_optional& unit::
-  offset ()
+  Unit::OffsetOptional& Unit::
+  getOffset ()
   {
     return this->offset_;
   }
 
-  void unit::
-  offset (const offset_type& x)
+  void Unit::
+  setOffset (const OffsetType& x)
   {
     this->offset_.set (x);
   }
 
-  void unit::
-  offset (const offset_optional& x)
+  void Unit::
+  setOffset (const OffsetOptional& x)
   {
     this->offset_ = x;
   }
 
-  const unit::exponent_optional& unit::
-  exponent () const
+  const Unit::ExponentOptional& Unit::
+  getExponent () const
   {
     return this->exponent_;
   }
 
-  unit::exponent_optional& unit::
-  exponent ()
+  Unit::ExponentOptional& Unit::
+  getExponent ()
   {
     return this->exponent_;
   }
 
-  void unit::
-  exponent (const exponent_type& x)
+  void Unit::
+  setExponent (const ExponentType& x)
   {
     this->exponent_.set (x);
   }
 
-  void unit::
-  exponent (const exponent_optional& x)
+  void Unit::
+  setExponent (const ExponentOptional& x)
   {
     this->exponent_ = x;
   }
 
 
-  // component
+  // Component
   // 
 
-  const component::units_sequence& component::
-  units () const
+  const Component::UnitsSequence& Component::
+  getUnits () const
   {
     return this->units_;
   }
 
-  component::units_sequence& component::
-  units ()
+  Component::UnitsSequence& Component::
+  getUnits ()
   {
     return this->units_;
   }
 
-  void component::
-  units (const units_sequence& s)
+  void Component::
+  setUnits (const UnitsSequence& s)
   {
     this->units_ = s;
   }
 
-  const component::variable_sequence& component::
-  variable () const
+  const Component::VariableSequence& Component::
+  getVariable () const
   {
     return this->variable_;
   }
 
-  component::variable_sequence& component::
-  variable ()
+  Component::VariableSequence& Component::
+  getVariable ()
   {
     return this->variable_;
   }
 
-  void component::
-  variable (const variable_sequence& s)
+  void Component::
+  setVariable (const VariableSequence& s)
   {
     this->variable_ = s;
   }
 
-  const component::math_sequence& component::
-  math () const
+  const Component::MathSequence& Component::
+  getMath () const
   {
     return this->math_;
   }
 
-  component::math_sequence& component::
-  math ()
+  Component::MathSequence& Component::
+  getMath ()
   {
     return this->math_;
   }
 
-  void component::
-  math (const math_sequence& s)
+  void Component::
+  setMath (const MathSequence& s)
   {
     this->math_ = s;
   }
 
-  const component::name_type& component::
-  name () const
+  const Component::NameType& Component::
+  getName () const
   {
     return this->name_.get ();
   }
 
-  component::name_type& component::
-  name ()
+  Component::NameType& Component::
+  getName ()
   {
     return this->name_.get ();
   }
 
-  void component::
-  name (const name_type& x)
+  void Component::
+  setName (const NameType& x)
   {
     this->name_.set (x);
   }
 
-  void component::
-  name (::std::unique_ptr< name_type > x)
+  void Component::
+  setName (::std::unique_ptr< NameType > x)
   {
     this->name_.set (std::move (x));
   }
 
 
-  // encapsulation
+  // Encapsulation
   // 
 
-  const encapsulation::component_ref_sequence& encapsulation::
-  component_ref () const
+  const Encapsulation::Component_refSequence& Encapsulation::
+  getComponent_ref () const
   {
     return this->component_ref_;
   }
 
-  encapsulation::component_ref_sequence& encapsulation::
-  component_ref ()
+  Encapsulation::Component_refSequence& Encapsulation::
+  getComponent_ref ()
   {
     return this->component_ref_;
   }
 
-  void encapsulation::
-  component_ref (const component_ref_sequence& s)
+  void Encapsulation::
+  setComponent_ref (const Component_refSequence& s)
   {
     this->component_ref_ = s;
   }
 
 
-  // toplevelComponentRef
+  // ToplevelComponentRef
   // 
 
-  const toplevelComponentRef::component_ref_sequence& toplevelComponentRef::
-  component_ref () const
+  const ToplevelComponentRef::Component_refSequence& ToplevelComponentRef::
+  getComponent_ref () const
   {
     return this->component_ref_;
   }
 
-  toplevelComponentRef::component_ref_sequence& toplevelComponentRef::
-  component_ref ()
+  ToplevelComponentRef::Component_refSequence& ToplevelComponentRef::
+  getComponent_ref ()
   {
     return this->component_ref_;
   }
 
-  void toplevelComponentRef::
-  component_ref (const component_ref_sequence& s)
+  void ToplevelComponentRef::
+  setComponent_ref (const Component_refSequence& s)
   {
     this->component_ref_ = s;
   }
 
-  const toplevelComponentRef::component_type& toplevelComponentRef::
-  component () const
+  const ToplevelComponentRef::ComponentType& ToplevelComponentRef::
+  getComponent () const
   {
     return this->component_.get ();
   }
 
-  toplevelComponentRef::component_type& toplevelComponentRef::
-  component ()
+  ToplevelComponentRef::ComponentType& ToplevelComponentRef::
+  getComponent ()
   {
     return this->component_.get ();
   }
 
-  void toplevelComponentRef::
-  component (const component_type& x)
+  void ToplevelComponentRef::
+  setComponent (const ComponentType& x)
   {
     this->component_.set (x);
   }
 
-  void toplevelComponentRef::
-  component (::std::unique_ptr< component_type > x)
+  void ToplevelComponentRef::
+  setComponent (::std::unique_ptr< ComponentType > x)
   {
     this->component_.set (std::move (x));
   }
 
 
-  // componentRef
+  // ComponentRef
   // 
 
-  const componentRef::component_ref_sequence& componentRef::
-  component_ref () const
+  const ComponentRef::Component_refSequence& ComponentRef::
+  getComponent_ref () const
   {
     return this->component_ref_;
   }
 
-  componentRef::component_ref_sequence& componentRef::
-  component_ref ()
+  ComponentRef::Component_refSequence& ComponentRef::
+  getComponent_ref ()
   {
     return this->component_ref_;
   }
 
-  void componentRef::
-  component_ref (const component_ref_sequence& s)
+  void ComponentRef::
+  setComponent_ref (const Component_refSequence& s)
   {
     this->component_ref_ = s;
   }
 
-  const componentRef::component_type& componentRef::
-  component () const
+  const ComponentRef::ComponentType& ComponentRef::
+  getComponent () const
   {
     return this->component_.get ();
   }
 
-  componentRef::component_type& componentRef::
-  component ()
+  ComponentRef::ComponentType& ComponentRef::
+  getComponent ()
   {
     return this->component_.get ();
   }
 
-  void componentRef::
-  component (const component_type& x)
+  void ComponentRef::
+  setComponent (const ComponentType& x)
   {
     this->component_.set (x);
   }
 
-  void componentRef::
-  component (::std::unique_ptr< component_type > x)
+  void ComponentRef::
+  setComponent (::std::unique_ptr< ComponentType > x)
   {
     this->component_.set (std::move (x));
   }
 
 
-  // connection
+  // Connection
   // 
 
-  const connection::map_variables_sequence& connection::
-  map_variables () const
+  const Connection::Map_variablesSequence& Connection::
+  getMap_variables () const
   {
     return this->map_variables_;
   }
 
-  connection::map_variables_sequence& connection::
-  map_variables ()
+  Connection::Map_variablesSequence& Connection::
+  getMap_variables ()
   {
     return this->map_variables_;
   }
 
-  void connection::
-  map_variables (const map_variables_sequence& s)
+  void Connection::
+  setMap_variables (const Map_variablesSequence& s)
   {
     this->map_variables_ = s;
   }
 
-  const connection::component_1_type& connection::
-  component_1 () const
+  const Connection::Component_1Type& Connection::
+  getComponent_1 () const
   {
     return this->component_1_.get ();
   }
 
-  connection::component_1_type& connection::
-  component_1 ()
+  Connection::Component_1Type& Connection::
+  getComponent_1 ()
   {
     return this->component_1_.get ();
   }
 
-  void connection::
-  component_1 (const component_1_type& x)
+  void Connection::
+  setComponent_1 (const Component_1Type& x)
   {
     this->component_1_.set (x);
   }
 
-  void connection::
-  component_1 (::std::unique_ptr< component_1_type > x)
+  void Connection::
+  setComponent_1 (::std::unique_ptr< Component_1Type > x)
   {
     this->component_1_.set (std::move (x));
   }
 
-  const connection::component_2_type& connection::
-  component_2 () const
+  const Connection::Component_2Type& Connection::
+  getComponent_2 () const
   {
     return this->component_2_.get ();
   }
 
-  connection::component_2_type& connection::
-  component_2 ()
+  Connection::Component_2Type& Connection::
+  getComponent_2 ()
   {
     return this->component_2_.get ();
   }
 
-  void connection::
-  component_2 (const component_2_type& x)
+  void Connection::
+  setComponent_2 (const Component_2Type& x)
   {
     this->component_2_.set (x);
   }
 
-  void connection::
-  component_2 (::std::unique_ptr< component_2_type > x)
+  void Connection::
+  setComponent_2 (::std::unique_ptr< Component_2Type > x)
   {
     this->component_2_.set (std::move (x));
   }
 
 
-  // importedUnits
+  // ImportedUnits
   // 
 
-  const importedUnits::name_type& importedUnits::
-  name () const
+  const ImportedUnits::NameType& ImportedUnits::
+  getName () const
   {
     return this->name_.get ();
   }
 
-  importedUnits::name_type& importedUnits::
-  name ()
+  ImportedUnits::NameType& ImportedUnits::
+  getName ()
   {
     return this->name_.get ();
   }
 
-  void importedUnits::
-  name (const name_type& x)
+  void ImportedUnits::
+  setName (const NameType& x)
   {
     this->name_.set (x);
   }
 
-  void importedUnits::
-  name (::std::unique_ptr< name_type > x)
+  void ImportedUnits::
+  setName (::std::unique_ptr< NameType > x)
   {
     this->name_.set (std::move (x));
   }
 
-  const importedUnits::units_ref_type& importedUnits::
-  units_ref () const
+  const ImportedUnits::Units_refType& ImportedUnits::
+  getUnits_ref () const
   {
     return this->units_ref_.get ();
   }
 
-  importedUnits::units_ref_type& importedUnits::
-  units_ref ()
+  ImportedUnits::Units_refType& ImportedUnits::
+  getUnits_ref ()
   {
     return this->units_ref_.get ();
   }
 
-  void importedUnits::
-  units_ref (const units_ref_type& x)
+  void ImportedUnits::
+  setUnits_ref (const Units_refType& x)
   {
     this->units_ref_.set (x);
   }
 
-  void importedUnits::
-  units_ref (::std::unique_ptr< units_ref_type > x)
+  void ImportedUnits::
+  setUnits_ref (::std::unique_ptr< Units_refType > x)
   {
     this->units_ref_.set (std::move (x));
   }
 
 
-  // importedComponent
+  // ImportedComponent
   // 
 
-  const importedComponent::name_type& importedComponent::
-  name () const
+  const ImportedComponent::NameType& ImportedComponent::
+  getName () const
   {
     return this->name_.get ();
   }
 
-  importedComponent::name_type& importedComponent::
-  name ()
+  ImportedComponent::NameType& ImportedComponent::
+  getName ()
   {
     return this->name_.get ();
   }
 
-  void importedComponent::
-  name (const name_type& x)
+  void ImportedComponent::
+  setName (const NameType& x)
   {
     this->name_.set (x);
   }
 
-  void importedComponent::
-  name (::std::unique_ptr< name_type > x)
+  void ImportedComponent::
+  setName (::std::unique_ptr< NameType > x)
   {
     this->name_.set (std::move (x));
   }
 
-  const importedComponent::component_ref_type& importedComponent::
-  component_ref () const
+  const ImportedComponent::Component_refType& ImportedComponent::
+  getComponent_ref () const
   {
     return this->component_ref_.get ();
   }
 
-  importedComponent::component_ref_type& importedComponent::
-  component_ref ()
+  ImportedComponent::Component_refType& ImportedComponent::
+  getComponent_ref ()
   {
     return this->component_ref_.get ();
   }
 
-  void importedComponent::
-  component_ref (const component_ref_type& x)
+  void ImportedComponent::
+  setComponent_ref (const Component_refType& x)
   {
     this->component_ref_.set (x);
   }
 
-  void importedComponent::
-  component_ref (::std::unique_ptr< component_ref_type > x)
+  void ImportedComponent::
+  setComponent_ref (::std::unique_ptr< Component_refType > x)
   {
     this->component_ref_.set (std::move (x));
   }
 
 
-  // variable
+  // Variable
   // 
 
-  const variable::name_type& variable::
-  name () const
+  const Variable::NameType& Variable::
+  getName () const
   {
     return this->name_.get ();
   }
 
-  variable::name_type& variable::
-  name ()
+  Variable::NameType& Variable::
+  getName ()
   {
     return this->name_.get ();
   }
 
-  void variable::
-  name (const name_type& x)
+  void Variable::
+  setName (const NameType& x)
   {
     this->name_.set (x);
   }
 
-  void variable::
-  name (::std::unique_ptr< name_type > x)
+  void Variable::
+  setName (::std::unique_ptr< NameType > x)
   {
     this->name_.set (std::move (x));
   }
 
-  const variable::units_type& variable::
-  units () const
+  const Variable::UnitsType& Variable::
+  getUnits () const
   {
     return this->units_.get ();
   }
 
-  variable::units_type& variable::
-  units ()
+  Variable::UnitsType& Variable::
+  getUnits ()
   {
     return this->units_.get ();
   }
 
-  void variable::
-  units (const units_type& x)
+  void Variable::
+  setUnits (const UnitsType& x)
   {
     this->units_.set (x);
   }
 
-  void variable::
-  units (::std::unique_ptr< units_type > x)
+  void Variable::
+  setUnits (::std::unique_ptr< UnitsType > x)
   {
     this->units_.set (std::move (x));
   }
 
-  const variable::public_interface_optional& variable::
-  public_interface () const
+  const Variable::Public_interfaceOptional& Variable::
+  getPublic_interface () const
   {
     return this->public_interface_;
   }
 
-  variable::public_interface_optional& variable::
-  public_interface ()
+  Variable::Public_interfaceOptional& Variable::
+  getPublic_interface ()
   {
     return this->public_interface_;
   }
 
-  void variable::
-  public_interface (const public_interface_type& x)
+  void Variable::
+  setPublic_interface (const Public_interfaceType& x)
   {
     this->public_interface_.set (x);
   }
 
-  void variable::
-  public_interface (const public_interface_optional& x)
+  void Variable::
+  setPublic_interface (const Public_interfaceOptional& x)
   {
     this->public_interface_ = x;
   }
 
-  void variable::
-  public_interface (::std::unique_ptr< public_interface_type > x)
+  void Variable::
+  setPublic_interface (::std::unique_ptr< Public_interfaceType > x)
   {
     this->public_interface_.set (std::move (x));
   }
 
-  const variable::private_interface_optional& variable::
-  private_interface () const
+  const Variable::Private_interfaceOptional& Variable::
+  getPrivate_interface () const
   {
     return this->private_interface_;
   }
 
-  variable::private_interface_optional& variable::
-  private_interface ()
+  Variable::Private_interfaceOptional& Variable::
+  getPrivate_interface ()
   {
     return this->private_interface_;
   }
 
-  void variable::
-  private_interface (const private_interface_type& x)
+  void Variable::
+  setPrivate_interface (const Private_interfaceType& x)
   {
     this->private_interface_.set (x);
   }
 
-  void variable::
-  private_interface (const private_interface_optional& x)
+  void Variable::
+  setPrivate_interface (const Private_interfaceOptional& x)
   {
     this->private_interface_ = x;
   }
 
-  void variable::
-  private_interface (::std::unique_ptr< private_interface_type > x)
+  void Variable::
+  setPrivate_interface (::std::unique_ptr< Private_interfaceType > x)
   {
     this->private_interface_.set (std::move (x));
   }
 
-  const variable::type_type& variable::
-  type () const
+  const Variable::TypeType& Variable::
+  getType () const
   {
     return this->type_.get ();
   }
 
-  variable::type_type& variable::
-  type ()
+  Variable::TypeType& Variable::
+  getType ()
   {
     return this->type_.get ();
   }
 
-  void variable::
-  type (const type_type& x)
+  void Variable::
+  setType (const TypeType& x)
   {
     this->type_.set (x);
   }
 
-  void variable::
-  type (::std::unique_ptr< type_type > x)
+  void Variable::
+  setType (::std::unique_ptr< TypeType > x)
   {
     this->type_.set (std::move (x));
   }
 
 
-  // mapVariables
+  // MapVariables
   // 
 
-  const mapVariables::variable_1_type& mapVariables::
-  variable_1 () const
+  const MapVariables::Variable_1Type& MapVariables::
+  getVariable_1 () const
   {
     return this->variable_1_.get ();
   }
 
-  mapVariables::variable_1_type& mapVariables::
-  variable_1 ()
+  MapVariables::Variable_1Type& MapVariables::
+  getVariable_1 ()
   {
     return this->variable_1_.get ();
   }
 
-  void mapVariables::
-  variable_1 (const variable_1_type& x)
+  void MapVariables::
+  setVariable_1 (const Variable_1Type& x)
   {
     this->variable_1_.set (x);
   }
 
-  void mapVariables::
-  variable_1 (::std::unique_ptr< variable_1_type > x)
+  void MapVariables::
+  setVariable_1 (::std::unique_ptr< Variable_1Type > x)
   {
     this->variable_1_.set (std::move (x));
   }
 
-  const mapVariables::variable_2_type& mapVariables::
-  variable_2 () const
+  const MapVariables::Variable_2Type& MapVariables::
+  getVariable_2 () const
   {
     return this->variable_2_.get ();
   }
 
-  mapVariables::variable_2_type& mapVariables::
-  variable_2 ()
+  MapVariables::Variable_2Type& MapVariables::
+  getVariable_2 ()
   {
     return this->variable_2_.get ();
   }
 
-  void mapVariables::
-  variable_2 (const variable_2_type& x)
+  void MapVariables::
+  setVariable_2 (const Variable_2Type& x)
   {
     this->variable_2_.set (x);
   }
 
-  void mapVariables::
-  variable_2 (::std::unique_ptr< variable_2_type > x)
+  void MapVariables::
+  setVariable_2 (::std::unique_ptr< Variable_2Type > x)
   {
     this->variable_2_.set (std::move (x));
   }
 
 
-  // cellMLIdentifier
+  // CellMLIdentifier
   // 
 
 
-  // unitPrefix
+  // UnitPrefix
   //
 
-  unitPrefix::
-  unitPrefix (const char* s)
-  : ::xml_schema::string (s)
+  UnitPrefix::
+  UnitPrefix (const char* s)
+  : ::xml_schema::String (s)
   {
   }
 
-  unitPrefix::
-  unitPrefix (const ::std::string& s)
-  : ::xml_schema::string (s)
+  UnitPrefix::
+  UnitPrefix (const ::std::string& s)
+  : ::xml_schema::String (s)
   {
   }
 
-  unitPrefix::
-  unitPrefix (const unitPrefix& o,
-              ::xml_schema::flags f,
-              ::xml_schema::container* c)
-  : ::xml_schema::string (o, f, c)
+  UnitPrefix::
+  UnitPrefix (const UnitPrefix& o,
+              ::xml_schema::Flags f,
+              ::xml_schema::Container* c)
+  : ::xml_schema::String (o, f, c)
   {
   }
 
-  // yesno
+  // Yesno
   // 
 
-  yesno::
-  yesno (value v)
-  : ::xml_schema::string (_xsd_yesno_literals_[v])
+  Yesno::
+  Yesno (Value v)
+  : ::xml_schema::String (_xsd_Yesno_literals_[v])
   {
   }
 
-  yesno::
-  yesno (const char* v)
-  : ::xml_schema::string (v)
+  Yesno::
+  Yesno (const char* v)
+  : ::xml_schema::String (v)
   {
   }
 
-  yesno::
-  yesno (const ::std::string& v)
-  : ::xml_schema::string (v)
+  Yesno::
+  Yesno (const ::std::string& v)
+  : ::xml_schema::String (v)
   {
   }
 
-  yesno::
-  yesno (const ::xml_schema::string& v)
-  : ::xml_schema::string (v)
+  Yesno::
+  Yesno (const ::xml_schema::String& v)
+  : ::xml_schema::String (v)
   {
   }
 
-  yesno::
-  yesno (const yesno& v,
-         ::xml_schema::flags f,
-         ::xml_schema::container* c)
-  : ::xml_schema::string (v, f, c)
+  Yesno::
+  Yesno (const Yesno& v,
+         ::xml_schema::Flags f,
+         ::xml_schema::Container* c)
+  : ::xml_schema::String (v, f, c)
   {
   }
 
-  yesno& yesno::
-  operator= (value v)
+  Yesno& Yesno::
+  operator= (Value v)
   {
-    static_cast< ::xml_schema::string& > (*this) = 
-    ::xml_schema::string (_xsd_yesno_literals_[v]);
+    static_cast< ::xml_schema::String& > (*this) = 
+    ::xml_schema::String (_xsd_Yesno_literals_[v]);
 
     return *this;
   }
 
 
-  // unitPrefix_member
+  // UnitPrefix_member
   // 
 
-  unitPrefix_member::
-  unitPrefix_member (value v)
-  : ::xml_schema::string (_xsd_unitPrefix_member_literals_[v])
+  UnitPrefix_member::
+  UnitPrefix_member (Value v)
+  : ::xml_schema::String (_xsd_UnitPrefix_member_literals_[v])
   {
   }
 
-  unitPrefix_member::
-  unitPrefix_member (const char* v)
-  : ::xml_schema::string (v)
+  UnitPrefix_member::
+  UnitPrefix_member (const char* v)
+  : ::xml_schema::String (v)
   {
   }
 
-  unitPrefix_member::
-  unitPrefix_member (const ::std::string& v)
-  : ::xml_schema::string (v)
+  UnitPrefix_member::
+  UnitPrefix_member (const ::std::string& v)
+  : ::xml_schema::String (v)
   {
   }
 
-  unitPrefix_member::
-  unitPrefix_member (const ::xml_schema::string& v)
-  : ::xml_schema::string (v)
+  UnitPrefix_member::
+  UnitPrefix_member (const ::xml_schema::String& v)
+  : ::xml_schema::String (v)
   {
   }
 
-  unitPrefix_member::
-  unitPrefix_member (const unitPrefix_member& v,
-                     ::xml_schema::flags f,
-                     ::xml_schema::container* c)
-  : ::xml_schema::string (v, f, c)
+  UnitPrefix_member::
+  UnitPrefix_member (const UnitPrefix_member& v,
+                     ::xml_schema::Flags f,
+                     ::xml_schema::Container* c)
+  : ::xml_schema::String (v, f, c)
   {
   }
 
-  unitPrefix_member& unitPrefix_member::
-  operator= (value v)
+  UnitPrefix_member& UnitPrefix_member::
+  operator= (Value v)
   {
-    static_cast< ::xml_schema::string& > (*this) = 
-    ::xml_schema::string (_xsd_unitPrefix_member_literals_[v]);
+    static_cast< ::xml_schema::String& > (*this) = 
+    ::xml_schema::String (_xsd_UnitPrefix_member_literals_[v]);
 
     return *this;
   }
 
 
-  // unitPrefix_member1
+  // UnitPrefix_member1
   // 
 }
 
@@ -1113,12 +1113,12 @@ namespace cellml12
 
 namespace cellml12
 {
-  // model
+  // Model
   //
 
-  model::
-  model (const name_type& name)
-  : ::xml_schema::type (),
+  Model::
+  Model (const NameType& name)
+  : ::xml_schema::Type (),
     import_ (this),
     units_ (this),
     component_ (this),
@@ -1128,11 +1128,11 @@ namespace cellml12
   {
   }
 
-  model::
-  model (const model& x,
-         ::xml_schema::flags f,
-         ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  Model::
+  Model (const Model& x,
+         ::xml_schema::Flags f,
+         ::xml_schema::Container* c)
+  : ::xml_schema::Type (x, f, c),
     import_ (x.import_, f, this),
     units_ (x.units_, f, this),
     component_ (x.component_, f, this),
@@ -1142,11 +1142,11 @@ namespace cellml12
   {
   }
 
-  model::
-  model (const ::xercesc::DOMElement& e,
-         ::xml_schema::flags f,
-         ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  Model::
+  Model (const ::xercesc::DOMElement& e,
+         ::xml_schema::Flags f,
+         ::xml_schema::Container* c)
+  : ::xml_schema::Type (e, f | ::xml_schema::Flags::base, c),
     import_ (this),
     units_ (this),
     component_ (this),
@@ -1154,16 +1154,16 @@ namespace cellml12
     connection_ (this),
     name_ (this)
   {
-    if ((f & ::xml_schema::flags::base) == 0)
+    if ((f & ::xml_schema::Flags::base) == 0)
     {
       ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
       this->parse (p, f);
     }
   }
 
-  void model::
+  void Model::
   parse (::xsd::cxx::xml::dom::parser< char >& p,
-         ::xml_schema::flags f)
+         ::xml_schema::Flags f)
   {
     for (; p.more_content (); p.next_content (false))
     {
@@ -1175,8 +1175,8 @@ namespace cellml12
       //
       if (n.name () == "import" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
       {
-        ::std::unique_ptr< import_type > r (
-          import_traits::create (i, f, this));
+        ::std::unique_ptr< ImportType > r (
+          ImportTraits::create (i, f, this));
 
         this->import_.push_back (::std::move (r));
         continue;
@@ -1186,8 +1186,8 @@ namespace cellml12
       //
       if (n.name () == "units" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
       {
-        ::std::unique_ptr< units_type > r (
-          units_traits::create (i, f, this));
+        ::std::unique_ptr< UnitsType > r (
+          UnitsTraits::create (i, f, this));
 
         this->units_.push_back (::std::move (r));
         continue;
@@ -1197,8 +1197,8 @@ namespace cellml12
       //
       if (n.name () == "component" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
       {
-        ::std::unique_ptr< component_type > r (
-          component_traits::create (i, f, this));
+        ::std::unique_ptr< ComponentType > r (
+          ComponentTraits::create (i, f, this));
 
         this->component_.push_back (::std::move (r));
         continue;
@@ -1208,8 +1208,8 @@ namespace cellml12
       //
       if (n.name () == "encapsulation" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
       {
-        ::std::unique_ptr< encapsulation_type > r (
-          encapsulation_traits::create (i, f, this));
+        ::std::unique_ptr< EncapsulationType > r (
+          EncapsulationTraits::create (i, f, this));
 
         this->encapsulation_.push_back (::std::move (r));
         continue;
@@ -1219,8 +1219,8 @@ namespace cellml12
       //
       if (n.name () == "connection" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
       {
-        ::std::unique_ptr< connection_type > r (
-          connection_traits::create (i, f, this));
+        ::std::unique_ptr< ConnectionType > r (
+          ConnectionTraits::create (i, f, this));
 
         this->connection_.push_back (::std::move (r));
         continue;
@@ -1237,7 +1237,7 @@ namespace cellml12
 
       if (n.name () == "name" && n.namespace_ ().empty ())
       {
-        this->name_.set (name_traits::create (i, f, this));
+        this->name_.set (NameTraits::create (i, f, this));
         continue;
       }
     }
@@ -1250,19 +1250,19 @@ namespace cellml12
     }
   }
 
-  model* model::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
+  Model* Model::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
   {
-    return new class model (*this, f, c);
+    return new class Model (*this, f, c);
   }
 
-  model& model::
-  operator= (const model& x)
+  Model& Model::
+  operator= (const Model& x)
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::xml_schema::Type& > (*this) = x;
       this->import_ = x.import_;
       this->units_ = x.units_;
       this->component_ = x.component_;
@@ -1274,53 +1274,53 @@ namespace cellml12
     return *this;
   }
 
-  model::
-  ~model ()
+  Model::
+  ~Model ()
   {
   }
 
-  // import
+  // Import
   //
 
-  import::
-  import (const href_type& href)
-  : ::xml_schema::type (),
+  Import::
+  Import (const HrefType& href)
+  : ::xml_schema::Type (),
     units_ (this),
     component_ (this),
     href_ (href, this)
   {
   }
 
-  import::
-  import (const import& x,
-          ::xml_schema::flags f,
-          ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  Import::
+  Import (const Import& x,
+          ::xml_schema::Flags f,
+          ::xml_schema::Container* c)
+  : ::xml_schema::Type (x, f, c),
     units_ (x.units_, f, this),
     component_ (x.component_, f, this),
     href_ (x.href_, f, this)
   {
   }
 
-  import::
-  import (const ::xercesc::DOMElement& e,
-          ::xml_schema::flags f,
-          ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  Import::
+  Import (const ::xercesc::DOMElement& e,
+          ::xml_schema::Flags f,
+          ::xml_schema::Container* c)
+  : ::xml_schema::Type (e, f | ::xml_schema::Flags::base, c),
     units_ (this),
     component_ (this),
     href_ (this)
   {
-    if ((f & ::xml_schema::flags::base) == 0)
+    if ((f & ::xml_schema::Flags::base) == 0)
     {
       ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
       this->parse (p, f);
     }
   }
 
-  void import::
+  void Import::
   parse (::xsd::cxx::xml::dom::parser< char >& p,
-         ::xml_schema::flags f)
+         ::xml_schema::Flags f)
   {
     for (; p.more_content (); p.next_content (false))
     {
@@ -1332,8 +1332,8 @@ namespace cellml12
       //
       if (n.name () == "units" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
       {
-        ::std::unique_ptr< units_type > r (
-          units_traits::create (i, f, this));
+        ::std::unique_ptr< UnitsType > r (
+          UnitsTraits::create (i, f, this));
 
         this->units_.push_back (::std::move (r));
         continue;
@@ -1343,8 +1343,8 @@ namespace cellml12
       //
       if (n.name () == "component" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
       {
-        ::std::unique_ptr< component_type > r (
-          component_traits::create (i, f, this));
+        ::std::unique_ptr< ComponentType > r (
+          ComponentTraits::create (i, f, this));
 
         this->component_.push_back (::std::move (r));
         continue;
@@ -1361,7 +1361,7 @@ namespace cellml12
 
       if (n.name () == "href" && n.namespace_ ().empty ())
       {
-        this->href_.set (href_traits::create (i, f, this));
+        this->href_.set (HrefTraits::create (i, f, this));
         continue;
       }
     }
@@ -1374,19 +1374,19 @@ namespace cellml12
     }
   }
 
-  import* import::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
+  Import* Import::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
   {
-    return new class import (*this, f, c);
+    return new class Import (*this, f, c);
   }
 
-  import& import::
-  operator= (const import& x)
+  Import& Import::
+  operator= (const Import& x)
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::xml_schema::Type& > (*this) = x;
       this->units_ = x.units_;
       this->component_ = x.component_;
       this->href_ = x.href_;
@@ -1395,53 +1395,53 @@ namespace cellml12
     return *this;
   }
 
-  import::
-  ~import ()
+  Import::
+  ~Import ()
   {
   }
 
-  // units
+  // Units
   //
 
-  units::
-  units (const name_type& name)
-  : ::xml_schema::type (),
+  Units::
+  Units (const NameType& name)
+  : ::xml_schema::Type (),
     unit_ (this),
     name_ (name, this),
     base_units_ (this)
   {
   }
 
-  units::
-  units (const units& x,
-         ::xml_schema::flags f,
-         ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  Units::
+  Units (const Units& x,
+         ::xml_schema::Flags f,
+         ::xml_schema::Container* c)
+  : ::xml_schema::Type (x, f, c),
     unit_ (x.unit_, f, this),
     name_ (x.name_, f, this),
     base_units_ (x.base_units_, f, this)
   {
   }
 
-  units::
-  units (const ::xercesc::DOMElement& e,
-         ::xml_schema::flags f,
-         ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  Units::
+  Units (const ::xercesc::DOMElement& e,
+         ::xml_schema::Flags f,
+         ::xml_schema::Container* c)
+  : ::xml_schema::Type (e, f | ::xml_schema::Flags::base, c),
     unit_ (this),
     name_ (this),
     base_units_ (this)
   {
-    if ((f & ::xml_schema::flags::base) == 0)
+    if ((f & ::xml_schema::Flags::base) == 0)
     {
       ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
       this->parse (p, f);
     }
   }
 
-  void units::
+  void Units::
   parse (::xsd::cxx::xml::dom::parser< char >& p,
-         ::xml_schema::flags f)
+         ::xml_schema::Flags f)
   {
     for (; p.more_content (); p.next_content (false))
     {
@@ -1453,8 +1453,8 @@ namespace cellml12
       //
       if (n.name () == "unit" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
       {
-        ::std::unique_ptr< unit_type > r (
-          unit_traits::create (i, f, this));
+        ::std::unique_ptr< UnitType > r (
+          UnitTraits::create (i, f, this));
 
         this->unit_.push_back (::std::move (r));
         continue;
@@ -1471,13 +1471,13 @@ namespace cellml12
 
       if (n.name () == "name" && n.namespace_ ().empty ())
       {
-        this->name_.set (name_traits::create (i, f, this));
+        this->name_.set (NameTraits::create (i, f, this));
         continue;
       }
 
       if (n.name () == "base_units" && n.namespace_ ().empty ())
       {
-        this->base_units_.set (base_units_traits::create (i, f, this));
+        this->base_units_.set (Base_unitsTraits::create (i, f, this));
         continue;
       }
     }
@@ -1490,19 +1490,19 @@ namespace cellml12
     }
   }
 
-  units* units::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
+  Units* Units::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
   {
-    return new class units (*this, f, c);
+    return new class Units (*this, f, c);
   }
 
-  units& units::
-  operator= (const units& x)
+  Units& Units::
+  operator= (const Units& x)
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::xml_schema::Type& > (*this) = x;
       this->unit_ = x.unit_;
       this->name_ = x.name_;
       this->base_units_ = x.base_units_;
@@ -1511,17 +1511,17 @@ namespace cellml12
     return *this;
   }
 
-  units::
-  ~units ()
+  Units::
+  ~Units ()
   {
   }
 
-  // unit
+  // Unit
   //
 
-  unit::
-  unit (const units_type& units)
-  : ::xml_schema::type (),
+  Unit::
+  Unit (const UnitsType& units)
+  : ::xml_schema::Type (),
     units_ (units, this),
     multiplier_ (this),
     prefix_ (this),
@@ -1530,11 +1530,11 @@ namespace cellml12
   {
   }
 
-  unit::
-  unit (const unit& x,
-        ::xml_schema::flags f,
-        ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  Unit::
+  Unit (const Unit& x,
+        ::xml_schema::Flags f,
+        ::xml_schema::Container* c)
+  : ::xml_schema::Type (x, f, c),
     units_ (x.units_, f, this),
     multiplier_ (x.multiplier_, f, this),
     prefix_ (x.prefix_, f, this),
@@ -1543,27 +1543,27 @@ namespace cellml12
   {
   }
 
-  unit::
-  unit (const ::xercesc::DOMElement& e,
-        ::xml_schema::flags f,
-        ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  Unit::
+  Unit (const ::xercesc::DOMElement& e,
+        ::xml_schema::Flags f,
+        ::xml_schema::Container* c)
+  : ::xml_schema::Type (e, f | ::xml_schema::Flags::base, c),
     units_ (this),
     multiplier_ (this),
     prefix_ (this),
     offset_ (this),
     exponent_ (this)
   {
-    if ((f & ::xml_schema::flags::base) == 0)
+    if ((f & ::xml_schema::Flags::base) == 0)
     {
       ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
       this->parse (p, f);
     }
   }
 
-  void unit::
+  void Unit::
   parse (::xsd::cxx::xml::dom::parser< char >& p,
-         ::xml_schema::flags f)
+         ::xml_schema::Flags f)
   {
     for (; p.more_content (); p.next_content (false))
     {
@@ -1582,31 +1582,31 @@ namespace cellml12
 
       if (n.name () == "units" && n.namespace_ ().empty ())
       {
-        this->units_.set (units_traits::create (i, f, this));
+        this->units_.set (UnitsTraits::create (i, f, this));
         continue;
       }
 
       if (n.name () == "multiplier" && n.namespace_ ().empty ())
       {
-        this->multiplier_.set (multiplier_traits::create (i, f, this));
+        this->multiplier_.set (MultiplierTraits::create (i, f, this));
         continue;
       }
 
       if (n.name () == "prefix" && n.namespace_ ().empty ())
       {
-        this->prefix_.set (prefix_traits::create (i, f, this));
+        this->prefix_.set (PrefixTraits::create (i, f, this));
         continue;
       }
 
       if (n.name () == "offset" && n.namespace_ ().empty ())
       {
-        this->offset_.set (offset_traits::create (i, f, this));
+        this->offset_.set (OffsetTraits::create (i, f, this));
         continue;
       }
 
       if (n.name () == "exponent" && n.namespace_ ().empty ())
       {
-        this->exponent_.set (exponent_traits::create (i, f, this));
+        this->exponent_.set (ExponentTraits::create (i, f, this));
         continue;
       }
     }
@@ -1619,19 +1619,19 @@ namespace cellml12
     }
   }
 
-  unit* unit::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
+  Unit* Unit::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
   {
-    return new class unit (*this, f, c);
+    return new class Unit (*this, f, c);
   }
 
-  unit& unit::
-  operator= (const unit& x)
+  Unit& Unit::
+  operator= (const Unit& x)
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::xml_schema::Type& > (*this) = x;
       this->units_ = x.units_;
       this->multiplier_ = x.multiplier_;
       this->prefix_ = x.prefix_;
@@ -1642,17 +1642,17 @@ namespace cellml12
     return *this;
   }
 
-  unit::
-  ~unit ()
+  Unit::
+  ~Unit ()
   {
   }
 
-  // component
+  // Component
   //
 
-  component::
-  component (const name_type& name)
-  : ::xml_schema::type (),
+  Component::
+  Component (const NameType& name)
+  : ::xml_schema::Type (),
     units_ (this),
     variable_ (this),
     math_ (this),
@@ -1660,11 +1660,11 @@ namespace cellml12
   {
   }
 
-  component::
-  component (const component& x,
-             ::xml_schema::flags f,
-             ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  Component::
+  Component (const Component& x,
+             ::xml_schema::Flags f,
+             ::xml_schema::Container* c)
+  : ::xml_schema::Type (x, f, c),
     units_ (x.units_, f, this),
     variable_ (x.variable_, f, this),
     math_ (x.math_, f, this),
@@ -1672,26 +1672,26 @@ namespace cellml12
   {
   }
 
-  component::
-  component (const ::xercesc::DOMElement& e,
-             ::xml_schema::flags f,
-             ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  Component::
+  Component (const ::xercesc::DOMElement& e,
+             ::xml_schema::Flags f,
+             ::xml_schema::Container* c)
+  : ::xml_schema::Type (e, f | ::xml_schema::Flags::base, c),
     units_ (this),
     variable_ (this),
     math_ (this),
     name_ (this)
   {
-    if ((f & ::xml_schema::flags::base) == 0)
+    if ((f & ::xml_schema::Flags::base) == 0)
     {
       ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
       this->parse (p, f);
     }
   }
 
-  void component::
+  void Component::
   parse (::xsd::cxx::xml::dom::parser< char >& p,
-         ::xml_schema::flags f)
+         ::xml_schema::Flags f)
   {
     for (; p.more_content (); p.next_content (false))
     {
@@ -1703,8 +1703,8 @@ namespace cellml12
       //
       if (n.name () == "units" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
       {
-        ::std::unique_ptr< units_type > r (
-          units_traits::create (i, f, this));
+        ::std::unique_ptr< UnitsType > r (
+          UnitsTraits::create (i, f, this));
 
         this->units_.push_back (::std::move (r));
         continue;
@@ -1714,8 +1714,8 @@ namespace cellml12
       //
       if (n.name () == "variable" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
       {
-        ::std::unique_ptr< variable_type > r (
-          variable_traits::create (i, f, this));
+        ::std::unique_ptr< VariableType > r (
+          VariableTraits::create (i, f, this));
 
         this->variable_.push_back (::std::move (r));
         continue;
@@ -1725,8 +1725,8 @@ namespace cellml12
       //
       if (n.name () == "math" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
       {
-        ::std::unique_ptr< math_type > r (
-          math_traits::create (i, f, this));
+        ::std::unique_ptr< MathType > r (
+          MathTraits::create (i, f, this));
 
         this->math_.push_back (::std::move (r));
         continue;
@@ -1743,7 +1743,7 @@ namespace cellml12
 
       if (n.name () == "name" && n.namespace_ ().empty ())
       {
-        this->name_.set (name_traits::create (i, f, this));
+        this->name_.set (NameTraits::create (i, f, this));
         continue;
       }
     }
@@ -1756,19 +1756,19 @@ namespace cellml12
     }
   }
 
-  component* component::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
+  Component* Component::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
   {
-    return new class component (*this, f, c);
+    return new class Component (*this, f, c);
   }
 
-  component& component::
-  operator= (const component& x)
+  Component& Component::
+  operator= (const Component& x)
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::xml_schema::Type& > (*this) = x;
       this->units_ = x.units_;
       this->variable_ = x.variable_;
       this->math_ = x.math_;
@@ -1778,47 +1778,47 @@ namespace cellml12
     return *this;
   }
 
-  component::
-  ~component ()
+  Component::
+  ~Component ()
   {
   }
 
-  // encapsulation
+  // Encapsulation
   //
 
-  encapsulation::
-  encapsulation ()
-  : ::xml_schema::type (),
+  Encapsulation::
+  Encapsulation ()
+  : ::xml_schema::Type (),
     component_ref_ (this)
   {
   }
 
-  encapsulation::
-  encapsulation (const encapsulation& x,
-                 ::xml_schema::flags f,
-                 ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  Encapsulation::
+  Encapsulation (const Encapsulation& x,
+                 ::xml_schema::Flags f,
+                 ::xml_schema::Container* c)
+  : ::xml_schema::Type (x, f, c),
     component_ref_ (x.component_ref_, f, this)
   {
   }
 
-  encapsulation::
-  encapsulation (const ::xercesc::DOMElement& e,
-                 ::xml_schema::flags f,
-                 ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  Encapsulation::
+  Encapsulation (const ::xercesc::DOMElement& e,
+                 ::xml_schema::Flags f,
+                 ::xml_schema::Container* c)
+  : ::xml_schema::Type (e, f | ::xml_schema::Flags::base, c),
     component_ref_ (this)
   {
-    if ((f & ::xml_schema::flags::base) == 0)
+    if ((f & ::xml_schema::Flags::base) == 0)
     {
       ::xsd::cxx::xml::dom::parser< char > p (e, true, false, false);
       this->parse (p, f);
     }
   }
 
-  void encapsulation::
+  void Encapsulation::
   parse (::xsd::cxx::xml::dom::parser< char >& p,
-         ::xml_schema::flags f)
+         ::xml_schema::Flags f)
   {
     for (; p.more_content (); p.next_content (false))
     {
@@ -1830,8 +1830,8 @@ namespace cellml12
       //
       if (n.name () == "component_ref" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
       {
-        ::std::unique_ptr< component_ref_type > r (
-          component_ref_traits::create (i, f, this));
+        ::std::unique_ptr< Component_refType > r (
+          Component_refTraits::create (i, f, this));
 
         this->component_ref_.push_back (::std::move (r));
         continue;
@@ -1841,69 +1841,69 @@ namespace cellml12
     }
   }
 
-  encapsulation* encapsulation::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
+  Encapsulation* Encapsulation::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
   {
-    return new class encapsulation (*this, f, c);
+    return new class Encapsulation (*this, f, c);
   }
 
-  encapsulation& encapsulation::
-  operator= (const encapsulation& x)
+  Encapsulation& Encapsulation::
+  operator= (const Encapsulation& x)
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::xml_schema::Type& > (*this) = x;
       this->component_ref_ = x.component_ref_;
     }
 
     return *this;
   }
 
-  encapsulation::
-  ~encapsulation ()
+  Encapsulation::
+  ~Encapsulation ()
   {
   }
 
-  // toplevelComponentRef
+  // ToplevelComponentRef
   //
 
-  toplevelComponentRef::
-  toplevelComponentRef (const component_type& component)
-  : ::xml_schema::type (),
+  ToplevelComponentRef::
+  ToplevelComponentRef (const ComponentType& component)
+  : ::xml_schema::Type (),
     component_ref_ (this),
     component_ (component, this)
   {
   }
 
-  toplevelComponentRef::
-  toplevelComponentRef (const toplevelComponentRef& x,
-                        ::xml_schema::flags f,
-                        ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  ToplevelComponentRef::
+  ToplevelComponentRef (const ToplevelComponentRef& x,
+                        ::xml_schema::Flags f,
+                        ::xml_schema::Container* c)
+  : ::xml_schema::Type (x, f, c),
     component_ref_ (x.component_ref_, f, this),
     component_ (x.component_, f, this)
   {
   }
 
-  toplevelComponentRef::
-  toplevelComponentRef (const ::xercesc::DOMElement& e,
-                        ::xml_schema::flags f,
-                        ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  ToplevelComponentRef::
+  ToplevelComponentRef (const ::xercesc::DOMElement& e,
+                        ::xml_schema::Flags f,
+                        ::xml_schema::Container* c)
+  : ::xml_schema::Type (e, f | ::xml_schema::Flags::base, c),
     component_ref_ (this),
     component_ (this)
   {
-    if ((f & ::xml_schema::flags::base) == 0)
+    if ((f & ::xml_schema::Flags::base) == 0)
     {
       ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
       this->parse (p, f);
     }
   }
 
-  void toplevelComponentRef::
+  void ToplevelComponentRef::
   parse (::xsd::cxx::xml::dom::parser< char >& p,
-         ::xml_schema::flags f)
+         ::xml_schema::Flags f)
   {
     for (; p.more_content (); p.next_content (false))
     {
@@ -1915,8 +1915,8 @@ namespace cellml12
       //
       if (n.name () == "component_ref" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
       {
-        ::std::unique_ptr< component_ref_type > r (
-          component_ref_traits::create (i, f, this));
+        ::std::unique_ptr< Component_refType > r (
+          Component_refTraits::create (i, f, this));
 
         this->component_ref_.push_back (::std::move (r));
         continue;
@@ -1933,7 +1933,7 @@ namespace cellml12
 
       if (n.name () == "component" && n.namespace_ ().empty ())
       {
-        this->component_.set (component_traits::create (i, f, this));
+        this->component_.set (ComponentTraits::create (i, f, this));
         continue;
       }
     }
@@ -1946,19 +1946,19 @@ namespace cellml12
     }
   }
 
-  toplevelComponentRef* toplevelComponentRef::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
+  ToplevelComponentRef* ToplevelComponentRef::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
   {
-    return new class toplevelComponentRef (*this, f, c);
+    return new class ToplevelComponentRef (*this, f, c);
   }
 
-  toplevelComponentRef& toplevelComponentRef::
-  operator= (const toplevelComponentRef& x)
+  ToplevelComponentRef& ToplevelComponentRef::
+  operator= (const ToplevelComponentRef& x)
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::xml_schema::Type& > (*this) = x;
       this->component_ref_ = x.component_ref_;
       this->component_ = x.component_;
     }
@@ -1966,50 +1966,50 @@ namespace cellml12
     return *this;
   }
 
-  toplevelComponentRef::
-  ~toplevelComponentRef ()
+  ToplevelComponentRef::
+  ~ToplevelComponentRef ()
   {
   }
 
-  // componentRef
+  // ComponentRef
   //
 
-  componentRef::
-  componentRef (const component_type& component)
-  : ::xml_schema::type (),
+  ComponentRef::
+  ComponentRef (const ComponentType& component)
+  : ::xml_schema::Type (),
     component_ref_ (this),
     component_ (component, this)
   {
   }
 
-  componentRef::
-  componentRef (const componentRef& x,
-                ::xml_schema::flags f,
-                ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  ComponentRef::
+  ComponentRef (const ComponentRef& x,
+                ::xml_schema::Flags f,
+                ::xml_schema::Container* c)
+  : ::xml_schema::Type (x, f, c),
     component_ref_ (x.component_ref_, f, this),
     component_ (x.component_, f, this)
   {
   }
 
-  componentRef::
-  componentRef (const ::xercesc::DOMElement& e,
-                ::xml_schema::flags f,
-                ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  ComponentRef::
+  ComponentRef (const ::xercesc::DOMElement& e,
+                ::xml_schema::Flags f,
+                ::xml_schema::Container* c)
+  : ::xml_schema::Type (e, f | ::xml_schema::Flags::base, c),
     component_ref_ (this),
     component_ (this)
   {
-    if ((f & ::xml_schema::flags::base) == 0)
+    if ((f & ::xml_schema::Flags::base) == 0)
     {
       ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
       this->parse (p, f);
     }
   }
 
-  void componentRef::
+  void ComponentRef::
   parse (::xsd::cxx::xml::dom::parser< char >& p,
-         ::xml_schema::flags f)
+         ::xml_schema::Flags f)
   {
     for (; p.more_content (); p.next_content (false))
     {
@@ -2021,8 +2021,8 @@ namespace cellml12
       //
       if (n.name () == "component_ref" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
       {
-        ::std::unique_ptr< component_ref_type > r (
-          component_ref_traits::create (i, f, this));
+        ::std::unique_ptr< Component_refType > r (
+          Component_refTraits::create (i, f, this));
 
         this->component_ref_.push_back (::std::move (r));
         continue;
@@ -2039,7 +2039,7 @@ namespace cellml12
 
       if (n.name () == "component" && n.namespace_ ().empty ())
       {
-        this->component_.set (component_traits::create (i, f, this));
+        this->component_.set (ComponentTraits::create (i, f, this));
         continue;
       }
     }
@@ -2052,19 +2052,19 @@ namespace cellml12
     }
   }
 
-  componentRef* componentRef::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
+  ComponentRef* ComponentRef::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
   {
-    return new class componentRef (*this, f, c);
+    return new class ComponentRef (*this, f, c);
   }
 
-  componentRef& componentRef::
-  operator= (const componentRef& x)
+  ComponentRef& ComponentRef::
+  operator= (const ComponentRef& x)
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::xml_schema::Type& > (*this) = x;
       this->component_ref_ = x.component_ref_;
       this->component_ = x.component_;
     }
@@ -2072,54 +2072,54 @@ namespace cellml12
     return *this;
   }
 
-  componentRef::
-  ~componentRef ()
+  ComponentRef::
+  ~ComponentRef ()
   {
   }
 
-  // connection
+  // Connection
   //
 
-  connection::
-  connection (const component_1_type& component_1,
-              const component_2_type& component_2)
-  : ::xml_schema::type (),
+  Connection::
+  Connection (const Component_1Type& component_1,
+              const Component_2Type& component_2)
+  : ::xml_schema::Type (),
     map_variables_ (this),
     component_1_ (component_1, this),
     component_2_ (component_2, this)
   {
   }
 
-  connection::
-  connection (const connection& x,
-              ::xml_schema::flags f,
-              ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  Connection::
+  Connection (const Connection& x,
+              ::xml_schema::Flags f,
+              ::xml_schema::Container* c)
+  : ::xml_schema::Type (x, f, c),
     map_variables_ (x.map_variables_, f, this),
     component_1_ (x.component_1_, f, this),
     component_2_ (x.component_2_, f, this)
   {
   }
 
-  connection::
-  connection (const ::xercesc::DOMElement& e,
-              ::xml_schema::flags f,
-              ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  Connection::
+  Connection (const ::xercesc::DOMElement& e,
+              ::xml_schema::Flags f,
+              ::xml_schema::Container* c)
+  : ::xml_schema::Type (e, f | ::xml_schema::Flags::base, c),
     map_variables_ (this),
     component_1_ (this),
     component_2_ (this)
   {
-    if ((f & ::xml_schema::flags::base) == 0)
+    if ((f & ::xml_schema::Flags::base) == 0)
     {
       ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
       this->parse (p, f);
     }
   }
 
-  void connection::
+  void Connection::
   parse (::xsd::cxx::xml::dom::parser< char >& p,
-         ::xml_schema::flags f)
+         ::xml_schema::Flags f)
   {
     for (; p.more_content (); p.next_content (false))
     {
@@ -2131,8 +2131,8 @@ namespace cellml12
       //
       if (n.name () == "map_variables" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
       {
-        ::std::unique_ptr< map_variables_type > r (
-          map_variables_traits::create (i, f, this));
+        ::std::unique_ptr< Map_variablesType > r (
+          Map_variablesTraits::create (i, f, this));
 
         this->map_variables_.push_back (::std::move (r));
         continue;
@@ -2149,13 +2149,13 @@ namespace cellml12
 
       if (n.name () == "component_1" && n.namespace_ ().empty ())
       {
-        this->component_1_.set (component_1_traits::create (i, f, this));
+        this->component_1_.set (Component_1Traits::create (i, f, this));
         continue;
       }
 
       if (n.name () == "component_2" && n.namespace_ ().empty ())
       {
-        this->component_2_.set (component_2_traits::create (i, f, this));
+        this->component_2_.set (Component_2Traits::create (i, f, this));
         continue;
       }
     }
@@ -2175,19 +2175,19 @@ namespace cellml12
     }
   }
 
-  connection* connection::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
+  Connection* Connection::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
   {
-    return new class connection (*this, f, c);
+    return new class Connection (*this, f, c);
   }
 
-  connection& connection::
-  operator= (const connection& x)
+  Connection& Connection::
+  operator= (const Connection& x)
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::xml_schema::Type& > (*this) = x;
       this->map_variables_ = x.map_variables_;
       this->component_1_ = x.component_1_;
       this->component_2_ = x.component_2_;
@@ -2196,51 +2196,51 @@ namespace cellml12
     return *this;
   }
 
-  connection::
-  ~connection ()
+  Connection::
+  ~Connection ()
   {
   }
 
-  // importedUnits
+  // ImportedUnits
   //
 
-  importedUnits::
-  importedUnits (const name_type& name,
-                 const units_ref_type& units_ref)
-  : ::xml_schema::type (),
+  ImportedUnits::
+  ImportedUnits (const NameType& name,
+                 const Units_refType& units_ref)
+  : ::xml_schema::Type (),
     name_ (name, this),
     units_ref_ (units_ref, this)
   {
   }
 
-  importedUnits::
-  importedUnits (const importedUnits& x,
-                 ::xml_schema::flags f,
-                 ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  ImportedUnits::
+  ImportedUnits (const ImportedUnits& x,
+                 ::xml_schema::Flags f,
+                 ::xml_schema::Container* c)
+  : ::xml_schema::Type (x, f, c),
     name_ (x.name_, f, this),
     units_ref_ (x.units_ref_, f, this)
   {
   }
 
-  importedUnits::
-  importedUnits (const ::xercesc::DOMElement& e,
-                 ::xml_schema::flags f,
-                 ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  ImportedUnits::
+  ImportedUnits (const ::xercesc::DOMElement& e,
+                 ::xml_schema::Flags f,
+                 ::xml_schema::Container* c)
+  : ::xml_schema::Type (e, f | ::xml_schema::Flags::base, c),
     name_ (this),
     units_ref_ (this)
   {
-    if ((f & ::xml_schema::flags::base) == 0)
+    if ((f & ::xml_schema::Flags::base) == 0)
     {
       ::xsd::cxx::xml::dom::parser< char > p (e, false, false, true);
       this->parse (p, f);
     }
   }
 
-  void importedUnits::
+  void ImportedUnits::
   parse (::xsd::cxx::xml::dom::parser< char >& p,
-         ::xml_schema::flags f)
+         ::xml_schema::Flags f)
   {
     while (p.more_attributes ())
     {
@@ -2250,13 +2250,13 @@ namespace cellml12
 
       if (n.name () == "name" && n.namespace_ ().empty ())
       {
-        this->name_.set (name_traits::create (i, f, this));
+        this->name_.set (NameTraits::create (i, f, this));
         continue;
       }
 
       if (n.name () == "units_ref" && n.namespace_ ().empty ())
       {
-        this->units_ref_.set (units_ref_traits::create (i, f, this));
+        this->units_ref_.set (Units_refTraits::create (i, f, this));
         continue;
       }
     }
@@ -2276,19 +2276,19 @@ namespace cellml12
     }
   }
 
-  importedUnits* importedUnits::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
+  ImportedUnits* ImportedUnits::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
   {
-    return new class importedUnits (*this, f, c);
+    return new class ImportedUnits (*this, f, c);
   }
 
-  importedUnits& importedUnits::
-  operator= (const importedUnits& x)
+  ImportedUnits& ImportedUnits::
+  operator= (const ImportedUnits& x)
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::xml_schema::Type& > (*this) = x;
       this->name_ = x.name_;
       this->units_ref_ = x.units_ref_;
     }
@@ -2296,51 +2296,51 @@ namespace cellml12
     return *this;
   }
 
-  importedUnits::
-  ~importedUnits ()
+  ImportedUnits::
+  ~ImportedUnits ()
   {
   }
 
-  // importedComponent
+  // ImportedComponent
   //
 
-  importedComponent::
-  importedComponent (const name_type& name,
-                     const component_ref_type& component_ref)
-  : ::xml_schema::type (),
+  ImportedComponent::
+  ImportedComponent (const NameType& name,
+                     const Component_refType& component_ref)
+  : ::xml_schema::Type (),
     name_ (name, this),
     component_ref_ (component_ref, this)
   {
   }
 
-  importedComponent::
-  importedComponent (const importedComponent& x,
-                     ::xml_schema::flags f,
-                     ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  ImportedComponent::
+  ImportedComponent (const ImportedComponent& x,
+                     ::xml_schema::Flags f,
+                     ::xml_schema::Container* c)
+  : ::xml_schema::Type (x, f, c),
     name_ (x.name_, f, this),
     component_ref_ (x.component_ref_, f, this)
   {
   }
 
-  importedComponent::
-  importedComponent (const ::xercesc::DOMElement& e,
-                     ::xml_schema::flags f,
-                     ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  ImportedComponent::
+  ImportedComponent (const ::xercesc::DOMElement& e,
+                     ::xml_schema::Flags f,
+                     ::xml_schema::Container* c)
+  : ::xml_schema::Type (e, f | ::xml_schema::Flags::base, c),
     name_ (this),
     component_ref_ (this)
   {
-    if ((f & ::xml_schema::flags::base) == 0)
+    if ((f & ::xml_schema::Flags::base) == 0)
     {
       ::xsd::cxx::xml::dom::parser< char > p (e, false, false, true);
       this->parse (p, f);
     }
   }
 
-  void importedComponent::
+  void ImportedComponent::
   parse (::xsd::cxx::xml::dom::parser< char >& p,
-         ::xml_schema::flags f)
+         ::xml_schema::Flags f)
   {
     while (p.more_attributes ())
     {
@@ -2350,13 +2350,13 @@ namespace cellml12
 
       if (n.name () == "name" && n.namespace_ ().empty ())
       {
-        this->name_.set (name_traits::create (i, f, this));
+        this->name_.set (NameTraits::create (i, f, this));
         continue;
       }
 
       if (n.name () == "component_ref" && n.namespace_ ().empty ())
       {
-        this->component_ref_.set (component_ref_traits::create (i, f, this));
+        this->component_ref_.set (Component_refTraits::create (i, f, this));
         continue;
       }
     }
@@ -2376,19 +2376,19 @@ namespace cellml12
     }
   }
 
-  importedComponent* importedComponent::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
+  ImportedComponent* ImportedComponent::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
   {
-    return new class importedComponent (*this, f, c);
+    return new class ImportedComponent (*this, f, c);
   }
 
-  importedComponent& importedComponent::
-  operator= (const importedComponent& x)
+  ImportedComponent& ImportedComponent::
+  operator= (const ImportedComponent& x)
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::xml_schema::Type& > (*this) = x;
       this->name_ = x.name_;
       this->component_ref_ = x.component_ref_;
     }
@@ -2396,19 +2396,19 @@ namespace cellml12
     return *this;
   }
 
-  importedComponent::
-  ~importedComponent ()
+  ImportedComponent::
+  ~ImportedComponent ()
   {
   }
 
-  // variable
+  // Variable
   //
 
-  variable::
-  variable (const name_type& name,
-            const units_type& units,
-            const type_type& type)
-  : ::xml_schema::type (),
+  Variable::
+  Variable (const NameType& name,
+            const UnitsType& units,
+            const TypeType& type)
+  : ::xml_schema::Type (),
     name_ (name, this),
     units_ (units, this),
     public_interface_ (this),
@@ -2417,11 +2417,11 @@ namespace cellml12
   {
   }
 
-  variable::
-  variable (const variable& x,
-            ::xml_schema::flags f,
-            ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  Variable::
+  Variable (const Variable& x,
+            ::xml_schema::Flags f,
+            ::xml_schema::Container* c)
+  : ::xml_schema::Type (x, f, c),
     name_ (x.name_, f, this),
     units_ (x.units_, f, this),
     public_interface_ (x.public_interface_, f, this),
@@ -2430,27 +2430,27 @@ namespace cellml12
   {
   }
 
-  variable::
-  variable (const ::xercesc::DOMElement& e,
-            ::xml_schema::flags f,
-            ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  Variable::
+  Variable (const ::xercesc::DOMElement& e,
+            ::xml_schema::Flags f,
+            ::xml_schema::Container* c)
+  : ::xml_schema::Type (e, f | ::xml_schema::Flags::base, c),
     name_ (this),
     units_ (this),
     public_interface_ (this),
     private_interface_ (this),
     type_ (this)
   {
-    if ((f & ::xml_schema::flags::base) == 0)
+    if ((f & ::xml_schema::Flags::base) == 0)
     {
       ::xsd::cxx::xml::dom::parser< char > p (e, false, false, true);
       this->parse (p, f);
     }
   }
 
-  void variable::
+  void Variable::
   parse (::xsd::cxx::xml::dom::parser< char >& p,
-         ::xml_schema::flags f)
+         ::xml_schema::Flags f)
   {
     while (p.more_attributes ())
     {
@@ -2460,31 +2460,31 @@ namespace cellml12
 
       if (n.name () == "name" && n.namespace_ ().empty ())
       {
-        this->name_.set (name_traits::create (i, f, this));
+        this->name_.set (NameTraits::create (i, f, this));
         continue;
       }
 
       if (n.name () == "units" && n.namespace_ ().empty ())
       {
-        this->units_.set (units_traits::create (i, f, this));
+        this->units_.set (UnitsTraits::create (i, f, this));
         continue;
       }
 
       if (n.name () == "public_interface" && n.namespace_ ().empty ())
       {
-        this->public_interface_.set (public_interface_traits::create (i, f, this));
+        this->public_interface_.set (Public_interfaceTraits::create (i, f, this));
         continue;
       }
 
       if (n.name () == "private_interface" && n.namespace_ ().empty ())
       {
-        this->private_interface_.set (private_interface_traits::create (i, f, this));
+        this->private_interface_.set (Private_interfaceTraits::create (i, f, this));
         continue;
       }
 
       if (n.name () == "type" && n.namespace_ ().empty ())
       {
-        this->type_.set (type_traits::create (i, f, this));
+        this->type_.set (TypeTraits::create (i, f, this));
         continue;
       }
     }
@@ -2511,19 +2511,19 @@ namespace cellml12
     }
   }
 
-  variable* variable::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
+  Variable* Variable::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
   {
-    return new class variable (*this, f, c);
+    return new class Variable (*this, f, c);
   }
 
-  variable& variable::
-  operator= (const variable& x)
+  Variable& Variable::
+  operator= (const Variable& x)
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::xml_schema::Type& > (*this) = x;
       this->name_ = x.name_;
       this->units_ = x.units_;
       this->public_interface_ = x.public_interface_;
@@ -2534,51 +2534,51 @@ namespace cellml12
     return *this;
   }
 
-  variable::
-  ~variable ()
+  Variable::
+  ~Variable ()
   {
   }
 
-  // mapVariables
+  // MapVariables
   //
 
-  mapVariables::
-  mapVariables (const variable_1_type& variable_1,
-                const variable_2_type& variable_2)
-  : ::xml_schema::type (),
+  MapVariables::
+  MapVariables (const Variable_1Type& variable_1,
+                const Variable_2Type& variable_2)
+  : ::xml_schema::Type (),
     variable_1_ (variable_1, this),
     variable_2_ (variable_2, this)
   {
   }
 
-  mapVariables::
-  mapVariables (const mapVariables& x,
-                ::xml_schema::flags f,
-                ::xml_schema::container* c)
-  : ::xml_schema::type (x, f, c),
+  MapVariables::
+  MapVariables (const MapVariables& x,
+                ::xml_schema::Flags f,
+                ::xml_schema::Container* c)
+  : ::xml_schema::Type (x, f, c),
     variable_1_ (x.variable_1_, f, this),
     variable_2_ (x.variable_2_, f, this)
   {
   }
 
-  mapVariables::
-  mapVariables (const ::xercesc::DOMElement& e,
-                ::xml_schema::flags f,
-                ::xml_schema::container* c)
-  : ::xml_schema::type (e, f | ::xml_schema::flags::base, c),
+  MapVariables::
+  MapVariables (const ::xercesc::DOMElement& e,
+                ::xml_schema::Flags f,
+                ::xml_schema::Container* c)
+  : ::xml_schema::Type (e, f | ::xml_schema::Flags::base, c),
     variable_1_ (this),
     variable_2_ (this)
   {
-    if ((f & ::xml_schema::flags::base) == 0)
+    if ((f & ::xml_schema::Flags::base) == 0)
     {
       ::xsd::cxx::xml::dom::parser< char > p (e, false, false, true);
       this->parse (p, f);
     }
   }
 
-  void mapVariables::
+  void MapVariables::
   parse (::xsd::cxx::xml::dom::parser< char >& p,
-         ::xml_schema::flags f)
+         ::xml_schema::Flags f)
   {
     while (p.more_attributes ())
     {
@@ -2588,13 +2588,13 @@ namespace cellml12
 
       if (n.name () == "variable_1" && n.namespace_ ().empty ())
       {
-        this->variable_1_.set (variable_1_traits::create (i, f, this));
+        this->variable_1_.set (Variable_1Traits::create (i, f, this));
         continue;
       }
 
       if (n.name () == "variable_2" && n.namespace_ ().empty ())
       {
-        this->variable_2_.set (variable_2_traits::create (i, f, this));
+        this->variable_2_.set (Variable_2Traits::create (i, f, this));
         continue;
       }
     }
@@ -2614,19 +2614,19 @@ namespace cellml12
     }
   }
 
-  mapVariables* mapVariables::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
+  MapVariables* MapVariables::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
   {
-    return new class mapVariables (*this, f, c);
+    return new class MapVariables (*this, f, c);
   }
 
-  mapVariables& mapVariables::
-  operator= (const mapVariables& x)
+  MapVariables& MapVariables::
+  operator= (const MapVariables& x)
   {
     if (this != &x)
     {
-      static_cast< ::xml_schema::type& > (*this) = x;
+      static_cast< ::xml_schema::Type& > (*this) = x;
       this->variable_1_ = x.variable_1_;
       this->variable_2_ = x.variable_2_;
     }
@@ -2634,167 +2634,167 @@ namespace cellml12
     return *this;
   }
 
-  mapVariables::
-  ~mapVariables ()
+  MapVariables::
+  ~MapVariables ()
   {
   }
 
-  // cellMLIdentifier
+  // CellMLIdentifier
   //
 
-  cellMLIdentifier::
-  cellMLIdentifier ()
-  : ::xml_schema::string ()
+  CellMLIdentifier::
+  CellMLIdentifier ()
+  : ::xml_schema::String ()
   {
   }
 
-  cellMLIdentifier::
-  cellMLIdentifier (const char* _xsd_string_base)
-  : ::xml_schema::string (_xsd_string_base)
+  CellMLIdentifier::
+  CellMLIdentifier (const char* _xsd_String_base)
+  : ::xml_schema::String (_xsd_String_base)
   {
   }
 
-  cellMLIdentifier::
-  cellMLIdentifier (const ::std::string& _xsd_string_base)
-  : ::xml_schema::string (_xsd_string_base)
+  CellMLIdentifier::
+  CellMLIdentifier (const ::std::string& _xsd_String_base)
+  : ::xml_schema::String (_xsd_String_base)
   {
   }
 
-  cellMLIdentifier::
-  cellMLIdentifier (const ::xml_schema::string& _xsd_string_base)
-  : ::xml_schema::string (_xsd_string_base)
+  CellMLIdentifier::
+  CellMLIdentifier (const ::xml_schema::String& _xsd_String_base)
+  : ::xml_schema::String (_xsd_String_base)
   {
   }
 
-  cellMLIdentifier::
-  cellMLIdentifier (const cellMLIdentifier& x,
-                    ::xml_schema::flags f,
-                    ::xml_schema::container* c)
-  : ::xml_schema::string (x, f, c)
+  CellMLIdentifier::
+  CellMLIdentifier (const CellMLIdentifier& x,
+                    ::xml_schema::Flags f,
+                    ::xml_schema::Container* c)
+  : ::xml_schema::String (x, f, c)
   {
   }
 
-  cellMLIdentifier::
-  cellMLIdentifier (const ::xercesc::DOMElement& e,
-                    ::xml_schema::flags f,
-                    ::xml_schema::container* c)
-  : ::xml_schema::string (e, f, c)
+  CellMLIdentifier::
+  CellMLIdentifier (const ::xercesc::DOMElement& e,
+                    ::xml_schema::Flags f,
+                    ::xml_schema::Container* c)
+  : ::xml_schema::String (e, f, c)
   {
   }
 
-  cellMLIdentifier::
-  cellMLIdentifier (const ::xercesc::DOMAttr& a,
-                    ::xml_schema::flags f,
-                    ::xml_schema::container* c)
-  : ::xml_schema::string (a, f, c)
+  CellMLIdentifier::
+  CellMLIdentifier (const ::xercesc::DOMAttr& a,
+                    ::xml_schema::Flags f,
+                    ::xml_schema::Container* c)
+  : ::xml_schema::String (a, f, c)
   {
   }
 
-  cellMLIdentifier::
-  cellMLIdentifier (const ::std::string& s,
+  CellMLIdentifier::
+  CellMLIdentifier (const ::std::string& s,
                     const ::xercesc::DOMElement* e,
-                    ::xml_schema::flags f,
-                    ::xml_schema::container* c)
-  : ::xml_schema::string (s, e, f, c)
+                    ::xml_schema::Flags f,
+                    ::xml_schema::Container* c)
+  : ::xml_schema::String (s, e, f, c)
   {
   }
 
-  cellMLIdentifier* cellMLIdentifier::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
+  CellMLIdentifier* CellMLIdentifier::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
   {
-    return new class cellMLIdentifier (*this, f, c);
+    return new class CellMLIdentifier (*this, f, c);
   }
 
-  cellMLIdentifier::
-  ~cellMLIdentifier ()
+  CellMLIdentifier::
+  ~CellMLIdentifier ()
   {
   }
 
-  // unitPrefix
+  // UnitPrefix
   //
 
-  unitPrefix::
-  unitPrefix (const ::xercesc::DOMElement& e,
-              ::xml_schema::flags f,
-              ::xml_schema::container* c)
-  : ::xml_schema::string (e, f, c)
+  UnitPrefix::
+  UnitPrefix (const ::xercesc::DOMElement& e,
+              ::xml_schema::Flags f,
+              ::xml_schema::Container* c)
+  : ::xml_schema::String (e, f, c)
   {
   }
 
-  unitPrefix::
-  unitPrefix (const ::xercesc::DOMAttr& a,
-              ::xml_schema::flags f,
-              ::xml_schema::container* c)
-  : ::xml_schema::string (a, f, c)
+  UnitPrefix::
+  UnitPrefix (const ::xercesc::DOMAttr& a,
+              ::xml_schema::Flags f,
+              ::xml_schema::Container* c)
+  : ::xml_schema::String (a, f, c)
   {
   }
 
-  unitPrefix::
-  unitPrefix (const ::std::string& s,
+  UnitPrefix::
+  UnitPrefix (const ::std::string& s,
               const ::xercesc::DOMElement* e,
-              ::xml_schema::flags f,
-              ::xml_schema::container* c)
-  : ::xml_schema::string (s, e, f, c)
+              ::xml_schema::Flags f,
+              ::xml_schema::Container* c)
+  : ::xml_schema::String (s, e, f, c)
   {
   }
 
-  unitPrefix* unitPrefix::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
+  UnitPrefix* UnitPrefix::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
   {
-    return new class unitPrefix (*this, f, c);
+    return new class UnitPrefix (*this, f, c);
   }
 
-  // yesno
+  // Yesno
   //
 
-  yesno::
-  yesno (const ::xercesc::DOMElement& e,
-         ::xml_schema::flags f,
-         ::xml_schema::container* c)
-  : ::xml_schema::string (e, f, c)
+  Yesno::
+  Yesno (const ::xercesc::DOMElement& e,
+         ::xml_schema::Flags f,
+         ::xml_schema::Container* c)
+  : ::xml_schema::String (e, f, c)
   {
-    _xsd_yesno_convert ();
+    _xsd_Yesno_convert ();
   }
 
-  yesno::
-  yesno (const ::xercesc::DOMAttr& a,
-         ::xml_schema::flags f,
-         ::xml_schema::container* c)
-  : ::xml_schema::string (a, f, c)
+  Yesno::
+  Yesno (const ::xercesc::DOMAttr& a,
+         ::xml_schema::Flags f,
+         ::xml_schema::Container* c)
+  : ::xml_schema::String (a, f, c)
   {
-    _xsd_yesno_convert ();
+    _xsd_Yesno_convert ();
   }
 
-  yesno::
-  yesno (const ::std::string& s,
+  Yesno::
+  Yesno (const ::std::string& s,
          const ::xercesc::DOMElement* e,
-         ::xml_schema::flags f,
-         ::xml_schema::container* c)
-  : ::xml_schema::string (s, e, f, c)
+         ::xml_schema::Flags f,
+         ::xml_schema::Container* c)
+  : ::xml_schema::String (s, e, f, c)
   {
-    _xsd_yesno_convert ();
+    _xsd_Yesno_convert ();
   }
 
-  yesno* yesno::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
+  Yesno* Yesno::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
   {
-    return new class yesno (*this, f, c);
+    return new class Yesno (*this, f, c);
   }
 
-  yesno::value yesno::
-  _xsd_yesno_convert () const
+  Yesno::Value Yesno::
+  _xsd_Yesno_convert () const
   {
-    ::xsd::cxx::tree::enum_comparator< char > c (_xsd_yesno_literals_);
-    const value* i (::std::lower_bound (
-                      _xsd_yesno_indexes_,
-                      _xsd_yesno_indexes_ + 2,
+    ::xsd::cxx::tree::enum_comparator< char > c (_xsd_Yesno_literals_);
+    const Value* i (::std::lower_bound (
+                      _xsd_Yesno_indexes_,
+                      _xsd_Yesno_indexes_ + 2,
                       *this,
                       c));
 
-    if (i == _xsd_yesno_indexes_ + 2 || _xsd_yesno_literals_[*i] != *this)
+    if (i == _xsd_Yesno_indexes_ + 2 || _xsd_Yesno_literals_[*i] != *this)
     {
       throw ::xsd::cxx::tree::unexpected_enumerator < char > (*this);
     }
@@ -2802,69 +2802,69 @@ namespace cellml12
     return *i;
   }
 
-  const char* const yesno::
-  _xsd_yesno_literals_[2] =
+  const char* const Yesno::
+  _xsd_Yesno_literals_[2] =
   {
     "yes",
     "no"
   };
 
-  const yesno::value yesno::
-  _xsd_yesno_indexes_[2] =
+  const Yesno::Value Yesno::
+  _xsd_Yesno_indexes_[2] =
   {
-    ::cellml12::yesno::no,
-    ::cellml12::yesno::yes
+    ::cellml12::Yesno::no,
+    ::cellml12::Yesno::yes
   };
 
-  // unitPrefix_member
+  // UnitPrefix_member
   //
 
-  unitPrefix_member::
-  unitPrefix_member (const ::xercesc::DOMElement& e,
-                     ::xml_schema::flags f,
-                     ::xml_schema::container* c)
-  : ::xml_schema::string (e, f, c)
+  UnitPrefix_member::
+  UnitPrefix_member (const ::xercesc::DOMElement& e,
+                     ::xml_schema::Flags f,
+                     ::xml_schema::Container* c)
+  : ::xml_schema::String (e, f, c)
   {
-    _xsd_unitPrefix_member_convert ();
+    _xsd_UnitPrefix_member_convert ();
   }
 
-  unitPrefix_member::
-  unitPrefix_member (const ::xercesc::DOMAttr& a,
-                     ::xml_schema::flags f,
-                     ::xml_schema::container* c)
-  : ::xml_schema::string (a, f, c)
+  UnitPrefix_member::
+  UnitPrefix_member (const ::xercesc::DOMAttr& a,
+                     ::xml_schema::Flags f,
+                     ::xml_schema::Container* c)
+  : ::xml_schema::String (a, f, c)
   {
-    _xsd_unitPrefix_member_convert ();
+    _xsd_UnitPrefix_member_convert ();
   }
 
-  unitPrefix_member::
-  unitPrefix_member (const ::std::string& s,
+  UnitPrefix_member::
+  UnitPrefix_member (const ::std::string& s,
                      const ::xercesc::DOMElement* e,
-                     ::xml_schema::flags f,
-                     ::xml_schema::container* c)
-  : ::xml_schema::string (s, e, f, c)
+                     ::xml_schema::Flags f,
+                     ::xml_schema::Container* c)
+  : ::xml_schema::String (s, e, f, c)
   {
-    _xsd_unitPrefix_member_convert ();
+    _xsd_UnitPrefix_member_convert ();
   }
 
-  unitPrefix_member* unitPrefix_member::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
+  UnitPrefix_member* UnitPrefix_member::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
   {
-    return new class unitPrefix_member (*this, f, c);
+    return new class UnitPrefix_member (*this, f, c);
   }
 
-  unitPrefix_member::value unitPrefix_member::
-  _xsd_unitPrefix_member_convert () const
+  UnitPrefix_member::Value UnitPrefix_member::
+  _xsd_UnitPrefix_member_convert () const
   {
-    ::xsd::cxx::tree::enum_comparator< char > c (_xsd_unitPrefix_member_literals_);
-    const value* i (::std::lower_bound (
-                      _xsd_unitPrefix_member_indexes_,
-                      _xsd_unitPrefix_member_indexes_ + 20,
+    ::xsd::cxx::tree::enum_comparator< char > c (_xsd_UnitPrefix_member_literals_);
+    const Value* i (::std::lower_bound (
+                      _xsd_UnitPrefix_member_indexes_,
+                      _xsd_UnitPrefix_member_indexes_ + 20,
                       *this,
                       c));
 
-    if (i == _xsd_unitPrefix_member_indexes_ + 20 || _xsd_unitPrefix_member_literals_[*i] != *this)
+    if (i == _xsd_UnitPrefix_member_indexes_ + 20 || _xsd_UnitPrefix_member_literals_[*i] != *this)
     {
       throw ::xsd::cxx::tree::unexpected_enumerator < char > (*this);
     }
@@ -2872,8 +2872,8 @@ namespace cellml12
     return *i;
   }
 
-  const char* const unitPrefix_member::
-  _xsd_unitPrefix_member_literals_[20] =
+  const char* const UnitPrefix_member::
+  _xsd_UnitPrefix_member_literals_[20] =
   {
     "yotta",
     "zetta",
@@ -2897,82 +2897,82 @@ namespace cellml12
     "yocto"
   };
 
-  const unitPrefix_member::value unitPrefix_member::
-  _xsd_unitPrefix_member_indexes_[20] =
+  const UnitPrefix_member::Value UnitPrefix_member::
+  _xsd_UnitPrefix_member_indexes_[20] =
   {
-    ::cellml12::unitPrefix_member::atto,
-    ::cellml12::unitPrefix_member::centi,
-    ::cellml12::unitPrefix_member::deci,
-    ::cellml12::unitPrefix_member::deka,
-    ::cellml12::unitPrefix_member::exa,
-    ::cellml12::unitPrefix_member::femto,
-    ::cellml12::unitPrefix_member::giga,
-    ::cellml12::unitPrefix_member::hecto,
-    ::cellml12::unitPrefix_member::kilo,
-    ::cellml12::unitPrefix_member::mega,
-    ::cellml12::unitPrefix_member::micro,
-    ::cellml12::unitPrefix_member::milli,
-    ::cellml12::unitPrefix_member::nano,
-    ::cellml12::unitPrefix_member::peta,
-    ::cellml12::unitPrefix_member::pico,
-    ::cellml12::unitPrefix_member::tera,
-    ::cellml12::unitPrefix_member::yocto,
-    ::cellml12::unitPrefix_member::yotta,
-    ::cellml12::unitPrefix_member::zepto,
-    ::cellml12::unitPrefix_member::zetta
+    ::cellml12::UnitPrefix_member::atto,
+    ::cellml12::UnitPrefix_member::centi,
+    ::cellml12::UnitPrefix_member::deci,
+    ::cellml12::UnitPrefix_member::deka,
+    ::cellml12::UnitPrefix_member::exa,
+    ::cellml12::UnitPrefix_member::femto,
+    ::cellml12::UnitPrefix_member::giga,
+    ::cellml12::UnitPrefix_member::hecto,
+    ::cellml12::UnitPrefix_member::kilo,
+    ::cellml12::UnitPrefix_member::mega,
+    ::cellml12::UnitPrefix_member::micro,
+    ::cellml12::UnitPrefix_member::milli,
+    ::cellml12::UnitPrefix_member::nano,
+    ::cellml12::UnitPrefix_member::peta,
+    ::cellml12::UnitPrefix_member::pico,
+    ::cellml12::UnitPrefix_member::tera,
+    ::cellml12::UnitPrefix_member::yocto,
+    ::cellml12::UnitPrefix_member::yotta,
+    ::cellml12::UnitPrefix_member::zepto,
+    ::cellml12::UnitPrefix_member::zetta
   };
 
-  // unitPrefix_member1
+  // UnitPrefix_member1
   //
 
-  unitPrefix_member1::
-  unitPrefix_member1 (const ::xml_schema::integer& _xsd_integer_base)
-  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::integer, char, ::xml_schema::simple_type > (_xsd_integer_base)
+  UnitPrefix_member1::
+  UnitPrefix_member1 (const ::xml_schema::Integer& _xsd_Integer_base)
+  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, char, ::xml_schema::SimpleType > (_xsd_Integer_base)
   {
   }
 
-  unitPrefix_member1::
-  unitPrefix_member1 (const unitPrefix_member1& x,
-                      ::xml_schema::flags f,
-                      ::xml_schema::container* c)
-  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::integer, char, ::xml_schema::simple_type > (x, f, c)
+  UnitPrefix_member1::
+  UnitPrefix_member1 (const UnitPrefix_member1& x,
+                      ::xml_schema::Flags f,
+                      ::xml_schema::Container* c)
+  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, char, ::xml_schema::SimpleType > (x, f, c)
   {
   }
 
-  unitPrefix_member1::
-  unitPrefix_member1 (const ::xercesc::DOMElement& e,
-                      ::xml_schema::flags f,
-                      ::xml_schema::container* c)
-  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::integer, char, ::xml_schema::simple_type > (e, f, c)
+  UnitPrefix_member1::
+  UnitPrefix_member1 (const ::xercesc::DOMElement& e,
+                      ::xml_schema::Flags f,
+                      ::xml_schema::Container* c)
+  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, char, ::xml_schema::SimpleType > (e, f, c)
   {
   }
 
-  unitPrefix_member1::
-  unitPrefix_member1 (const ::xercesc::DOMAttr& a,
-                      ::xml_schema::flags f,
-                      ::xml_schema::container* c)
-  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::integer, char, ::xml_schema::simple_type > (a, f, c)
+  UnitPrefix_member1::
+  UnitPrefix_member1 (const ::xercesc::DOMAttr& a,
+                      ::xml_schema::Flags f,
+                      ::xml_schema::Container* c)
+  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, char, ::xml_schema::SimpleType > (a, f, c)
   {
   }
 
-  unitPrefix_member1::
-  unitPrefix_member1 (const ::std::string& s,
+  UnitPrefix_member1::
+  UnitPrefix_member1 (const ::std::string& s,
                       const ::xercesc::DOMElement* e,
-                      ::xml_schema::flags f,
-                      ::xml_schema::container* c)
-  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::integer, char, ::xml_schema::simple_type > (s, e, f, c)
+                      ::xml_schema::Flags f,
+                      ::xml_schema::Container* c)
+  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, char, ::xml_schema::SimpleType > (s, e, f, c)
   {
   }
 
-  unitPrefix_member1* unitPrefix_member1::
-  _clone (::xml_schema::flags f,
-          ::xml_schema::container* c) const
+  UnitPrefix_member1* UnitPrefix_member1::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
   {
-    return new class unitPrefix_member1 (*this, f, c);
+    return new class UnitPrefix_member1 (*this, f, c);
   }
 
-  unitPrefix_member1::
-  ~unitPrefix_member1 ()
+  UnitPrefix_member1::
+  ~UnitPrefix_member1 ()
   {
   }
 }
@@ -2983,14 +2983,14 @@ namespace cellml12
 
 namespace cellml12
 {
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (const ::std::string& u,
-          ::xml_schema::flags f,
-          const ::xml_schema::properties& p)
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (const ::std::string& u,
+              ::xml_schema::Flags f,
+              const ::xml_schema::Properties& p)
   {
     ::xsd::cxx::xml::auto_initializer i (
-      (f & ::xml_schema::flags::dont_initialize) == 0,
-      (f & ::xml_schema::flags::keep_dom) == 0);
+      (f & ::xml_schema::Flags::dont_initialize) == 0,
+      (f & ::xml_schema::Flags::keep_dom) == 0);
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -3000,20 +3000,20 @@ namespace cellml12
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::cellml12::model > (
-      ::cellml12::model_ (
-        std::move (d), f | ::xml_schema::flags::own_dom, p));
+    return ::std::unique_ptr< ::cellml12::Model > (
+      ::cellml12::parseModel (
+        std::move (d), f | ::xml_schema::Flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (const ::std::string& u,
-          ::xml_schema::error_handler& h,
-          ::xml_schema::flags f,
-          const ::xml_schema::properties& p)
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (const ::std::string& u,
+              ::xml_schema::ErrorHandler& h,
+              ::xml_schema::Flags f,
+              const ::xml_schema::Properties& p)
   {
     ::xsd::cxx::xml::auto_initializer i (
-      (f & ::xml_schema::flags::dont_initialize) == 0,
-      (f & ::xml_schema::flags::keep_dom) == 0);
+      (f & ::xml_schema::Flags::dont_initialize) == 0,
+      (f & ::xml_schema::Flags::keep_dom) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
       ::xsd::cxx::xml::dom::parse< char > (
@@ -3022,16 +3022,16 @@ namespace cellml12
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::cellml12::model > (
-      ::cellml12::model_ (
-        std::move (d), f | ::xml_schema::flags::own_dom, p));
+    return ::std::unique_ptr< ::cellml12::Model > (
+      ::cellml12::parseModel (
+        std::move (d), f | ::xml_schema::Flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (const ::std::string& u,
-          ::xercesc::DOMErrorHandler& h,
-          ::xml_schema::flags f,
-          const ::xml_schema::properties& p)
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (const ::std::string& u,
+              ::xercesc::DOMErrorHandler& h,
+              ::xml_schema::Flags f,
+              const ::xml_schema::Properties& p)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
       ::xsd::cxx::xml::dom::parse< char > (
@@ -3040,92 +3040,92 @@ namespace cellml12
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::cellml12::model > (
-      ::cellml12::model_ (
-        std::move (d), f | ::xml_schema::flags::own_dom, p));
+    return ::std::unique_ptr< ::cellml12::Model > (
+      ::cellml12::parseModel (
+        std::move (d), f | ::xml_schema::Flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::std::istream& is,
-          ::xml_schema::flags f,
-          const ::xml_schema::properties& p)
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::std::istream& is,
+              ::xml_schema::Flags f,
+              const ::xml_schema::Properties& p)
   {
     ::xsd::cxx::xml::auto_initializer i (
-      (f & ::xml_schema::flags::dont_initialize) == 0,
-      (f & ::xml_schema::flags::keep_dom) == 0);
+      (f & ::xml_schema::Flags::dont_initialize) == 0,
+      (f & ::xml_schema::Flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::cellml12::model_ (isrc, f, p);
+    return ::cellml12::parseModel (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::std::istream& is,
-          ::xml_schema::error_handler& h,
-          ::xml_schema::flags f,
-          const ::xml_schema::properties& p)
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::std::istream& is,
+              ::xml_schema::ErrorHandler& h,
+              ::xml_schema::Flags f,
+              const ::xml_schema::Properties& p)
   {
     ::xsd::cxx::xml::auto_initializer i (
-      (f & ::xml_schema::flags::dont_initialize) == 0,
-      (f & ::xml_schema::flags::keep_dom) == 0);
+      (f & ::xml_schema::Flags::dont_initialize) == 0,
+      (f & ::xml_schema::Flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::cellml12::model_ (isrc, h, f, p);
+    return ::cellml12::parseModel (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::std::istream& is,
-          ::xercesc::DOMErrorHandler& h,
-          ::xml_schema::flags f,
-          const ::xml_schema::properties& p)
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::std::istream& is,
+              ::xercesc::DOMErrorHandler& h,
+              ::xml_schema::Flags f,
+              const ::xml_schema::Properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is);
-    return ::cellml12::model_ (isrc, h, f, p);
+    return ::cellml12::parseModel (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::std::istream& is,
-          const ::std::string& sid,
-          ::xml_schema::flags f,
-          const ::xml_schema::properties& p)
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::std::istream& is,
+              const ::std::string& sid,
+              ::xml_schema::Flags f,
+              const ::xml_schema::Properties& p)
   {
     ::xsd::cxx::xml::auto_initializer i (
-      (f & ::xml_schema::flags::dont_initialize) == 0,
-      (f & ::xml_schema::flags::keep_dom) == 0);
+      (f & ::xml_schema::Flags::dont_initialize) == 0,
+      (f & ::xml_schema::Flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::cellml12::model_ (isrc, f, p);
+    return ::cellml12::parseModel (isrc, f, p);
   }
 
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::std::istream& is,
-          const ::std::string& sid,
-          ::xml_schema::error_handler& h,
-          ::xml_schema::flags f,
-          const ::xml_schema::properties& p)
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::std::istream& is,
+              const ::std::string& sid,
+              ::xml_schema::ErrorHandler& h,
+              ::xml_schema::Flags f,
+              const ::xml_schema::Properties& p)
   {
     ::xsd::cxx::xml::auto_initializer i (
-      (f & ::xml_schema::flags::dont_initialize) == 0,
-      (f & ::xml_schema::flags::keep_dom) == 0);
+      (f & ::xml_schema::Flags::dont_initialize) == 0,
+      (f & ::xml_schema::Flags::keep_dom) == 0);
 
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::cellml12::model_ (isrc, h, f, p);
+    return ::cellml12::parseModel (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::std::istream& is,
-          const ::std::string& sid,
-          ::xercesc::DOMErrorHandler& h,
-          ::xml_schema::flags f,
-          const ::xml_schema::properties& p)
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::std::istream& is,
+              const ::std::string& sid,
+              ::xercesc::DOMErrorHandler& h,
+              ::xml_schema::Flags f,
+              const ::xml_schema::Properties& p)
   {
     ::xsd::cxx::xml::sax::std_input_source isrc (is, sid);
-    return ::cellml12::model_ (isrc, h, f, p);
+    return ::cellml12::parseModel (isrc, h, f, p);
   }
 
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::xercesc::InputSource& i,
-          ::xml_schema::flags f,
-          const ::xml_schema::properties& p)
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::xercesc::InputSource& i,
+              ::xml_schema::Flags f,
+              const ::xml_schema::Properties& p)
   {
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -3135,16 +3135,16 @@ namespace cellml12
 
     h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
 
-    return ::std::unique_ptr< ::cellml12::model > (
-      ::cellml12::model_ (
-        std::move (d), f | ::xml_schema::flags::own_dom, p));
+    return ::std::unique_ptr< ::cellml12::Model > (
+      ::cellml12::parseModel (
+        std::move (d), f | ::xml_schema::Flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::xercesc::InputSource& i,
-          ::xml_schema::error_handler& h,
-          ::xml_schema::flags f,
-          const ::xml_schema::properties& p)
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::xercesc::InputSource& i,
+              ::xml_schema::ErrorHandler& h,
+              ::xml_schema::Flags f,
+              const ::xml_schema::Properties& p)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
       ::xsd::cxx::xml::dom::parse< char > (
@@ -3153,16 +3153,16 @@ namespace cellml12
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::cellml12::model > (
-      ::cellml12::model_ (
-        std::move (d), f | ::xml_schema::flags::own_dom, p));
+    return ::std::unique_ptr< ::cellml12::Model > (
+      ::cellml12::parseModel (
+        std::move (d), f | ::xml_schema::Flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::xercesc::InputSource& i,
-          ::xercesc::DOMErrorHandler& h,
-          ::xml_schema::flags f,
-          const ::xml_schema::properties& p)
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::xercesc::InputSource& i,
+              ::xercesc::DOMErrorHandler& h,
+              ::xml_schema::Flags f,
+              const ::xml_schema::Properties& p)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
       ::xsd::cxx::xml::dom::parse< char > (
@@ -3171,24 +3171,24 @@ namespace cellml12
     if (!d.get ())
       throw ::xsd::cxx::tree::parsing< char > ();
 
-    return ::std::unique_ptr< ::cellml12::model > (
-      ::cellml12::model_ (
-        std::move (d), f | ::xml_schema::flags::own_dom, p));
+    return ::std::unique_ptr< ::cellml12::Model > (
+      ::cellml12::parseModel (
+        std::move (d), f | ::xml_schema::Flags::own_dom, p));
   }
 
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (const ::xercesc::DOMDocument& doc,
-          ::xml_schema::flags f,
-          const ::xml_schema::properties& p)
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (const ::xercesc::DOMDocument& doc,
+              ::xml_schema::Flags f,
+              const ::xml_schema::Properties& p)
   {
-    if (f & ::xml_schema::flags::keep_dom)
+    if (f & ::xml_schema::Flags::keep_dom)
     {
       ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
         static_cast< ::xercesc::DOMDocument* > (doc.cloneNode (true)));
 
-      return ::std::unique_ptr< ::cellml12::model > (
-        ::cellml12::model_ (
-          std::move (d), f | ::xml_schema::flags::own_dom, p));
+      return ::std::unique_ptr< ::cellml12::Model > (
+        ::cellml12::parseModel (
+          std::move (d), f | ::xml_schema::Flags::own_dom, p));
     }
 
     const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
@@ -3198,8 +3198,8 @@ namespace cellml12
     if (n.name () == "model" &&
         n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
     {
-      ::std::unique_ptr< ::cellml12::model > r (
-        ::xsd::cxx::tree::traits< ::cellml12::model, char >::create (
+      ::std::unique_ptr< ::cellml12::Model > r (
+        ::xsd::cxx::tree::traits< ::cellml12::Model, char >::create (
           e, f, 0));
       return r;
     }
@@ -3211,14 +3211,14 @@ namespace cellml12
       "http://www.cellml.org/cellml/1.2#");
   }
 
-  ::std::unique_ptr< ::cellml12::model >
-  model_ (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
-          ::xml_schema::flags f,
-          const ::xml_schema::properties&)
+  ::std::unique_ptr< ::cellml12::Model >
+  parseModel (::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d,
+              ::xml_schema::Flags f,
+              const ::xml_schema::Properties&)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > c (
-      ((f & ::xml_schema::flags::keep_dom) &&
-       !(f & ::xml_schema::flags::own_dom))
+      ((f & ::xml_schema::Flags::keep_dom) &&
+       !(f & ::xml_schema::Flags::own_dom))
       ? static_cast< ::xercesc::DOMDocument* > (d->cloneNode (true))
       : 0);
 
@@ -3228,16 +3228,16 @@ namespace cellml12
     const ::xsd::cxx::xml::qualified_name< char > n (
       ::xsd::cxx::xml::dom::name< char > (e));
 
-    if (f & ::xml_schema::flags::keep_dom)
-      doc.setUserData (::xml_schema::dom::tree_node_key,
+    if (f & ::xml_schema::Flags::keep_dom)
+      doc.setUserData (::xml_schema::dom::treeNodeKey,
                        (c.get () ? &c : &d),
                        0);
 
     if (n.name () == "model" &&
         n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
     {
-      ::std::unique_ptr< ::cellml12::model > r (
-        ::xsd::cxx::tree::traits< ::cellml12::model, char >::create (
+      ::std::unique_ptr< ::cellml12::Model > r (
+        ::xsd::cxx::tree::traits< ::cellml12::Model, char >::create (
           e, f, 0));
       return r;
     }
@@ -3257,17 +3257,17 @@ namespace cellml12
 namespace cellml12
 {
   void
-  model_ (::std::ostream& o,
-          const ::cellml12::model& s,
-          const ::xml_schema::namespace_infomap& m,
-          const ::std::string& e,
-          ::xml_schema::flags f)
+  serializeModel (::std::ostream& o,
+                  const ::cellml12::Model& s,
+                  const ::xml_schema::NamespaceInfomap& m,
+                  const ::std::string& e,
+                  ::xml_schema::Flags f)
   {
     ::xsd::cxx::xml::auto_initializer i (
-      (f & ::xml_schema::flags::dont_initialize) == 0);
+      (f & ::xml_schema::Flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::cellml12::model_ (s, m, f));
+      ::cellml12::serializeModel (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -3279,18 +3279,18 @@ namespace cellml12
   }
 
   void
-  model_ (::std::ostream& o,
-          const ::cellml12::model& s,
-          ::xml_schema::error_handler& h,
-          const ::xml_schema::namespace_infomap& m,
-          const ::std::string& e,
-          ::xml_schema::flags f)
+  serializeModel (::std::ostream& o,
+                  const ::cellml12::Model& s,
+                  ::xml_schema::ErrorHandler& h,
+                  const ::xml_schema::NamespaceInfomap& m,
+                  const ::std::string& e,
+                  ::xml_schema::Flags f)
   {
     ::xsd::cxx::xml::auto_initializer i (
-      (f & ::xml_schema::flags::dont_initialize) == 0);
+      (f & ::xml_schema::Flags::dont_initialize) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::cellml12::model_ (s, m, f));
+      ::cellml12::serializeModel (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -3299,15 +3299,15 @@ namespace cellml12
   }
 
   void
-  model_ (::std::ostream& o,
-          const ::cellml12::model& s,
-          ::xercesc::DOMErrorHandler& h,
-          const ::xml_schema::namespace_infomap& m,
-          const ::std::string& e,
-          ::xml_schema::flags f)
+  serializeModel (::std::ostream& o,
+                  const ::cellml12::Model& s,
+                  ::xercesc::DOMErrorHandler& h,
+                  const ::xml_schema::NamespaceInfomap& m,
+                  const ::std::string& e,
+                  ::xml_schema::Flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::cellml12::model_ (s, m, f));
+      ::cellml12::serializeModel (s, m, f));
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
@@ -3316,14 +3316,14 @@ namespace cellml12
   }
 
   void
-  model_ (::xercesc::XMLFormatTarget& t,
-          const ::cellml12::model& s,
-          const ::xml_schema::namespace_infomap& m,
-          const ::std::string& e,
-          ::xml_schema::flags f)
+  serializeModel (::xercesc::XMLFormatTarget& t,
+                  const ::cellml12::Model& s,
+                  const ::xml_schema::NamespaceInfomap& m,
+                  const ::std::string& e,
+                  ::xml_schema::Flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::cellml12::model_ (s, m, f));
+      ::cellml12::serializeModel (s, m, f));
 
     ::xsd::cxx::tree::error_handler< char > h;
 
@@ -3334,15 +3334,15 @@ namespace cellml12
   }
 
   void
-  model_ (::xercesc::XMLFormatTarget& t,
-          const ::cellml12::model& s,
-          ::xml_schema::error_handler& h,
-          const ::xml_schema::namespace_infomap& m,
-          const ::std::string& e,
-          ::xml_schema::flags f)
+  serializeModel (::xercesc::XMLFormatTarget& t,
+                  const ::cellml12::Model& s,
+                  ::xml_schema::ErrorHandler& h,
+                  const ::xml_schema::NamespaceInfomap& m,
+                  const ::std::string& e,
+                  ::xml_schema::Flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::cellml12::model_ (s, m, f));
+      ::cellml12::serializeModel (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -3350,15 +3350,15 @@ namespace cellml12
   }
 
   void
-  model_ (::xercesc::XMLFormatTarget& t,
-          const ::cellml12::model& s,
-          ::xercesc::DOMErrorHandler& h,
-          const ::xml_schema::namespace_infomap& m,
-          const ::std::string& e,
-          ::xml_schema::flags f)
+  serializeModel (::xercesc::XMLFormatTarget& t,
+                  const ::cellml12::Model& s,
+                  ::xercesc::DOMErrorHandler& h,
+                  const ::xml_schema::NamespaceInfomap& m,
+                  const ::std::string& e,
+                  ::xml_schema::Flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::cellml12::model_ (s, m, f));
+      ::cellml12::serializeModel (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
       throw ::xsd::cxx::tree::serialization< char > ();
@@ -3366,9 +3366,9 @@ namespace cellml12
   }
 
   void
-  model_ (::xercesc::DOMDocument& d,
-          const ::cellml12::model& s,
-          ::xml_schema::flags)
+  serializeModel (::xercesc::DOMDocument& d,
+                  const ::cellml12::Model& s,
+                  ::xml_schema::Flags)
   {
     ::xercesc::DOMElement& e (*d.getDocumentElement ());
     const ::xsd::cxx::xml::qualified_name< char > n (
@@ -3390,9 +3390,9 @@ namespace cellml12
   }
 
   ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument >
-  model_ (const ::cellml12::model& s,
-          const ::xml_schema::namespace_infomap& m,
-          ::xml_schema::flags f)
+  serializeModel (const ::cellml12::Model& s,
+                  const ::xml_schema::NamespaceInfomap& m,
+                  ::xml_schema::Flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
       ::xsd::cxx::xml::dom::serialize< char > (
@@ -3400,19 +3400,19 @@ namespace cellml12
         "http://www.cellml.org/cellml/1.2#",
         m, f));
 
-    ::cellml12::model_ (*d, s, f);
+    ::cellml12::serializeModel (*d, s, f);
     return d;
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const model& i)
+  operator<< (::xercesc::DOMElement& e, const Model& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::xml_schema::Type& > (i);
 
     // import
     //
-    for (model::import_const_iterator
-         b (i.import ().begin ()), n (i.import ().end ());
+    for (Model::ImportConstIterator
+         b (i.getImport ().begin ()), n (i.getImport ().end ());
          b != n; ++b)
     {
       ::xercesc::DOMElement& s (
@@ -3426,8 +3426,8 @@ namespace cellml12
 
     // units
     //
-    for (model::units_const_iterator
-         b (i.units ().begin ()), n (i.units ().end ());
+    for (Model::UnitsConstIterator
+         b (i.getUnits ().begin ()), n (i.getUnits ().end ());
          b != n; ++b)
     {
       ::xercesc::DOMElement& s (
@@ -3441,8 +3441,8 @@ namespace cellml12
 
     // component
     //
-    for (model::component_const_iterator
-         b (i.component ().begin ()), n (i.component ().end ());
+    for (Model::ComponentConstIterator
+         b (i.getComponent ().begin ()), n (i.getComponent ().end ());
          b != n; ++b)
     {
       ::xercesc::DOMElement& s (
@@ -3456,8 +3456,8 @@ namespace cellml12
 
     // encapsulation
     //
-    for (model::encapsulation_const_iterator
-         b (i.encapsulation ().begin ()), n (i.encapsulation ().end ());
+    for (Model::EncapsulationConstIterator
+         b (i.getEncapsulation ().begin ()), n (i.getEncapsulation ().end ());
          b != n; ++b)
     {
       ::xercesc::DOMElement& s (
@@ -3471,8 +3471,8 @@ namespace cellml12
 
     // connection
     //
-    for (model::connection_const_iterator
-         b (i.connection ().begin ()), n (i.connection ().end ());
+    for (Model::ConnectionConstIterator
+         b (i.getConnection ().begin ()), n (i.getConnection ().end ());
          b != n; ++b)
     {
       ::xercesc::DOMElement& s (
@@ -3492,19 +3492,19 @@ namespace cellml12
           "name",
           e));
 
-      a << i.name ();
+      a << i.getName ();
     }
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const import& i)
+  operator<< (::xercesc::DOMElement& e, const Import& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::xml_schema::Type& > (i);
 
     // units
     //
-    for (import::units_const_iterator
-         b (i.units ().begin ()), n (i.units ().end ());
+    for (Import::UnitsConstIterator
+         b (i.getUnits ().begin ()), n (i.getUnits ().end ());
          b != n; ++b)
     {
       ::xercesc::DOMElement& s (
@@ -3518,8 +3518,8 @@ namespace cellml12
 
     // component
     //
-    for (import::component_const_iterator
-         b (i.component ().begin ()), n (i.component ().end ());
+    for (Import::ComponentConstIterator
+         b (i.getComponent ().begin ()), n (i.getComponent ().end ());
          b != n; ++b)
     {
       ::xercesc::DOMElement& s (
@@ -3539,19 +3539,19 @@ namespace cellml12
           "href",
           e));
 
-      a << i.href ();
+      a << i.getHref ();
     }
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const units& i)
+  operator<< (::xercesc::DOMElement& e, const Units& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::xml_schema::Type& > (i);
 
     // unit
     //
-    for (units::unit_const_iterator
-         b (i.unit ().begin ()), n (i.unit ().end ());
+    for (Units::UnitConstIterator
+         b (i.getUnit ().begin ()), n (i.getUnit ().end ());
          b != n; ++b)
     {
       ::xercesc::DOMElement& s (
@@ -3571,26 +3571,26 @@ namespace cellml12
           "name",
           e));
 
-      a << i.name ();
+      a << i.getName ();
     }
 
     // base_units
     //
-    if (i.base_units ())
+    if (i.getBase_units ())
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
           "base_units",
           e));
 
-      a << *i.base_units ();
+      a << *i.getBase_units ();
     }
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const unit& i)
+  operator<< (::xercesc::DOMElement& e, const Unit& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::xml_schema::Type& > (i);
 
     // units
     //
@@ -3600,67 +3600,67 @@ namespace cellml12
           "units",
           e));
 
-      a << i.units ();
+      a << i.getUnits ();
     }
 
     // multiplier
     //
-    if (i.multiplier ())
+    if (i.getMultiplier ())
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
           "multiplier",
           e));
 
-      a << ::xml_schema::as_double(*i.multiplier ());
+      a << ::xml_schema::AsDouble(*i.getMultiplier ());
     }
 
     // prefix
     //
-    if (i.prefix ())
+    if (i.getPrefix ())
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
           "prefix",
           e));
 
-      a << *i.prefix ();
+      a << *i.getPrefix ();
     }
 
     // offset
     //
-    if (i.offset ())
+    if (i.getOffset ())
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
           "offset",
           e));
 
-      a << ::xml_schema::as_double(*i.offset ());
+      a << ::xml_schema::AsDouble(*i.getOffset ());
     }
 
     // exponent
     //
-    if (i.exponent ())
+    if (i.getExponent ())
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
           "exponent",
           e));
 
-      a << ::xml_schema::as_double(*i.exponent ());
+      a << ::xml_schema::AsDouble(*i.getExponent ());
     }
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const component& i)
+  operator<< (::xercesc::DOMElement& e, const Component& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::xml_schema::Type& > (i);
 
     // units
     //
-    for (component::units_const_iterator
-         b (i.units ().begin ()), n (i.units ().end ());
+    for (Component::UnitsConstIterator
+         b (i.getUnits ().begin ()), n (i.getUnits ().end ());
          b != n; ++b)
     {
       ::xercesc::DOMElement& s (
@@ -3674,8 +3674,8 @@ namespace cellml12
 
     // variable
     //
-    for (component::variable_const_iterator
-         b (i.variable ().begin ()), n (i.variable ().end ());
+    for (Component::VariableConstIterator
+         b (i.getVariable ().begin ()), n (i.getVariable ().end ());
          b != n; ++b)
     {
       ::xercesc::DOMElement& s (
@@ -3689,8 +3689,8 @@ namespace cellml12
 
     // math
     //
-    for (component::math_const_iterator
-         b (i.math ().begin ()), n (i.math ().end ());
+    for (Component::MathConstIterator
+         b (i.getMath ().begin ()), n (i.getMath ().end ());
          b != n; ++b)
     {
       ::xercesc::DOMElement& s (
@@ -3710,19 +3710,19 @@ namespace cellml12
           "name",
           e));
 
-      a << i.name ();
+      a << i.getName ();
     }
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const encapsulation& i)
+  operator<< (::xercesc::DOMElement& e, const Encapsulation& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::xml_schema::Type& > (i);
 
     // component_ref
     //
-    for (encapsulation::component_ref_const_iterator
-         b (i.component_ref ().begin ()), n (i.component_ref ().end ());
+    for (Encapsulation::Component_refConstIterator
+         b (i.getComponent_ref ().begin ()), n (i.getComponent_ref ().end ());
          b != n; ++b)
     {
       ::xercesc::DOMElement& s (
@@ -3736,46 +3736,14 @@ namespace cellml12
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const toplevelComponentRef& i)
+  operator<< (::xercesc::DOMElement& e, const ToplevelComponentRef& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::xml_schema::Type& > (i);
 
     // component_ref
     //
-    for (toplevelComponentRef::component_ref_const_iterator
-         b (i.component_ref ().begin ()), n (i.component_ref ().end ());
-         b != n; ++b)
-    {
-      ::xercesc::DOMElement& s (
-        ::xsd::cxx::xml::dom::create_element (
-          "component_ref",
-          "http://www.cellml.org/cellml/1.2#",
-          e));
-
-      s << *b;
-    }
-
-    // component
-    //
-    {
-      ::xercesc::DOMAttr& a (
-        ::xsd::cxx::xml::dom::create_attribute (
-          "component",
-          e));
-
-      a << i.component ();
-    }
-  }
-
-  void
-  operator<< (::xercesc::DOMElement& e, const componentRef& i)
-  {
-    e << static_cast< const ::xml_schema::type& > (i);
-
-    // component_ref
-    //
-    for (componentRef::component_ref_const_iterator
-         b (i.component_ref ().begin ()), n (i.component_ref ().end ());
+    for (ToplevelComponentRef::Component_refConstIterator
+         b (i.getComponent_ref ().begin ()), n (i.getComponent_ref ().end ());
          b != n; ++b)
     {
       ::xercesc::DOMElement& s (
@@ -3795,19 +3763,51 @@ namespace cellml12
           "component",
           e));
 
-      a << i.component ();
+      a << i.getComponent ();
     }
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const connection& i)
+  operator<< (::xercesc::DOMElement& e, const ComponentRef& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::xml_schema::Type& > (i);
+
+    // component_ref
+    //
+    for (ComponentRef::Component_refConstIterator
+         b (i.getComponent_ref ().begin ()), n (i.getComponent_ref ().end ());
+         b != n; ++b)
+    {
+      ::xercesc::DOMElement& s (
+        ::xsd::cxx::xml::dom::create_element (
+          "component_ref",
+          "http://www.cellml.org/cellml/1.2#",
+          e));
+
+      s << *b;
+    }
+
+    // component
+    //
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          "component",
+          e));
+
+      a << i.getComponent ();
+    }
+  }
+
+  void
+  operator<< (::xercesc::DOMElement& e, const Connection& i)
+  {
+    e << static_cast< const ::xml_schema::Type& > (i);
 
     // map_variables
     //
-    for (connection::map_variables_const_iterator
-         b (i.map_variables ().begin ()), n (i.map_variables ().end ());
+    for (Connection::Map_variablesConstIterator
+         b (i.getMap_variables ().begin ()), n (i.getMap_variables ().end ());
          b != n; ++b)
     {
       ::xercesc::DOMElement& s (
@@ -3827,7 +3827,7 @@ namespace cellml12
           "component_1",
           e));
 
-      a << i.component_1 ();
+      a << i.getComponent_1 ();
     }
 
     // component_2
@@ -3838,14 +3838,14 @@ namespace cellml12
           "component_2",
           e));
 
-      a << i.component_2 ();
+      a << i.getComponent_2 ();
     }
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const importedUnits& i)
+  operator<< (::xercesc::DOMElement& e, const ImportedUnits& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::xml_schema::Type& > (i);
 
     // name
     //
@@ -3855,7 +3855,7 @@ namespace cellml12
           "name",
           e));
 
-      a << i.name ();
+      a << i.getName ();
     }
 
     // units_ref
@@ -3866,14 +3866,14 @@ namespace cellml12
           "units_ref",
           e));
 
-      a << i.units_ref ();
+      a << i.getUnits_ref ();
     }
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const importedComponent& i)
+  operator<< (::xercesc::DOMElement& e, const ImportedComponent& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::xml_schema::Type& > (i);
 
     // name
     //
@@ -3883,7 +3883,7 @@ namespace cellml12
           "name",
           e));
 
-      a << i.name ();
+      a << i.getName ();
     }
 
     // component_ref
@@ -3894,14 +3894,14 @@ namespace cellml12
           "component_ref",
           e));
 
-      a << i.component_ref ();
+      a << i.getComponent_ref ();
     }
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const variable& i)
+  operator<< (::xercesc::DOMElement& e, const Variable& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::xml_schema::Type& > (i);
 
     // name
     //
@@ -3911,7 +3911,7 @@ namespace cellml12
           "name",
           e));
 
-      a << i.name ();
+      a << i.getName ();
     }
 
     // units
@@ -3922,31 +3922,31 @@ namespace cellml12
           "units",
           e));
 
-      a << i.units ();
+      a << i.getUnits ();
     }
 
     // public_interface
     //
-    if (i.public_interface ())
+    if (i.getPublic_interface ())
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
           "public_interface",
           e));
 
-      a << *i.public_interface ();
+      a << *i.getPublic_interface ();
     }
 
     // private_interface
     //
-    if (i.private_interface ())
+    if (i.getPrivate_interface ())
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
           "private_interface",
           e));
 
-      a << *i.private_interface ();
+      a << *i.getPrivate_interface ();
     }
 
     // type
@@ -3957,14 +3957,14 @@ namespace cellml12
           "type",
           e));
 
-      a << i.type ();
+      a << i.getType ();
     }
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const mapVariables& i)
+  operator<< (::xercesc::DOMElement& e, const MapVariables& i)
   {
-    e << static_cast< const ::xml_schema::type& > (i);
+    e << static_cast< const ::xml_schema::Type& > (i);
 
     // variable_1
     //
@@ -3974,7 +3974,7 @@ namespace cellml12
           "variable_1",
           e));
 
-      a << i.variable_1 ();
+      a << i.getVariable_1 ();
     }
 
     // variable_2
@@ -3985,103 +3985,103 @@ namespace cellml12
           "variable_2",
           e));
 
-      a << i.variable_2 ();
+      a << i.getVariable_2 ();
     }
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const cellMLIdentifier& i)
+  operator<< (::xercesc::DOMElement& e, const CellMLIdentifier& i)
   {
-    e << static_cast< const ::xml_schema::string& > (i);
+    e << static_cast< const ::xml_schema::String& > (i);
   }
 
   void
-  operator<< (::xercesc::DOMAttr& a, const cellMLIdentifier& i)
+  operator<< (::xercesc::DOMAttr& a, const CellMLIdentifier& i)
   {
-    a << static_cast< const ::xml_schema::string& > (i);
+    a << static_cast< const ::xml_schema::String& > (i);
   }
 
   void
-  operator<< (::xml_schema::list_stream& l,
-              const cellMLIdentifier& i)
+  operator<< (::xml_schema::ListStream& l,
+              const CellMLIdentifier& i)
   {
-    l << static_cast< const ::xml_schema::string& > (i);
+    l << static_cast< const ::xml_schema::String& > (i);
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const unitPrefix& i)
+  operator<< (::xercesc::DOMElement& e, const UnitPrefix& i)
   {
-    e << static_cast< const ::xml_schema::string& > (i);
+    e << static_cast< const ::xml_schema::String& > (i);
   }
 
   void
-  operator<< (::xercesc::DOMAttr& a, const unitPrefix& i)
+  operator<< (::xercesc::DOMAttr& a, const UnitPrefix& i)
   {
-    a << static_cast< const ::xml_schema::string& > (i);
+    a << static_cast< const ::xml_schema::String& > (i);
   }
 
   void
-  operator<< (::xml_schema::list_stream& l,
-              const unitPrefix& i)
+  operator<< (::xml_schema::ListStream& l,
+              const UnitPrefix& i)
   {
-    l << static_cast< const ::xml_schema::string& > (i);
+    l << static_cast< const ::xml_schema::String& > (i);
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const yesno& i)
+  operator<< (::xercesc::DOMElement& e, const Yesno& i)
   {
-    e << static_cast< const ::xml_schema::string& > (i);
+    e << static_cast< const ::xml_schema::String& > (i);
   }
 
   void
-  operator<< (::xercesc::DOMAttr& a, const yesno& i)
+  operator<< (::xercesc::DOMAttr& a, const Yesno& i)
   {
-    a << static_cast< const ::xml_schema::string& > (i);
+    a << static_cast< const ::xml_schema::String& > (i);
   }
 
   void
-  operator<< (::xml_schema::list_stream& l,
-              const yesno& i)
+  operator<< (::xml_schema::ListStream& l,
+              const Yesno& i)
   {
-    l << static_cast< const ::xml_schema::string& > (i);
+    l << static_cast< const ::xml_schema::String& > (i);
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const unitPrefix_member& i)
+  operator<< (::xercesc::DOMElement& e, const UnitPrefix_member& i)
   {
-    e << static_cast< const ::xml_schema::string& > (i);
+    e << static_cast< const ::xml_schema::String& > (i);
   }
 
   void
-  operator<< (::xercesc::DOMAttr& a, const unitPrefix_member& i)
+  operator<< (::xercesc::DOMAttr& a, const UnitPrefix_member& i)
   {
-    a << static_cast< const ::xml_schema::string& > (i);
+    a << static_cast< const ::xml_schema::String& > (i);
   }
 
   void
-  operator<< (::xml_schema::list_stream& l,
-              const unitPrefix_member& i)
+  operator<< (::xml_schema::ListStream& l,
+              const UnitPrefix_member& i)
   {
-    l << static_cast< const ::xml_schema::string& > (i);
+    l << static_cast< const ::xml_schema::String& > (i);
   }
 
   void
-  operator<< (::xercesc::DOMElement& e, const unitPrefix_member1& i)
+  operator<< (::xercesc::DOMElement& e, const UnitPrefix_member1& i)
   {
-    e << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::integer, char, ::xml_schema::simple_type >& > (i);
+    e << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, char, ::xml_schema::SimpleType >& > (i);
   }
 
   void
-  operator<< (::xercesc::DOMAttr& a, const unitPrefix_member1& i)
+  operator<< (::xercesc::DOMAttr& a, const UnitPrefix_member1& i)
   {
-    a << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::integer, char, ::xml_schema::simple_type >& > (i);
+    a << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, char, ::xml_schema::SimpleType >& > (i);
   }
 
   void
-  operator<< (::xml_schema::list_stream& l,
-              const unitPrefix_member1& i)
+  operator<< (::xml_schema::ListStream& l,
+              const UnitPrefix_member1& i)
   {
-    l << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::integer, char, ::xml_schema::simple_type >& > (i);
+    l << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, char, ::xml_schema::SimpleType >& > (i);
   }
 }
 
