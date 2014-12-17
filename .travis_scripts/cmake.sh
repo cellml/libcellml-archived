@@ -10,4 +10,4 @@ make
 
 sudo apt-get remove cmake cmake-data
 
-make install
+sudo make install
