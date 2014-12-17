@@ -6,4 +6,4 @@
 --generate-doxygen
 --type-naming java
 --function-naming java
-
+--char-type wchar_t

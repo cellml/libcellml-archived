@@ -23,16 +23,16 @@ string xml1() {
 
 //! Test creation of a model and serialisation to XML
 TEST(XmlBindingsSerialisation, SimpleExample01) {
-  auto modelName = "modelName";
+  auto modelName = L"modelName";
   cellml12::Model m(modelName);
-  cellml12::Component c1("c1");
-  cellml12::Variable v1("v1", "kg", "real");
+  cellml12::Component c1(L"c1");
+  cellml12::Variable v1(L"v1", L"kg", L"real");
 
-  v1.setPublic_interface(cellml12::Yesno::Value::yes);
+  v1.setPublic_interface(cellml12::Yesno::yes);
   c1.getVariable().push_back(v1);
   m.getComponent().push_back(c1);
 
-  cellml12::Component c2("c2");
+  cellml12::Component c2(L"c2");
   m.getComponent().push_back(c2);
 
   ostringstream oss;
@@ -49,7 +49,7 @@ TEST(XmlBindingsDeserialisation, SimpleExample01) {
 
   auto m2 = parseModel(iss, xml_schema::Flags::dont_validate);
 
-  ostringstream oss;
+  wostringstream oss;
   oss << "Read in model name: " << m2->getName() << endl;
   oss << "  Components:" << endl;
   auto cs = m2->getComponent();
@@ -62,13 +62,13 @@ TEST(XmlBindingsDeserialisation, SimpleExample01) {
     }
   }
 
-  string expectedSummary(
-"Read in model name: modelName\n"
-"  Components:\n"
-"    c1\n"
-"      Variables:\n"
-"        v1::real(private: <not present>, public: yes)\n"
-"    c2\n"
-"      Variables:\n");
+  wstring expectedSummary(
+L"Read in model name: modelName\n"
+L"  Components:\n"
+L"    c1\n"
+L"      Variables:\n"
+L"        v1::real(private: <not present>, public: yes)\n"
+L"    c2\n"
+L"      Variables:\n");
   ASSERT_EQ(expectedSummary, oss.str());
 }

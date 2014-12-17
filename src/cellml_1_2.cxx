@@ -996,13 +996,13 @@ namespace cellml12
   //
 
   UnitPrefix::
-  UnitPrefix (const char* s)
+  UnitPrefix (const wchar_t* s)
   : ::xml_schema::String (s)
   {
   }
 
   UnitPrefix::
-  UnitPrefix (const ::std::string& s)
+  UnitPrefix (const ::std::wstring& s)
   : ::xml_schema::String (s)
   {
   }
@@ -1025,13 +1025,13 @@ namespace cellml12
   }
 
   Yesno::
-  Yesno (const char* v)
+  Yesno (const wchar_t* v)
   : ::xml_schema::String (v)
   {
   }
 
   Yesno::
-  Yesno (const ::std::string& v)
+  Yesno (const ::std::wstring& v)
   : ::xml_schema::String (v)
   {
   }
@@ -1070,13 +1070,13 @@ namespace cellml12
   }
 
   UnitPrefix_member::
-  UnitPrefix_member (const char* v)
+  UnitPrefix_member (const wchar_t* v)
   : ::xml_schema::String (v)
   {
   }
 
   UnitPrefix_member::
-  UnitPrefix_member (const ::std::string& v)
+  UnitPrefix_member (const ::std::wstring& v)
   : ::xml_schema::String (v)
   {
   }
@@ -1156,24 +1156,24 @@ namespace cellml12
   {
     if ((f & ::xml_schema::Flags::base) == 0)
     {
-      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
+      ::xsd::cxx::xml::dom::parser< wchar_t > p (e, true, false, true);
       this->parse (p, f);
     }
   }
 
   void Model::
-  parse (::xsd::cxx::xml::dom::parser< char >& p,
+  parse (::xsd::cxx::xml::dom::parser< wchar_t >& p,
          ::xml_schema::Flags f)
   {
     for (; p.more_content (); p.next_content (false))
     {
       const ::xercesc::DOMElement& i (p.cur_element ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
       // import
       //
-      if (n.name () == "import" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
+      if (n.name () == L"import" && n.namespace_ () == L"http://www.cellml.org/cellml/1.2#")
       {
         ::std::unique_ptr< ImportType > r (
           ImportTraits::create (i, f, this));
@@ -1184,7 +1184,7 @@ namespace cellml12
 
       // units
       //
-      if (n.name () == "units" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
+      if (n.name () == L"units" && n.namespace_ () == L"http://www.cellml.org/cellml/1.2#")
       {
         ::std::unique_ptr< UnitsType > r (
           UnitsTraits::create (i, f, this));
@@ -1195,7 +1195,7 @@ namespace cellml12
 
       // component
       //
-      if (n.name () == "component" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
+      if (n.name () == L"component" && n.namespace_ () == L"http://www.cellml.org/cellml/1.2#")
       {
         ::std::unique_ptr< ComponentType > r (
           ComponentTraits::create (i, f, this));
@@ -1206,7 +1206,7 @@ namespace cellml12
 
       // encapsulation
       //
-      if (n.name () == "encapsulation" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
+      if (n.name () == L"encapsulation" && n.namespace_ () == L"http://www.cellml.org/cellml/1.2#")
       {
         ::std::unique_ptr< EncapsulationType > r (
           EncapsulationTraits::create (i, f, this));
@@ -1217,7 +1217,7 @@ namespace cellml12
 
       // connection
       //
-      if (n.name () == "connection" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
+      if (n.name () == L"connection" && n.namespace_ () == L"http://www.cellml.org/cellml/1.2#")
       {
         ::std::unique_ptr< ConnectionType > r (
           ConnectionTraits::create (i, f, this));
@@ -1232,10 +1232,10 @@ namespace cellml12
     while (p.more_attributes ())
     {
       const ::xercesc::DOMAttr& i (p.next_attribute ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
-      if (n.name () == "name" && n.namespace_ ().empty ())
+      if (n.name () == L"name" && n.namespace_ ().empty ())
       {
         this->name_.set (NameTraits::create (i, f, this));
         continue;
@@ -1244,9 +1244,9 @@ namespace cellml12
 
     if (!name_.present ())
     {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "name",
-        "");
+      throw ::xsd::cxx::tree::expected_attribute< wchar_t > (
+        L"name",
+        L"");
     }
   }
 
@@ -1313,24 +1313,24 @@ namespace cellml12
   {
     if ((f & ::xml_schema::Flags::base) == 0)
     {
-      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
+      ::xsd::cxx::xml::dom::parser< wchar_t > p (e, true, false, true);
       this->parse (p, f);
     }
   }
 
   void Import::
-  parse (::xsd::cxx::xml::dom::parser< char >& p,
+  parse (::xsd::cxx::xml::dom::parser< wchar_t >& p,
          ::xml_schema::Flags f)
   {
     for (; p.more_content (); p.next_content (false))
     {
       const ::xercesc::DOMElement& i (p.cur_element ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
       // units
       //
-      if (n.name () == "units" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
+      if (n.name () == L"units" && n.namespace_ () == L"http://www.cellml.org/cellml/1.2#")
       {
         ::std::unique_ptr< UnitsType > r (
           UnitsTraits::create (i, f, this));
@@ -1341,7 +1341,7 @@ namespace cellml12
 
       // component
       //
-      if (n.name () == "component" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
+      if (n.name () == L"component" && n.namespace_ () == L"http://www.cellml.org/cellml/1.2#")
       {
         ::std::unique_ptr< ComponentType > r (
           ComponentTraits::create (i, f, this));
@@ -1356,10 +1356,10 @@ namespace cellml12
     while (p.more_attributes ())
     {
       const ::xercesc::DOMAttr& i (p.next_attribute ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
-      if (n.name () == "href" && n.namespace_ ().empty ())
+      if (n.name () == L"href" && n.namespace_ ().empty ())
       {
         this->href_.set (HrefTraits::create (i, f, this));
         continue;
@@ -1368,9 +1368,9 @@ namespace cellml12
 
     if (!href_.present ())
     {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "href",
-        "");
+      throw ::xsd::cxx::tree::expected_attribute< wchar_t > (
+        L"href",
+        L"");
     }
   }
 
@@ -1434,24 +1434,24 @@ namespace cellml12
   {
     if ((f & ::xml_schema::Flags::base) == 0)
     {
-      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
+      ::xsd::cxx::xml::dom::parser< wchar_t > p (e, true, false, true);
       this->parse (p, f);
     }
   }
 
   void Units::
-  parse (::xsd::cxx::xml::dom::parser< char >& p,
+  parse (::xsd::cxx::xml::dom::parser< wchar_t >& p,
          ::xml_schema::Flags f)
   {
     for (; p.more_content (); p.next_content (false))
     {
       const ::xercesc::DOMElement& i (p.cur_element ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
       // unit
       //
-      if (n.name () == "unit" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
+      if (n.name () == L"unit" && n.namespace_ () == L"http://www.cellml.org/cellml/1.2#")
       {
         ::std::unique_ptr< UnitType > r (
           UnitTraits::create (i, f, this));
@@ -1466,16 +1466,16 @@ namespace cellml12
     while (p.more_attributes ())
     {
       const ::xercesc::DOMAttr& i (p.next_attribute ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
-      if (n.name () == "name" && n.namespace_ ().empty ())
+      if (n.name () == L"name" && n.namespace_ ().empty ())
       {
         this->name_.set (NameTraits::create (i, f, this));
         continue;
       }
 
-      if (n.name () == "base_units" && n.namespace_ ().empty ())
+      if (n.name () == L"base_units" && n.namespace_ ().empty ())
       {
         this->base_units_.set (Base_unitsTraits::create (i, f, this));
         continue;
@@ -1484,9 +1484,9 @@ namespace cellml12
 
     if (!name_.present ())
     {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "name",
-        "");
+      throw ::xsd::cxx::tree::expected_attribute< wchar_t > (
+        L"name",
+        L"");
     }
   }
 
@@ -1556,20 +1556,20 @@ namespace cellml12
   {
     if ((f & ::xml_schema::Flags::base) == 0)
     {
-      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
+      ::xsd::cxx::xml::dom::parser< wchar_t > p (e, true, false, true);
       this->parse (p, f);
     }
   }
 
   void Unit::
-  parse (::xsd::cxx::xml::dom::parser< char >& p,
+  parse (::xsd::cxx::xml::dom::parser< wchar_t >& p,
          ::xml_schema::Flags f)
   {
     for (; p.more_content (); p.next_content (false))
     {
       const ::xercesc::DOMElement& i (p.cur_element ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
       break;
     }
@@ -1577,34 +1577,34 @@ namespace cellml12
     while (p.more_attributes ())
     {
       const ::xercesc::DOMAttr& i (p.next_attribute ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
-      if (n.name () == "units" && n.namespace_ ().empty ())
+      if (n.name () == L"units" && n.namespace_ ().empty ())
       {
         this->units_.set (UnitsTraits::create (i, f, this));
         continue;
       }
 
-      if (n.name () == "multiplier" && n.namespace_ ().empty ())
+      if (n.name () == L"multiplier" && n.namespace_ ().empty ())
       {
         this->multiplier_.set (MultiplierTraits::create (i, f, this));
         continue;
       }
 
-      if (n.name () == "prefix" && n.namespace_ ().empty ())
+      if (n.name () == L"prefix" && n.namespace_ ().empty ())
       {
         this->prefix_.set (PrefixTraits::create (i, f, this));
         continue;
       }
 
-      if (n.name () == "offset" && n.namespace_ ().empty ())
+      if (n.name () == L"offset" && n.namespace_ ().empty ())
       {
         this->offset_.set (OffsetTraits::create (i, f, this));
         continue;
       }
 
-      if (n.name () == "exponent" && n.namespace_ ().empty ())
+      if (n.name () == L"exponent" && n.namespace_ ().empty ())
       {
         this->exponent_.set (ExponentTraits::create (i, f, this));
         continue;
@@ -1613,9 +1613,9 @@ namespace cellml12
 
     if (!units_.present ())
     {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "units",
-        "");
+      throw ::xsd::cxx::tree::expected_attribute< wchar_t > (
+        L"units",
+        L"");
     }
   }
 
@@ -1684,24 +1684,24 @@ namespace cellml12
   {
     if ((f & ::xml_schema::Flags::base) == 0)
     {
-      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
+      ::xsd::cxx::xml::dom::parser< wchar_t > p (e, true, false, true);
       this->parse (p, f);
     }
   }
 
   void Component::
-  parse (::xsd::cxx::xml::dom::parser< char >& p,
+  parse (::xsd::cxx::xml::dom::parser< wchar_t >& p,
          ::xml_schema::Flags f)
   {
     for (; p.more_content (); p.next_content (false))
     {
       const ::xercesc::DOMElement& i (p.cur_element ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
       // units
       //
-      if (n.name () == "units" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
+      if (n.name () == L"units" && n.namespace_ () == L"http://www.cellml.org/cellml/1.2#")
       {
         ::std::unique_ptr< UnitsType > r (
           UnitsTraits::create (i, f, this));
@@ -1712,7 +1712,7 @@ namespace cellml12
 
       // variable
       //
-      if (n.name () == "variable" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
+      if (n.name () == L"variable" && n.namespace_ () == L"http://www.cellml.org/cellml/1.2#")
       {
         ::std::unique_ptr< VariableType > r (
           VariableTraits::create (i, f, this));
@@ -1723,7 +1723,7 @@ namespace cellml12
 
       // math
       //
-      if (n.name () == "math" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
+      if (n.name () == L"math" && n.namespace_ () == L"http://www.cellml.org/cellml/1.2#")
       {
         ::std::unique_ptr< MathType > r (
           MathTraits::create (i, f, this));
@@ -1738,10 +1738,10 @@ namespace cellml12
     while (p.more_attributes ())
     {
       const ::xercesc::DOMAttr& i (p.next_attribute ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
-      if (n.name () == "name" && n.namespace_ ().empty ())
+      if (n.name () == L"name" && n.namespace_ ().empty ())
       {
         this->name_.set (NameTraits::create (i, f, this));
         continue;
@@ -1750,9 +1750,9 @@ namespace cellml12
 
     if (!name_.present ())
     {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "name",
-        "");
+      throw ::xsd::cxx::tree::expected_attribute< wchar_t > (
+        L"name",
+        L"");
     }
   }
 
@@ -1811,24 +1811,24 @@ namespace cellml12
   {
     if ((f & ::xml_schema::Flags::base) == 0)
     {
-      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, false);
+      ::xsd::cxx::xml::dom::parser< wchar_t > p (e, true, false, false);
       this->parse (p, f);
     }
   }
 
   void Encapsulation::
-  parse (::xsd::cxx::xml::dom::parser< char >& p,
+  parse (::xsd::cxx::xml::dom::parser< wchar_t >& p,
          ::xml_schema::Flags f)
   {
     for (; p.more_content (); p.next_content (false))
     {
       const ::xercesc::DOMElement& i (p.cur_element ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
       // component_ref
       //
-      if (n.name () == "component_ref" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
+      if (n.name () == L"component_ref" && n.namespace_ () == L"http://www.cellml.org/cellml/1.2#")
       {
         ::std::unique_ptr< Component_refType > r (
           Component_refTraits::create (i, f, this));
@@ -1896,24 +1896,24 @@ namespace cellml12
   {
     if ((f & ::xml_schema::Flags::base) == 0)
     {
-      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
+      ::xsd::cxx::xml::dom::parser< wchar_t > p (e, true, false, true);
       this->parse (p, f);
     }
   }
 
   void ToplevelComponentRef::
-  parse (::xsd::cxx::xml::dom::parser< char >& p,
+  parse (::xsd::cxx::xml::dom::parser< wchar_t >& p,
          ::xml_schema::Flags f)
   {
     for (; p.more_content (); p.next_content (false))
     {
       const ::xercesc::DOMElement& i (p.cur_element ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
       // component_ref
       //
-      if (n.name () == "component_ref" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
+      if (n.name () == L"component_ref" && n.namespace_ () == L"http://www.cellml.org/cellml/1.2#")
       {
         ::std::unique_ptr< Component_refType > r (
           Component_refTraits::create (i, f, this));
@@ -1928,10 +1928,10 @@ namespace cellml12
     while (p.more_attributes ())
     {
       const ::xercesc::DOMAttr& i (p.next_attribute ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
-      if (n.name () == "component" && n.namespace_ ().empty ())
+      if (n.name () == L"component" && n.namespace_ ().empty ())
       {
         this->component_.set (ComponentTraits::create (i, f, this));
         continue;
@@ -1940,9 +1940,9 @@ namespace cellml12
 
     if (!component_.present ())
     {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "component",
-        "");
+      throw ::xsd::cxx::tree::expected_attribute< wchar_t > (
+        L"component",
+        L"");
     }
   }
 
@@ -2002,24 +2002,24 @@ namespace cellml12
   {
     if ((f & ::xml_schema::Flags::base) == 0)
     {
-      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
+      ::xsd::cxx::xml::dom::parser< wchar_t > p (e, true, false, true);
       this->parse (p, f);
     }
   }
 
   void ComponentRef::
-  parse (::xsd::cxx::xml::dom::parser< char >& p,
+  parse (::xsd::cxx::xml::dom::parser< wchar_t >& p,
          ::xml_schema::Flags f)
   {
     for (; p.more_content (); p.next_content (false))
     {
       const ::xercesc::DOMElement& i (p.cur_element ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
       // component_ref
       //
-      if (n.name () == "component_ref" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
+      if (n.name () == L"component_ref" && n.namespace_ () == L"http://www.cellml.org/cellml/1.2#")
       {
         ::std::unique_ptr< Component_refType > r (
           Component_refTraits::create (i, f, this));
@@ -2034,10 +2034,10 @@ namespace cellml12
     while (p.more_attributes ())
     {
       const ::xercesc::DOMAttr& i (p.next_attribute ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
-      if (n.name () == "component" && n.namespace_ ().empty ())
+      if (n.name () == L"component" && n.namespace_ ().empty ())
       {
         this->component_.set (ComponentTraits::create (i, f, this));
         continue;
@@ -2046,9 +2046,9 @@ namespace cellml12
 
     if (!component_.present ())
     {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "component",
-        "");
+      throw ::xsd::cxx::tree::expected_attribute< wchar_t > (
+        L"component",
+        L"");
     }
   }
 
@@ -2112,24 +2112,24 @@ namespace cellml12
   {
     if ((f & ::xml_schema::Flags::base) == 0)
     {
-      ::xsd::cxx::xml::dom::parser< char > p (e, true, false, true);
+      ::xsd::cxx::xml::dom::parser< wchar_t > p (e, true, false, true);
       this->parse (p, f);
     }
   }
 
   void Connection::
-  parse (::xsd::cxx::xml::dom::parser< char >& p,
+  parse (::xsd::cxx::xml::dom::parser< wchar_t >& p,
          ::xml_schema::Flags f)
   {
     for (; p.more_content (); p.next_content (false))
     {
       const ::xercesc::DOMElement& i (p.cur_element ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
       // map_variables
       //
-      if (n.name () == "map_variables" && n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
+      if (n.name () == L"map_variables" && n.namespace_ () == L"http://www.cellml.org/cellml/1.2#")
       {
         ::std::unique_ptr< Map_variablesType > r (
           Map_variablesTraits::create (i, f, this));
@@ -2144,16 +2144,16 @@ namespace cellml12
     while (p.more_attributes ())
     {
       const ::xercesc::DOMAttr& i (p.next_attribute ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
-      if (n.name () == "component_1" && n.namespace_ ().empty ())
+      if (n.name () == L"component_1" && n.namespace_ ().empty ())
       {
         this->component_1_.set (Component_1Traits::create (i, f, this));
         continue;
       }
 
-      if (n.name () == "component_2" && n.namespace_ ().empty ())
+      if (n.name () == L"component_2" && n.namespace_ ().empty ())
       {
         this->component_2_.set (Component_2Traits::create (i, f, this));
         continue;
@@ -2162,16 +2162,16 @@ namespace cellml12
 
     if (!component_1_.present ())
     {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "component_1",
-        "");
+      throw ::xsd::cxx::tree::expected_attribute< wchar_t > (
+        L"component_1",
+        L"");
     }
 
     if (!component_2_.present ())
     {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "component_2",
-        "");
+      throw ::xsd::cxx::tree::expected_attribute< wchar_t > (
+        L"component_2",
+        L"");
     }
   }
 
@@ -2233,28 +2233,28 @@ namespace cellml12
   {
     if ((f & ::xml_schema::Flags::base) == 0)
     {
-      ::xsd::cxx::xml::dom::parser< char > p (e, false, false, true);
+      ::xsd::cxx::xml::dom::parser< wchar_t > p (e, false, false, true);
       this->parse (p, f);
     }
   }
 
   void ImportedUnits::
-  parse (::xsd::cxx::xml::dom::parser< char >& p,
+  parse (::xsd::cxx::xml::dom::parser< wchar_t >& p,
          ::xml_schema::Flags f)
   {
     while (p.more_attributes ())
     {
       const ::xercesc::DOMAttr& i (p.next_attribute ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
-      if (n.name () == "name" && n.namespace_ ().empty ())
+      if (n.name () == L"name" && n.namespace_ ().empty ())
       {
         this->name_.set (NameTraits::create (i, f, this));
         continue;
       }
 
-      if (n.name () == "units_ref" && n.namespace_ ().empty ())
+      if (n.name () == L"units_ref" && n.namespace_ ().empty ())
       {
         this->units_ref_.set (Units_refTraits::create (i, f, this));
         continue;
@@ -2263,16 +2263,16 @@ namespace cellml12
 
     if (!name_.present ())
     {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "name",
-        "");
+      throw ::xsd::cxx::tree::expected_attribute< wchar_t > (
+        L"name",
+        L"");
     }
 
     if (!units_ref_.present ())
     {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "units_ref",
-        "");
+      throw ::xsd::cxx::tree::expected_attribute< wchar_t > (
+        L"units_ref",
+        L"");
     }
   }
 
@@ -2333,28 +2333,28 @@ namespace cellml12
   {
     if ((f & ::xml_schema::Flags::base) == 0)
     {
-      ::xsd::cxx::xml::dom::parser< char > p (e, false, false, true);
+      ::xsd::cxx::xml::dom::parser< wchar_t > p (e, false, false, true);
       this->parse (p, f);
     }
   }
 
   void ImportedComponent::
-  parse (::xsd::cxx::xml::dom::parser< char >& p,
+  parse (::xsd::cxx::xml::dom::parser< wchar_t >& p,
          ::xml_schema::Flags f)
   {
     while (p.more_attributes ())
     {
       const ::xercesc::DOMAttr& i (p.next_attribute ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
-      if (n.name () == "name" && n.namespace_ ().empty ())
+      if (n.name () == L"name" && n.namespace_ ().empty ())
       {
         this->name_.set (NameTraits::create (i, f, this));
         continue;
       }
 
-      if (n.name () == "component_ref" && n.namespace_ ().empty ())
+      if (n.name () == L"component_ref" && n.namespace_ ().empty ())
       {
         this->component_ref_.set (Component_refTraits::create (i, f, this));
         continue;
@@ -2363,16 +2363,16 @@ namespace cellml12
 
     if (!name_.present ())
     {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "name",
-        "");
+      throw ::xsd::cxx::tree::expected_attribute< wchar_t > (
+        L"name",
+        L"");
     }
 
     if (!component_ref_.present ())
     {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "component_ref",
-        "");
+      throw ::xsd::cxx::tree::expected_attribute< wchar_t > (
+        L"component_ref",
+        L"");
     }
   }
 
@@ -2443,46 +2443,46 @@ namespace cellml12
   {
     if ((f & ::xml_schema::Flags::base) == 0)
     {
-      ::xsd::cxx::xml::dom::parser< char > p (e, false, false, true);
+      ::xsd::cxx::xml::dom::parser< wchar_t > p (e, false, false, true);
       this->parse (p, f);
     }
   }
 
   void Variable::
-  parse (::xsd::cxx::xml::dom::parser< char >& p,
+  parse (::xsd::cxx::xml::dom::parser< wchar_t >& p,
          ::xml_schema::Flags f)
   {
     while (p.more_attributes ())
     {
       const ::xercesc::DOMAttr& i (p.next_attribute ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
-      if (n.name () == "name" && n.namespace_ ().empty ())
+      if (n.name () == L"name" && n.namespace_ ().empty ())
       {
         this->name_.set (NameTraits::create (i, f, this));
         continue;
       }
 
-      if (n.name () == "units" && n.namespace_ ().empty ())
+      if (n.name () == L"units" && n.namespace_ ().empty ())
       {
         this->units_.set (UnitsTraits::create (i, f, this));
         continue;
       }
 
-      if (n.name () == "public_interface" && n.namespace_ ().empty ())
+      if (n.name () == L"public_interface" && n.namespace_ ().empty ())
       {
         this->public_interface_.set (Public_interfaceTraits::create (i, f, this));
         continue;
       }
 
-      if (n.name () == "private_interface" && n.namespace_ ().empty ())
+      if (n.name () == L"private_interface" && n.namespace_ ().empty ())
       {
         this->private_interface_.set (Private_interfaceTraits::create (i, f, this));
         continue;
       }
 
-      if (n.name () == "type" && n.namespace_ ().empty ())
+      if (n.name () == L"type" && n.namespace_ ().empty ())
       {
         this->type_.set (TypeTraits::create (i, f, this));
         continue;
@@ -2491,23 +2491,23 @@ namespace cellml12
 
     if (!name_.present ())
     {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "name",
-        "");
+      throw ::xsd::cxx::tree::expected_attribute< wchar_t > (
+        L"name",
+        L"");
     }
 
     if (!units_.present ())
     {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "units",
-        "");
+      throw ::xsd::cxx::tree::expected_attribute< wchar_t > (
+        L"units",
+        L"");
     }
 
     if (!type_.present ())
     {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "type",
-        "");
+      throw ::xsd::cxx::tree::expected_attribute< wchar_t > (
+        L"type",
+        L"");
     }
   }
 
@@ -2571,28 +2571,28 @@ namespace cellml12
   {
     if ((f & ::xml_schema::Flags::base) == 0)
     {
-      ::xsd::cxx::xml::dom::parser< char > p (e, false, false, true);
+      ::xsd::cxx::xml::dom::parser< wchar_t > p (e, false, false, true);
       this->parse (p, f);
     }
   }
 
   void MapVariables::
-  parse (::xsd::cxx::xml::dom::parser< char >& p,
+  parse (::xsd::cxx::xml::dom::parser< wchar_t >& p,
          ::xml_schema::Flags f)
   {
     while (p.more_attributes ())
     {
       const ::xercesc::DOMAttr& i (p.next_attribute ());
-      const ::xsd::cxx::xml::qualified_name< char > n (
-        ::xsd::cxx::xml::dom::name< char > (i));
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
 
-      if (n.name () == "variable_1" && n.namespace_ ().empty ())
+      if (n.name () == L"variable_1" && n.namespace_ ().empty ())
       {
         this->variable_1_.set (Variable_1Traits::create (i, f, this));
         continue;
       }
 
-      if (n.name () == "variable_2" && n.namespace_ ().empty ())
+      if (n.name () == L"variable_2" && n.namespace_ ().empty ())
       {
         this->variable_2_.set (Variable_2Traits::create (i, f, this));
         continue;
@@ -2601,16 +2601,16 @@ namespace cellml12
 
     if (!variable_1_.present ())
     {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "variable_1",
-        "");
+      throw ::xsd::cxx::tree::expected_attribute< wchar_t > (
+        L"variable_1",
+        L"");
     }
 
     if (!variable_2_.present ())
     {
-      throw ::xsd::cxx::tree::expected_attribute< char > (
-        "variable_2",
-        "");
+      throw ::xsd::cxx::tree::expected_attribute< wchar_t > (
+        L"variable_2",
+        L"");
     }
   }
 
@@ -2649,13 +2649,13 @@ namespace cellml12
   }
 
   CellMLIdentifier::
-  CellMLIdentifier (const char* _xsd_String_base)
+  CellMLIdentifier (const wchar_t* _xsd_String_base)
   : ::xml_schema::String (_xsd_String_base)
   {
   }
 
   CellMLIdentifier::
-  CellMLIdentifier (const ::std::string& _xsd_String_base)
+  CellMLIdentifier (const ::std::wstring& _xsd_String_base)
   : ::xml_schema::String (_xsd_String_base)
   {
   }
@@ -2691,7 +2691,7 @@ namespace cellml12
   }
 
   CellMLIdentifier::
-  CellMLIdentifier (const ::std::string& s,
+  CellMLIdentifier (const ::std::wstring& s,
                     const ::xercesc::DOMElement* e,
                     ::xml_schema::Flags f,
                     ::xml_schema::Container* c)
@@ -2731,7 +2731,7 @@ namespace cellml12
   }
 
   UnitPrefix::
-  UnitPrefix (const ::std::string& s,
+  UnitPrefix (const ::std::wstring& s,
               const ::xercesc::DOMElement* e,
               ::xml_schema::Flags f,
               ::xml_schema::Container* c)
@@ -2768,7 +2768,7 @@ namespace cellml12
   }
 
   Yesno::
-  Yesno (const ::std::string& s,
+  Yesno (const ::std::wstring& s,
          const ::xercesc::DOMElement* e,
          ::xml_schema::Flags f,
          ::xml_schema::Container* c)
@@ -2787,7 +2787,7 @@ namespace cellml12
   Yesno::Value Yesno::
   _xsd_Yesno_convert () const
   {
-    ::xsd::cxx::tree::enum_comparator< char > c (_xsd_Yesno_literals_);
+    ::xsd::cxx::tree::enum_comparator< wchar_t > c (_xsd_Yesno_literals_);
     const Value* i (::std::lower_bound (
                       _xsd_Yesno_indexes_,
                       _xsd_Yesno_indexes_ + 2,
@@ -2796,17 +2796,17 @@ namespace cellml12
 
     if (i == _xsd_Yesno_indexes_ + 2 || _xsd_Yesno_literals_[*i] != *this)
     {
-      throw ::xsd::cxx::tree::unexpected_enumerator < char > (*this);
+      throw ::xsd::cxx::tree::unexpected_enumerator < wchar_t > (*this);
     }
 
     return *i;
   }
 
-  const char* const Yesno::
+  const wchar_t* const Yesno::
   _xsd_Yesno_literals_[2] =
   {
-    "yes",
-    "no"
+    L"yes",
+    L"no"
   };
 
   const Yesno::Value Yesno::
@@ -2838,7 +2838,7 @@ namespace cellml12
   }
 
   UnitPrefix_member::
-  UnitPrefix_member (const ::std::string& s,
+  UnitPrefix_member (const ::std::wstring& s,
                      const ::xercesc::DOMElement* e,
                      ::xml_schema::Flags f,
                      ::xml_schema::Container* c)
@@ -2857,7 +2857,7 @@ namespace cellml12
   UnitPrefix_member::Value UnitPrefix_member::
   _xsd_UnitPrefix_member_convert () const
   {
-    ::xsd::cxx::tree::enum_comparator< char > c (_xsd_UnitPrefix_member_literals_);
+    ::xsd::cxx::tree::enum_comparator< wchar_t > c (_xsd_UnitPrefix_member_literals_);
     const Value* i (::std::lower_bound (
                       _xsd_UnitPrefix_member_indexes_,
                       _xsd_UnitPrefix_member_indexes_ + 20,
@@ -2866,35 +2866,35 @@ namespace cellml12
 
     if (i == _xsd_UnitPrefix_member_indexes_ + 20 || _xsd_UnitPrefix_member_literals_[*i] != *this)
     {
-      throw ::xsd::cxx::tree::unexpected_enumerator < char > (*this);
+      throw ::xsd::cxx::tree::unexpected_enumerator < wchar_t > (*this);
     }
 
     return *i;
   }
 
-  const char* const UnitPrefix_member::
+  const wchar_t* const UnitPrefix_member::
   _xsd_UnitPrefix_member_literals_[20] =
   {
-    "yotta",
-    "zetta",
-    "exa",
-    "peta",
-    "tera",
-    "giga",
-    "mega",
-    "kilo",
-    "hecto",
-    "deka",
-    "deci",
-    "centi",
-    "milli",
-    "micro",
-    "nano",
-    "pico",
-    "femto",
-    "atto",
-    "zepto",
-    "yocto"
+    L"yotta",
+    L"zetta",
+    L"exa",
+    L"peta",
+    L"tera",
+    L"giga",
+    L"mega",
+    L"kilo",
+    L"hecto",
+    L"deka",
+    L"deci",
+    L"centi",
+    L"milli",
+    L"micro",
+    L"nano",
+    L"pico",
+    L"femto",
+    L"atto",
+    L"zepto",
+    L"yocto"
   };
 
   const UnitPrefix_member::Value UnitPrefix_member::
@@ -2927,7 +2927,7 @@ namespace cellml12
 
   UnitPrefix_member1::
   UnitPrefix_member1 (const ::xml_schema::Integer& _xsd_Integer_base)
-  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, char, ::xml_schema::SimpleType > (_xsd_Integer_base)
+  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, wchar_t, ::xml_schema::SimpleType > (_xsd_Integer_base)
   {
   }
 
@@ -2935,7 +2935,7 @@ namespace cellml12
   UnitPrefix_member1 (const UnitPrefix_member1& x,
                       ::xml_schema::Flags f,
                       ::xml_schema::Container* c)
-  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, char, ::xml_schema::SimpleType > (x, f, c)
+  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, wchar_t, ::xml_schema::SimpleType > (x, f, c)
   {
   }
 
@@ -2943,7 +2943,7 @@ namespace cellml12
   UnitPrefix_member1 (const ::xercesc::DOMElement& e,
                       ::xml_schema::Flags f,
                       ::xml_schema::Container* c)
-  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, char, ::xml_schema::SimpleType > (e, f, c)
+  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, wchar_t, ::xml_schema::SimpleType > (e, f, c)
   {
   }
 
@@ -2951,16 +2951,16 @@ namespace cellml12
   UnitPrefix_member1 (const ::xercesc::DOMAttr& a,
                       ::xml_schema::Flags f,
                       ::xml_schema::Container* c)
-  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, char, ::xml_schema::SimpleType > (a, f, c)
+  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, wchar_t, ::xml_schema::SimpleType > (a, f, c)
   {
   }
 
   UnitPrefix_member1::
-  UnitPrefix_member1 (const ::std::string& s,
+  UnitPrefix_member1 (const ::std::wstring& s,
                       const ::xercesc::DOMElement* e,
                       ::xml_schema::Flags f,
                       ::xml_schema::Container* c)
-  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, char, ::xml_schema::SimpleType > (s, e, f, c)
+  : ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, wchar_t, ::xml_schema::SimpleType > (s, e, f, c)
   {
   }
 
@@ -2984,7 +2984,7 @@ namespace cellml12
 namespace cellml12
 {
   ::std::unique_ptr< ::cellml12::Model >
-  parseModel (const ::std::string& u,
+  parseModel (const ::std::wstring& u,
               ::xml_schema::Flags f,
               const ::xml_schema::Properties& p)
   {
@@ -2992,13 +2992,13 @@ namespace cellml12
       (f & ::xml_schema::Flags::dont_initialize) == 0,
       (f & ::xml_schema::Flags::keep_dom) == 0);
 
-    ::xsd::cxx::tree::error_handler< char > h;
+    ::xsd::cxx::tree::error_handler< wchar_t > h;
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::xsd::cxx::xml::dom::parse< char > (
+      ::xsd::cxx::xml::dom::parse< wchar_t > (
         u, h, p, f));
 
-    h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+    h.throw_if_failed< ::xsd::cxx::tree::parsing< wchar_t > > ();
 
     return ::std::unique_ptr< ::cellml12::Model > (
       ::cellml12::parseModel (
@@ -3006,7 +3006,7 @@ namespace cellml12
   }
 
   ::std::unique_ptr< ::cellml12::Model >
-  parseModel (const ::std::string& u,
+  parseModel (const ::std::wstring& u,
               ::xml_schema::ErrorHandler& h,
               ::xml_schema::Flags f,
               const ::xml_schema::Properties& p)
@@ -3016,11 +3016,11 @@ namespace cellml12
       (f & ::xml_schema::Flags::keep_dom) == 0);
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::xsd::cxx::xml::dom::parse< char > (
+      ::xsd::cxx::xml::dom::parse< wchar_t > (
         u, h, p, f));
 
     if (!d.get ())
-      throw ::xsd::cxx::tree::parsing< char > ();
+      throw ::xsd::cxx::tree::parsing< wchar_t > ();
 
     return ::std::unique_ptr< ::cellml12::Model > (
       ::cellml12::parseModel (
@@ -3028,17 +3028,17 @@ namespace cellml12
   }
 
   ::std::unique_ptr< ::cellml12::Model >
-  parseModel (const ::std::string& u,
+  parseModel (const ::std::wstring& u,
               ::xercesc::DOMErrorHandler& h,
               ::xml_schema::Flags f,
               const ::xml_schema::Properties& p)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::xsd::cxx::xml::dom::parse< char > (
+      ::xsd::cxx::xml::dom::parse< wchar_t > (
         u, h, p, f));
 
     if (!d.get ())
-      throw ::xsd::cxx::tree::parsing< char > ();
+      throw ::xsd::cxx::tree::parsing< wchar_t > ();
 
     return ::std::unique_ptr< ::cellml12::Model > (
       ::cellml12::parseModel (
@@ -3084,7 +3084,7 @@ namespace cellml12
 
   ::std::unique_ptr< ::cellml12::Model >
   parseModel (::std::istream& is,
-              const ::std::string& sid,
+              const ::std::wstring& sid,
               ::xml_schema::Flags f,
               const ::xml_schema::Properties& p)
   {
@@ -3098,7 +3098,7 @@ namespace cellml12
 
   ::std::unique_ptr< ::cellml12::Model >
   parseModel (::std::istream& is,
-              const ::std::string& sid,
+              const ::std::wstring& sid,
               ::xml_schema::ErrorHandler& h,
               ::xml_schema::Flags f,
               const ::xml_schema::Properties& p)
@@ -3113,7 +3113,7 @@ namespace cellml12
 
   ::std::unique_ptr< ::cellml12::Model >
   parseModel (::std::istream& is,
-              const ::std::string& sid,
+              const ::std::wstring& sid,
               ::xercesc::DOMErrorHandler& h,
               ::xml_schema::Flags f,
               const ::xml_schema::Properties& p)
@@ -3127,13 +3127,13 @@ namespace cellml12
               ::xml_schema::Flags f,
               const ::xml_schema::Properties& p)
   {
-    ::xsd::cxx::tree::error_handler< char > h;
+    ::xsd::cxx::tree::error_handler< wchar_t > h;
 
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::xsd::cxx::xml::dom::parse< char > (
+      ::xsd::cxx::xml::dom::parse< wchar_t > (
         i, h, p, f));
 
-    h.throw_if_failed< ::xsd::cxx::tree::parsing< char > > ();
+    h.throw_if_failed< ::xsd::cxx::tree::parsing< wchar_t > > ();
 
     return ::std::unique_ptr< ::cellml12::Model > (
       ::cellml12::parseModel (
@@ -3147,11 +3147,11 @@ namespace cellml12
               const ::xml_schema::Properties& p)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::xsd::cxx::xml::dom::parse< char > (
+      ::xsd::cxx::xml::dom::parse< wchar_t > (
         i, h, p, f));
 
     if (!d.get ())
-      throw ::xsd::cxx::tree::parsing< char > ();
+      throw ::xsd::cxx::tree::parsing< wchar_t > ();
 
     return ::std::unique_ptr< ::cellml12::Model > (
       ::cellml12::parseModel (
@@ -3165,11 +3165,11 @@ namespace cellml12
               const ::xml_schema::Properties& p)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::xsd::cxx::xml::dom::parse< char > (
+      ::xsd::cxx::xml::dom::parse< wchar_t > (
         i, h, p, f));
 
     if (!d.get ())
-      throw ::xsd::cxx::tree::parsing< char > ();
+      throw ::xsd::cxx::tree::parsing< wchar_t > ();
 
     return ::std::unique_ptr< ::cellml12::Model > (
       ::cellml12::parseModel (
@@ -3192,23 +3192,23 @@ namespace cellml12
     }
 
     const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
-    const ::xsd::cxx::xml::qualified_name< char > n (
-      ::xsd::cxx::xml::dom::name< char > (e));
+    const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+      ::xsd::cxx::xml::dom::name< wchar_t > (e));
 
-    if (n.name () == "model" &&
-        n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
+    if (n.name () == L"model" &&
+        n.namespace_ () == L"http://www.cellml.org/cellml/1.2#")
     {
       ::std::unique_ptr< ::cellml12::Model > r (
-        ::xsd::cxx::tree::traits< ::cellml12::Model, char >::create (
+        ::xsd::cxx::tree::traits< ::cellml12::Model, wchar_t >::create (
           e, f, 0));
       return r;
     }
 
-    throw ::xsd::cxx::tree::unexpected_element < char > (
+    throw ::xsd::cxx::tree::unexpected_element < wchar_t > (
       n.name (),
       n.namespace_ (),
-      "model",
-      "http://www.cellml.org/cellml/1.2#");
+      L"model",
+      L"http://www.cellml.org/cellml/1.2#");
   }
 
   ::std::unique_ptr< ::cellml12::Model >
@@ -3225,28 +3225,28 @@ namespace cellml12
     ::xercesc::DOMDocument& doc (c.get () ? *c : *d);
     const ::xercesc::DOMElement& e (*doc.getDocumentElement ());
 
-    const ::xsd::cxx::xml::qualified_name< char > n (
-      ::xsd::cxx::xml::dom::name< char > (e));
+    const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+      ::xsd::cxx::xml::dom::name< wchar_t > (e));
 
     if (f & ::xml_schema::Flags::keep_dom)
       doc.setUserData (::xml_schema::dom::treeNodeKey,
                        (c.get () ? &c : &d),
                        0);
 
-    if (n.name () == "model" &&
-        n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
+    if (n.name () == L"model" &&
+        n.namespace_ () == L"http://www.cellml.org/cellml/1.2#")
     {
       ::std::unique_ptr< ::cellml12::Model > r (
-        ::xsd::cxx::tree::traits< ::cellml12::Model, char >::create (
+        ::xsd::cxx::tree::traits< ::cellml12::Model, wchar_t >::create (
           e, f, 0));
       return r;
     }
 
-    throw ::xsd::cxx::tree::unexpected_element < char > (
+    throw ::xsd::cxx::tree::unexpected_element < wchar_t > (
       n.name (),
       n.namespace_ (),
-      "model",
-      "http://www.cellml.org/cellml/1.2#");
+      L"model",
+      L"http://www.cellml.org/cellml/1.2#");
   }
 }
 
@@ -3260,7 +3260,7 @@ namespace cellml12
   serializeModel (::std::ostream& o,
                   const ::cellml12::Model& s,
                   const ::xml_schema::NamespaceInfomap& m,
-                  const ::std::string& e,
+                  const ::std::wstring& e,
                   ::xml_schema::Flags f)
   {
     ::xsd::cxx::xml::auto_initializer i (
@@ -3269,12 +3269,12 @@ namespace cellml12
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
       ::cellml12::serializeModel (s, m, f));
 
-    ::xsd::cxx::tree::error_handler< char > h;
+    ::xsd::cxx::tree::error_handler< wchar_t > h;
 
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
-      h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      h.throw_if_failed< ::xsd::cxx::tree::serialization< wchar_t > > ();
     }
   }
 
@@ -3283,7 +3283,7 @@ namespace cellml12
                   const ::cellml12::Model& s,
                   ::xml_schema::ErrorHandler& h,
                   const ::xml_schema::NamespaceInfomap& m,
-                  const ::std::string& e,
+                  const ::std::wstring& e,
                   ::xml_schema::Flags f)
   {
     ::xsd::cxx::xml::auto_initializer i (
@@ -3294,7 +3294,7 @@ namespace cellml12
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
-      throw ::xsd::cxx::tree::serialization< char > ();
+      throw ::xsd::cxx::tree::serialization< wchar_t > ();
     }
   }
 
@@ -3303,7 +3303,7 @@ namespace cellml12
                   const ::cellml12::Model& s,
                   ::xercesc::DOMErrorHandler& h,
                   const ::xml_schema::NamespaceInfomap& m,
-                  const ::std::string& e,
+                  const ::std::wstring& e,
                   ::xml_schema::Flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
@@ -3311,7 +3311,7 @@ namespace cellml12
     ::xsd::cxx::xml::dom::ostream_format_target t (o);
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
-      throw ::xsd::cxx::tree::serialization< char > ();
+      throw ::xsd::cxx::tree::serialization< wchar_t > ();
     }
   }
 
@@ -3319,17 +3319,17 @@ namespace cellml12
   serializeModel (::xercesc::XMLFormatTarget& t,
                   const ::cellml12::Model& s,
                   const ::xml_schema::NamespaceInfomap& m,
-                  const ::std::string& e,
+                  const ::std::wstring& e,
                   ::xml_schema::Flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
       ::cellml12::serializeModel (s, m, f));
 
-    ::xsd::cxx::tree::error_handler< char > h;
+    ::xsd::cxx::tree::error_handler< wchar_t > h;
 
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
-      h.throw_if_failed< ::xsd::cxx::tree::serialization< char > > ();
+      h.throw_if_failed< ::xsd::cxx::tree::serialization< wchar_t > > ();
     }
   }
 
@@ -3338,14 +3338,14 @@ namespace cellml12
                   const ::cellml12::Model& s,
                   ::xml_schema::ErrorHandler& h,
                   const ::xml_schema::NamespaceInfomap& m,
-                  const ::std::string& e,
+                  const ::std::wstring& e,
                   ::xml_schema::Flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
       ::cellml12::serializeModel (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
-      throw ::xsd::cxx::tree::serialization< char > ();
+      throw ::xsd::cxx::tree::serialization< wchar_t > ();
     }
   }
 
@@ -3354,14 +3354,14 @@ namespace cellml12
                   const ::cellml12::Model& s,
                   ::xercesc::DOMErrorHandler& h,
                   const ::xml_schema::NamespaceInfomap& m,
-                  const ::std::string& e,
+                  const ::std::wstring& e,
                   ::xml_schema::Flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
       ::cellml12::serializeModel (s, m, f));
     if (!::xsd::cxx::xml::dom::serialize (t, *d, e, h, f))
     {
-      throw ::xsd::cxx::tree::serialization< char > ();
+      throw ::xsd::cxx::tree::serialization< wchar_t > ();
     }
   }
 
@@ -3371,21 +3371,21 @@ namespace cellml12
                   ::xml_schema::Flags)
   {
     ::xercesc::DOMElement& e (*d.getDocumentElement ());
-    const ::xsd::cxx::xml::qualified_name< char > n (
-      ::xsd::cxx::xml::dom::name< char > (e));
+    const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+      ::xsd::cxx::xml::dom::name< wchar_t > (e));
 
-    if (n.name () == "model" &&
-        n.namespace_ () == "http://www.cellml.org/cellml/1.2#")
+    if (n.name () == L"model" &&
+        n.namespace_ () == L"http://www.cellml.org/cellml/1.2#")
     {
       e << s;
     }
     else
     {
-      throw ::xsd::cxx::tree::unexpected_element < char > (
+      throw ::xsd::cxx::tree::unexpected_element < wchar_t > (
         n.name (),
         n.namespace_ (),
-        "model",
-        "http://www.cellml.org/cellml/1.2#");
+        L"model",
+        L"http://www.cellml.org/cellml/1.2#");
     }
   }
 
@@ -3395,9 +3395,9 @@ namespace cellml12
                   ::xml_schema::Flags f)
   {
     ::xml_schema::dom::unique_ptr< ::xercesc::DOMDocument > d (
-      ::xsd::cxx::xml::dom::serialize< char > (
-        "model",
-        "http://www.cellml.org/cellml/1.2#",
+      ::xsd::cxx::xml::dom::serialize< wchar_t > (
+        L"model",
+        L"http://www.cellml.org/cellml/1.2#",
         m, f));
 
     ::cellml12::serializeModel (*d, s, f);
@@ -3417,8 +3417,8 @@ namespace cellml12
     {
       ::xercesc::DOMElement& s (
         ::xsd::cxx::xml::dom::create_element (
-          "import",
-          "http://www.cellml.org/cellml/1.2#",
+          L"import",
+          L"http://www.cellml.org/cellml/1.2#",
           e));
 
       s << *b;
@@ -3432,8 +3432,8 @@ namespace cellml12
     {
       ::xercesc::DOMElement& s (
         ::xsd::cxx::xml::dom::create_element (
-          "units",
-          "http://www.cellml.org/cellml/1.2#",
+          L"units",
+          L"http://www.cellml.org/cellml/1.2#",
           e));
 
       s << *b;
@@ -3447,8 +3447,8 @@ namespace cellml12
     {
       ::xercesc::DOMElement& s (
         ::xsd::cxx::xml::dom::create_element (
-          "component",
-          "http://www.cellml.org/cellml/1.2#",
+          L"component",
+          L"http://www.cellml.org/cellml/1.2#",
           e));
 
       s << *b;
@@ -3462,8 +3462,8 @@ namespace cellml12
     {
       ::xercesc::DOMElement& s (
         ::xsd::cxx::xml::dom::create_element (
-          "encapsulation",
-          "http://www.cellml.org/cellml/1.2#",
+          L"encapsulation",
+          L"http://www.cellml.org/cellml/1.2#",
           e));
 
       s << *b;
@@ -3477,8 +3477,8 @@ namespace cellml12
     {
       ::xercesc::DOMElement& s (
         ::xsd::cxx::xml::dom::create_element (
-          "connection",
-          "http://www.cellml.org/cellml/1.2#",
+          L"connection",
+          L"http://www.cellml.org/cellml/1.2#",
           e));
 
       s << *b;
@@ -3489,7 +3489,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "name",
+          L"name",
           e));
 
       a << i.getName ();
@@ -3509,8 +3509,8 @@ namespace cellml12
     {
       ::xercesc::DOMElement& s (
         ::xsd::cxx::xml::dom::create_element (
-          "units",
-          "http://www.cellml.org/cellml/1.2#",
+          L"units",
+          L"http://www.cellml.org/cellml/1.2#",
           e));
 
       s << *b;
@@ -3524,8 +3524,8 @@ namespace cellml12
     {
       ::xercesc::DOMElement& s (
         ::xsd::cxx::xml::dom::create_element (
-          "component",
-          "http://www.cellml.org/cellml/1.2#",
+          L"component",
+          L"http://www.cellml.org/cellml/1.2#",
           e));
 
       s << *b;
@@ -3536,7 +3536,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "href",
+          L"href",
           e));
 
       a << i.getHref ();
@@ -3556,8 +3556,8 @@ namespace cellml12
     {
       ::xercesc::DOMElement& s (
         ::xsd::cxx::xml::dom::create_element (
-          "unit",
-          "http://www.cellml.org/cellml/1.2#",
+          L"unit",
+          L"http://www.cellml.org/cellml/1.2#",
           e));
 
       s << *b;
@@ -3568,7 +3568,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "name",
+          L"name",
           e));
 
       a << i.getName ();
@@ -3580,7 +3580,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "base_units",
+          L"base_units",
           e));
 
       a << *i.getBase_units ();
@@ -3597,7 +3597,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "units",
+          L"units",
           e));
 
       a << i.getUnits ();
@@ -3609,7 +3609,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "multiplier",
+          L"multiplier",
           e));
 
       a << ::xml_schema::AsDouble(*i.getMultiplier ());
@@ -3621,7 +3621,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "prefix",
+          L"prefix",
           e));
 
       a << *i.getPrefix ();
@@ -3633,7 +3633,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "offset",
+          L"offset",
           e));
 
       a << ::xml_schema::AsDouble(*i.getOffset ());
@@ -3645,7 +3645,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "exponent",
+          L"exponent",
           e));
 
       a << ::xml_schema::AsDouble(*i.getExponent ());
@@ -3665,8 +3665,8 @@ namespace cellml12
     {
       ::xercesc::DOMElement& s (
         ::xsd::cxx::xml::dom::create_element (
-          "units",
-          "http://www.cellml.org/cellml/1.2#",
+          L"units",
+          L"http://www.cellml.org/cellml/1.2#",
           e));
 
       s << *b;
@@ -3680,8 +3680,8 @@ namespace cellml12
     {
       ::xercesc::DOMElement& s (
         ::xsd::cxx::xml::dom::create_element (
-          "variable",
-          "http://www.cellml.org/cellml/1.2#",
+          L"variable",
+          L"http://www.cellml.org/cellml/1.2#",
           e));
 
       s << *b;
@@ -3695,8 +3695,8 @@ namespace cellml12
     {
       ::xercesc::DOMElement& s (
         ::xsd::cxx::xml::dom::create_element (
-          "math",
-          "http://www.cellml.org/cellml/1.2#",
+          L"math",
+          L"http://www.cellml.org/cellml/1.2#",
           e));
 
       s << *b;
@@ -3707,7 +3707,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "name",
+          L"name",
           e));
 
       a << i.getName ();
@@ -3727,8 +3727,8 @@ namespace cellml12
     {
       ::xercesc::DOMElement& s (
         ::xsd::cxx::xml::dom::create_element (
-          "component_ref",
-          "http://www.cellml.org/cellml/1.2#",
+          L"component_ref",
+          L"http://www.cellml.org/cellml/1.2#",
           e));
 
       s << *b;
@@ -3748,8 +3748,8 @@ namespace cellml12
     {
       ::xercesc::DOMElement& s (
         ::xsd::cxx::xml::dom::create_element (
-          "component_ref",
-          "http://www.cellml.org/cellml/1.2#",
+          L"component_ref",
+          L"http://www.cellml.org/cellml/1.2#",
           e));
 
       s << *b;
@@ -3760,7 +3760,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "component",
+          L"component",
           e));
 
       a << i.getComponent ();
@@ -3780,8 +3780,8 @@ namespace cellml12
     {
       ::xercesc::DOMElement& s (
         ::xsd::cxx::xml::dom::create_element (
-          "component_ref",
-          "http://www.cellml.org/cellml/1.2#",
+          L"component_ref",
+          L"http://www.cellml.org/cellml/1.2#",
           e));
 
       s << *b;
@@ -3792,7 +3792,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "component",
+          L"component",
           e));
 
       a << i.getComponent ();
@@ -3812,8 +3812,8 @@ namespace cellml12
     {
       ::xercesc::DOMElement& s (
         ::xsd::cxx::xml::dom::create_element (
-          "map_variables",
-          "http://www.cellml.org/cellml/1.2#",
+          L"map_variables",
+          L"http://www.cellml.org/cellml/1.2#",
           e));
 
       s << *b;
@@ -3824,7 +3824,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "component_1",
+          L"component_1",
           e));
 
       a << i.getComponent_1 ();
@@ -3835,7 +3835,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "component_2",
+          L"component_2",
           e));
 
       a << i.getComponent_2 ();
@@ -3852,7 +3852,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "name",
+          L"name",
           e));
 
       a << i.getName ();
@@ -3863,7 +3863,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "units_ref",
+          L"units_ref",
           e));
 
       a << i.getUnits_ref ();
@@ -3880,7 +3880,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "name",
+          L"name",
           e));
 
       a << i.getName ();
@@ -3891,7 +3891,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "component_ref",
+          L"component_ref",
           e));
 
       a << i.getComponent_ref ();
@@ -3908,7 +3908,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "name",
+          L"name",
           e));
 
       a << i.getName ();
@@ -3919,7 +3919,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "units",
+          L"units",
           e));
 
       a << i.getUnits ();
@@ -3931,7 +3931,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "public_interface",
+          L"public_interface",
           e));
 
       a << *i.getPublic_interface ();
@@ -3943,7 +3943,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "private_interface",
+          L"private_interface",
           e));
 
       a << *i.getPrivate_interface ();
@@ -3954,7 +3954,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "type",
+          L"type",
           e));
 
       a << i.getType ();
@@ -3971,7 +3971,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "variable_1",
+          L"variable_1",
           e));
 
       a << i.getVariable_1 ();
@@ -3982,7 +3982,7 @@ namespace cellml12
     {
       ::xercesc::DOMAttr& a (
         ::xsd::cxx::xml::dom::create_attribute (
-          "variable_2",
+          L"variable_2",
           e));
 
       a << i.getVariable_2 ();
@@ -4068,20 +4068,20 @@ namespace cellml12
   void
   operator<< (::xercesc::DOMElement& e, const UnitPrefix_member1& i)
   {
-    e << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, char, ::xml_schema::SimpleType >& > (i);
+    e << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, wchar_t, ::xml_schema::SimpleType >& > (i);
   }
 
   void
   operator<< (::xercesc::DOMAttr& a, const UnitPrefix_member1& i)
   {
-    a << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, char, ::xml_schema::SimpleType >& > (i);
+    a << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, wchar_t, ::xml_schema::SimpleType >& > (i);
   }
 
   void
   operator<< (::xml_schema::ListStream& l,
               const UnitPrefix_member1& i)
   {
-    l << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, char, ::xml_schema::SimpleType >& > (i);
+    l << static_cast< const ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, wchar_t, ::xml_schema::SimpleType >& > (i);
   }
 }
 

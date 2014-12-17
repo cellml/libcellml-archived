@@ -43,12 +43,12 @@
 #define XSD_CXX11
 #endif
 
-#ifndef XSD_USE_CHAR
-#define XSD_USE_CHAR
+#ifndef XSD_USE_WCHAR
+#define XSD_USE_WCHAR
 #endif
 
-#ifndef XSD_CXX_TREE_USE_CHAR
-#define XSD_CXX_TREE_USE_CHAR
+#ifndef XSD_CXX_TREE_USE_WCHAR
+#define XSD_CXX_TREE_USE_WCHAR
 #endif
 
 // Begin prologue.
@@ -63,8 +63,6 @@
 #endif
 
 #include <xsd/cxx/pre.hxx>
-
-#include <xsd/cxx/xml/char-utf8.hxx>
 
 #include <xsd/cxx/tree/exceptions.hxx>
 #include <xsd/cxx/tree/elements.hxx>
@@ -122,7 +120,7 @@ namespace xml_schema
    * @brief C++ type corresponding to the anySimpleType XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::simple_type< char, Type > SimpleType;
+  typedef ::xsd::cxx::tree::simple_type< wchar_t, Type > SimpleType;
 
   /**
    * @brief Alias for the anyType type.
@@ -267,49 +265,49 @@ namespace xml_schema
    * @brief C++ type corresponding to the string XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::string< char, SimpleType > String;
+  typedef ::xsd::cxx::tree::string< wchar_t, SimpleType > String;
 
   /**
    * @brief C++ type corresponding to the normalizedString XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::normalized_string< char, String > NormalizedString;
+  typedef ::xsd::cxx::tree::normalized_string< wchar_t, String > NormalizedString;
 
   /**
    * @brief C++ type corresponding to the token XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::token< char, NormalizedString > Token;
+  typedef ::xsd::cxx::tree::token< wchar_t, NormalizedString > Token;
 
   /**
    * @brief C++ type corresponding to the Name XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::name< char, Token > Name;
+  typedef ::xsd::cxx::tree::name< wchar_t, Token > Name;
 
   /**
    * @brief C++ type corresponding to the NMTOKEN XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::nmtoken< char, Token > Nmtoken;
+  typedef ::xsd::cxx::tree::nmtoken< wchar_t, Token > Nmtoken;
 
   /**
    * @brief C++ type corresponding to the NMTOKENS XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::nmtokens< char, SimpleType, Nmtoken > Nmtokens;
+  typedef ::xsd::cxx::tree::nmtokens< wchar_t, SimpleType, Nmtoken > Nmtokens;
 
   /**
    * @brief C++ type corresponding to the NCName XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::ncname< char, Name > Ncname;
+  typedef ::xsd::cxx::tree::ncname< wchar_t, Name > Ncname;
 
   /**
    * @brief C++ type corresponding to the language XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::language< char, Token > Language;
+  typedef ::xsd::cxx::tree::language< wchar_t, Token > Language;
 
 
   // ID/IDREF.
@@ -319,19 +317,19 @@ namespace xml_schema
    * @brief C++ type corresponding to the ID XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::id< char, Ncname > Id;
+  typedef ::xsd::cxx::tree::id< wchar_t, Ncname > Id;
 
   /**
    * @brief C++ type corresponding to the IDREF XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::idref< char, Ncname, Type > Idref;
+  typedef ::xsd::cxx::tree::idref< wchar_t, Ncname, Type > Idref;
 
   /**
    * @brief C++ type corresponding to the IDREFS XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::idrefs< char, SimpleType, Idref > Idrefs;
+  typedef ::xsd::cxx::tree::idrefs< wchar_t, SimpleType, Idref > Idrefs;
 
 
   // URI.
@@ -341,7 +339,7 @@ namespace xml_schema
    * @brief C++ type corresponding to the anyURI XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::uri< char, SimpleType > Uri;
+  typedef ::xsd::cxx::tree::uri< wchar_t, SimpleType > Uri;
 
 
   // Qualified name.
@@ -351,7 +349,7 @@ namespace xml_schema
    * @brief C++ type corresponding to the QName XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::qname< char, SimpleType, Uri, Ncname > Qname;
+  typedef ::xsd::cxx::tree::qname< wchar_t, SimpleType, Uri, Ncname > Qname;
 
 
   // Binary.
@@ -360,19 +358,19 @@ namespace xml_schema
   /**
    * @brief Binary buffer type.
    */
-  typedef ::xsd::cxx::tree::buffer< char > Buffer;
+  typedef ::xsd::cxx::tree::buffer< wchar_t > Buffer;
 
   /**
    * @brief C++ type corresponding to the base64Binary XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::base64_binary< char, SimpleType > Base64Binary;
+  typedef ::xsd::cxx::tree::base64_binary< wchar_t, SimpleType > Base64Binary;
 
   /**
    * @brief C++ type corresponding to the hexBinary XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::hex_binary< char, SimpleType > HexBinary;
+  typedef ::xsd::cxx::tree::hex_binary< wchar_t, SimpleType > HexBinary;
 
 
   // Date/time.
@@ -387,55 +385,55 @@ namespace xml_schema
    * @brief C++ type corresponding to the date XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::date< char, SimpleType > Date;
+  typedef ::xsd::cxx::tree::date< wchar_t, SimpleType > Date;
 
   /**
    * @brief C++ type corresponding to the dateTime XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::date_time< char, SimpleType > DateTime;
+  typedef ::xsd::cxx::tree::date_time< wchar_t, SimpleType > DateTime;
 
   /**
    * @brief C++ type corresponding to the duration XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::duration< char, SimpleType > Duration;
+  typedef ::xsd::cxx::tree::duration< wchar_t, SimpleType > Duration;
 
   /**
    * @brief C++ type corresponding to the gDay XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::gday< char, SimpleType > Gday;
+  typedef ::xsd::cxx::tree::gday< wchar_t, SimpleType > Gday;
 
   /**
    * @brief C++ type corresponding to the gMonth XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::gmonth< char, SimpleType > Gmonth;
+  typedef ::xsd::cxx::tree::gmonth< wchar_t, SimpleType > Gmonth;
 
   /**
    * @brief C++ type corresponding to the gMonthDay XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::gmonth_day< char, SimpleType > GmonthDay;
+  typedef ::xsd::cxx::tree::gmonth_day< wchar_t, SimpleType > GmonthDay;
 
   /**
    * @brief C++ type corresponding to the gYear XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::gyear< char, SimpleType > Gyear;
+  typedef ::xsd::cxx::tree::gyear< wchar_t, SimpleType > Gyear;
 
   /**
    * @brief C++ type corresponding to the gYearMonth XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::gyear_month< char, SimpleType > GyearMonth;
+  typedef ::xsd::cxx::tree::gyear_month< wchar_t, SimpleType > GyearMonth;
 
   /**
    * @brief C++ type corresponding to the time XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::time< char, SimpleType > Time;
+  typedef ::xsd::cxx::tree::time< wchar_t, SimpleType > Time;
 
 
   // Entity.
@@ -445,13 +443,13 @@ namespace xml_schema
    * @brief C++ type corresponding to the ENTITY XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::entity< char, Ncname > Entity;
+  typedef ::xsd::cxx::tree::entity< wchar_t, Ncname > Entity;
 
   /**
    * @brief C++ type corresponding to the ENTITIES XML Schema
    * built-in type.
    */
-  typedef ::xsd::cxx::tree::entities< char, SimpleType, Entity > Entities;
+  typedef ::xsd::cxx::tree::entities< wchar_t, SimpleType, Entity > Entities;
 
 
 
@@ -465,17 +463,17 @@ namespace xml_schema
   /**
    * @brief Namespace serialization information.
    */
-  typedef ::xsd::cxx::xml::dom::namespace_info< char > NamespaceInfo;
+  typedef ::xsd::cxx::xml::dom::namespace_info< wchar_t > NamespaceInfo;
 
   /**
    * @brief Namespace serialization information map.
    */
-  typedef ::xsd::cxx::xml::dom::namespace_infomap< char > NamespaceInfomap;
+  typedef ::xsd::cxx::xml::dom::namespace_infomap< wchar_t > NamespaceInfomap;
 
   /**
    * @brief List serialization stream.
    */
-  typedef ::xsd::cxx::tree::list_stream< char > ListStream;
+  typedef ::xsd::cxx::tree::list_stream< wchar_t > ListStream;
 
   /**
    * @brief Serialization wrapper for the %double type.
@@ -503,7 +501,7 @@ namespace xml_schema
   /**
    * @brief Parsing properties.
    */
-  typedef ::xsd::cxx::tree::properties< char > Properties;
+  typedef ::xsd::cxx::tree::properties< wchar_t > Properties;
 
   // Parsing/serialization diagnostics.
   //
@@ -516,12 +514,12 @@ namespace xml_schema
   /**
    * @brief Error condition.
    */
-  typedef ::xsd::cxx::tree::error< char > Error;
+  typedef ::xsd::cxx::tree::error< wchar_t > Error;
 
   /**
    * @brief List of %error conditions.
    */
-  typedef ::xsd::cxx::tree::diagnostics< char > Diagnostics;
+  typedef ::xsd::cxx::tree::diagnostics< wchar_t > Diagnostics;
 
   // Exceptions.
   //
@@ -529,70 +527,70 @@ namespace xml_schema
   /**
    * @brief Root of the C++/Tree %exception hierarchy.
    */
-  typedef ::xsd::cxx::tree::exception< char > Exception;
+  typedef ::xsd::cxx::tree::exception< wchar_t > Exception;
 
   /**
    * @brief Exception indicating that the size argument exceeds
    * the capacity argument.
    */
-  typedef ::xsd::cxx::tree::bounds< char > Bounds;
+  typedef ::xsd::cxx::tree::bounds< wchar_t > Bounds;
 
   /**
    * @brief Exception indicating that a duplicate ID value
    * was encountered in the object model.
    */
-  typedef ::xsd::cxx::tree::duplicate_id< char > DuplicateId;
+  typedef ::xsd::cxx::tree::duplicate_id< wchar_t > DuplicateId;
 
   /**
    * @brief Exception indicating a parsing failure.
    */
-  typedef ::xsd::cxx::tree::parsing< char > Parsing;
+  typedef ::xsd::cxx::tree::parsing< wchar_t > Parsing;
 
   /**
    * @brief Exception indicating that an expected element
    * was not encountered.
    */
-  typedef ::xsd::cxx::tree::expected_element< char > ExpectedElement;
+  typedef ::xsd::cxx::tree::expected_element< wchar_t > ExpectedElement;
 
   /**
    * @brief Exception indicating that an unexpected element
    * was encountered.
    */
-  typedef ::xsd::cxx::tree::unexpected_element< char > UnexpectedElement;
+  typedef ::xsd::cxx::tree::unexpected_element< wchar_t > UnexpectedElement;
 
   /**
    * @brief Exception indicating that an expected attribute
    * was not encountered.
    */
-  typedef ::xsd::cxx::tree::expected_attribute< char > ExpectedAttribute;
+  typedef ::xsd::cxx::tree::expected_attribute< wchar_t > ExpectedAttribute;
 
   /**
    * @brief Exception indicating that an unexpected enumerator
    * was encountered.
    */
-  typedef ::xsd::cxx::tree::unexpected_enumerator< char > UnexpectedEnumerator;
+  typedef ::xsd::cxx::tree::unexpected_enumerator< wchar_t > UnexpectedEnumerator;
 
   /**
    * @brief Exception indicating that the text content was
    * expected for an element.
    */
-  typedef ::xsd::cxx::tree::expected_text_content< char > ExpectedTextContent;
+  typedef ::xsd::cxx::tree::expected_text_content< wchar_t > ExpectedTextContent;
 
   /**
    * @brief Exception indicating that a prefix-namespace
    * mapping was not provided.
    */
-  typedef ::xsd::cxx::tree::no_prefix_mapping< char > NoPrefixMapping;
+  typedef ::xsd::cxx::tree::no_prefix_mapping< wchar_t > NoPrefixMapping;
 
   /**
    * @brief Exception indicating a serialization failure.
    */
-  typedef ::xsd::cxx::tree::serialization< char > Serialization;
+  typedef ::xsd::cxx::tree::serialization< wchar_t > Serialization;
 
   /**
    * @brief Error handler callback interface.
    */
-  typedef ::xsd::cxx::xml::error_handler< char > ErrorHandler;
+  typedef ::xsd::cxx::xml::error_handler< wchar_t > ErrorHandler;
 
   /**
    * @brief DOM interaction.
@@ -643,8 +641,6 @@ namespace cellml12
 #include <limits>    // std::numeric_limits
 #include <algorithm> // std::binary_search
 #include <utility>   // std::move
-
-#include <xsd/cxx/xml/char-utf8.hxx>
 
 #include <xsd/cxx/tree/exceptions.hxx>
 #include <xsd/cxx/tree/elements.hxx>
@@ -698,7 +694,7 @@ namespace cellml12
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< ImportType, char > ImportTraits;
+    typedef ::xsd::cxx::tree::traits< ImportType, wchar_t > ImportTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -762,7 +758,7 @@ namespace cellml12
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< UnitsType, char > UnitsTraits;
+    typedef ::xsd::cxx::tree::traits< UnitsType, wchar_t > UnitsTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -826,7 +822,7 @@ namespace cellml12
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< ComponentType, char > ComponentTraits;
+    typedef ::xsd::cxx::tree::traits< ComponentType, wchar_t > ComponentTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -890,7 +886,7 @@ namespace cellml12
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< EncapsulationType, char > EncapsulationTraits;
+    typedef ::xsd::cxx::tree::traits< EncapsulationType, wchar_t > EncapsulationTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -954,7 +950,7 @@ namespace cellml12
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< ConnectionType, char > ConnectionTraits;
+    typedef ::xsd::cxx::tree::traits< ConnectionType, wchar_t > ConnectionTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -1003,7 +999,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< NameType, char > NameTraits;
+    typedef ::xsd::cxx::tree::traits< NameType, wchar_t > NameTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
@@ -1122,7 +1118,7 @@ namespace cellml12
 
     protected:
     void
-    parse (::xsd::cxx::xml::dom::parser< char >&,
+    parse (::xsd::cxx::xml::dom::parser< wchar_t >&,
            ::xml_schema::Flags);
 
     protected:
@@ -1175,7 +1171,7 @@ namespace cellml12
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< UnitsType, char > UnitsTraits;
+    typedef ::xsd::cxx::tree::traits< UnitsType, wchar_t > UnitsTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -1239,7 +1235,7 @@ namespace cellml12
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< ComponentType, char > ComponentTraits;
+    typedef ::xsd::cxx::tree::traits< ComponentType, wchar_t > ComponentTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -1288,7 +1284,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< HrefType, char > HrefTraits;
+    typedef ::xsd::cxx::tree::traits< HrefType, wchar_t > HrefTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
@@ -1407,7 +1403,7 @@ namespace cellml12
 
     protected:
     void
-    parse (::xsd::cxx::xml::dom::parser< char >&,
+    parse (::xsd::cxx::xml::dom::parser< wchar_t >&,
            ::xml_schema::Flags);
 
     protected:
@@ -1457,7 +1453,7 @@ namespace cellml12
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< UnitType, char > UnitTraits;
+    typedef ::xsd::cxx::tree::traits< UnitType, wchar_t > UnitTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -1506,7 +1502,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< NameType, char > NameTraits;
+    typedef ::xsd::cxx::tree::traits< NameType, wchar_t > NameTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
@@ -1569,7 +1565,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< Base_unitsType, char > Base_unitsTraits;
+    typedef ::xsd::cxx::tree::traits< Base_unitsType, wchar_t > Base_unitsTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute
@@ -1701,7 +1697,7 @@ namespace cellml12
 
     protected:
     void
-    parse (::xsd::cxx::xml::dom::parser< char >&,
+    parse (::xsd::cxx::xml::dom::parser< wchar_t >&,
            ::xml_schema::Flags);
 
     protected:
@@ -1736,7 +1732,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< UnitsType, char > UnitsTraits;
+    typedef ::xsd::cxx::tree::traits< UnitsType, wchar_t > UnitsTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
@@ -1799,7 +1795,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< MultiplierType, char, ::xsd::cxx::tree::schema_type::double_ > MultiplierTraits;
+    typedef ::xsd::cxx::tree::traits< MultiplierType, wchar_t, ::xsd::cxx::tree::schema_type::double_ > MultiplierTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute
@@ -1864,7 +1860,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< PrefixType, char > PrefixTraits;
+    typedef ::xsd::cxx::tree::traits< PrefixType, wchar_t > PrefixTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute
@@ -1940,7 +1936,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< OffsetType, char, ::xsd::cxx::tree::schema_type::double_ > OffsetTraits;
+    typedef ::xsd::cxx::tree::traits< OffsetType, wchar_t, ::xsd::cxx::tree::schema_type::double_ > OffsetTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute
@@ -2005,7 +2001,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< ExponentType, char, ::xsd::cxx::tree::schema_type::double_ > ExponentTraits;
+    typedef ::xsd::cxx::tree::traits< ExponentType, wchar_t, ::xsd::cxx::tree::schema_type::double_ > ExponentTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute
@@ -2126,7 +2122,7 @@ namespace cellml12
 
     protected:
     void
-    parse (::xsd::cxx::xml::dom::parser< char >&,
+    parse (::xsd::cxx::xml::dom::parser< wchar_t >&,
            ::xml_schema::Flags);
 
     protected:
@@ -2178,7 +2174,7 @@ namespace cellml12
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< UnitsType, char > UnitsTraits;
+    typedef ::xsd::cxx::tree::traits< UnitsType, wchar_t > UnitsTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -2242,7 +2238,7 @@ namespace cellml12
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< VariableType, char > VariableTraits;
+    typedef ::xsd::cxx::tree::traits< VariableType, wchar_t > VariableTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -2306,7 +2302,7 @@ namespace cellml12
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< MathType, char > MathTraits;
+    typedef ::xsd::cxx::tree::traits< MathType, wchar_t > MathTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -2355,7 +2351,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< NameType, char > NameTraits;
+    typedef ::xsd::cxx::tree::traits< NameType, wchar_t > NameTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
@@ -2474,7 +2470,7 @@ namespace cellml12
 
     protected:
     void
-    parse (::xsd::cxx::xml::dom::parser< char >&,
+    parse (::xsd::cxx::xml::dom::parser< wchar_t >&,
            ::xml_schema::Flags);
 
     protected:
@@ -2525,7 +2521,7 @@ namespace cellml12
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< Component_refType, char > Component_refTraits;
+    typedef ::xsd::cxx::tree::traits< Component_refType, wchar_t > Component_refTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -2635,7 +2631,7 @@ namespace cellml12
 
     protected:
     void
-    parse (::xsd::cxx::xml::dom::parser< char >&,
+    parse (::xsd::cxx::xml::dom::parser< wchar_t >&,
            ::xml_schema::Flags);
 
     protected:
@@ -2683,7 +2679,7 @@ namespace cellml12
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< Component_refType, char > Component_refTraits;
+    typedef ::xsd::cxx::tree::traits< Component_refType, wchar_t > Component_refTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -2732,7 +2728,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< ComponentType, char > ComponentTraits;
+    typedef ::xsd::cxx::tree::traits< ComponentType, wchar_t > ComponentTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
@@ -2851,7 +2847,7 @@ namespace cellml12
 
     protected:
     void
-    parse (::xsd::cxx::xml::dom::parser< char >&,
+    parse (::xsd::cxx::xml::dom::parser< wchar_t >&,
            ::xml_schema::Flags);
 
     protected:
@@ -2900,7 +2896,7 @@ namespace cellml12
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< Component_refType, char > Component_refTraits;
+    typedef ::xsd::cxx::tree::traits< Component_refType, wchar_t > Component_refTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -2949,7 +2945,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< ComponentType, char > ComponentTraits;
+    typedef ::xsd::cxx::tree::traits< ComponentType, wchar_t > ComponentTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
@@ -3068,7 +3064,7 @@ namespace cellml12
 
     protected:
     void
-    parse (::xsd::cxx::xml::dom::parser< char >&,
+    parse (::xsd::cxx::xml::dom::parser< wchar_t >&,
            ::xml_schema::Flags);
 
     protected:
@@ -3117,7 +3113,7 @@ namespace cellml12
     /**
      * @brief Element traits type.
      */
-    typedef ::xsd::cxx::tree::traits< Map_variablesType, char > Map_variablesTraits;
+    typedef ::xsd::cxx::tree::traits< Map_variablesType, wchar_t > Map_variablesTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the element
@@ -3166,7 +3162,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< Component_1Type, char > Component_1Traits;
+    typedef ::xsd::cxx::tree::traits< Component_1Type, wchar_t > Component_1Traits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
@@ -3224,7 +3220,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< Component_2Type, char > Component_2Traits;
+    typedef ::xsd::cxx::tree::traits< Component_2Type, wchar_t > Component_2Traits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
@@ -3344,7 +3340,7 @@ namespace cellml12
 
     protected:
     void
-    parse (::xsd::cxx::xml::dom::parser< char >&,
+    parse (::xsd::cxx::xml::dom::parser< wchar_t >&,
            ::xml_schema::Flags);
 
     protected:
@@ -3379,7 +3375,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< NameType, char > NameTraits;
+    typedef ::xsd::cxx::tree::traits< NameType, wchar_t > NameTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
@@ -3437,7 +3433,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< Units_refType, char > Units_refTraits;
+    typedef ::xsd::cxx::tree::traits< Units_refType, wchar_t > Units_refTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
@@ -3557,7 +3553,7 @@ namespace cellml12
 
     protected:
     void
-    parse (::xsd::cxx::xml::dom::parser< char >&,
+    parse (::xsd::cxx::xml::dom::parser< wchar_t >&,
            ::xml_schema::Flags);
 
     protected:
@@ -3591,7 +3587,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< NameType, char > NameTraits;
+    typedef ::xsd::cxx::tree::traits< NameType, wchar_t > NameTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
@@ -3649,7 +3645,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< Component_refType, char > Component_refTraits;
+    typedef ::xsd::cxx::tree::traits< Component_refType, wchar_t > Component_refTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
@@ -3769,7 +3765,7 @@ namespace cellml12
 
     protected:
     void
-    parse (::xsd::cxx::xml::dom::parser< char >&,
+    parse (::xsd::cxx::xml::dom::parser< wchar_t >&,
            ::xml_schema::Flags);
 
     protected:
@@ -3803,7 +3799,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< NameType, char > NameTraits;
+    typedef ::xsd::cxx::tree::traits< NameType, wchar_t > NameTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
@@ -3861,7 +3857,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< UnitsType, char > UnitsTraits;
+    typedef ::xsd::cxx::tree::traits< UnitsType, wchar_t > UnitsTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
@@ -3924,7 +3920,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< Public_interfaceType, char > Public_interfaceTraits;
+    typedef ::xsd::cxx::tree::traits< Public_interfaceType, wchar_t > Public_interfaceTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute
@@ -4000,7 +3996,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< Private_interfaceType, char > Private_interfaceTraits;
+    typedef ::xsd::cxx::tree::traits< Private_interfaceType, wchar_t > Private_interfaceTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute
@@ -4071,7 +4067,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< TypeType, char > TypeTraits;
+    typedef ::xsd::cxx::tree::traits< TypeType, wchar_t > TypeTraits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
@@ -4192,7 +4188,7 @@ namespace cellml12
 
     protected:
     void
-    parse (::xsd::cxx::xml::dom::parser< char >&,
+    parse (::xsd::cxx::xml::dom::parser< wchar_t >&,
            ::xml_schema::Flags);
 
     protected:
@@ -4229,7 +4225,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< Variable_1Type, char > Variable_1Traits;
+    typedef ::xsd::cxx::tree::traits< Variable_1Type, wchar_t > Variable_1Traits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
@@ -4287,7 +4283,7 @@ namespace cellml12
     /**
      * @brief Attribute traits type.
      */
-    typedef ::xsd::cxx::tree::traits< Variable_2Type, char > Variable_2Traits;
+    typedef ::xsd::cxx::tree::traits< Variable_2Type, wchar_t > Variable_2Traits;
 
     /**
      * @brief Return a read-only (constant) reference to the attribute.
@@ -4407,7 +4403,7 @@ namespace cellml12
 
     protected:
     void
-    parse (::xsd::cxx::xml::dom::parser< char >&,
+    parse (::xsd::cxx::xml::dom::parser< wchar_t >&,
            ::xml_schema::Flags);
 
     protected:
@@ -4440,13 +4436,13 @@ namespace cellml12
      * @brief Create an instance from a C string and initializers
      * for required elements and attributes.
      */
-    CellMLIdentifier (const char*);
+    CellMLIdentifier (const wchar_t*);
 
     /**
      * @brief Create an instance from a string andinitializers
      * for required elements and attributes.
      */
-    CellMLIdentifier (const ::std::string&);
+    CellMLIdentifier (const ::std::wstring&);
 
     /**
      * @brief Create an instance from the ultimate base and
@@ -4487,7 +4483,7 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    CellMLIdentifier (const ::std::string& s,
+    CellMLIdentifier (const ::std::wstring& s,
                       const ::xercesc::DOMElement* e,
                       ::xml_schema::Flags f = 0,
                       ::xml_schema::Container* c = 0);
@@ -4544,14 +4540,14 @@ namespace cellml12
      *
      * @param v A string value.
      */
-    UnitPrefix (const char* v);
+    UnitPrefix (const wchar_t* v);
 
     /**
      * @brief Create an instance from a string.
      *
      * @param v A string value.
      */
-    UnitPrefix (const ::std::string& v);
+    UnitPrefix (const ::std::wstring& v);
 
     /**
      * @brief Create an instance from a DOM element.
@@ -4586,7 +4582,7 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    UnitPrefix (const ::std::string& s,
+    UnitPrefix (const ::std::wstring& s,
                 const ::xercesc::DOMElement* e,
                 ::xml_schema::Flags f = 0,
                 ::xml_schema::Container* c = 0);
@@ -4649,14 +4645,14 @@ namespace cellml12
      *
      * @param v A string value.
      */
-    Yesno (const char* v);
+    Yesno (const wchar_t* v);
 
     /**
      * @brief Create an instance from a string.
      *
      * @param v A string value.
      */
-    Yesno (const ::std::string& v);
+    Yesno (const ::std::wstring& v);
 
     /**
      * @brief Create an instance from the base value.
@@ -4698,7 +4694,7 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    Yesno (const ::std::string& s,
+    Yesno (const ::std::wstring& s,
            const ::xercesc::DOMElement* e,
            ::xml_schema::Flags f = 0,
            ::xml_schema::Container* c = 0);
@@ -4759,7 +4755,7 @@ namespace cellml12
     _xsd_Yesno_convert () const;
 
     public:
-    static const char* const _xsd_Yesno_literals_[2];
+    static const wchar_t* const _xsd_Yesno_literals_[2];
     static const Value _xsd_Yesno_indexes_[2];
 
     //@endcond
@@ -4812,14 +4808,14 @@ namespace cellml12
      *
      * @param v A string value.
      */
-    UnitPrefix_member (const char* v);
+    UnitPrefix_member (const wchar_t* v);
 
     /**
      * @brief Create an instance from a string.
      *
      * @param v A string value.
      */
-    UnitPrefix_member (const ::std::string& v);
+    UnitPrefix_member (const ::std::wstring& v);
 
     /**
      * @brief Create an instance from the base value.
@@ -4861,7 +4857,7 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    UnitPrefix_member (const ::std::string& s,
+    UnitPrefix_member (const ::std::wstring& s,
                        const ::xercesc::DOMElement* e,
                        ::xml_schema::Flags f = 0,
                        ::xml_schema::Container* c = 0);
@@ -4922,7 +4918,7 @@ namespace cellml12
     _xsd_UnitPrefix_member_convert () const;
 
     public:
-    static const char* const _xsd_UnitPrefix_member_literals_[20];
+    static const wchar_t* const _xsd_UnitPrefix_member_literals_[20];
     static const Value _xsd_UnitPrefix_member_indexes_[20];
 
     //@endcond
@@ -4933,7 +4929,7 @@ namespace cellml12
    *
    * @nosubgrouping
    */
-  class UnitPrefix_member1: public ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, char, ::xml_schema::SimpleType >
+  class UnitPrefix_member1: public ::xsd::cxx::tree::fundamental_base< ::xml_schema::Integer, wchar_t, ::xml_schema::SimpleType >
   {
     public:
     /**
@@ -4980,7 +4976,7 @@ namespace cellml12
      * @param c A pointer to the object that will contain the new
      * instance.
      */
-    UnitPrefix_member1 (const ::std::string& s,
+    UnitPrefix_member1 (const ::std::wstring& s,
                         const ::xercesc::DOMElement* e,
                         ::xml_schema::Flags f = 0,
                         ::xml_schema::Container* c = 0);
@@ -5047,7 +5043,7 @@ namespace cellml12
    * This function uses exceptions to report parsing errors.
    */
   ::std::unique_ptr< ::cellml12::Model >
-  parseModel (const ::std::string& uri,
+  parseModel (const ::std::wstring& uri,
               ::xml_schema::Flags f = 0,
               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
 
@@ -5063,7 +5059,7 @@ namespace cellml12
    * This function reports parsing errors by calling the error handler.
    */
   ::std::unique_ptr< ::cellml12::Model >
-  parseModel (const ::std::string& uri,
+  parseModel (const ::std::wstring& uri,
               ::xml_schema::ErrorHandler& eh,
               ::xml_schema::Flags f = 0,
               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
@@ -5081,7 +5077,7 @@ namespace cellml12
    * This function reports parsing errors by calling the error handler.
    */
   ::std::unique_ptr< ::cellml12::Model >
-  parseModel (const ::std::string& uri,
+  parseModel (const ::std::wstring& uri,
               ::xercesc::DOMErrorHandler& eh,
               ::xml_schema::Flags f = 0,
               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
@@ -5152,7 +5148,7 @@ namespace cellml12
    */
   ::std::unique_ptr< ::cellml12::Model >
   parseModel (::std::istream& is,
-              const ::std::string& id,
+              const ::std::wstring& id,
               ::xml_schema::Flags f = 0,
               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
 
@@ -5174,7 +5170,7 @@ namespace cellml12
    */
   ::std::unique_ptr< ::cellml12::Model >
   parseModel (::std::istream& is,
-              const ::std::string& id,
+              const ::std::wstring& id,
               ::xml_schema::ErrorHandler& eh,
               ::xml_schema::Flags f = 0,
               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
@@ -5197,7 +5193,7 @@ namespace cellml12
    */
   ::std::unique_ptr< ::cellml12::Model >
   parseModel (::std::istream& is,
-              const ::std::string& id,
+              const ::std::wstring& id,
               ::xercesc::DOMErrorHandler& eh,
               ::xml_schema::Flags f = 0,
               const ::xml_schema::Properties& p = ::xml_schema::Properties ());
@@ -5315,7 +5311,7 @@ namespace cellml12
   serializeModel (::std::ostream& os,
                   const ::cellml12::Model& x, 
                   const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
-                  const ::std::string& e = "UTF-8",
+                  const ::std::wstring& e = L"UTF-8",
                   ::xml_schema::Flags f = 0);
 
   /**
@@ -5336,7 +5332,7 @@ namespace cellml12
                   const ::cellml12::Model& x, 
                   ::xml_schema::ErrorHandler& eh,
                   const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
-                  const ::std::string& e = "UTF-8",
+                  const ::std::wstring& e = L"UTF-8",
                   ::xml_schema::Flags f = 0);
 
   /**
@@ -5358,7 +5354,7 @@ namespace cellml12
                   const ::cellml12::Model& x, 
                   ::xercesc::DOMErrorHandler& eh,
                   const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
-                  const ::std::string& e = "UTF-8",
+                  const ::std::wstring& e = L"UTF-8",
                   ::xml_schema::Flags f = 0);
 
   /**
@@ -5376,7 +5372,7 @@ namespace cellml12
   serializeModel (::xercesc::XMLFormatTarget& ft,
                   const ::cellml12::Model& x, 
                   const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
-                  const ::std::string& e = "UTF-8",
+                  const ::std::wstring& e = L"UTF-8",
                   ::xml_schema::Flags f = 0);
 
   /**
@@ -5398,7 +5394,7 @@ namespace cellml12
                   const ::cellml12::Model& x, 
                   ::xml_schema::ErrorHandler& eh,
                   const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
-                  const ::std::string& e = "UTF-8",
+                  const ::std::wstring& e = L"UTF-8",
                   ::xml_schema::Flags f = 0);
 
   /**
@@ -5420,7 +5416,7 @@ namespace cellml12
                   const ::cellml12::Model& x, 
                   ::xercesc::DOMErrorHandler& eh,
                   const ::xml_schema::NamespaceInfomap& m = ::xml_schema::NamespaceInfomap (),
-                  const ::std::string& e = "UTF-8",
+                  const ::std::wstring& e = L"UTF-8",
                   ::xml_schema::Flags f = 0);
 
   /**
