@@ -36,8 +36,8 @@
  * @brief Generated from cellml_1_2.xsd.
  */
 
-#ifndef CELLML_1_2_HXX
-#define CELLML_1_2_HXX
+#ifndef CELLML_1_2_H
+#define CELLML_1_2_H
 
 #ifndef XSD_CXX11
 #define XSD_CXX11
@@ -5547,4 +5547,4 @@ namespace cellml12
 //
 // End epilogue.
 
-#endif // CELLML_1_2_HXX
+#endif // CELLML_1_2_H

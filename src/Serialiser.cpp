@@ -5,7 +5,7 @@
 #include <strstream>
 #include <string>
 
-#include "cellml_1_2.hxx"
+#include "cellml_1_2.h"
 
 using namespace std;
 using namespace cellml12;
