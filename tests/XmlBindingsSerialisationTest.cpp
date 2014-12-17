@@ -11,15 +11,15 @@ using namespace cellml12;
 
 string xml1() {
   return
-    "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n"
-    "<p1:model xmlns:p1=\"http://www.cellml.org/cellml/1.2#\" name=\"modelName\">\n"
-    "  <p1:component name=\"c1\">\n"
-    "    <p1:variable name=\"v1\" public_interface=\"yes\" type=\"real\" units=\"kg\"/>\n"
-    "  </p1:component>\n"
-    "  <p1:component name=\"c2\"/>\n"
-    "</p1:model>\n";
+R"(<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<p1:model xmlns:p1="http://www.cellml.org/cellml/1.2#" name="modelName">
+  <p1:component name="c1">
+    <p1:variable name="v1" public_interface="yes" type="real" units="kg"/>
+  </p1:component>
+  <p1:component name="c2"/>
+</p1:model>
+)";
 }
-
 
 //! Test creation of a model and serialisation to XML
 TEST(XmlBindingsSerialisation, SimpleExample01) {
@@ -62,13 +62,20 @@ TEST(XmlBindingsDeserialisation, SimpleExample01) {
     }
   }
 
-  wstring expectedSummary(
-L"Read in model name: modelName\n"
-L"  Components:\n"
-L"    c1\n"
-L"      Variables:\n"
-L"        v1::real(private: <not present>, public: yes)\n"
-L"    c2\n"
-L"      Variables:\n");
-  ASSERT_EQ(expectedSummary, oss.str());
+  string expectedSummary(
+R"(Read in model name: modelName
+  Components:
+    c1
+      Variables:
+        v1::real(private: <not present>, public: yes)
+    c2
+      Variables:
+)");
+  //! todo: conversion from std::string to std::wstring should be a utility.
+  wstringstream wss;
+  wss << expectedSummary.c_str();
+  wstring expectedSummaryW = wss.str();
+
+
+  ASSERT_EQ(expectedSummaryW, oss.str());
 }
