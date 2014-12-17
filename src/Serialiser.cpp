@@ -24,7 +24,16 @@ string Serialiser::createXml(const Manager& m) {
     for( auto component : components) {
       auto compName = component->getName();
       cellml12::Component componentXml(compName);
+
+      auto vars = component->getChildrenReadOnly();
+      for( auto var : vars ) {
+        auto varName = var->getName();
+        cellml12::Variable varXml(varName, L"kg", L"real");
+
+        componentXml.getVariable().push_back(varXml);
+      }
       modelXml.getComponent().push_back(componentXml);
+
     }
     serializeModel(oss, modelXml);
   }
