@@ -3,6 +3,9 @@ compiler:
   - gcc
   - clang
 
+install:
+  - .travis_scripts/cmake.sh
+
 script: cmake -G "Unix Makefiles" -Dtest=true . && make && make test
 
 os:
