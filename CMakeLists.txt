@@ -22,6 +22,7 @@ set(HEADER_FILES
   ${PROJECT_SOURCE_DIR}/src/Serialiser.h
   ${PROJECT_SOURCE_DIR}/src/Model.h
   ${PROJECT_SOURCE_DIR}/src/Component.h
+  ${PROJECT_SOURCE_DIR}/src/Variable.h
   ${PROJECT_SOURCE_DIR}/src/Parent.h
   ${PROJECT_SOURCE_DIR}/src/Child.h
   ${PROJECT_SOURCE_DIR}/src/Cellml_1_2.hxx  
@@ -43,6 +44,7 @@ add_library(Libcellml
   src/Serialiser.cpp 
   src/Model.cpp 
   src/Component.cpp 
+  src/Variable.cpp 
   src/Cellml_1_2.cxx 
   ${HEADER_FILES}
 )
