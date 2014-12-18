@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 3.1)
 
 set(PROJECT_NAME libCellML)
-project(${PROJECT_NAME})
+project(${PROJECT_NAME} CXX)
 
 ################################
 # Normal Libraries & Executables
