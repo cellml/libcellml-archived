@@ -6,6 +6,8 @@
 #include <vector>
 
 #include "Component.h"
+#include "Unit.h"
+
 #include "Child.h"
 
 namespace libcellml {
@@ -20,6 +22,9 @@ class Variable : public Child<Component, Variable>{
   //! Variable name
   std::wstring name_;
 
+  //! Unit of measure
+  std::weak_ptr<Unit> unit_;
+
 public:
   Variable(std::weak_ptr<Component>, const this_is_private &);
 
@@ -28,6 +33,13 @@ public:
    */
   std::wstring getName() const {
     return name_;
+  }
+
+  /**! Variable's name attribute
+   * \return Variable's name
+   */
+  std::weak_ptr<Unit> getUnit() const {
+    return unit_; //! todo: is this const correct?
   }
 
 };

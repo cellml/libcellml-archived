@@ -1,11 +1,13 @@
 #include <memory>
 #include <iostream>
 
-#include "Serialiser.h"
+#include <Serialiser.h>
 #include <Manager.h>
 #include <Model.h>
 #include <Component.h>
 #include <Variable.h>
+
+#include <UnitsOwner.h> //! todo: remove this, just for testing.
 
 #include "gtest/gtest.h"
 
@@ -17,7 +19,9 @@ TEST(Serialiser, simpleXmlOutput) {
   shared_ptr<Manager> m = make_shared<Manager>();
   auto m1 = m->createModel(L"test model");
   auto c1 = m1->createComponent(L"test component");
-  auto v1 = c1->createVariable(L"test variable");
+  shared_ptr<UnitsOwner> uo = make_shared<UnitsOwner>(); // todo: owner shouldn't float, should be Model or Component.
+  auto u1 = uo->createUnit(L"kg");
+  auto v1 = c1->createVariable(L"test variable", u1);
 
   Serialiser s;
   auto xml = s.createXml(*m);

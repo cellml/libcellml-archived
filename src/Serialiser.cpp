@@ -28,7 +28,9 @@ string Serialiser::createXml(const Manager& m) {
       auto vars = component->getChildrenReadOnly();
       for( auto var : vars ) {
         auto varName = var->getName();
-        cellml12::Variable varXml(varName, L"kg", L"real");
+        auto varUnit = var->getUnit();
+        auto unitName = varUnit.lock()->getName();
+        cellml12::Variable varXml(varName, unitName, L"real");
 
         componentXml.getVariable().push_back(varXml);
       }

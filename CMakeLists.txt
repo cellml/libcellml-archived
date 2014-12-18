@@ -25,6 +25,8 @@ set(HEADER_FILES
   ${PROJECT_SOURCE_DIR}/src/Variable.h
   ${PROJECT_SOURCE_DIR}/src/Parent.h
   ${PROJECT_SOURCE_DIR}/src/Child.h
+  ${PROJECT_SOURCE_DIR}/src/UnitsOwner.h
+  ${PROJECT_SOURCE_DIR}/src/Unit.h
   ${PROJECT_SOURCE_DIR}/src/Cellml_1_2.h  
 )
 
@@ -45,6 +47,8 @@ add_library(Libcellml
   src/Model.cpp 
   src/Component.cpp 
   src/Variable.cpp 
+  src/UnitsOwner.cpp 
+  src/Unit.cpp 
   src/Cellml_1_2.cpp 
   ${HEADER_FILES}
 )

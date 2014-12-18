@@ -42,7 +42,7 @@ public:
    * \param variableName The name of the new variable
    * \return a pointer the newly created child object.
    */
-  const std::shared_ptr<libcellml::model::Variable> createVariable(std::wstring variableName);
+  const std::shared_ptr<Variable> createVariable(std::wstring variableName, std::weak_ptr<Unit>);
 
 };
 
