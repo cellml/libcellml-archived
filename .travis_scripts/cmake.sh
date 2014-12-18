@@ -9,10 +9,13 @@ cmake .
 make
 
 # Uninstall old version of cmake
-if [ "$TRAVIS_OS_NAME" == 'linux'] then
+if [ "$TRAVIS_OS_NAME" == 'linux']
+then
   sudo apt-get remove cmake cmake-data
 fi
-if [ "$TRAVIS_OS_NAME" == 'osx'] then
+
+if [ "$TRAVIS_OS_NAME" == 'osx']
+then
  brew uninstall cmake
 fi
 
