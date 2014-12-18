@@ -7,15 +7,6 @@
 #include <vector>
 
 
-//! For collection of const children (i.e. each element immutable).
-//! Overall collection is also not mutable
-template<typename parent, typename child>
-using childCollectionConstT = std::vector<std::shared_ptr<const child>> const;
-
-//! Overall collection is not mutable, but each element is mutable
-template<typename parent, typename child>
-using childCollectionT = std::vector<std::shared_ptr<child>> const&;
-
 //! The class for a parent object
 template<typename parent, typename child>
 class Parent :
@@ -25,13 +16,20 @@ class Parent :
     std::vector<std::shared_ptr<child>> children;
     
 public:
+    //! For collection of const children (i.e. each element immutable).
+    //! Overall collection is also not mutable
+    typedef std::vector<std::shared_ptr<const child>> const childCollectionConstT;
+
+    //! Overall collection is not mutable, but each element is mutable
+    typedef std::vector<std::shared_ptr<child>> const& childCollectionT;
+
     /** Get read-only collection of children
      *
      * Each child element is immutable.
      * \return The collection of children, read-only.
      */
-    childCollectionConstT<parent, child> getChildrenReadOnly() const {
-      childCollectionConstT<parent, child> childrenConst(children.begin(), children.end()); // Have to copy to get const version.
+    childCollectionConstT getChildrenReadOnly() const {
+      childCollectionConstT childrenConst(children.begin(), children.end()); // Have to copy to get const version.
       return std::move(childrenConst);
     }
 
@@ -41,7 +39,7 @@ public:
      * Overall membership of collection is still fixed.
      * \return The collection of mutable children.
      */
-    childCollectionT<parent, child> getChildren() {
+    childCollectionT getChildren() {
       return children;
     }
   
