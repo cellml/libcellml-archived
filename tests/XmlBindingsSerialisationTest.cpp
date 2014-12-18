@@ -3,7 +3,7 @@
 #include <strstream>
 #include <string>
 
-#include "cellml_1_2.h"
+#include "Cellml_1_2.h"
 #include "gtest/gtest.h"
 
 using namespace std;

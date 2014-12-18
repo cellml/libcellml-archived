@@ -33,7 +33,7 @@
 
 /**
  * @file
- * @brief Generated from cellml_1_2.xsd.
+ * @brief Generated from Cellml_1_2.xsd.
  */
 
 #ifndef CELLML_1_2_H

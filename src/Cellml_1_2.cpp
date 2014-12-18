@@ -38,7 +38,7 @@
 
 #include <xsd/cxx/pre.hxx>
 
-#include "cellml_1_2.h"
+#include "Cellml_1_2.h"
 
 namespace cellml12
 {
