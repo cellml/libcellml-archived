@@ -23,13 +23,13 @@ TEST(Serialiser, simpleXmlOutput) {
   auto xml = s.createXml(*m);
 
   string expectedXml(
-"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n"
-"<p1:model xmlns:p1=\"http://www.cellml.org/cellml/1.2#\" name=\"test model\">\n"
-"  <p1:component name=\"test component\">\n"
-"    <p1:variable name=\"test variable\" type=\"real\" units=\"kg\"/>\n"
-"  </p1:component>\n"
-"</p1:model>\n"
-);
+R"(<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<p1:model xmlns:p1="http://www.cellml.org/cellml/1.2#" name="test model">
+  <p1:component name="test component">
+    <p1:variable name="test variable" type="real" units="kg"/>
+  </p1:component>
+</p1:model>
+)");
 
   ASSERT_EQ(expectedXml, xml);
 }
