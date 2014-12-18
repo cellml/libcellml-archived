@@ -26,7 +26,7 @@ TEST(Serialiser, simpleXmlOutput) {
 "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>\n"
 "<p1:model xmlns:p1=\"http://www.cellml.org/cellml/1.2#\" name=\"test model\">\n"
 "  <p1:component name=\"test component\">\n"
-"    <p1:variable name=\"test variable\"/>\n"
+"    <p1:variable name=\"test variable\" type=\"real\" units=\"kg\"/>\n"
 "  </p1:component>\n"
 "</p1:model>\n"
 );
