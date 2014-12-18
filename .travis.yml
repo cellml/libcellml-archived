@@ -1,3 +1,7 @@
+os:
+  - linux
+  - osx
+
 language: cpp
 compiler:
   - gcc
@@ -12,6 +16,3 @@ install:
 
 script: cmake -G "Unix Makefiles" -Dtest=true . && make && make test
 
-os:
-  - linux
-  - osx
