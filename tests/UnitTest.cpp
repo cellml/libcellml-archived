@@ -13,6 +13,6 @@ TEST(Unit, UnitNaming) {
   shared_ptr<UnitsOwner> uo = make_shared<UnitsOwner>(); // todo: owner shouldn't float, should be Model or Component.
   auto u1 = uo->createUnit(L"kg");
 
-  ASSERT_EQ(u1->getName(), L"force test to fail");
+  ASSERT_EQ(u1->getName(), L"kg");
 }
 
