@@ -6,6 +6,8 @@
 #include <vector>
 
 #include "Component.h"
+#include "UnitsOwner.h"
+
 #include "Child.h"
 #include "Parent.h"
 
@@ -29,6 +31,9 @@ class Model :
   //! Model name
   std::wstring name_;
 
+  //! Units Owner delegate
+  std::shared_ptr<UnitsOwner> unitsOwner_;
+
 public:
   Model(std::weak_ptr<general::Manager> p, const this_is_private &t);
 
@@ -45,6 +50,13 @@ public:
    * \return a pointer the newly created child object.
    */
   const std::shared_ptr<libcellml::model::Component> createComponent(std::wstring componentName);
+
+  /**
+   * Create a child unit object, of which this model object is the parent
+   * \param unitName The name of the new unit
+   * \return a pointer the newly created child object.
+   */
+  const std::shared_ptr<libcellml::model::Unit> createUnit(std::wstring unitName);
 
 };
 

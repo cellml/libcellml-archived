@@ -1,17 +1,23 @@
 #include <memory>
 #include <iostream>
-#include "UnitsOwner.h"
-#include "Unit.h"
+
+#include <Manager.h>
+#include <Model.h>
+
+#include <Unit.h>
 
 #include "gtest/gtest.h"
 
+using namespace libcellml::general;
 using namespace libcellml::model;
 using namespace std;
 
 //! Test unit has name specified during creation
 TEST(Unit, UnitNaming) {
-  shared_ptr<UnitsOwner> uo = make_shared<UnitsOwner>(); // todo: owner shouldn't float, should be Model or Component.
-  auto u1 = uo->createUnit(L"kg");
+  shared_ptr<Manager> m = make_shared<Manager>();
+  auto m1 = m->createModel(L"test model");
+
+  auto u1 = m1->createUnit(L"kg");
 
   ASSERT_EQ(u1->getName(), L"kg");
 }
