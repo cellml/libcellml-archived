@@ -97,6 +97,7 @@ if (test)
     ${PROJECT_SOURCE_DIR}/tests/VersionTest.cpp 
     ${PROJECT_SOURCE_DIR}/tests/ManagerTest.cpp 
     ${PROJECT_SOURCE_DIR}/tests/ModelTest.cpp 
+    ${PROJECT_SOURCE_DIR}/tests/ComponentTest.cpp 
     ${PROJECT_SOURCE_DIR}/tests/SerialiserTest.cpp
     ${PROJECT_SOURCE_DIR}/tests/UnitTest.cpp
     ${PROJECT_SOURCE_DIR}/tests/XmlBindingsSerialisationTest.cpp

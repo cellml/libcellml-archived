@@ -13,12 +13,14 @@ namespace model {
 
 class Unit;
 class Model;
+class Component;
 
 //! Implements ownership of units, behaviour shared by Component and Model.
 class UnitsOwner :
   public Parent<UnitsOwner, Unit>
 {
   friend class Model;
+  friend class Component;
 
   UnitsOwner(){}
 

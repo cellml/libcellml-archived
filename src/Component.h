@@ -7,6 +7,8 @@
 
 #include "Model.h"
 #include "Variable.h"
+#include "UnitsOwner.h"
+
 #include "Child.h"
 #include "Parent.h"
 
@@ -27,6 +29,9 @@ class Component :
   //! Component name
   std::wstring name_;
 
+  //! Units Owner delegate
+  std::shared_ptr<UnitsOwner> unitsOwner_;
+
 public:
   Component(std::weak_ptr<Model>, const this_is_private &);
 
@@ -43,6 +48,13 @@ public:
    * \return a pointer the newly created child object.
    */
   const std::shared_ptr<Variable> createVariable(std::wstring variableName, std::weak_ptr<Unit>);
+
+  /**
+   * Create a child unit object, of which this component object is the parent
+   * \param unitName The name of the new unit
+   * \return a pointer the newly created child object.
+   */
+  const std::shared_ptr<libcellml::model::Unit> createUnit(std::wstring unitName);
 
 };
 
