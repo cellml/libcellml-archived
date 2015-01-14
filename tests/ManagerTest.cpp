@@ -1,5 +1,6 @@
 #include <memory>
 #include <iostream>
+#include <algorithm>
 #include "Manager.h"
 
 
@@ -24,6 +25,23 @@ TEST(Manager, Create2EmptyModels) {
   ASSERT_NE(v1, nullptr);
   ASSERT_NE(v2, nullptr);
   ASSERT_NE(v1, v2);
+}
+
+
+//! Test that manager's list of models contains exactly only those created.
+TEST(Manager, ChildModelsExactlyMatchCreated) {
+  shared_ptr<Manager> m = make_shared<Manager>();
+  const auto ms0 = m->getChildren();
+
+  ASSERT_EQ( 0, ms0.size());
+
+  const auto v1 = m->createModel(L"test model 1");
+  const auto v2 = m->createModel(L"test model 2");
+
+  const auto ms2 = m->getChildren();
+  ASSERT_EQ( 2, ms2.size());
+  ASSERT_EQ( 1, count(ms2.begin(), ms2.end(), v1));
+  ASSERT_EQ( 1, count(ms2.begin(), ms2.end(), v2));
 }
 
 
