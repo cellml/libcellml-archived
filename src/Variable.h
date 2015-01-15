@@ -42,6 +42,17 @@ public:
     return unit_; //! todo: is this const correct?
   }
 
+  /**! Returns the collection of variables connected to this variable.
+   * \return Variables connected to this variable
+   */
+  const std::vector<std::weak_ptr<const Variable>>& getConnectedVariables() const{
+    std::vector<std::weak_ptr<const Variable>> dummy;
+    return std::move(dummy);
+  }
+
+  /**! Connect a variable to this variable
+   */
+  void connect(std::weak_ptr<Variable>){}
 };
 
 } // namespace model

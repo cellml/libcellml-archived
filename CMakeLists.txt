@@ -100,6 +100,7 @@ if (test)
     ${PROJECT_SOURCE_DIR}/tests/ComponentTest.cpp 
     ${PROJECT_SOURCE_DIR}/tests/SerialiserTest.cpp
     ${PROJECT_SOURCE_DIR}/tests/UnitTest.cpp
+    ${PROJECT_SOURCE_DIR}/tests/VariableTest.cpp
     ${PROJECT_SOURCE_DIR}/tests/XmlBindingsSerialisationTest.cpp
     ${HEADER_FILES}
   )
