@@ -38,8 +38,8 @@ public:
   /**! Variable's name attribute
    * \return Variable's name
    */
-  std::weak_ptr<Unit> getUnit() const {
-    return unit_; //! todo: is this const correct?
+  std::weak_ptr<const Unit> const getUnit() const {
+    return unit_;
   }
 
 };
