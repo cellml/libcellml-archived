@@ -76,6 +76,12 @@ if (XercesC_FOUND)
   target_link_libraries (Libcellml ${XercesC_LIBRARY})
 endif (XercesC_FOUND)
 
+find_package (Boost)
+if (Boost_FOUND)
+  include_directories(${Boost_INCLUDE_DIRS})
+  target_link_libraries (Libcellml ${Boost_LIBRARIES})
+endif (Boost_FOUND)
+
 
 ################################
 # Testing

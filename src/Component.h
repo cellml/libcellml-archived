@@ -5,6 +5,8 @@
 #include <string>
 #include <vector>
 
+#include <boost/optional.hpp>
+
 #include "Model.h"
 #include "Variable.h"
 #include "UnitsOwner.h"
@@ -47,7 +49,7 @@ public:
    * \param variableName The name of the new variable
    * \return a pointer the newly created child object.
    */
-  const std::shared_ptr<Variable> createVariable(std::wstring variableName, std::weak_ptr<Unit>);
+  const std::shared_ptr<Variable> createVariable(std::wstring variableName, boost::optional<std::weak_ptr<Unit>>);
 
   /**
    * Create a child unit object, of which this component object is the parent

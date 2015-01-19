@@ -19,7 +19,7 @@ TEST(Serialiser, simpleXmlOutput) {
   shared_ptr<Manager> m = make_shared<Manager>();
   auto m1 = m->createModel(L"test model");
   auto c1 = m1->createComponent(L"test component");
-  auto u1 = m1->createUnit(L"kg");
+  weak_ptr<Unit> u1 = m1->createUnit(L"kg");
   auto v1 = c1->createVariable(L"test variable", u1);
 
   Serialiser s;

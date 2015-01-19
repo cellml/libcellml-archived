@@ -8,11 +8,11 @@ compiler:
   - clang
 
 before_install:
-  - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then sudo apt-get update -qq && sudo apt-get install -y libxerces-c-dev; fi
-  - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then brew update && brew install xerces-c; fi
+  - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then sudo apt-get update -qq && sudo apt-get install -y libxerces-c-dev boost; fi
+  - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then brew update && brew install xerces-c && brew install boost; fi
 
 install:
   - .travis_scripts/cmake.sh
 
-script: cmake -G "Unix Makefiles" -Dtest=true . && make && make test
+script: cmake -G "Unix Makefiles" -Dtest=true -DBOOST_ROOT:PATH="/usr/local/boost/" . && make && make test
 

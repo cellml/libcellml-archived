@@ -5,6 +5,9 @@
 #include <string>
 #include <vector>
 
+#include <boost/optional.hpp>
+
+
 #include "Component.h"
 #include "Unit.h"
 
@@ -26,7 +29,7 @@ class Variable :
   std::wstring name_;
 
   //! Unit of measure
-  std::weak_ptr<Unit> unit_;
+  boost::optional<std::weak_ptr<Unit>> unit_;
 
   //! Connected variables
   std::vector<std::weak_ptr<Variable>> connectedVars_;
@@ -47,8 +50,13 @@ public:
   /**! Variable's name attribute
    * \return Variable's name
    */
-  std::weak_ptr<const Unit> const getUnit() const {
-    return unit_;
+  boost::optional<std::weak_ptr<const Unit>> const getUnit() const {
+    if (!unit_) {
+      return boost::none;
+    }
+
+    std::weak_ptr<const Unit> u = unit_.value(); // Convert to wrapped const.
+    return u;
   }
 
   /**! Returns the collection of variables connected to this variable.
