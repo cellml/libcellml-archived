@@ -14,6 +14,11 @@ const std::vector<std::weak_ptr<const Variable>> Variable::getConnectedVariables
 
 void Variable::connect(std::weak_ptr<Variable> v){
   this->connectedVars_.push_back(v);
+
+  if (this == v.lock().get() ) {
+    return;
+  }
+
   v.lock()->connectWithoutReciprocating(shared_from_this());
 }
 
