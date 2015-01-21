@@ -29,7 +29,7 @@ string Serialiser::createXml(const Manager& m) {
       for( auto var : vars ) {
         auto varName = var->getName();
         auto varUnit = var->getUnit();
-        auto unitName = varUnit.value().lock()->getName();
+        auto unitName = varUnit ? varUnit.value().lock()->getName() : L"";
         cellml12::Variable varXml(varName, unitName, L"real");
 
         componentXml.getVariable().push_back(varXml);
