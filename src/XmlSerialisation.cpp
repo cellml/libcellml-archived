@@ -1,5 +1,4 @@
-#include <Serialiser.h>
-
+#include <XmlSerialisation.h>
 #include <memory>
 #include <iostream>
 #include <strstream>
@@ -10,8 +9,10 @@
 using namespace std;
 using namespace cellml12;
 
+namespace libcellml {
+namespace general {
 
-string Serialiser::createXml(const Manager& m) {
+string createXml(const libcellml::general::Manager& m) {
   ostringstream oss;
 
   auto models = m.getChildrenReadOnly();
@@ -44,3 +45,6 @@ string Serialiser::createXml(const Manager& m) {
 
 }
 
+
+}
+}

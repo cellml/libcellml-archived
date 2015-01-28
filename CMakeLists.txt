@@ -19,7 +19,7 @@ set (Libcellml_VERSION_MINOR 1)
 set(HEADER_FILES 
   ${PROJECT_SOURCE_DIR}/src/Version.h
   ${PROJECT_SOURCE_DIR}/src/Manager.h
-  ${PROJECT_SOURCE_DIR}/src/Serialiser.h
+  ${PROJECT_SOURCE_DIR}/src/XmlSerialisation.h
   ${PROJECT_SOURCE_DIR}/src/Model.h
   ${PROJECT_SOURCE_DIR}/src/Component.h
   ${PROJECT_SOURCE_DIR}/src/Variable.h
@@ -43,7 +43,7 @@ include_directories(
 add_library(Libcellml 
   src/Version.cpp 
   src/Manager.cpp 
-  src/Serialiser.cpp 
+  src/XmlSerialisation.cpp 
   src/Model.cpp 
   src/Component.cpp 
   src/Variable.cpp 
@@ -104,7 +104,7 @@ if (test)
     ${PROJECT_SOURCE_DIR}/tests/ManagerTest.cpp 
     ${PROJECT_SOURCE_DIR}/tests/ModelTest.cpp 
     ${PROJECT_SOURCE_DIR}/tests/ComponentTest.cpp 
-    ${PROJECT_SOURCE_DIR}/tests/SerialiserTest.cpp
+    ${PROJECT_SOURCE_DIR}/tests/XmlSerialisationTest.cpp
     ${PROJECT_SOURCE_DIR}/tests/UnitTest.cpp
     ${PROJECT_SOURCE_DIR}/tests/VariableTest.cpp
     ${PROJECT_SOURCE_DIR}/tests/XmlBindingsSerialisationTest.cpp
