@@ -37,7 +37,7 @@ class Component :
 public:
   Component(std::weak_ptr<Model>, const this_is_private &);
 
-  /**! Component name attribute
+  /** Component name attribute
    * \return component name
    */
   std::wstring getName() const {

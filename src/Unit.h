@@ -22,7 +22,7 @@ class Unit : public Child<UnitsOwner, Unit>{
 public:
   Unit(std::weak_ptr<UnitsOwner>, const this_is_private &);
 
-  /**! Unit's name attribute
+  /** Unit's name attribute
    * \return Unit's name
    */
   std::wstring getName() const {

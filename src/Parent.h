@@ -13,15 +13,15 @@ class Parent :
   public std::enable_shared_from_this<parent> // Needed so that a reference to the parent object creating the child object can be stored by the child object.
 {
     //! Children
-    std::vector<std::shared_ptr<child>> children;
+    std::vector<std::shared_ptr<child> > children;
     
 public:
     //! For collection of const children (i.e. each element immutable).
     //! Overall collection is also not mutable
-    typedef std::vector<std::shared_ptr<const child>> const childCollectionConstT;
+    typedef std::vector<std::shared_ptr<const child> > const childCollectionConstT;
 
     //! Overall collection is not mutable, but each element is mutable
-    typedef std::vector<std::shared_ptr<child>> const& childCollectionT;
+    typedef std::vector<std::shared_ptr<child> > const& childCollectionT;
 
     /** Get read-only collection of children
      *

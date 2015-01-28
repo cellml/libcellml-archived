@@ -17,6 +17,7 @@ namespace general {
 class Manager;
 }
 
+//! Namespace for entities directly related to defining CellML 1.2 models.
 namespace model {
 
 class Component;
@@ -37,7 +38,7 @@ class Model :
 public:
   Model(std::weak_ptr<general::Manager> p, const this_is_private &t);
 
-  /**! Model name attribute
+  /** Model name attribute
    * \return model name
    */
   std::wstring getName() const {

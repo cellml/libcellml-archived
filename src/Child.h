@@ -28,7 +28,7 @@ protected:
 
   
 public:
-    /**! make_shared workaround: public constructor, but effectively private, only possible to make instance of this_is_private from privileged members.
+    /** make_shared workaround: public constructor, but effectively private, only possible to make instance of this_is_private from privileged members.
      
         \see Parent::createChild
      */

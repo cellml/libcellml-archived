@@ -40,15 +40,15 @@ class Variable :
 public:
   Variable(std::weak_ptr<Component>, const this_is_private &);
 
-  /**! Variable's name attribute
+  /** Variable's name attribute
    * \return Variable's name
    */
   std::wstring getName() const {
     return name_;
   }
 
-  /**! Variable's name attribute
-   * \return Variable's name
+  /** Variable's unit
+   * \return Variable's unit
    */
   boost::optional<std::weak_ptr<const Unit>> const getUnit() const {
     if (!unit_) {
@@ -59,12 +59,12 @@ public:
     return u;
   }
 
-  /**! Returns the collection of variables connected to this variable.
+  /** Returns the collection of variables connected to this variable.
    * \return Variables connected to this variable
    */
   const std::vector<std::weak_ptr<const Variable>> getConnectedVariables() const;
 
-  /**! Connect a variable to this variable
+  /** Connect a variable to this variable
    */
   void connect(std::weak_ptr<Variable>);
 };

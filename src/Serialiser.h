@@ -8,9 +8,15 @@
 using namespace libcellml::general;
 using namespace libcellml::model;
 
+//! Used for creating serialisations of the models of a Manager.
 class Serialiser {
 public:
-  std::string createXml(const Manager&);
+  /**
+   Serialise the manager's collection of CellML models.
+   \param manager The Manager that owns the models to be serialised.
+   \return Collection of XML representations
+   */
+  std::string createXml(const Manager& manager);
 };
 
 
