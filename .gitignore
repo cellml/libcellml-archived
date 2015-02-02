@@ -1,0 +1,9 @@
+
+# Ignore build/ directories
+build/
+
+# Eclipse project files
+.project
+.pydevproject
+.settings/
+

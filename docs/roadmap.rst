@@ -1,7 +1,8 @@
 .. _libcellmlRoadmap:
 
-libCellML Roadmap
-=================
+=======
+Roadmap
+=======
 
 David Nickerson, 9 June 2014.
 
@@ -16,8 +17,8 @@ Clearly the milestones defined below are to be worked on in numerical order and 
 
 .. contents::
 
-High-level objectives
----------------------
+High level objectives
+=====================
 
 * Focus on CellML 1.2 and beyond.
 
@@ -34,7 +35,7 @@ High-level objectives
 * Develop the libCellML API as work progresses through the milestones outlined below.
 
 Environment
------------
+===========
 
 This section will specify the environment for the development of libCellML.
 
@@ -47,10 +48,11 @@ This section will specify the environment for the development of libCellML.
 * Documentation: API and source code examples will be documented using c++-style `doxygen <http://www.doxygen.org/>`_ comments.
 
 Requirements
-++++++++++++
+------------
 
 * Documentation: made available on `readthedocs.org <https://readthedocs.org/>`_. Read the Docs uses `Sphinx <http://sphinx-doc.org/>`_ for generating documentation.
-* Development: Agile and test-driven development where:
+* Documentation: Is amenable for inclusion in external documentation efforts
+* Development: Agile, test driven development where:
 
   * Functionality is more important than API stability in early releases.
   * Release early and often.
@@ -62,25 +64,29 @@ Requirements
 
 We should avoid using non-standard system libraries unless there is a compelling reason. Once features are available, the API can be fine tuned in consultation with the CellML community.
 
-Milestone 0: setting up the development environment (timeframe: 8 working days)
--------------------------------------------------------------------------------
-**To be completed on Wednesday 3rd September 2014**
+Milestone 0: setting up development environment
+===============================================
 
 #. Share an `UML <http://www.uml.org/>`_-esque document with the community via `GitHub <https://github.com/>`_ describing a CellML specific object model.
 
-   #. The form of the API to libCellML should not be dictated by the XML serialisation but by the objects tool developers desire to work with.
+   #. The form of the API to libCellML should not be dictated by the XML serialisation but by the objects tool developers desire to work with
+   #. Respond to feedback
 
 #. Setup the cross platform build and test environment using the ABI's build and test server (BaTS).
 
-   #. Builds required: Windows 64-bit, Ubuntu 14.04 LTS 64-bit and OS X 10.9.
+   #. Builds required: Windows 64 bit, OS X 10.9, Ubuntu 14.04 64 bit
+   #. Using Buildbot for CI framework
+   #. Interact with Github to process changes
+   #. Make Buildbot status available from autotest.bioeng.auckland.ac.nz/libcellml-buildbot/
 
 #. Document the development process/workflow.
 
-   #. How we are to implement Agile and test driven development.
-   #. How code reviews are done.
+   #. Code contribution document
+   #. Developer setup document
+   #. Code review document
 
 Milestone 1: starting to get useful code (timeframe: ? months)
---------------------------------------------------------------
+==============================================================
 
 #. Create a CellML 1.2 model from scratch and save it to XML
 
@@ -114,7 +120,7 @@ Milestone 1: starting to get useful code (timeframe: ? months)
    #. Integrating libCellML into various common IDEs (Visual Studio, Eclipse, Qt Creator, NetBeans...).
 
 Milestone 2: toward simulation support (timeframe: ? months)
-------------------------------------------------------------
+============================================================
 
 #. Conversion to intermediate representation.
 
@@ -130,7 +136,7 @@ Milestone 2: toward simulation support (timeframe: ? months)
 #. Documentation, documentation and more documentation!
 
 Milestone 3: functional library for tool developers (timeframe: ? months)
--------------------------------------------------------------------------
+=========================================================================
 
 #. Establish the process/API required to generate procedural code from the intermediate representation.
 
@@ -144,14 +150,14 @@ Milestone 3: functional library for tool developers (timeframe: ? months)
    #. CellML 1.2 will not be released until we can do this (in addition to the other requirements above).
 
 Milestone 4: advanced capabilities (timeframe: ? months)
---------------------------------------------------------
+========================================================
 
 #. High-order model manipulation (recall the discussion with Andrew McCulloch at the 8th CellML workshop).
 
    #. Again, it is outside the scope of libCellML, but helping tool developers provide these kinds of services is very important.
 
 Milestone 5: broadening accessibility (timeframe: ? months)
------------------------------------------------------------
+===========================================================
 
 #. Support for more platforms.
 
