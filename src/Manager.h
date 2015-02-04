@@ -8,7 +8,7 @@
 #include "Parent.h"
 #include "Child.h"
 
-//! LibCellML main top level namespace.
+//! Everything in LibCellML is in this namespace.
 namespace libcellml {
 
 
