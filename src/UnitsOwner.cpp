@@ -2,7 +2,7 @@
 #include "Unit.h"
 
 using namespace std;
-using namespace libcellml::model;
+using namespace libcellml;
 
 const shared_ptr<Unit> UnitsOwner::createUnit(wstring unitName) {
   auto u = createChild();

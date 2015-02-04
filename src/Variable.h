@@ -14,7 +14,6 @@
 #include "Child.h"
 
 namespace libcellml {
-namespace model {
 
 class Component;
 
@@ -69,7 +68,6 @@ public:
   void connect(std::weak_ptr<Variable>);
 };
 
-} // namespace model
 } // namespace libcellml
 
 #endif

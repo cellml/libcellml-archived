@@ -11,13 +11,10 @@
 //! LibCellML main top level namespace.
 namespace libcellml {
 
-//! Namespace for support entities
-namespace general {
-
 
 //! Manages models
 class Manager
-  : public Parent<Manager, model::Model>
+  : public Parent<Manager, Model>
 {
 
 public:
@@ -26,10 +23,9 @@ public:
    * \param modelName The name of the new model
    * \return a pointer the newly created child object.
    */
-  const std::shared_ptr<libcellml::model::Model> createModel(std::wstring modelName);
+  const std::shared_ptr<Model> createModel(std::wstring modelName);
 };
 
 
-} //namespace general
 } //namespace libcellml
 #endif

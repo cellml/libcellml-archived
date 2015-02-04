@@ -12,7 +12,7 @@
 #include "gtest/gtest.h"
 
 using namespace std;
-using namespace libcellml::general;
+using namespace libcellml;
 
 //! Test creation of simple model using manager
 TEST(XmlSerialisation, simpleXmlOutput) {

@@ -7,8 +7,7 @@
 #include <Unit.h>
 #include "gtest/gtest.h"
 
-using namespace libcellml::general;
-using namespace libcellml::model;
+using namespace libcellml;
 using namespace std;
 
 /**! Test that a variable can be connected to itself.

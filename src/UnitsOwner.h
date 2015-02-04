@@ -9,8 +9,6 @@
 
 namespace libcellml {
 
-namespace model {
-
 class Unit;
 class Model;
 class Component;
@@ -31,11 +29,10 @@ public:
    * \param unitName The name of the new unit
    * \return a pointer the newly created child object.
    */
-  const std::shared_ptr<libcellml::model::Unit> createUnit(std::wstring unitName);
+  const std::shared_ptr<Unit> createUnit(std::wstring unitName);
 
 };
 
-} // namespace model
 } // namespace libcellml
 
 #endif

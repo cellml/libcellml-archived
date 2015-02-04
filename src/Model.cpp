@@ -1,11 +1,10 @@
 #include "Model.h"
 #include "Manager.h"
 #include "Component.h"
+#include "Child.h"
 
 using namespace std;
-using namespace libcellml::model;
-using namespace libcellml::general;
-
+using namespace libcellml;
 
 Model::Model(weak_ptr<Manager> p, const this_is_private &t)
 :

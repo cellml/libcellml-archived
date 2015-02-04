@@ -7,7 +7,7 @@
 
 #include "gtest/gtest.h"
 
-using namespace libcellml::general;
+using namespace libcellml;
 using namespace std;
 
 //! Test component has name specified during creation

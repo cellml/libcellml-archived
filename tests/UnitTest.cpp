@@ -8,8 +8,7 @@
 
 #include "gtest/gtest.h"
 
-using namespace libcellml::general;
-using namespace libcellml::model;
+using namespace libcellml;
 using namespace std;
 
 //! Test unit has name specified during creation

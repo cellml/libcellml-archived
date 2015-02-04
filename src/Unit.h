@@ -8,7 +8,6 @@
 #include "Child.h"
 
 namespace libcellml {
-namespace model {
 
 class UnitsOwner;
 
@@ -31,7 +30,6 @@ public:
 
 };
 
-} // namespace model
 } // namespace libcellml
 
 #endif

@@ -6,8 +6,7 @@
 #include "Model.h"
 
 using namespace std;
-using namespace libcellml::general;
-using namespace libcellml::model;
+using namespace libcellml;
 
 
 const shared_ptr<Model> Manager::createModel(wstring modelName) {

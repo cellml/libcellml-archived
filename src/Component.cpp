@@ -2,7 +2,7 @@
 #include "Model.h"
 
 using namespace std;
-using namespace libcellml::model;
+using namespace libcellml;
 
 
 Component::Component(weak_ptr<Model> p, const this_is_private &t)

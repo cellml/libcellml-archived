@@ -5,10 +5,7 @@
 
 #include <string>
 
-using namespace libcellml::model;
-
 namespace libcellml {
-namespace general {
 
 /**
  Serialise the manager's collection of CellML models.
@@ -17,7 +14,6 @@ namespace general {
  */
 std::string createXml(const Manager& manager);
 
-}
 }
 
 

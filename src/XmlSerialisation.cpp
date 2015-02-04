@@ -10,9 +10,8 @@ using namespace std;
 using namespace cellml12;
 
 namespace libcellml {
-namespace general {
 
-string createXml(const libcellml::general::Manager& m) {
+string createXml(const libcellml::Manager& m) {
   ostringstream oss;
 
   auto models = m.getChildrenReadOnly();
@@ -45,6 +44,4 @@ string createXml(const libcellml::general::Manager& m) {
 
 }
 
-
-}
-}
+} // namespace libcellml
