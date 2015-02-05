@@ -11,16 +11,14 @@ using namespace cellml12;
 
 namespace libcellml {
 
-string createXml(const libcellml::Manager& m) {
+string createXml(const libcellml::Model& model) {
   ostringstream oss;
 
-  auto models = m.getChildrenReadOnly();
-  for( auto model : models) {
-    auto modelName = model->getName();
+    auto modelName = model.getName();
 
     cellml12::Model modelXml(modelName);
 
-    auto components = model->getChildrenReadOnly();
+    auto components = model.getChildrenReadOnly();
     for( auto component : components) {
       auto compName = component->getName();
       cellml12::Component componentXml(compName);
@@ -38,7 +36,6 @@ string createXml(const libcellml::Manager& m) {
 
     }
     serializeModel(oss, modelXml);
-  }
 
   return oss.str();
 

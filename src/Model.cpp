@@ -1,14 +1,13 @@
 #include "Model.h"
-#include "Manager.h"
 #include "Component.h"
 #include "Child.h"
 
 using namespace std;
 using namespace libcellml;
 
-Model::Model(weak_ptr<Manager> p, const this_is_private &t)
+Model::Model(const wstring name)
 :
-  Child<Manager, Model>(p, t),
+  name_(name),
   unitsOwner_(new UnitsOwner)
 {}
 

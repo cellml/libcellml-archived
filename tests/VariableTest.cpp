@@ -1,10 +1,9 @@
 #include <memory>
 
-#include <Manager.h>
-#include <Model.h>
-#include <Component.h>
-#include <Variable.h>
-#include <Unit.h>
+#include "Model.h"
+#include "Component.h"
+#include "Variable.h"
+#include "Unit.h"
 #include "gtest/gtest.h"
 
 using namespace libcellml;
@@ -15,8 +14,7 @@ using namespace std;
  */
 TEST(Variable, VariableSelfConnection) {
 
-  shared_ptr<Manager> m = make_shared<Manager>();
-  auto m1 = m->createModel(L"test model");
+  shared_ptr<Model> m1 = make_shared<Model>(L"test model");
   auto c1 = m1->createComponent(L"test component");
   weak_ptr<Unit> u1 = m1->createUnit(L"kg");
   auto v1 = c1->createVariable(L"v1", u1);
@@ -31,8 +29,7 @@ TEST(Variable, VariableSelfConnection) {
  */
 TEST(Variable, UnitAbsent) {
 
-  shared_ptr<Manager> m = make_shared<Manager>();
-  auto m1 = m->createModel(L"test model");
+  shared_ptr<Model> m1 = make_shared<Model>(L"test model");
   auto c1 = m1->createComponent(L"test component");
   auto uPlaceholderUnit = m1->createUnit(L"nothing");
   auto v1 = c1->createVariable(L"v1", boost::none);
@@ -45,8 +42,7 @@ TEST(Variable, UnitAbsent) {
 /**! Test a simple connection between to variables from separate components.
  */
 TEST(Variable, SimpleVariableConnection) {
-  shared_ptr<Manager> m = make_shared<Manager>();
-  auto m1 = m->createModel(L"test model");
+  shared_ptr<Model> m1 = make_shared<Model>(L"test model");
   auto c1 = m1->createComponent(L"test component 1");
   auto c2 = m1->createComponent(L"test component 2");
   weak_ptr<Unit> u1 = m1->createUnit(L"kg");

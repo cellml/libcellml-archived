@@ -13,15 +13,12 @@
 
 namespace libcellml {
 
-class Manager;
 class Component;
 
 //! In-memory representation of a CellML model
 class Model :
-  public Child<Manager, Model>,
   public Parent<Model, Component>
 {
-  friend class Manager;
 
   //! Model name
   std::wstring name_;
@@ -30,7 +27,11 @@ class Model :
   std::shared_ptr<UnitsOwner> unitsOwner_;
 
 public:
-  Model(std::weak_ptr<Manager> p, const this_is_private &t);
+  /**
+   * Constructor
+   * \param name The model name
+   */
+  Model(const std::wstring name);
 
   /** Model name attribute
    * \return model name

@@ -18,7 +18,6 @@ set (Libcellml_VERSION_MINOR 1)
 
 set(HEADER_FILES 
   ${PROJECT_SOURCE_DIR}/src/Version.h
-  ${PROJECT_SOURCE_DIR}/src/Manager.h
   ${PROJECT_SOURCE_DIR}/src/XmlSerialisation.h
   ${PROJECT_SOURCE_DIR}/src/Model.h
   ${PROJECT_SOURCE_DIR}/src/Component.h
@@ -42,7 +41,6 @@ include_directories(
 
 add_library(Libcellml 
   src/Version.cpp 
-  src/Manager.cpp 
   src/XmlSerialisation.cpp 
   src/Model.cpp 
   src/Component.cpp 
@@ -101,7 +99,6 @@ if (test)
   ##############
   add_executable (libcellmlTest 
     ${PROJECT_SOURCE_DIR}/tests/VersionTest.cpp 
-    ${PROJECT_SOURCE_DIR}/tests/ManagerTest.cpp 
     ${PROJECT_SOURCE_DIR}/tests/ModelTest.cpp 
     ${PROJECT_SOURCE_DIR}/tests/ComponentTest.cpp 
     ${PROJECT_SOURCE_DIR}/tests/XmlSerialisationTest.cpp
