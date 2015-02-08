@@ -18,7 +18,7 @@ const shared_ptr<Component> Model::createComponent(wstring componentName) {
   return c;
 }
 
-const shared_ptr<Unit> Model::createUnit(wstring unitName) {
-  auto u = unitsOwner_->createUnit(unitName);
+const shared_ptr<Units> Model::createUnits(wstring unitsName) {
+  auto u = unitsOwner_->createUnits(unitsName);
   return u;
 }

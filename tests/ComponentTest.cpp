@@ -20,7 +20,7 @@ TEST(Component, ComponentNaming) {
 TEST(Component, UnitCreation) {
   shared_ptr<Model> m1 = make_shared<Model>(L"test model");
   auto c1 = m1->createComponent(L"test component");
-  auto u1 = c1->createUnit(L"test unit");
+  auto u1 = c1->createUnits(L"test unit");
   ASSERT_EQ(u1->getName(), L"test unit");
 }
 

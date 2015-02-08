@@ -16,7 +16,7 @@ using namespace libcellml;
 TEST(XmlSerialisation, simpleXmlOutput) {
   shared_ptr<Model> m1 = make_shared<Model>(L"test model");
   auto c1 = m1->createComponent(L"test component");
-  weak_ptr<Unit> u1 = m1->createUnit(L"kg");
+  weak_ptr<Units> u1 = m1->createUnits(L"kg");
   auto v1 = c1->createVariable(L"test variable", u1);
 
   auto xml = createXml(*m1);

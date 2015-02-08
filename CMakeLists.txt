@@ -25,7 +25,7 @@ set(HEADER_FILES
   ${PROJECT_SOURCE_DIR}/src/Parent.h
   ${PROJECT_SOURCE_DIR}/src/Child.h
   ${PROJECT_SOURCE_DIR}/src/UnitsOwner.h
-  ${PROJECT_SOURCE_DIR}/src/Unit.h
+  ${PROJECT_SOURCE_DIR}/src/Units.h
   ${PROJECT_SOURCE_DIR}/src/Cellml_1_2.h  
 )
 
@@ -46,7 +46,7 @@ add_library(Libcellml
   src/Component.cpp 
   src/Variable.cpp 
   src/UnitsOwner.cpp 
-  src/Unit.cpp 
+  src/Units.cpp 
   src/Cellml_1_2.cpp 
   ${HEADER_FILES}
 )
@@ -102,7 +102,7 @@ if (test)
     ${PROJECT_SOURCE_DIR}/tests/ModelTest.cpp 
     ${PROJECT_SOURCE_DIR}/tests/ComponentTest.cpp 
     ${PROJECT_SOURCE_DIR}/tests/XmlSerialisationTest.cpp
-    ${PROJECT_SOURCE_DIR}/tests/UnitTest.cpp
+    ${PROJECT_SOURCE_DIR}/tests/UnitsTest.cpp
     ${PROJECT_SOURCE_DIR}/tests/VariableTest.cpp
     ${PROJECT_SOURCE_DIR}/tests/XmlBindingsSerialisationTest.cpp
     ${HEADER_FILES}

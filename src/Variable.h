@@ -6,11 +6,10 @@
 #include <vector>
 
 #include <boost/optional.hpp>
+#include <Units.h>
 
 
 #include "Component.h"
-#include "Unit.h"
-
 #include "Child.h"
 
 namespace libcellml {
@@ -28,7 +27,7 @@ class Variable :
   std::wstring name_;
 
   //! Unit of measure
-  boost::optional<std::weak_ptr<Unit>> unit_;
+  boost::optional<std::weak_ptr<Units>> units_;
 
   //! Connected variables
   std::vector<std::weak_ptr<Variable>> connectedVars_;
@@ -46,15 +45,15 @@ public:
     return name_;
   }
 
-  /** Variable's unit
-   * \return Variable's unit
+  /** Variable's units object
+   * \return Variable's units object
    */
-  boost::optional<std::weak_ptr<const Unit>> const getUnit() const {
-    if (!unit_) {
+  boost::optional<std::weak_ptr<const Units>> const getUnit() const {
+    if (!units_) {
       return boost::none;
     }
 
-    std::weak_ptr<const Unit> u = unit_.value(); // Convert to wrapped const.
+    std::weak_ptr<const Units> u = units_.value(); // Convert to const units object wrapped in optional.
     return u;
   }
 

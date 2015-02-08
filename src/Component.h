@@ -46,16 +46,17 @@ public:
   /**
    * Create a child variable object, of which this component object is the parent
    * \param variableName The name of the new variable
+   * \param units The units object.
    * \return a pointer the newly created child object.
    */
-  const std::shared_ptr<Variable> createVariable(std::wstring variableName, boost::optional<std::weak_ptr<Unit>>);
+  const std::shared_ptr<Variable> createVariable(std::wstring variableName, boost::optional<std::weak_ptr<Units>> units);
 
   /**
-   * Create a child unit object, of which this component object is the parent
-   * \param unitName The name of the new unit
-   * \return a pointer the newly created child object.
+   * Create a units object, of which this component object is the parent
+   * \param unitsName The name of the new units object
+   * \return a pointer the newly created units object
    */
-  const std::shared_ptr<Unit> createUnit(std::wstring unitName);
+  const std::shared_ptr<Units> createUnits(std::wstring unitsName);
 
 };
 

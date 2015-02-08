@@ -48,11 +48,11 @@ public:
   const std::shared_ptr<Component> createComponent(std::wstring componentName);
 
   /**
-   * Create a child unit object, of which this model object is the parent
-   * \param unitName The name of the new unit
-   * \return a pointer the newly created child object.
+   * Create a child units object, of which this model object is the parent
+   * \param unitsName The name of the new units object
+   * \return a pointer the newly created units object.
    */
-  const std::shared_ptr<Unit> createUnit(std::wstring unitName);
+  const std::shared_ptr<Units> createUnits(std::wstring unitsName);
 
 };
 
