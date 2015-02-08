@@ -22,8 +22,8 @@ Use-cases for libCellML
 
    #. a model with imported components
 
-      a. import the component from model 1.iv.a
-      #. import the component from model 1.iv.b
+      a. import the component from model *1.iv.a*
+      #. import the component from model *1.iv.b*
       #. import a component from a non-existing URL
 
    #. a model with units
@@ -31,24 +31,24 @@ Use-cases for libCellML
       a. a single base units with valid name
       #. a single base units with an invalid name
       #. a units which defines micro-Ampere * Kelvin / milli-siemens
-      #. the units from 1.viii.a and 1.viii.c and multiplies them
+      #. the units from *1.viii.a* and *1.viii.c* and multiplies them
 
    #. a model with imported units
 
-      a. import the units from model 1.viii.c
+      a. import the units from model *1.viii.c*
 
          #. with a valid name
          #. with an invalid name
 
       #. import a units from a non-existing URL
-      #. import the units from model 1.viii.d and scale it by a factor of 1000
+      #. import the units from model *1.viii.d* and scale it by a factor of 1000
       
    #. a model with variables
    
-      a. model from 1.iv.a and define a variable with a valid name and units dimensionless
-      #. model from 1.iv.a and define a variable with an invalid name and units dimensionless
-      #. model from 1.iv.a and define a variable with a valid name and invalid units name.
-      #. model from 1.vi.a, define a single variable in each component with units dimensionless
+      a. model from *1.iv.a* and define a variable with a valid name and units dimensionless
+      #. model from *1.iv.a* and define a variable with an invalid name and units dimensionless
+      #. model from *1.iv.a* and define a variable with a valid name and invalid units name.
+      #. model from *1.vi.a*, define a single variable in each component with units dimensionless
       
          #. private interface in the parent and public interface in the child components and connect the variable in both children to the parent.
          #. public interface in all components and connect the variables in the children to the parent
