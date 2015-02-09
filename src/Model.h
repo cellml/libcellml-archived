@@ -11,6 +11,7 @@
 #include "Child.h"
 #include "Parent.h"
 
+//! Everything in LibCellML is in this namespace.
 namespace libcellml {
 
 class Component;
