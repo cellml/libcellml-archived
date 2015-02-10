@@ -8,7 +8,7 @@ project(${PROJECT_NAME} CXX)
 ################################
 
 if (MSVC)
-  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
+  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd /EHsc")
 endif()
 
 
