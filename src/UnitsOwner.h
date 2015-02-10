@@ -1,7 +1,7 @@
 #ifndef Libcellml_UnitsOwner_h
 #define Libcellml_UnitsOwner_h
 
-#include <Units.h>
+#include "Units.h"
 #include <memory>
 #include <string>
 
