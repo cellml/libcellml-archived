@@ -7,6 +7,14 @@
 using namespace libcellml;
 using namespace std;
 
+// todo: use boost::optional to indicate whether or not name attribute is present.
+//! Test model construction without naming the model.
+TEST(Model, ModelNameless) {
+  shared_ptr<Model> m1 = make_shared<Model>();
+  ASSERT_EQ(m1->getName(), L"");
+}
+
+
 //! Test model has name specified during creation
 TEST(Model, ModelNaming) {
   shared_ptr<Model> m1 = make_shared<Model>(L"test model");

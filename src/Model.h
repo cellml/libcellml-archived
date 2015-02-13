@@ -29,6 +29,11 @@ class Model :
 
 public:
   /**
+   * Default constructor
+   */
+  Model();
+
+  /**
    * Constructor
    * \param name The model name
    */

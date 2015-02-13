@@ -5,6 +5,12 @@
 using namespace std;
 using namespace libcellml;
 
+Model::Model()
+:
+  name_(L""),
+  unitsOwner_(new UnitsOwner)
+{}
+
 Model::Model(const wstring name)
 :
   name_(name),
