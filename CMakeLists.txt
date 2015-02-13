@@ -68,7 +68,7 @@ else()
         message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
 endif()
 
-set(XercesC_ROOT "" CACHE PATH "Location of Xerces-C")
+set(XercesC_ROOT "${XercesC_ROOT}" CACHE PATH "Location of Xerces-C")
 set(BOOST_ROOT "${BOOST_ROOT}" CACHE PATH "Location of Boost")
 
 set(CMAKE_INCLUDE_PATH "${XercesC_ROOT}/include")
