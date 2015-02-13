@@ -1,0 +1,21 @@
+os:
+  - linux
+  - osx
+
+language: cpp
+compiler:
+  - gcc
+  - clang
+
+before_install:
+  - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then sudo apt-get update -qq && sudo apt-get install -y libxerces-c-dev; fi
+  - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then .travis_scripts/boost-linux.sh; fi
+  - if [[ $TRAVIS_OS_NAME == 'osx' ]]; then brew update && brew install xerces-c && brew unlink boost && brew install boost; fi
+
+install:
+  - .travis_scripts/cmake.sh
+
+script: 
+  - if [[ $TRAVIS_OS_NAME == 'osx'   ]]; then cmake -G "Unix Makefiles" -Dtest=true -DBOOST_ROOT:PATH="/usr/local/boost/" . && make && make test; fi
+  - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then cmake -G "Unix Makefiles" -Dtest=true -DBOOST_ROOT:PATH="boost_1_57_0"      . && make && make test; fi
+
