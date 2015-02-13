@@ -17,8 +17,8 @@ TEST(Model, ModelNameless) {
 
 //! Test model has name specified during creation
 TEST(Model, ModelNaming) {
-  shared_ptr<Model> m1 = make_shared<Model>(L"test model1");
-  ASSERT_EQ(m1->getName(), L"test model1");
+  shared_ptr<Model> m1 = make_shared<Model>(L"test model");
+  ASSERT_EQ(m1->getName(), L"test model");
 }
 
 
