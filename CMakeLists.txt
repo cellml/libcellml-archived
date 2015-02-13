@@ -68,6 +68,11 @@ else()
         message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
 endif()
 
+set(XercesC_ROOT "" CACHE PATH "Location of Xerces-C")
+set(BOOST_ROOT "${BOOST_ROOT}" CACHE PATH "Location of Boost")
+
+set(CMAKE_INCLUDE_PATH "${XercesC_ROOT}/include")
+set(CMAKE_LIBRARY_PATH "${XercesC_ROOT}/lib")
 find_package (XercesC)
 if (XercesC_FOUND)
   include_directories(${XercesC_INCLUDE_DIR})
