@@ -3,6 +3,7 @@
 
 #include <string>
 
+//! Everything in LibCellML is in this namespace.
 namespace libcellml {
 
 /** Get the version string
