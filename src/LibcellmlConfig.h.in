@@ -1,2 +1,7 @@
+#ifndef Libcellml_Config_h
+#define Libcellml_Config_h
+
 #define LIBCELLML_VERSION_MAJOR @Libcellml_VERSION_MAJOR@
 #define LIBCELLML_VERSION_MINOR @Libcellml_VERSION_MINOR@
+
+#endif /* Libcellml_Config_h */
