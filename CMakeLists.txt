@@ -13,8 +13,8 @@ endif()
 
 
 # The version number.
-set (Libcellml_VERSION_MAJOR 0)
-set (Libcellml_VERSION_MINOR 1)
+set (LIBCELLML_VERSION_MAJOR 0)
+set (LIBCELLML_VERSION_MINOR 1)
 
 set(HEADER_FILES 
   ${PROJECT_SOURCE_DIR}/src/Version.h
