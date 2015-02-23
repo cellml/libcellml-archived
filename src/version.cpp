@@ -1,7 +1,7 @@
 #include <sstream>
 #include <string>
-#include "Version.h"
-#include "LibcellmlConfig.h"
+#include "version.h"
+#include "libcellml_config.h"
 
 const std::string libcellml::getVersion() {
     std::ostringstream os;

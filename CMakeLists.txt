@@ -17,12 +17,12 @@ set (LIBCELLML_VERSION_MAJOR 0)
 set (LIBCELLML_VERSION_MINOR 1)
 
 set(HEADER_FILES 
-  ${PROJECT_SOURCE_DIR}/src/Version.h
+  ${PROJECT_SOURCE_DIR}/src/version.h
 )
 
 configure_file (
-  "${PROJECT_SOURCE_DIR}/src/LibcellmlConfig.h.in"
-  "${PROJECT_BINARY_DIR}/src/LibcellmlConfig.h"
+  "${PROJECT_SOURCE_DIR}/src/libcellml_config.h.in"
+  "${PROJECT_BINARY_DIR}/src/libcellml_config.h"
 )
 
 include_directories(
@@ -30,7 +30,7 @@ include_directories(
 )
 
 add_library(Libcellml 
-  src/Version.cpp 
+  src/version.cpp 
   ${HEADER_FILES}
 )
 
@@ -69,7 +69,7 @@ if (test)
   # Unit Tests
   ##############
   add_executable (libcellmlTest 
-    ${PROJECT_SOURCE_DIR}/tests/VersionTest.cpp 
+    ${PROJECT_SOURCE_DIR}/tests/version_test.cpp 
     ${HEADER_FILES}
   )
 
