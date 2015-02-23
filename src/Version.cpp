@@ -4,7 +4,7 @@
 #include "LibcellmlConfig.h"
 
 const std::string libcellml::getVersion() {
-    std::ostringstream os;
+    static std::ostringstream os;
     os << LIBCELLML_VERSION_MAJOR << "." << LIBCELLML_VERSION_MINOR << std::endl;
     return os.str();
 }
