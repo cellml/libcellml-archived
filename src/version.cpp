@@ -1,6 +1,6 @@
+#include "version.h"
 #include <sstream>
 #include <string>
-#include "version.h"
 #include "libcellml_config.h"
 
 const std::string libcellml::getVersion() {
