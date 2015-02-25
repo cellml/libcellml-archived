@@ -17,23 +17,6 @@ set (LIBCELLML_VERSION_MAJOR 0)
 set (LIBCELLML_VERSION_MINOR 1)
 set (LIBCELLML_VERSION_PATCH 0)
 
-set(HEADER_FILES 
-  ${PROJECT_SOURCE_DIR}/src/version.h
-)
-
-configure_file (
-  "${PROJECT_SOURCE_DIR}/src/libcellml_config.h.in"
-  "${PROJECT_BINARY_DIR}/src/libcellml_config.h"
-)
-
-include_directories(
-  "${PROJECT_BINARY_DIR}/src"
-)
-
-add_library(Libcellml 
-  src/version.cpp 
-  ${HEADER_FILES}
-)
 
 
 # Options. Turn on with 'cmake -Dmyvarname=ON'.
@@ -53,33 +36,8 @@ else()
 endif()
 
 
-################################
-# Testing
-################################
+add_subdirectory(${PROJECT_SOURCE_DIR}/src)
+
 if (test)
-  # This adds another subdirectory, which has 'project(gtest)'.
-  add_subdirectory(tests/gtest-1.7.0)
-
-  enable_testing()
-
-  # Include the gtest library. gtest_SOURCE_DIR is available due to
-  # 'project(gtest)' above.
-  include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR} "${PROJECT_SOURCE_DIR}/src")
-
-  ##############
-  # Unit Tests
-  ##############
-  add_executable (libcellmlTest 
-    ${PROJECT_SOURCE_DIR}/tests/version_test.cpp 
-    ${HEADER_FILES}
-  )
-
-  # Standard linking to gtest stuff.
-  target_link_libraries(libcellmlTest gtest gtest_main)
-
-  # Extra linking for the project.
-  target_link_libraries(libcellmlTest Libcellml)
-
-  # test executable.
-  add_test(libcellmlTest libcellmlTest)
+  add_subdirectory(${PROJECT_SOURCE_DIR}/tests)
 endif()
