@@ -1,4 +1,4 @@
-#include "version.h"
+#include "libcellml/version.h"
 #include <sstream>
 #include <string>
 #include "libcellml_config.h"
