@@ -1,5 +1,5 @@
 set(HEADER_FILES 
-  ${PROJECT_SOURCE_DIR}/src/libcellml/version.h
+  ${PROJECT_SOURCE_DIR}/src/api/libcellml/version.h
 )
 
 configure_file (
@@ -8,8 +8,8 @@ configure_file (
 )
 
 include_directories(
-  "${PROJECT_BINARY_DIR}/src/libcellml"
   "${PROJECT_BINARY_DIR}/src"
+  "${PROJECT_SOURCE_DIR}/src/api"
 )
 
 add_library(Libcellml 

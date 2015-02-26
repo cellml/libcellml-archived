@@ -1,5 +1,5 @@
 #include <iostream>
-#include "version.h"
+#include "libcellml/version.h"
 
 #include "gtest/gtest.h"
 
