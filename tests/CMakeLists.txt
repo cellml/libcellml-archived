@@ -9,7 +9,7 @@ if (test)
 
   # Include the gtest library. gtest_SOURCE_DIR is available due to
   # 'project(gtest)' above.
-  include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR} "${PROJECT_SOURCE_DIR}/src/api" "${PROJECT_SOURCE_DIR}/src/api/libcellml")
+  include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR} "${PROJECT_SOURCE_DIR}/src/api")
 
   ##############
   # Unit Tests
