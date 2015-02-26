@@ -1,7 +1,7 @@
 ################################
 # Testing
 ################################
-if (test)
+if (LIBCELLML_TESTS)
   # This adds another subdirectory, which has 'project(gtest)'.
   add_subdirectory(${PROJECT_SOURCE_DIR}/tests/gtest-1.7.0)
 

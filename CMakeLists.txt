@@ -1,5 +1,13 @@
 cmake_minimum_required (VERSION 3.1)
 
+# Use the following variables when configuring the build from the command line to
+# set the corresponding cache variables.
+# TESTS ==> LIBCELLML_TESTS
+SET( LIBCELLML_TESTS "" CACHE BOOL "Enable build of automated LibCellML tests." )
+IF( TESTS )
+	SET( LIBCELLML_TESTS "${TESTS}" CACHE BOOL "Enable build of automated LibCellML tests." FORCE )
+ENDIF()
+
 set(PROJECT_NAME libCellML)
 project(${PROJECT_NAME} CXX)
 
@@ -38,6 +46,6 @@ endif()
 
 add_subdirectory(${PROJECT_SOURCE_DIR}/src)
 
-if (test)
+if (LIBCELLML_TESTS)
   add_subdirectory(${PROJECT_SOURCE_DIR}/tests)
 endif()
