@@ -1,5 +1,13 @@
 cmake_minimum_required (VERSION 3.1)
 
+# Use the following variables when configuring the build from the command line to
+# set the corresponding cache variables.
+# TESTS ==> LIBCELLML_TESTS
+SET( LIBCELLML_TESTS "" CACHE BOOL "Enable build of automated LibCellML tests." )
+IF( TESTS )
+	SET( LIBCELLML_TESTS "${TESTS}" CACHE BOOL "Enable build of automated LibCellML tests." FORCE )
+ENDIF()
+
 set(PROJECT_NAME libCellML)
 project(${PROJECT_NAME} CXX)
 
@@ -13,26 +21,10 @@ endif()
 
 
 # The version number.
-set (Libcellml_VERSION_MAJOR 0)
-set (Libcellml_VERSION_MINOR 1)
+set (LIBCELLML_VERSION_MAJOR 0)
+set (LIBCELLML_VERSION_MINOR 1)
+set (LIBCELLML_VERSION_PATCH 0)
 
-set(HEADER_FILES 
-  ${PROJECT_SOURCE_DIR}/src/Version.h
-)
-
-configure_file (
-  "${PROJECT_SOURCE_DIR}/src/LibcellmlConfig.h.in"
-  "${PROJECT_BINARY_DIR}/src/LibcellmlConfig.h"
-)
-
-include_directories(
-  "${PROJECT_BINARY_DIR}/src"
-)
-
-add_library(Libcellml 
-  src/Version.cpp 
-  ${HEADER_FILES}
-)
 
 
 # Options. Turn on with 'cmake -Dmyvarname=ON'.
@@ -52,33 +44,8 @@ else()
 endif()
 
 
-################################
-# Testing
-################################
-if (test)
-  # This adds another subdirectory, which has 'project(gtest)'.
-  add_subdirectory(tests/gtest-1.7.0)
+add_subdirectory(${PROJECT_SOURCE_DIR}/src)
 
-  enable_testing()
-
-  # Include the gtest library. gtest_SOURCE_DIR is available due to
-  # 'project(gtest)' above.
-  include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR} "${PROJECT_SOURCE_DIR}/src")
-
-  ##############
-  # Unit Tests
-  ##############
-  add_executable (libcellmlTest 
-    ${PROJECT_SOURCE_DIR}/tests/VersionTest.cpp 
-    ${HEADER_FILES}
-  )
-
-  # Standard linking to gtest stuff.
-  target_link_libraries(libcellmlTest gtest gtest_main)
-
-  # Extra linking for the project.
-  target_link_libraries(libcellmlTest Libcellml)
-
-  # test executable.
-  add_test(libcellmlTest libcellmlTest)
+if (LIBCELLML_TESTS)
+  add_subdirectory(${PROJECT_SOURCE_DIR}/tests)
 endif()
