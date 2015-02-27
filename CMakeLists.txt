@@ -43,9 +43,10 @@ else()
   message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
 endif()
 
-
 add_subdirectory(${PROJECT_SOURCE_DIR}/src)
 
 if (LIBCELLML_TESTS)
+  enable_testing()
   add_subdirectory(${PROJECT_SOURCE_DIR}/tests)
 endif()
+
