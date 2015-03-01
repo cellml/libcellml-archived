@@ -3,7 +3,7 @@
 ################################
 if (LIBCELLML_TESTS)
   # This adds another subdirectory, which has 'project(gtest)'.
-  add_subdirectory(${PROJECT_SOURCE_DIR}/tests/gtest-1.7.0)
+  add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/gtest-1.7.0)
 
   # Include the gtest library. gtest_SOURCE_DIR is available due to
   # 'project(gtest)' above.
@@ -13,7 +13,7 @@ if (LIBCELLML_TESTS)
   # Unit Tests
   ##############
   add_executable (libcellmlTest 
-    ${PROJECT_SOURCE_DIR}/tests/version_test.cpp 
+    ${CMAKE_CURRENT_SOURCE_DIR}/version_test.cpp 
     ${HEADER_FILES}
   )
 

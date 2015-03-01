@@ -1,18 +1,18 @@
 set(HEADER_FILES 
-  ${PROJECT_SOURCE_DIR}/src/api/libcellml/version.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/api/libcellml/version.h
 )
 
 configure_file (
-  "${PROJECT_SOURCE_DIR}/src/libcellml_config.h.in"
-  "${PROJECT_BINARY_DIR}/src/libcellml_config.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/libcellml_config.h.in"
+  "${CMAKE_CURRENT_BINARY_DIR}/libcellml_config.h"
 )
 
 include_directories(
-  "${PROJECT_BINARY_DIR}/src"
-  "${PROJECT_SOURCE_DIR}/src/api"
+  "${CMAKE_CURRENT_BINARY_DIR}"
+  "${CMAKE_CURRENT_SOURCE_DIR}/api"
 )
 
 add_library(Libcellml 
-  ${PROJECT_SOURCE_DIR}/src/version.cpp 
+  ${CMAKE_CURRENT_SOURCE_DIR}/version.cpp 
   ${HEADER_FILES}
 )
