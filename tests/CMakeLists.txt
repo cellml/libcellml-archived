@@ -20,7 +20,7 @@ add_executable (libcellmlTest
 target_link_libraries(libcellmlTest gtest gtest_main)
 
 # Extra linking for the project.
-target_link_libraries(libcellmlTest Libcellml)
+target_link_libraries(libcellmlTest cellml)
 
 # test executable.
 add_test(libcellmlTest libcellmlTest)
