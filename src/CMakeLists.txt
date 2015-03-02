@@ -1,5 +1,6 @@
 set(HEADER_FILES 
   ${CMAKE_CURRENT_SOURCE_DIR}/api/libcellml/version.h
+  "${CMAKE_CURRENT_BINARY_DIR}/libcellml_config.h"
 )
 
 configure_file (
