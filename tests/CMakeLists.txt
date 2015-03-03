@@ -6,13 +6,13 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/gtest-1.7.0)
 
 # Include the gtest library. gtest_SOURCE_DIR is available due to
 # 'project(gtest)' above.
-include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR} "${PROJECT_SOURCE_DIR}/src/api")
+include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR} "${PROJECT_SOURCE_DIR}/src/api"  "${PROJECT_BINARY_DIR}/src/api")
 
 ##############
 # Unit Tests
 ##############
-add_executable (libcellmlTest 
-  ${CMAKE_CURRENT_SOURCE_DIR}/version_test.cpp 
+add_executable (libcellmlTest
+  ${CMAKE_CURRENT_SOURCE_DIR}/version_test.cpp
   ${HEADER_FILES}
 )
 
@@ -26,3 +26,4 @@ target_link_libraries(libcellmlTest cellml)
 add_test(libcellmlTest libcellmlTest)
 
 set_target_properties(libcellmlTest PROPERTIES CXX_STANDARD 11 CXX_STANDARD_REQUIRED ON)
+
