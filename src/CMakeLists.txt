@@ -50,7 +50,7 @@ add_library(cellml
 generate_export_header(cellml EXPORT_FILE_NAME ${CELLML_EXPORT_H} BASE_NAME LIBCELLML)
 
 set_source_files_properties(${CELLML_EXPORT_H} PROPERTIES GENERATED TRUE)
-set_target_properties(cellml PROPERTIES CXX_STANDARD 11 CXX_STANDARD_REQUIRED ON)
+#set_target_properties(cellml PROPERTIES CXX_STANDARD 11 CXX_STANDARD_REQUIRED ON)
 
 export(TARGETS cellml FILE libcellml-exports.cmake)
 
