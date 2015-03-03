@@ -33,5 +33,8 @@ target_link_libraries(libcellmlTest cellml)
 # test executable.
 add_test(libcellmlTest libcellmlTest)
 
-#set_target_properties(libcellmlTest PROPERTIES CXX_STANDARD 11 CXX_STANDARD_REQUIRED ON)
+# To work around a bug conditionally set the CXX_STANDARD property
+if("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux")
+  set_target_properties(libcellmlTest PROPERTIES CXX_STANDARD 11 CXX_STANDARD_REQUIRED ON)
+endif()
 
