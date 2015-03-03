@@ -24,3 +24,5 @@ target_link_libraries(libcellmlTest cellml)
 
 # test executable.
 add_test(libcellmlTest libcellmlTest)
+
+set_target_properties(libcellmlTest PROPERTIES CXX_STANDARD 11 CXX_STANDARD_REQUIRED ON)

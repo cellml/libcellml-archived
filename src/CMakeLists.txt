@@ -17,3 +17,5 @@ add_library(cellml
   ${CMAKE_CURRENT_SOURCE_DIR}/version.cpp 
   ${HEADER_FILES}
 )
+
+set_target_properties(cellml PROPERTIES CXX_STANDARD 11 CXX_STANDARD_REQUIRED ON)
