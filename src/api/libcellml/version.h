@@ -14,8 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.Some license of other
 */
 
-#ifndef Libcellml_Version_h
-#define Libcellml_Version_h
+#ifndef LIBCELLML_VERSION_H
+#define LIBCELLML_VERSION_H
 
 #include <string>
 
@@ -34,4 +34,4 @@ LIBCELLML_EXPORT const std::string getVersion();
 
 } // namespace libcellml
 
-#endif
+#endif /* LIBCELLML_VERSION_H */

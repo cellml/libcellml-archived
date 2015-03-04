@@ -34,9 +34,9 @@ set(HEADER_FILES
 )
 
 include_directories(
-  "${CMAKE_CURRENT_BINARY_DIR}/api"
-  "${CMAKE_CURRENT_SOURCE_DIR}/api"
-  "${CMAKE_CURRENT_BINARY_DIR}"
+  ${CMAKE_CURRENT_BINARY_DIR}/api
+  ${CMAKE_CURRENT_SOURCE_DIR}/api
+  ${CMAKE_CURRENT_BINARY_DIR}
 )
 
 include(GenerateExportHeader)
@@ -63,9 +63,11 @@ install(TARGETS cellml EXPORT libcellml-targets
   LIBRARY DESTINATION lib
   ARCHIVE DESTINATION lib
 )
+
 install(FILES
   ${API_HEADER_FILES}
   DESTINATION ${CMAKE_INSTALL_PREFIX}/include/libcellml
 )
+
 install(EXPORT libcellml-targets DESTINATION lib/cmake)
 
