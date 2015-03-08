@@ -4,7 +4,7 @@
 Contributing Code
 =================
 
-This section describes how a developer can contribute code to the LibCellML project.  Before reading this section make sure you have read through :doc:`Setup <libcellml-development-setup>` as some of what follows may not make sense without this prior context.
+This section describes how to contribute to the LibCellML project.  While there are many types of contribution, this section focuses on code and documentation contributions (and contributions of any other digital assets that are managed using the version control system).  We recommend that you have first read :doc:`Setup <libcellml-development-setup>`. 
 
 .. contents:
 
