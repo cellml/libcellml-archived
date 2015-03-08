@@ -11,17 +11,13 @@ This section describes how to contribute to the LibCellML project.  While there 
 Overview
 ========
 
-To contribute code to the LibCellML project you should select an issue from the list of open issues to work on.  You can let others know that you are working on an issue by leaving a comment on the issue to that effect.  Once you have started work on the issue and added either some implementation, tests or documentation open a pull request to share your progress with other developers.
+An issue (either an existing one, or a newly created one) is used to initiate work.  Once work has started, a pull request takes over as the way to capture both the discussion, as well as the commits of the changes that are made as the work progresses.  The pull request is from the topic branch of the contributor's fork, and targets the develop branch of the prime repository.
 
-Add a reference from the main pull request to the src, tests and docs pull requests for a reviewer to follow.
+Reviewers provide feedback on the changes by adding comments to the pull request or associated commits. The BuildBot build/test procedure will run each time changes are pushed to the pull request's branch, and the results are displayed in the pull request view.
 
-Make use of Buildbot to test your changes, any changes (i.e. new commits) to an open pull request on cellml/libcellml will trigger the test procedure.  Buildbot will report back to the pull request the status of the tests.  A reviewer will first look at the status of the main pull request before looking at anything else so having the tests pass is a priority.
+Once all the changes and reviews are complete, one of the prime repository owners will merge the pull request into the prime repository, onto the develop branch.
 
-When the changes you have completed resolves the issue a reviewer will give your work a final review before merging into the **prime** codebase. 
-
-Fixing a bug follows a similar path the only difference being that we need to write a test that triggers the bug in question.
-
-Finally check out :doc:`Git Submodules <libcellml-development-submodules>` for help on working with git submodules. 
+Note that a bug is just a type of issue, and that resolving the bug requires both a test that triggers the bug, as well as the implementation of the fix.
 
 Take Ownership
 ==============
