@@ -47,10 +47,7 @@ Test driven development entails writing code that automatically tests the implem
 
 Refactoring means improving the code without adding features, and the automated tests enable the refactored code to be validated.
 
-Final Review
-============
+Completion of Workflow
+======================
 
-When you have finished working on an issue, mark it as closed.  This will indicate to a reviewer that your work is ready for merging.  A reviewer will give your work a final review and when any queries are satisfactorily resolved they will merge and close the three open pull requests across mapclient-{tests, src, docs} and then close the main pull request.  All that is left to do now is to thank you for your contribution.
-
-Thank you.
-
+Once the owners of the prime repository are satisfied that the work on the issue is complete and that the feedback has been addressed, one of the owners will merge and close the pull request, marking the completion of the workflow.
