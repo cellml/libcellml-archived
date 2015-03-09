@@ -25,42 +25,27 @@ Issue Assignment
 If an issue has not been created for the required work (e.g. implementation of a feature, fixing of a bug), then create a new one. To assign yourself to the issue, leave a comment on the issue to that effect.
 
 
-Share Progress
-==============
+Pull Request Collaboration
+==========================
 
-We are following a test driven approach for the LibCellML project so the first thing to do is write a test that at least covers some part of the functionality required for the feature you are working on.  Once this first test is written commit your changes and push them to Github so that your work can be shared with others.
+Pull the latest changes from the develop branch.  Create a branch with a name that briefly describes the work, based off the head of develop. This will be referred to as the topic branch.
 
-When the first new test is pushed to Github create a pull request from your feature/develop branch against the cellml/libcellml repositories develop branch.  We do this so that other developers can comment and make suggestions on your changes.  We want to have an environment of friendly social coding where developers can offer guidance and help minimise wasted effort.  Link this pull request to the main pull request by adding a comment on the main pull request with the following markup::
+For code changes, an automated test should be the first code written and committed.  
 
-    cellml/libcellml-tests#4
+After the first commit, push to GitHub so that your work can be shared with others.
+
+Next, create a pull request from your topic branch targeting the prime repository's develop branch.  This allows other developers to comment and make suggestions on your work.  Link this pull request to the issue by adding a comment on the pull request that references the issue. This causes GitHub to automatically create the corresponding reference in the other direction, i.e. from the issue to the pull request.
     
-or::
- 
-    cellml/libcellml-tests/pull/4
+To reference the issue from the pull request in the GitHub comment area, type a hash, "#". A list will appear, from which you can select the issue. The mark-up for creating the reference will then be automatically added.
 
-Github will interpret this markup and create a link between the pull requests.  Obviously replace the numeral '4' with the actual value of the related pull request for your own work.
+We want to have an environment of friendly social coding where developers can offer guidance and help.  Other developers will have been notified via GitHub of the work on the pull request, and will review the work, posting feedback on the commits within the pull request, or on the pull request itself.  Respond to this feedback as appropriate, e.g. making coding changes, posting a reply, etc.
 
-With the tests written and any comments from the community resolved write the implementation code, the implementation code is written into your copy of the mapclient-src repository.  Again commit your code and push the changes to Github.  With the new code on Github create another pull request from your repository to the develop branch in the cellml/libcellml-src repository.  Link this pull request to the main pull request again by adding a comment on the main pull request with the following markup::
+Test Driven Development
+=======================
 
-    cellml/libcellml-src#4
-    
-or::
- 
-    cellml/libcellml-src/pull/4
+Test driven development entails writing code that automatically tests the implementation before writing the implementation itself.  Running the tests prior to writing the implementation should cause the tests to fail, and running them after the implementation has been written should cause them to then pass.  This helps validate that the tests cover the required behaviour.  It is common to find that the initial implementation was incomplete (e.g. didn't cover all cases), but nevertheless, the tests didn't detect this.  This is addressed by improving the tests first, and then improving the implementation.  It can often take multiple cycles of modifying tests and implementation to complete the work.  Commit the code changes each time the tests are incrementally improved, and each time the implementation code passes the tests, or more often if necessary.
 
-Again, obviously replace the numeral '4' with the actual value of the related pull request for your own work.
-
-Simarlarly to writing the implementation code you also need to write documentation for your changes and create a pull request from your mapclient-docs repository to cellml/libcellml-docs develop branch.  Also link the pull request to the pull request already added for the tests by adding a comment on the main pull request with the following markup::
-
-    cellml/libcellml-docs#4
-    
-or::
- 
-    cellml/libcellml-docs/pull/4
-
-Again, replace the numeral '4' with the actual value of the related pull request for your own work.
-
-To have your progress tested push a commit to the main pull request with the correct submodule references set making sure that the dependent pull requests (tests, src, docs) have the commits you are referencing.  When the commit is received by Github Buildbot will be notified and check for any changes, clone and run the tests across the Buildslaves.  When the tests have completed the status will be reported back to the main pull request and the commit status will be made visible on Github.
+Refactoring means improving the code without adding features, and the automated tests enable the refactored code to be validated.
 
 Final Review
 ============
