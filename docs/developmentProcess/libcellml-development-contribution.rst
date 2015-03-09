@@ -11,7 +11,7 @@ This section describes how to contribute to the LibCellML project.  While there 
 Overview
 ========
 
-An issue (either an existing one, or a newly created one) is used to initiate work.  Once work has started, a pull request takes over as the way to capture both the discussion, as well as the commits of the changes that are made as the work progresses.  The pull request is from the topic branch of the contributor's fork, and targets the develop branch of the prime repository.
+An issue is used to initiate work.  Once work has started, a pull request takes over as the way to capture both the discussion, as well as the commits of the changes that are made as the work progresses.  The pull request is from the topic branch of the contributor's fork, and targets the develop branch of the prime repository.
 
 Reviewers provide feedback on the changes by adding comments to the pull request or associated commits. The BuildBot build/test procedure will run each time changes are pushed to the pull request's branch, and the results are displayed in the pull request view.
 
@@ -19,10 +19,11 @@ Once all the changes and reviews are complete, one of the prime repository owner
 
 Note that a bug is just a type of issue, and that resolving the bug requires both a test that triggers the bug, as well as the implementation of the fix.
 
-Take Ownership
-==============
+Issue Assignment
+================
 
-Because every feature must have an associated issue leave a comment on the issue letting others know that you are intending to start work on this issue.  If an issue has not been created for the functionality that you require simply create a new one and leave a comment stating that you are working on it.
+If an issue has not been created for the required work (e.g. implementation of a feature, fixing of a bug), then create a new one. To assign yourself to the issue, leave a comment on the issue to that effect.
+
 
 Share Progress
 ==============
