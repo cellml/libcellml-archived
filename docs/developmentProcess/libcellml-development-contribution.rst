@@ -1,10 +1,10 @@
-.. _Developer Contribution for LibCellML:
+.. _Developer Contribution for libCellML:
 
 =================
 Contributing Code
 =================
 
-This section describes how to contribute to the LibCellML project.  While there are many types of contribution, this section focuses on code and documentation contributions (and contributions of any other digital assets that are managed using the version control system).  We recommend that you have first read :doc:`Setup <libcellml-development-setup>`. 
+This section describes how to contribute to the libCellML project.  While there are many types of contribution, this section focuses on code and documentation contributions (and contributions of any other digital assets that are managed using the version control system).  We recommend that you have first read :doc:`Setup <libcellml-development-setup>`. 
 
 .. contents:
 
