@@ -13,7 +13,7 @@ Overview
 
 Before you begin you will need to have a few prerequisites satisfied:
 
-#. GitHub user account (if necessary, create one using this link https://github.com/join ) (for the rest of this document we will call our user *bob*)
+#. GitHub user account (if necessary, create one using this link https://github.com/join ) (for the rest of this document we will call our user *libCellML-developer*)
 #. A Git client installed (see http://git-scm.com/downloads and http://git-scm.com/downloads/guis )
 
 This document doesn't cover the process of satisfying these prerequisites in any further detail.  The remainder of this document assumes that these prerequisites have been met.
@@ -41,22 +41,22 @@ and fork this repository into your own GitHub user account.  This is done by cli
 Clone
 =====
 
-You now need to clone the libcellml repository to your computer.  You do this by going to your fork (in this example, user bob's fork) at:
+You now need to clone the libcellml repository to your computer.  You do this by going to your fork (in this example, user libCellML-developer's fork) at:
 
-  https://github.com/bob/libcellml
+  https://github.com/libCellML-developer/libcellml
 
-.. note:: Don't clone this location.  Substitute your own GitHub user name in place of *bob*.
+.. note:: Don't clone this location.  Substitute your own GitHub user name in place of *libCellML-developer*.
 
 On the right hand side of the web page on your fork of the repository you can get the link for cloning the repository to your computer, in our example::
 
-  https://github.com/bob/libcellml.git
+  https://github.com/libCellML-developer/libcellml.git
 
 Now clone the repository. If using git from the command line on a Unix-like system, this is done as follows::
 
   cd /somewhere/you/keep/project/files
-  git clone https://github.com/bob/libcellml.git
+  git clone https://github.com/libCellML-developer/libcellml.git
 
-.. note:: Again, don't clone this location. Substitute your own user name in place of *bob*.
+.. note:: Again, don't clone this location. Substitute your own user name in place of *libCellML-developer*.
 
 Set Git remotes
 ===============
