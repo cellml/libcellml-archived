@@ -45,7 +45,7 @@ You now need to clone the libcellml repository to your computer.  You do this by
 
   https://github.com/bob/libcellml
 
-**Note**: Don't clone this location.  Substitute your own GitHub user name in place of *bob*.
+.. note:: Don't clone this location.  Substitute your own GitHub user name in place of *bob*.
 
 On the right hand side of the web page on your fork of the repository you can get the link for cloning the repository to your computer, in our example::
 
@@ -56,7 +56,7 @@ Now clone the repository. If using git from the command line on a Unix-like syst
   cd /somewhere/you/keep/project/files
   git clone https://github.com/bob/libcellml.git
 
-Note: Again, don't clone this location. Substitute your own user name in place of *bob*.
+.. note:: Again, don't clone this location. Substitute your own user name in place of *bob*.
 
 Set Git remotes
 ===============
@@ -67,7 +67,7 @@ You now need to setup a read-only remote connection to the prime repository. To 
   git remote add prime https://github.com/cellml/libcellml
   git config remote.prime.pushurl "you really didn't want to do that" #This is optional
 
-(Note: The third command is optional, and only recommended if you have sufficient permission to push directly to the prime repository.)
+.. note:: The third command is optional, and only recommended if you have sufficient permission to push directly to the prime repository.
 
 You have now added a new remote named **prime** and set origin as the default fetch and push location to point at your fork on GitHub.  Here **prime** is a reference to the main definitive repository where releases are made for the libCellML project.  You have also optionally also set the **prime** repository as read-only by setting an invalid push URL.
 
