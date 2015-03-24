@@ -1,5 +1,5 @@
-#include <Units.h>
-#include "UnitsOwner.h"
+#include <libcellml/Units.h>
+#include "libcellml/UnitsOwner.h"
 
 using namespace std;
 using namespace libcellml;

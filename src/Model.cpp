@@ -1,6 +1,6 @@
-#include "Model.h"
-#include "Component.h"
-#include "Child.h"
+#include "libcellml/model.h"
+#include "libcellml/Component.h"
+#include "libcellml/Child.h"
 
 using namespace std;
 using namespace libcellml;

@@ -1,5 +1,5 @@
-#include "Component.h"
-#include "Model.h"
+#include "libcellml/Component.h"
+#include "libcellml/Model.h"
 
 using namespace std;
 using namespace libcellml;

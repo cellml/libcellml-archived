@@ -1,121 +1,65 @@
+# Copyright 2015 University of Auckland
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.cmake_minimum_required (VERSION 3.1)
+
 cmake_minimum_required (VERSION 3.1)
 
 set(PROJECT_NAME libCellML)
 project(${PROJECT_NAME} CXX)
 
-################################
-# Normal Libraries & Executables
-################################
-
-if (MSVC)
-  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
+# Use the following variables when configuring the build from the command line to
+# set the corresponding cache variables.
+# TESTS ==> LIBCELLML_TESTS
+set( LIBCELLML_TESTS OFF CACHE BOOL "Enable build of automated LibCellML tests." )
+if( TESTS )
+  set( LIBCELLML_TESTS "${TESTS}" CACHE BOOL "Enable build of automated LibCellML tests." FORCE )
 endif()
 
+# BUILD_TYPE ==> LIBCELLML_BUILD_TYPE
+set( LIBCELLML_BUILD_TYPE "Release" CACHE STRING "Choose the type of build, options are: None(CMAKE_CXX_FLAGS or CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel." )
+if( BUILD_TYPE )
+  set( LIBCELLML_BUILD_TYPE ${BUILD_TYPE} CACHE STRING "Choose the type of build, options are: None(CMAKE_CXX_FLAGS or CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel." FORCE )
+endif()
+
+# INSTALL_PREFIX ==> LIBCELLML_INSTALL_PREFIX
+set( LIBCELLML_INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX} CACHE STRING "Install path prefix, prepended onto install directories." )
+if( INSTALL_PREFIX )
+  set( LIBCELLML_INSTALL_PREFIX ${INSTALL_PREFIX} CACHE STRING "Install path prefix, prepended onto install directories." FORCE )
+endif()
+
+# BUILD_SHARED ==> LIBCELLML_BUILD_SHARED
+set( LIBCELLML_BUILD_SHARED OFF CACHE BOOL "Build shared libraries (so, dylib, DLLs)." )
+if( BUILD_SHARED )
+  set( LIBCELLML_BUILD_SHARED ${BUILD_SHARED} CACHE BOOL "Build shared libraries (so, dylib, DLLs)." FORCE )
+endif()
+
+# internalise some CMake variables
+set( CMAKE_INSTALL_PREFIX ${LIBCELLML_INSTALL_PREFIX} CACHE INTERNAL "Internalise CMAKE_INSTALL_PREFIX, manipulate via LIBCELLML_INSTALL_PREFIX" FORCE )
+set( CMAKE_BUILD_TYPE ${LIBCELLML_BUILD_TYPE} CACHE INTERNAL "Internalise CMAKE_BUILD_TYPE, manipulate via LIBCELLML_BUILD_TYPE" FORCE )
+set( BUILD_SHARED_LIBS ${LIBCELLML_BUILD_SHARED} CACHE INTERNAL "Internalise BUILD_SHARED_LIBS, manipulate via LIBCELLML_BUILD_SHARED" FORCE )
+set( CMAKE_CODEBLOCKS_EXECUTABLE "" CACHE INTERNAL "Internalise BUILD_SHARED_LIBS" FORCE )
 
 # The version number.
-set (Libcellml_VERSION_MAJOR 0)
-set (Libcellml_VERSION_MINOR 1)
+set(LIBCELLML_VERSION_MAJOR 0)
+set(LIBCELLML_VERSION_MINOR 1)
+set(LIBCELLML_VERSION_PATCH 0)
 
-set(HEADER_FILES 
-  ${PROJECT_SOURCE_DIR}/src/Version.h
-  ${PROJECT_SOURCE_DIR}/src/XmlSerialisation.h
-  ${PROJECT_SOURCE_DIR}/src/Model.h
-  ${PROJECT_SOURCE_DIR}/src/Component.h
-  ${PROJECT_SOURCE_DIR}/src/Variable.h
-  ${PROJECT_SOURCE_DIR}/src/Parent.h
-  ${PROJECT_SOURCE_DIR}/src/Child.h
-  ${PROJECT_SOURCE_DIR}/src/UnitsOwner.h
-  ${PROJECT_SOURCE_DIR}/src/Units.h
-  ${PROJECT_SOURCE_DIR}/src/Cellml_1_2.h  
-)
+# cellml library target
+add_subdirectory(${PROJECT_SOURCE_DIR}/src)
 
-configure_file (
-  "${PROJECT_SOURCE_DIR}/src/LibcellmlConfig.h.in"
-  "${PROJECT_BINARY_DIR}/src/LibcellmlConfig.h"
-)
-
-include_directories(
-  "${PROJECT_BINARY_DIR}/src"
-  "${PROJECT_SOURCE_DIR}/extdep/libxsd"
-)
-
-add_library(Libcellml 
-  src/Version.cpp 
-  src/XmlSerialisation.cpp 
-  src/Model.cpp 
-  src/Component.cpp 
-  src/Variable.cpp 
-  src/UnitsOwner.cpp 
-  src/Units.cpp 
-  src/Cellml_1_2.cpp 
-  ${HEADER_FILES}
-)
-
-
-# Options. Turn on with 'cmake -Dmyvarname=ON'.
-option(test "Build all tests." OFF) # Makes boolean 'test' available.
-
-set(CMAKE_CXX_FLAGS "-g -Wall")
-
-include(CheckCXXCompilerFlag)
-CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
-CHECK_CXX_COMPILER_FLAG("-std=c++0x" COMPILER_SUPPORTS_CXX0X)
-if(COMPILER_SUPPORTS_CXX11)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-elseif(COMPILER_SUPPORTS_CXX0X)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
-else()
-        message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
-endif()
-
-find_package (XercesC)
-if (XercesC_FOUND)
-  include_directories(${XercesC_INCLUDE_DIR})
-  target_link_libraries (Libcellml ${XercesC_LIBRARY})
-endif (XercesC_FOUND)
-
-find_package (Boost)
-if (Boost_FOUND)
-  include_directories(${Boost_INCLUDE_DIRS})
-  target_link_libraries (Libcellml ${Boost_LIBRARIES})
-endif (Boost_FOUND)
-
-
-################################
-# Testing
-################################
-if (test)
-  # This adds another subdirectory, which has 'project(gtest)'.
-  add_subdirectory(extdep/gtest-1.7.0)
-
+if (LIBCELLML_TESTS)
+  # enable testing here so that we can make use of the 'test' target
   enable_testing()
-
-  # Include the gtest library. gtest_SOURCE_DIR is available due to
-  # 'project(gtest)' above.
-  include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR} "${PROJECT_SOURCE_DIR}/src")
-
-  ##############
-  # Unit Tests
-  ##############
-  add_executable (libcellmlTest 
-    ${PROJECT_SOURCE_DIR}/tests/VersionTest.cpp 
-    ${PROJECT_SOURCE_DIR}/tests/ModelTest.cpp 
-    ${PROJECT_SOURCE_DIR}/tests/ComponentTest.cpp 
-    ${PROJECT_SOURCE_DIR}/tests/XmlSerialisationTest.cpp
-    ${PROJECT_SOURCE_DIR}/tests/UnitsTest.cpp
-    ${PROJECT_SOURCE_DIR}/tests/VariableTest.cpp
-    ${PROJECT_SOURCE_DIR}/tests/XmlBindingsSerialisationTest.cpp
-    ${HEADER_FILES}
-  )
-
-
-
-  # Standard linking to gtest stuff.
-  target_link_libraries(libcellmlTest gtest gtest_main)
-
-  # Extra linking for the project.
-  target_link_libraries(libcellmlTest Libcellml)
-
-  # test executable.
-  add_test(libcellmlTest libcellmlTest)
+  add_subdirectory(${PROJECT_SOURCE_DIR}/tests)
 endif()
+
