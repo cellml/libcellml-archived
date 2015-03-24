@@ -16,6 +16,6 @@ install:
   - .travis_scripts/cmake.sh
 
 script: 
-  - if [[ $TRAVIS_OS_NAME == 'osx'   ]]; then cmake -G "Unix Makefiles" -Dtest=true -DBOOST_ROOT:PATH="/usr/local/boost/" . && make && make test; fi
-  - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then cmake -G "Unix Makefiles" -Dtest=true -DBOOST_ROOT:PATH="boost_1_57_0"      . && make && make test; fi
+  - if [[ $TRAVIS_OS_NAME == 'osx'   ]]; then cmake -G "Unix Makefiles" -DTESTS=true -DBOOST_ROOT:PATH="/usr/local/boost/" . && make && make test; fi
+  - if [[ $TRAVIS_OS_NAME == 'linux' ]]; then cmake -G "Unix Makefiles" -DTESTS=true -DBOOST_ROOT:PATH="boost_1_57_0"      . && make && make test; fi
 
