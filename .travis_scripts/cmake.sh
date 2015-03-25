@@ -1,9 +1,9 @@
 #!/bin/bash
 
-wget http://www.cmake.org/files/v3.1/cmake-3.1.0.tar.gz
+wget http://www.cmake.org/files/v3.2/cmake-3.2.0.tar.gz
 
-tar xzf cmake-3.1.0.tar.gz
-cd cmake-3.1.0
+tar xzf cmake-3.2.0.tar.gz
+cd cmake-3.2.0
 cmake .
 ./configure
 make
