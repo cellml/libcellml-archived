@@ -7,7 +7,7 @@
 
 #include <boost/optional.hpp>
 
-#include "Model.h"
+#include "model.h"
 #include "Variable.h"
 #include "UnitsOwner.h"
 
