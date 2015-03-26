@@ -1,7 +1,7 @@
 #ifndef XMLSERIALISATION_H_
 #define XMLSERIALISATION_H_
 
-#include "Model.h"
+#include "model.h"
 
 #include <string>
 
