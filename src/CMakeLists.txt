@@ -97,5 +97,8 @@ install(FILES
 
 install(EXPORT libcellml-targets DESTINATION lib/cmake)
 
+if (MSVC)
+  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd /EHsc")
+endif()
 
 set_target_properties(cellml PROPERTIES CXX_STANDARD 11 CXX_STANDARD_REQUIRED ON)

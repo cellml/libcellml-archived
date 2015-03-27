@@ -46,4 +46,8 @@ target_link_libraries(libcellmlTest cellml)
 # test executable.
 add_test(libcellmlTest libcellmlTest)
 
+if (MSVC)
+  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd /EHsc")
+endif()
+
 set_target_properties(libcellmlTest PROPERTIES CXX_STANDARD 11 CXX_STANDARD_REQUIRED ON)
