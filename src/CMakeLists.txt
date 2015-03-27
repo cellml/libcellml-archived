@@ -22,10 +22,16 @@ configure_file (
 
 set(SOURCE_FILES
   ${CMAKE_CURRENT_SOURCE_DIR}/version.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/model.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/xml_serialisation.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/Cellml_1_2.cpp 
 )
 
 set(API_HEADER_FILES
   ${CMAKE_CURRENT_SOURCE_DIR}/api/libcellml/version.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/api/libcellml/model.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/api/libcellml/xml_serialisation.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/Cellml_1_2.h
   ${CELLML_EXPORT_H}
 )
 
@@ -36,6 +42,7 @@ set(HEADER_FILES
 include_directories(
   ${CMAKE_CURRENT_BINARY_DIR}/api
   ${CMAKE_CURRENT_SOURCE_DIR}/api
+  ${CMAKE_CURRENT_SOURCE_DIR}/../extdep/libxsd
   ${CMAKE_CURRENT_BINARY_DIR}
 )
 
@@ -48,6 +55,25 @@ add_library(cellml
   ${API_HEADER_FILES}
 )
 generate_export_header(cellml EXPORT_FILE_NAME ${CELLML_EXPORT_H} BASE_NAME LIBCELLML)
+
+set(XercesC_ROOT "${XercesC_ROOT}" CACHE PATH "Location of Xerces-C")
+set(BOOST_ROOT "${BOOST_ROOT}" CACHE PATH "Location of Boost")
+
+set(CMAKE_INCLUDE_PATH "${XercesC_ROOT}/include")
+set(CMAKE_LIBRARY_PATH "${XercesC_ROOT}/lib")
+find_package (XercesC)
+if (XercesC_FOUND)
+  include_directories(${XercesC_INCLUDE_DIR})
+  target_link_libraries (cellml ${XercesC_LIBRARY})
+endif (XercesC_FOUND)
+
+
+find_package (Boost)
+if (Boost_FOUND)
+  include_directories(${Boost_INCLUDE_DIRS})
+  target_link_libraries (cellml ${Boost_LIBRARIES})
+endif (Boost_FOUND)
+
 
 set_source_files_properties(${CELLML_EXPORT_H} PROPERTIES GENERATED TRUE)
 
@@ -71,3 +97,5 @@ install(FILES
 
 install(EXPORT libcellml-targets DESTINATION lib/cmake)
 
+
+set_target_properties(cellml PROPERTIES CXX_STANDARD 11 CXX_STANDARD_REQUIRED ON)

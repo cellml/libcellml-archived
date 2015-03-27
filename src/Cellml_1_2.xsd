@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:cellml="http://www.cellml.org/cellml/1.2#"
+        elementFormDefault="qualified"
+        targetNamespace="http://www.cellml.org/cellml/1.2#">
+
+  <element name="model" type="cellml:model">
+  </element>
+  <complexType name="model">
+    <anyAttribute namespace="##other" processContents="lax"/>
+  </complexType>
+
+</schema>
