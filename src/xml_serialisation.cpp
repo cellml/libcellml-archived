@@ -28,7 +28,7 @@ std::string createXml(const libcellml::Model& model) {
   cellml12::Model modelXml;
 
   std::ostringstream oss;
-  //cellml12::serializeModel(oss, modelXml);
+  cellml12::serializeModel(oss, modelXml);
   return oss.str();
 }
 
