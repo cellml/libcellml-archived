@@ -30,7 +30,7 @@ using namespace libcellml;
 TEST(XmlSerialisation, simpleXmlOutput) {
   shared_ptr<Model> m1 = make_shared<Model>();
 
-  auto xml = createXml(*m1);
+  const std::string& xml = createXml(*m1);
 
   string expectedXml{
 R"(<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
