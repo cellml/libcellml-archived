@@ -19,11 +19,13 @@ limitations under the License.Some license of other
 
 #include <string>
 
+#include "libcellml/libcellml_export.h"
+
 //! Everything in LibCellML is in this namespace.
 namespace libcellml {
 
 //! In-memory representation of a CellML model.
-class Model {
+class LIBCELLML_EXPORT Model {
  public:
   /**
    * Default constructor.

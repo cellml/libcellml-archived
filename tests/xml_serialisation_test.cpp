@@ -19,7 +19,6 @@ limitations under the License.Some license of other
 #include <string>
 
 #include "libcellml/model.h"
-
 #include "libcellml/xml_serialisation.h"
 
 #include "gtest/gtest.h"

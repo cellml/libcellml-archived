@@ -18,6 +18,7 @@ limitations under the License.Some license of other
 #define SRC_API_LIBCELLML_XML_SERIALISATION_H_
 
 #include "model.h"
+#include "libcellml/libcellml_export.h"
 
 #include <string>
 
@@ -28,7 +29,7 @@ namespace libcellml {
  \param model The model to be serialised.
  \return XML representation.
  */
-std::string createXml(const Model& model);
+std::string LIBCELLML_EXPORT createXml(const Model& model);
 
 }
 
