@@ -31,7 +31,7 @@ TEST(XmlSerialisation, simpleXmlOutput) {
 
   std::shared_ptr<Model> m1 = std::make_shared<Model>();
 
-  const std::string& xml = libcellml::createXml(*m1);
+  const string xml = libcellml::createXml(*m1);
 
   string expectedXml{
 R"(<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
