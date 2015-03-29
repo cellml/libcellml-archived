@@ -20,7 +20,7 @@ limitations under the License.Some license of other
 #include <strstream>
 #include <string>
 
-#include "Cellml_1_2.h"
+#include "cellml_1_2.h"
 
 namespace libcellml {
 

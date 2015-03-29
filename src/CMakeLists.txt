@@ -24,14 +24,14 @@ set(SOURCE_FILES
   ${CMAKE_CURRENT_SOURCE_DIR}/version.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/model.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/xml_serialisation.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/Cellml_1_2.cpp 
+  ${CMAKE_CURRENT_SOURCE_DIR}/cellml_1_2.cpp 
 )
 
 set(API_HEADER_FILES
   ${CMAKE_CURRENT_SOURCE_DIR}/api/libcellml/version.h
   ${CMAKE_CURRENT_SOURCE_DIR}/api/libcellml/model.h
   ${CMAKE_CURRENT_SOURCE_DIR}/api/libcellml/xml_serialisation.h
-  ${CMAKE_CURRENT_SOURCE_DIR}/Cellml_1_2.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/cellml_1_2.h
   ${CELLML_EXPORT_H}
 )
 
