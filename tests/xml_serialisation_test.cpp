@@ -16,6 +16,7 @@ limitations under the License.Some license of other
 
 #include <memory>
 #include <iostream>
+#include <string>
 
 #include "libcellml/model.h"
 
@@ -23,14 +24,14 @@ limitations under the License.Some license of other
 
 #include "gtest/gtest.h"
 
-using namespace std;
-using namespace libcellml;
-
 //! Test serialisation to XML of empty model.
 TEST(XmlSerialisation, simpleXmlOutput) {
-  shared_ptr<Model> m1 = make_shared<Model>();
+  using Model = libcellml::Model;
+  using string = std::string;
 
-  const std::string& xml = createXml(*m1);
+  std::shared_ptr<Model> m1 = std::make_shared<Model>();
+
+  const std::string& xml = libcellml::createXml(*m1);
 
   string expectedXml{
 R"(<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
@@ -39,8 +40,3 @@ R"(<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 
   ASSERT_EQ(expectedXml, xml);
 }
-
-
-
-
-
