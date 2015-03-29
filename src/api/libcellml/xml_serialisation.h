@@ -24,9 +24,9 @@ limitations under the License.Some license of other
 namespace libcellml {
 
 /**
- Serialise the Model
+ Serialise the Model.
  \param model The model to be serialised.
- \return XML representation
+ \return XML representation.
  */
 std::string createXml(const Model& model);
 

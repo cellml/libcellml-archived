@@ -22,11 +22,11 @@ limitations under the License.Some license of other
 //! Everything in LibCellML is in this namespace.
 namespace libcellml {
 
-//! In-memory representation of a CellML model
+//! In-memory representation of a CellML model.
 class Model {
  public:
   /**
-   * Default constructor
+   * Default constructor.
    */
   Model();
 };
