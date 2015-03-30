@@ -80,11 +80,6 @@ endif (Boost_FOUND)
 
 set_source_files_properties(${CELLML_EXPORT_H} PROPERTIES GENERATED TRUE)
 
-# To work around a bug conditionally set the CXX_STANDARD property
-if("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux")
-  set_target_properties(cellml PROPERTIES CXX_STANDARD 11 CXX_STANDARD_REQUIRED ON)
-endif()
-
 export(TARGETS cellml FILE libcellml-exports.cmake)
 
 install(TARGETS cellml EXPORT libcellml-targets
