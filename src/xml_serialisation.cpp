@@ -17,7 +17,7 @@ limitations under the License.Some license of other
 #include "libcellml/xml_serialisation.h"
 #include <memory>
 #include <iostream>
-#include <strstream>
+#include <sstream>
 #include <string>
 
 #include "cellml_1_2.h"
