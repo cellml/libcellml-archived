@@ -14,8 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.Some license of other
 */
 
-#ifndef SRC_API_LIBCELLML_MODEL_H_
-#define SRC_API_LIBCELLML_MODEL_H_
+#ifndef LIBCELLML_LIBCELLML_MODEL_H_
+#define LIBCELLML_LIBCELLML_MODEL_H_
 
 #include <string>
 
@@ -35,4 +35,4 @@ class LIBCELLML_EXPORT Model {
 
 }  // namespace libcellml
 
-#endif  // SRC_API_LIBCELLML_MODEL_H_
+#endif  // LIBCELLML_LIBCELLML_MODEL_H_

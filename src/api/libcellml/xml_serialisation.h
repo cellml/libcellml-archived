@@ -14,8 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.Some license of other
 */
 
-#ifndef SRC_API_LIBCELLML_XML_SERIALISATION_H_
-#define SRC_API_LIBCELLML_XML_SERIALISATION_H_
+#ifndef LIBCELLML_LIBCELLML_XML_SERIALISATION_H_
+#define LIBCELLML_LIBCELLML_XML_SERIALISATION_H_
 
 #include "model.h"
 #include "libcellml/libcellml_export.h"
@@ -33,4 +33,4 @@ std::string LIBCELLML_EXPORT createXml(const Model& model);
 
 }
 
-#endif  // SRC_API_LIBCELLML_XML_SERIALISATION_H_
+#endif  // LIBCELLML_LIBCELLML_XML_SERIALISATION_H_
