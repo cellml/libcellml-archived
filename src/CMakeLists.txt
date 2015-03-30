@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.cmake_minimum_required (VERSION 3.1)
 
+INCLUDE(${CMAKE_SOURCE_DIR}/cmake/common.cmake)
 
 set(CELLML_EXPORT_H "${CMAKE_CURRENT_BINARY_DIR}/api/libcellml/libcellml_export.h")
 set(LIBCELLML_CONFIG_H "${CMAKE_CURRENT_BINARY_DIR}/libcellml_config.h")
@@ -96,9 +97,5 @@ install(FILES
 )
 
 install(EXPORT libcellml-targets DESTINATION lib/cmake)
-
-if (MSVC)
-  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd /EHsc")
-endif()
 
 set_target_properties(cellml PROPERTIES CXX_STANDARD 11 CXX_STANDARD_REQUIRED ON)

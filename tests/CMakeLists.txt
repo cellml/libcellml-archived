@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.cmake_minimum_required (VERSION 3.1)
 
+INCLUDE(${CMAKE_SOURCE_DIR}/cmake/common.cmake)
+
 # This adds another subdirectory, which has 'project(gtest)'.
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/gtest-1.7.0)
 
@@ -45,9 +47,5 @@ target_link_libraries(libcellmlTest cellml)
 
 # test executable.
 add_test(libcellmlTest libcellmlTest)
-
-if (MSVC)
-  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd /EHsc")
-endif()
 
 set_target_properties(libcellmlTest PROPERTIES CXX_STANDARD 11 CXX_STANDARD_REQUIRED ON)
