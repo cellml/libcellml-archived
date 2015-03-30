@@ -13,7 +13,7 @@
 # limitations under the License.cmake_minimum_required (VERSION 3.1)
 
 
-cmake_minimum_required (VERSION 3.1) #NB: Actually v3.2 is required.
+cmake_minimum_required (VERSION 3.2)
 
 set(PROJECT_NAME libCellML)
 project(${PROJECT_NAME} CXX)
