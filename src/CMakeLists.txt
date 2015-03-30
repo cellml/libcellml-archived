@@ -14,6 +14,8 @@
 
 INCLUDE(${CMAKE_SOURCE_DIR}/cmake/common.cmake)
 
+INITIALISE_PROJECT()
+
 set(CELLML_EXPORT_H "${CMAKE_CURRENT_BINARY_DIR}/api/libcellml/libcellml_export.h")
 set(LIBCELLML_CONFIG_H "${CMAKE_CURRENT_BINARY_DIR}/libcellml_config.h")
 configure_file (

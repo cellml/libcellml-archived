@@ -14,6 +14,8 @@
 
 INCLUDE(${CMAKE_SOURCE_DIR}/cmake/common.cmake)
 
+INITIALISE_PROJECT()
+
 # This adds another subdirectory, which has 'project(gtest)'.
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/gtest-1.7.0)
 
