@@ -24,7 +24,7 @@ limitations under the License.Some license of other
 
 namespace libcellml {
 
-std::string createXml(const libcellml::Model& model) {
+std::string createXml(const libcellml::Model&) {
   cellml12::Model modelXml;
 
   std::ostringstream oss;
