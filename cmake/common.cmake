@@ -6,7 +6,7 @@ macro(SET_COMPILER_FLAGS)
       set(CMAKE_CXX_FLAGS "-Wall -W -Werror")
     endif()
   endif()
-  
+
   if (MSVC)
     set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd /EHsc")
   endif()
@@ -14,7 +14,7 @@ macro(SET_COMPILER_FLAGS)
 endmacro()
 
 macro(DISABLE_TREATING_WARNINGS_AS_ERRORS)
-  if(WIN32)
+  if(MSVC)
     string(REPLACE "/W3 /WX" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
   else()
     string(REPLACE "-Wall -W -Werror" "-w" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
