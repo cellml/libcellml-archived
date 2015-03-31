@@ -12,3 +12,11 @@ macro(SET_COMPILER_FLAGS)
   endif()
 
 endmacro()
+
+macro(DISABLE_TREATING_WARNINGS_AS_ERRORS)
+  if(WIN32)
+    string(REPLACE "/W3 /WX" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+  else()
+    string(REPLACE "-Wall -W -Werror" "-w" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+  endif()
+endmacro()
