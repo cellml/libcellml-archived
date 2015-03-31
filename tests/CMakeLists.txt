@@ -12,8 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.cmake_minimum_required (VERSION 3.1)
 
-set_compiler_flags()
-
 # This adds another subdirectory, which has 'project(gtest)'.
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/gtest-1.7.0)
 
@@ -40,7 +38,9 @@ if (Boost_FOUND)
   target_link_libraries(libcellmlTest ${Boost_LIBRARIES})
 endif (Boost_FOUND)
 
-
+if(LIBCELLML_WARNINGS_TREATED_AS_ERRORS)
+  target_warnings_as_errors(libcellmlTest)
+endif()
 
 # Extra linking for the project.
 target_link_libraries(libcellmlTest cellml)
