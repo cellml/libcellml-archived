@@ -12,13 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.cmake_minimum_required (VERSION 3.1)
 
-INCLUDE(${CMAKE_MODULE_PATH}/common.cmake)
-
-SET_COMPILER_FLAGS()
+set_compiler_flags()
 
 set(CELLML_EXPORT_H "${CMAKE_CURRENT_BINARY_DIR}/api/libcellml/libcellml_export.h")
 set(LIBCELLML_CONFIG_H "${CMAKE_CURRENT_BINARY_DIR}/libcellml_config.h")
-configure_file (
+configure_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/libcellml_config.h.in"
   ${LIBCELLML_CONFIG_H}
 )
@@ -27,7 +25,7 @@ set(SOURCE_FILES
   ${CMAKE_CURRENT_SOURCE_DIR}/version.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/model.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/xml_serialisation.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/cellml_1_2.cpp 
+  ${CMAKE_CURRENT_SOURCE_DIR}/cellml_1_2.cpp
 )
 
 set(API_HEADER_FILES
@@ -66,14 +64,14 @@ set(CMAKE_INCLUDE_PATH "${XercesC_ROOT}/include")
 set(CMAKE_LIBRARY_PATH "${XercesC_ROOT}/lib")
 find_package (XercesC)
 if (XercesC_FOUND)
-  include_directories(${XercesC_INCLUDE_DIR})
+  target_include_directories(cellml PRIVATE ${XercesC_INCLUDE_DIR})
   target_link_libraries (cellml ${XercesC_LIBRARY})
 endif (XercesC_FOUND)
 
 
 find_package (Boost)
 if (Boost_FOUND)
-  include_directories(${Boost_INCLUDE_DIRS})
+  target_include_directories(cellml PRIVATE ${Boost_INCLUDE_DIRS})
   target_link_libraries (cellml ${Boost_LIBRARIES})
 endif (Boost_FOUND)
 

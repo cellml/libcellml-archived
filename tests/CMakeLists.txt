@@ -12,9 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.cmake_minimum_required (VERSION 3.1)
 
-INCLUDE(${CMAKE_MODULE_PATH}/common.cmake)
-
-SET_COMPILER_FLAGS()
+set_compiler_flags()
 
 # This adds another subdirectory, which has 'project(gtest)'.
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/gtest-1.7.0)
@@ -38,8 +36,8 @@ target_link_libraries(libcellmlTest gtest gtest_main)
 
 find_package (Boost)
 if (Boost_FOUND)
-  include_directories(${Boost_INCLUDE_DIRS})
-  target_link_libraries (libcellmlTest ${Boost_LIBRARIES})
+  target_include_directories(libcellmlTest PRIVATE ${Boost_INCLUDE_DIRS})
+  target_link_libraries(libcellmlTest ${Boost_LIBRARIES})
 endif (Boost_FOUND)
 
 
