@@ -18,6 +18,8 @@ cmake_minimum_required (VERSION 3.2)
 set(PROJECT_NAME libCellML)
 project(${PROJECT_NAME} CXX)
 
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake/")
+
 # Use the following variables when configuring the build from the command line to
 # set the corresponding cache variables.
 # TESTS ==> LIBCELLML_TESTS
