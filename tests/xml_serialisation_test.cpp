@@ -24,17 +24,35 @@ limitations under the License.Some license of other
 #include "gtest/gtest.h"
 
 //! Test serialisation to XML of empty model.
-TEST(XmlSerialisation, simpleXmlOutput) {
+TEST(XmlSerialisation, EmptyNamelessModel) {
   using Model = libcellml::Model;
   using string = std::string;
 
-  std::shared_ptr<Model> m1 = std::make_shared<Model>();
+  Model m1;
 
-  const string xml = libcellml::createXml(*m1);
+  const string xml = libcellml::createXml(m1);
 
   string expectedXml{
 R"(<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <p1:model xmlns:p1="http://www.cellml.org/cellml/1.2#"/>
+)"};
+
+  ASSERT_EQ(expectedXml, xml);
+}
+
+//! Test serialisation to XML of model with a valid name (though no validation is actually done).
+TEST(XmlSerialisation, EmptyValidlyNamedModel) {
+  using Model = libcellml::Model;
+  using string = std::string;
+
+  boost::optional<std::wstring> modelName{L"testModel"};
+  Model m1{modelName};
+
+  const string xml = libcellml::createXml(m1);
+
+  string expectedXml{
+R"(<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<p1:model xmlns:p1="http://www.cellml.org/cellml/1.2#" name="testModel"/>
 )"};
 
   ASSERT_EQ(expectedXml, xml);

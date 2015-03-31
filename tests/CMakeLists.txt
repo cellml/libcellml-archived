@@ -26,6 +26,7 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR} "${PROJECT_S
 add_executable (libcellmlTest
   ${CMAKE_CURRENT_SOURCE_DIR}/version_test.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/xml_serialisation_test.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/model_test.cpp
   ${HEADER_FILES}
 )
 

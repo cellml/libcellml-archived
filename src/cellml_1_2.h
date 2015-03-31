@@ -30,7 +30,6 @@
 // the Free/Libre and Open Source Software (FLOSS) which is described
 // in the accompanying FLOSSE file.
 //
-
 /**
  * @file
  * @brief Generated from cellml_1_2.xsd.
@@ -617,6 +616,7 @@ namespace xml_schema
 namespace cellml12
 {
   class Model;
+  class CellMLIdentifier;
 }
 
 
@@ -646,6 +646,82 @@ namespace cellml12
   class Model: public ::xml_schema::Type
   {
     public:
+    /**
+     * @name name
+     *
+     * @brief Accessor and modifier functions for the %name
+     * optional attribute.
+     */
+    //@{
+
+    /**
+     * @brief Attribute type.
+     */
+    typedef ::cellml12::CellMLIdentifier NameType;
+
+    /**
+     * @brief Attribute optional container type.
+     */
+    typedef ::xsd::cxx::tree::optional< NameType > NameOptional;
+
+    /**
+     * @brief Attribute traits type.
+     */
+    typedef ::xsd::cxx::tree::traits< NameType, wchar_t > NameTraits;
+
+    /**
+     * @brief Return a read-only (constant) reference to the attribute
+     * container.
+     *
+     * @return A constant reference to the optional container.
+     */
+    const NameOptional&
+    getName () const;
+
+    /**
+     * @brief Return a read-write reference to the attribute container.
+     *
+     * @return A reference to the optional container.
+     */
+    NameOptional&
+    getName ();
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x A new value to set.
+     *
+     * This function makes a copy of its argument and sets it as
+     * the new value of the attribute.
+     */
+    void
+    setName (const NameType& x);
+
+    /**
+     * @brief Set the attribute value.
+     *
+     * @param x An optional container with the new value to set.
+     *
+     * If the value is present in @a x then this function makes a copy 
+     * of this value and sets it as the new value of the attribute.
+     * Otherwise the attribute container is set the 'not present' state.
+     */
+    void
+    setName (const NameOptional& x);
+
+    /**
+     * @brief Set the attribute value without copying.
+     *
+     * @param p A new value to use.
+     *
+     * This function will try to use the passed value directly instead
+     * of making a copy.
+     */
+    void
+    setName (::std::unique_ptr< NameType > p);
+
+    //@}
+
     /**
      * @name Constructors
      */
@@ -697,6 +773,17 @@ namespace cellml12
     _clone (::xml_schema::Flags f = 0,
             ::xml_schema::Container* c = 0) const;
 
+    /**
+     * @brief Copy assignment operator.
+     *
+     * @param x An instance to make a copy of.
+     * @return A reference to itself.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    Model&
+    operator= (const Model& x);
+
     //@}
 
     /**
@@ -704,6 +791,133 @@ namespace cellml12
      */
     virtual 
     ~Model ();
+
+    // Implementation.
+    //
+
+    //@cond
+
+    protected:
+    void
+    parse (::xsd::cxx::xml::dom::parser< wchar_t >&,
+           ::xml_schema::Flags);
+
+    protected:
+    NameOptional name_;
+
+    //@endcond
+  };
+
+  /**
+   * @brief Class corresponding to the %cellMLIdentifier schema type.
+   *
+   * @nosubgrouping
+   */
+  class CellMLIdentifier: public ::xml_schema::String
+  {
+    public:
+    /**
+     * @name Constructors
+     */
+    //@{
+
+    /**
+     * @brief Create an instance from initializers for required 
+     * elements and attributes.
+     */
+    CellMLIdentifier ();
+
+    /**
+     * @brief Create an instance from a C string and initializers
+     * for required elements and attributes.
+     */
+    CellMLIdentifier (const wchar_t*);
+
+    /**
+     * @brief Create an instance from a string andinitializers
+     * for required elements and attributes.
+     */
+    CellMLIdentifier (const ::std::wstring&);
+
+    /**
+     * @brief Create an instance from the ultimate base and
+     * initializers for required elements and attributes.
+     */
+    CellMLIdentifier (const ::xml_schema::String&);
+
+    /**
+     * @brief Create an instance from a DOM element.
+     *
+     * @param e A DOM element to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    CellMLIdentifier (const ::xercesc::DOMElement& e,
+                      ::xml_schema::Flags f = 0,
+                      ::xml_schema::Container* c = 0);
+
+    /**
+     * @brief Create an instance from a DOM attribute.
+     *
+     * @param a A DOM attribute to extract the data from.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    CellMLIdentifier (const ::xercesc::DOMAttr& a,
+                      ::xml_schema::Flags f = 0,
+                      ::xml_schema::Container* c = 0);
+
+    /**
+     * @brief Create an instance from a string fragment.
+     *
+     * @param s A string fragment to extract the data from.
+     * @param e A pointer to DOM element containing the string fragment.
+     * @param f Flags to create the new instance with.
+     * @param c A pointer to the object that will contain the new
+     * instance.
+     */
+    CellMLIdentifier (const ::std::wstring& s,
+                      const ::xercesc::DOMElement* e,
+                      ::xml_schema::Flags f = 0,
+                      ::xml_schema::Container* c = 0);
+
+    /**
+     * @brief Copy constructor.
+     *
+     * @param x An instance to make a copy of.
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     *
+     * For polymorphic object models use the @c _clone function instead.
+     */
+    CellMLIdentifier (const CellMLIdentifier& x,
+                      ::xml_schema::Flags f = 0,
+                      ::xml_schema::Container* c = 0);
+
+    /**
+     * @brief Copy the instance polymorphically.
+     *
+     * @param f Flags to create the copy with.
+     * @param c A pointer to the object that will contain the copy.
+     * @return A pointer to the dynamically allocated copy.
+     *
+     * This function ensures that the dynamic type of the instance is
+     * used for copying and should be used for polymorphic object
+     * models instead of the copy constructor.
+     */
+    virtual CellMLIdentifier*
+    _clone (::xml_schema::Flags f = 0,
+            ::xml_schema::Container* c = 0) const;
+
+    //@}
+
+    /**
+     * @brief Destructor.
+     */
+    virtual 
+    ~CellMLIdentifier ();
   };
 }
 
@@ -1140,6 +1354,16 @@ namespace cellml12
 
   void
   operator<< (::xercesc::DOMElement&, const Model&);
+
+  void
+  operator<< (::xercesc::DOMElement&, const CellMLIdentifier&);
+
+  void
+  operator<< (::xercesc::DOMAttr&, const CellMLIdentifier&);
+
+  void
+  operator<< (::xml_schema::ListStream&,
+              const CellMLIdentifier&);
 }
 
 #include <xsd/cxx/post.hxx>

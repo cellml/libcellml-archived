@@ -36,13 +36,48 @@
 //
 // End prologue.
 
+#include "cellml_1_2.h"
+
 #include <xsd/cxx/pre.hxx>
 
-#include "cellml_1_2.h"
 
 namespace cellml12
 {
   // Model
+  // 
+
+  const Model::NameOptional& Model::
+  getName () const
+  {
+    return this->name_;
+  }
+
+  Model::NameOptional& Model::
+  getName ()
+  {
+    return this->name_;
+  }
+
+  void Model::
+  setName (const NameType& x)
+  {
+    this->name_.set (x);
+  }
+
+  void Model::
+  setName (const NameOptional& x)
+  {
+    this->name_ = x;
+  }
+
+  void Model::
+  setName (::std::unique_ptr< NameType > x)
+  {
+    this->name_.set (std::move (x));
+  }
+
+
+  // CellMLIdentifier
   // 
 }
 
@@ -55,7 +90,8 @@ namespace cellml12
 
   Model::
   Model ()
-  : ::xml_schema::Type ()
+  : ::xml_schema::Type (),
+    name_ (this)
   {
   }
 
@@ -63,7 +99,8 @@ namespace cellml12
   Model (const Model& x,
          ::xml_schema::Flags f,
          ::xml_schema::Container* c)
-  : ::xml_schema::Type (x, f, c)
+  : ::xml_schema::Type (x, f, c),
+    name_ (x.name_, f, this)
   {
   }
 
@@ -71,8 +108,32 @@ namespace cellml12
   Model (const ::xercesc::DOMElement& e,
          ::xml_schema::Flags f,
          ::xml_schema::Container* c)
-  : ::xml_schema::Type (e, f, c)
+  : ::xml_schema::Type (e, f | ::xml_schema::Flags::base, c),
+    name_ (this)
   {
+    if ((f & ::xml_schema::Flags::base) == 0)
+    {
+      ::xsd::cxx::xml::dom::parser< wchar_t > p (e, false, false, true);
+      this->parse (p, f);
+    }
+  }
+
+  void Model::
+  parse (::xsd::cxx::xml::dom::parser< wchar_t >& p,
+         ::xml_schema::Flags f)
+  {
+    while (p.more_attributes ())
+    {
+      const ::xercesc::DOMAttr& i (p.next_attribute ());
+      const ::xsd::cxx::xml::qualified_name< wchar_t > n (
+        ::xsd::cxx::xml::dom::name< wchar_t > (i));
+
+      if (n.name () == L"name" && n.namespace_ ().empty ())
+      {
+        this->name_.set (NameTraits::create (i, f, this));
+        continue;
+      }
+    }
   }
 
   Model* Model::
@@ -82,8 +143,92 @@ namespace cellml12
     return new class Model (*this, f, c);
   }
 
+  Model& Model::
+  operator= (const Model& x)
+  {
+    if (this != &x)
+    {
+      static_cast< ::xml_schema::Type& > (*this) = x;
+      this->name_ = x.name_;
+    }
+
+    return *this;
+  }
+
   Model::
   ~Model ()
+  {
+  }
+
+  // CellMLIdentifier
+  //
+
+  CellMLIdentifier::
+  CellMLIdentifier ()
+  : ::xml_schema::String ()
+  {
+  }
+
+  CellMLIdentifier::
+  CellMLIdentifier (const wchar_t* _xsd_String_base)
+  : ::xml_schema::String (_xsd_String_base)
+  {
+  }
+
+  CellMLIdentifier::
+  CellMLIdentifier (const ::std::wstring& _xsd_String_base)
+  : ::xml_schema::String (_xsd_String_base)
+  {
+  }
+
+  CellMLIdentifier::
+  CellMLIdentifier (const ::xml_schema::String& _xsd_String_base)
+  : ::xml_schema::String (_xsd_String_base)
+  {
+  }
+
+  CellMLIdentifier::
+  CellMLIdentifier (const CellMLIdentifier& x,
+                    ::xml_schema::Flags f,
+                    ::xml_schema::Container* c)
+  : ::xml_schema::String (x, f, c)
+  {
+  }
+
+  CellMLIdentifier::
+  CellMLIdentifier (const ::xercesc::DOMElement& e,
+                    ::xml_schema::Flags f,
+                    ::xml_schema::Container* c)
+  : ::xml_schema::String (e, f, c)
+  {
+  }
+
+  CellMLIdentifier::
+  CellMLIdentifier (const ::xercesc::DOMAttr& a,
+                    ::xml_schema::Flags f,
+                    ::xml_schema::Container* c)
+  : ::xml_schema::String (a, f, c)
+  {
+  }
+
+  CellMLIdentifier::
+  CellMLIdentifier (const ::std::wstring& s,
+                    const ::xercesc::DOMElement* e,
+                    ::xml_schema::Flags f,
+                    ::xml_schema::Container* c)
+  : ::xml_schema::String (s, e, f, c)
+  {
+  }
+
+  CellMLIdentifier* CellMLIdentifier::
+  _clone (::xml_schema::Flags f,
+          ::xml_schema::Container* c) const
+  {
+    return new class CellMLIdentifier (*this, f, c);
+  }
+
+  CellMLIdentifier::
+  ~CellMLIdentifier ()
   {
   }
 }
@@ -519,6 +664,37 @@ namespace cellml12
   operator<< (::xercesc::DOMElement& e, const Model& i)
   {
     e << static_cast< const ::xml_schema::Type& > (i);
+
+    // name
+    //
+    if (i.getName ())
+    {
+      ::xercesc::DOMAttr& a (
+        ::xsd::cxx::xml::dom::create_attribute (
+          L"name",
+          e));
+
+      a << *i.getName ();
+    }
+  }
+
+  void
+  operator<< (::xercesc::DOMElement& e, const CellMLIdentifier& i)
+  {
+    e << static_cast< const ::xml_schema::String& > (i);
+  }
+
+  void
+  operator<< (::xercesc::DOMAttr& a, const CellMLIdentifier& i)
+  {
+    a << static_cast< const ::xml_schema::String& > (i);
+  }
+
+  void
+  operator<< (::xml_schema::ListStream& l,
+              const CellMLIdentifier& i)
+  {
+    l << static_cast< const ::xml_schema::String& > (i);
   }
 }
 

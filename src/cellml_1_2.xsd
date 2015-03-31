@@ -6,8 +6,16 @@
 
   <element name="model" type="cellml:model">
   </element>
+  
   <complexType name="model">
+    <attribute name="name" type="cellml:cellMLIdentifier" />
     <anyAttribute namespace="##other" processContents="lax"/>
   </complexType>
+
+  <simpleType name="cellMLIdentifier">
+    <restriction base="string">
+      <pattern value="[a-z|A-Z|_]*[a-z|A-Z][a-z|A-Z|0-9|_]*"/>
+    </restriction>
+  </simpleType>
 
 </schema>

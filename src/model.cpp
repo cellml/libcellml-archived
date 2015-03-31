@@ -16,5 +16,11 @@ limitations under the License.Some license of other
 
 #include "libcellml/model.h"
 
+#include <boost/optional.hpp>
+
 libcellml::Model::Model() {}
 
+libcellml::Model::Model(const boost::optional<std::wstring> name)
+:
+  name_(name)
+{}
