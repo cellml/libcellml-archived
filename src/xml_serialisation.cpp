@@ -24,8 +24,9 @@ limitations under the License.Some license of other
 
 namespace libcellml {
 
-std::string createXml(const libcellml::Model&) {
+std::string createXml(const libcellml::Model& model) {
   cellml12::Model modelXml;
+  if (model.getName()) modelXml.setName(*model.getName());
 
   std::ostringstream oss;
   cellml12::serializeModel(oss, modelXml);
