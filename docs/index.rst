@@ -16,6 +16,7 @@ Contents:
    roadmap
    usecases
    developmentProcess/index
+   glossary
 
 
 Indices and tables
