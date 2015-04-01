@@ -18,6 +18,7 @@ limitations under the License.Some license of other
 #define LIBCELLML_LIBCELLML_MODEL_H_
 
 #include <string>
+#include <boost/optional.hpp>
 
 #include "libcellml/libcellml_export.h"
 
@@ -26,11 +27,28 @@ namespace libcellml {
 
 //! In-memory representation of a CellML model.
 class LIBCELLML_EXPORT Model {
+  //! Model name
+  boost::optional<std::wstring> name_;
+
  public:
   /**
    * Default constructor.
    */
   Model();
+
+  /**
+   * Constructor
+   * \param name The model name
+   */
+  Model(const boost::optional<std::wstring> name);
+
+  /** Model name attribute
+   * \return Model name
+   */
+  boost::optional< std::wstring> getName() const {
+    return name_;
+  }
+
 };
 
 }  // namespace libcellml
