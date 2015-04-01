@@ -19,7 +19,7 @@ Before you begin you will need to have a few prerequisites satisfied:
 This document doesn't cover the process of satisfying these prerequisites in any further detail.  The remainder of this document assumes that these prerequisites have been met.
 
 The goal here is to get a working copy of the project's files (i.e. source code, tests, and documentation, etc.) onto your
- computer so that you can begin working.  Firstly, you need to fork the prime libCellML repository, make a clone onto your
+ computer so that you can begin working.  Firstly, you need to fork the :term:`prime libCellML repository`, make a clone onto your
  computer, and set up the Git remotes.  :numref:`Figure %s <libcellml-github-figure>` shows some of these setup actions and the
  resulting setup.  It also shows the information flow for making contributions (steps 1 to 4).
 
@@ -65,7 +65,7 @@ Now clone the repository. If using git from the command line on a Unix-like syst
 Set Git remotes
 ===============
 
-You now need to setup a read-only remote connection to the prime repository. To do this from the command line::
+You now need to setup a read-only remote connection to the :term:`prime repository`. To do this from the command line::
 
   cd libcellml
   git remote add prime https://github.com/cellml/libcellml

@@ -15,8 +15,8 @@ Contents:
 
    roadmap
    usecases
-   developmentProcess/libcellml-development-contribution
-   developmentProcess/libcellml-development-setup
+   developmentProcess/index
+   glossary
 
 
 Indices and tables
