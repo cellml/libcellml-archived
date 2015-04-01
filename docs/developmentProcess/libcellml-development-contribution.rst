@@ -30,7 +30,10 @@ Pull Request Collaboration
 
 Pull the latest changes from the develop branch.  Create a branch with a name that briefly describes the work, based off the head of develop. This will be referred to as the topic branch.
 
-For code changes, an automated test should be the first code written and committed.  
+For code changes, an automated test should be the first code written and committed.
+Since it is expected that the test should compile and run, then, if this requires that the interface to the implementation is coded,
+this must be done too, and included in the commit.  One of the reasons requiring that a failing test
+is committed first is that it validates the test, since the test then only passes when the implementation is completed.  
 
 After the first commit, push to GitHub so that your work can be shared with others.
 
