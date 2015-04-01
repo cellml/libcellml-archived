@@ -14,24 +14,43 @@ See the License for the specific language governing permissions and
 limitations under the License.Some license of other
 */
 
-#ifndef LIBCELLML_LIBCELLML_VERSION_H_
-#define LIBCELLML_LIBCELLML_VERSION_H_
+#ifndef LIBCELLML_LIBCELLML_MODEL_H_
+#define LIBCELLML_LIBCELLML_MODEL_H_
 
 #include <string>
+#include <boost/optional.hpp>
 
 #include "libcellml/libcellml_export.h"
 
 //! Everything in LibCellML is in this namespace.
 namespace libcellml {
 
-/**
- * Get the version string.
- * The version string is in the format x.y.z, where the "."s are literal, and x,y and z represent counting numbers,
- * in which case x is the major version, y the minor version, and z the patch level.
- *  @return a string to represent the version.
- */
-LIBCELLML_EXPORT const std::string getVersion();
+//! In-memory representation of a CellML model.
+class LIBCELLML_EXPORT Model {
+  //! Model name
+  boost::optional<std::wstring> name_;
+
+ public:
+  /**
+   * Default constructor.
+   */
+  Model();
+
+  /**
+   * Constructor
+   * \param name The model name
+   */
+  Model(const boost::optional<std::wstring> name);
+
+  /** Model name attribute
+   * \return Model name
+   */
+  boost::optional< std::wstring> getName() const {
+    return name_;
+  }
+
+};
 
 }  // namespace libcellml
 
-#endif  // LIBCELLML_LIBCELLML_VERSION_H_
+#endif  // LIBCELLML_LIBCELLML_MODEL_H_

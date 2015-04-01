@@ -14,15 +14,13 @@ See the License for the specific language governing permissions and
 limitations under the License.Some license of other
 */
 
-#include <iostream>
-#include "libcellml/version.h"
+#include "libcellml/model.h"
 
-#include "gtest/gtest.h"
+#include <boost/optional.hpp>
 
-//! Test version number is as expected.
-TEST(Version, Version) {
-  auto ver = libcellml::getVersion();
-    EXPECT_EQ("0.1.0", ver);
-}
+libcellml::Model::Model() {}
 
-
+libcellml::Model::Model(const boost::optional<std::wstring> name)
+:
+  name_(name)
+{}
