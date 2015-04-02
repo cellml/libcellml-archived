@@ -21,7 +21,7 @@ add_executable (libcellmlTest
   ${HEADER_FILES}
 )
 
-# Standard linking to gtest stuff.
+# Linking to required libraries.
 target_link_libraries(libcellmlTest gtest_main cellml)
 
 find_package (Boost)
