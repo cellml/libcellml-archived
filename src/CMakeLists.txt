@@ -30,11 +30,11 @@ set(API_HEADER_FILES
   ${CMAKE_CURRENT_SOURCE_DIR}/api/libcellml/version.h
   ${CMAKE_CURRENT_SOURCE_DIR}/api/libcellml/model.h
   ${CMAKE_CURRENT_SOURCE_DIR}/api/libcellml/xml_serialisation.h
-  ${CMAKE_CURRENT_SOURCE_DIR}/cellml_1_2.h
   ${CELLML_EXPORT_H}
 )
 
 set(HEADER_FILES
+  ${CMAKE_CURRENT_SOURCE_DIR}/cellml_1_2.h
   ${LIBCELLML_CONFIG_H}
 )
 
