@@ -21,7 +21,7 @@ add_executable (libcellmlTest
   ${HEADER_FILES}
 )
 
-# Add requrired include directories from gtest
+# Add required include directories from gtest
 target_include_directories(libcellmlTest PRIVATE ${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 # Linking to required libraries.
