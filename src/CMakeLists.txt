@@ -23,7 +23,7 @@ set(SOURCE_FILES
   ${CMAKE_CURRENT_SOURCE_DIR}/version.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/model.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/xml_serialisation.cpp
-  ${CMAKE_CURRENT_SOURCE_DIR}/cellml_1_2.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/generated/cellml_1_2.cpp
 )
 
 set(API_HEADER_FILES
@@ -34,7 +34,7 @@ set(API_HEADER_FILES
 )
 
 set(HEADER_FILES
-  ${CMAKE_CURRENT_SOURCE_DIR}/cellml_1_2.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/generated/cellml_1_2.h
   ${LIBCELLML_CONFIG_H}
 )
 
@@ -50,6 +50,7 @@ add_library(cellml
 target_include_directories(cellml PRIVATE
   ${CMAKE_CURRENT_BINARY_DIR}/api
   ${CMAKE_CURRENT_SOURCE_DIR}/api
+  ${CMAKE_CURRENT_SOURCE_DIR}/generated
   ${CMAKE_CURRENT_SOURCE_DIR}/../extdep/libxsd
   ${CMAKE_CURRENT_BINARY_DIR}
 )
