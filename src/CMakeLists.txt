@@ -91,7 +91,7 @@ install(TARGETS cellml EXPORT libcellml-targets
 
 install(FILES
   ${API_HEADER_FILES}
-  DESTINATION ${CMAKE_INSTALL_PREFIX}/include/libcellml
+  DESTINATION include/libcellml
 )
 
 install(EXPORT libcellml-targets DESTINATION lib/cmake)
