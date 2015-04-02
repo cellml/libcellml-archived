@@ -22,7 +22,7 @@ add_executable (libcellmlTest
 )
 
 # Standard linking to gtest stuff.
-target_link_libraries(libcellmlTest gtest gtest_main cellml)
+target_link_libraries(libcellmlTest gtest_main cellml)
 
 find_package (Boost)
 if (Boost_FOUND)
