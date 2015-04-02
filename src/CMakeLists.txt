@@ -47,9 +47,12 @@ add_library(cellml
   ${API_HEADER_FILES}
 )
 
-target_include_directories(cellml PRIVATE
-  ${CMAKE_CURRENT_BINARY_DIR}/api
-  ${CMAKE_CURRENT_SOURCE_DIR}/api
+target_include_directories(cellml
+  PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/api>
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/api>
+  $<INSTALL_INTERFACE:include/>
+  PRIVATE
   ${CMAKE_CURRENT_SOURCE_DIR}/../extdep/libxsd
   ${CMAKE_CURRENT_BINARY_DIR}
 )

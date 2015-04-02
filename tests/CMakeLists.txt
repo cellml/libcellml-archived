@@ -15,22 +15,14 @@
 # This adds another subdirectory, which has 'project(gtest)'.
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/gtest-1.7.0)
 
-# Include the gtest library. gtest_SOURCE_DIR is available due to
-# 'project(gtest)' above.
-include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR} "${PROJECT_SOURCE_DIR}/src/api"  "${PROJECT_BINARY_DIR}/src/api")
-
 add_executable (libcellmlTest
   ${CMAKE_CURRENT_SOURCE_DIR}/version_test.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/xml_serialisation_test.cpp
   ${HEADER_FILES}
 )
 
-include_directories(
-  ${CMAKE_CURRENT_SOURCE_DIR}/extdep/libxsd
-)
-
 # Standard linking to gtest stuff.
-target_link_libraries(libcellmlTest gtest gtest_main)
+target_link_libraries(libcellmlTest gtest gtest_main cellml)
 
 find_package (Boost)
 if (Boost_FOUND)
@@ -41,9 +33,6 @@ endif (Boost_FOUND)
 if(LIBCELLML_WARNINGS_TREATED_AS_ERRORS)
   target_warnings_as_errors(libcellmlTest)
 endif()
-
-# Extra linking for the project.
-target_link_libraries(libcellmlTest cellml)
 
 # test executable.
 add_test(libcellmlTest libcellmlTest)
