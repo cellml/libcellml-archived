@@ -22,7 +22,5 @@ limitations under the License.Some license of other
 //! Test version number is as expected.
 TEST(Version, Version) {
   auto ver = libcellml::getVersion();
-    EXPECT_EQ("0.1.0", ver);
+  EXPECT_EQ("0.1.0", ver);
 }
-
-

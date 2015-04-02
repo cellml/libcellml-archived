@@ -14,6 +14,7 @@
 
 function(TARGET_WARNINGS_AS_ERRORS _TARGET)
   set(_COMPILER_WAE)
+  
   set(_GNU_FLAGS_COMPILER_COMPAT "GNU" "AppleClang" "Clang")
   list(FIND _GNU_FLAGS_COMPILER_COMPAT "${CMAKE_CXX_COMPILER_ID}" _INDEX)
   if(${_INDEX} GREATER -1)
@@ -21,6 +22,8 @@ function(TARGET_WARNINGS_AS_ERRORS _TARGET)
   elseif("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
     set(_COMPILER_WAE /W3)
   endif()
+
+
   if(_COMPILER_WAE)
     target_compile_options(${_TARGET} PRIVATE ${_COMPILER_WAE})
   endif()
