@@ -14,13 +14,28 @@ See the License for the specific language governing permissions and
 limitations under the License.Some license of other
 */
 
+#include <memory>
 #include <iostream>
-#include "libcellml/version.h"
+#include <string>
+
+#include "libcellml/model.h"
+#include "libcellml/xml_serialisation.h"
 
 #include "gtest/gtest.h"
 
-//! Test version number is as expected.
-TEST(Version, Version) {
-  auto ver = libcellml::getVersion();
-  EXPECT_EQ("0.1.0", ver);
+//! Test serialisation to XML of empty model.
+TEST(XmlSerialisation, simpleXmlOutput) {
+  using Model = libcellml::Model;
+  using string = std::string;
+
+  std::shared_ptr<Model> m1 = std::make_shared<Model>();
+
+  const string xml = libcellml::createXml(*m1);
+
+  string expectedXml{
+R"(<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<p1:model xmlns:p1="http://www.cellml.org/cellml/1.2#"/>
+)"};
+
+  ASSERT_EQ(expectedXml, xml);
 }

@@ -14,13 +14,23 @@ See the License for the specific language governing permissions and
 limitations under the License.Some license of other
 */
 
-#include <iostream>
-#include "libcellml/version.h"
+#ifndef LIBCELLML_LIBCELLML_XML_SERIALISATION_H_
+#define LIBCELLML_LIBCELLML_XML_SERIALISATION_H_
 
-#include "gtest/gtest.h"
+#include "model.h"
+#include "libcellml/libcellml_export.h"
 
-//! Test version number is as expected.
-TEST(Version, Version) {
-  auto ver = libcellml::getVersion();
-  EXPECT_EQ("0.1.0", ver);
+#include <string>
+
+namespace libcellml {
+
+/**
+ Serialise the Model.
+ \param model The model to be serialised.
+ \return XML representation.
+ */
+std::string LIBCELLML_EXPORT createXml(const Model& model);
+
 }
+
+#endif  // LIBCELLML_LIBCELLML_XML_SERIALISATION_H_

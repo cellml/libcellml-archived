@@ -10,3 +10,4 @@ build/
 # Qt Creator generated files
 CMakeLists.txt.user
 
+html

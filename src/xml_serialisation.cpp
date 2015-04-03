@@ -14,13 +14,22 @@ See the License for the specific language governing permissions and
 limitations under the License.Some license of other
 */
 
+#include "libcellml/xml_serialisation.h"
+#include <memory>
 #include <iostream>
-#include "libcellml/version.h"
+#include <sstream>
+#include <string>
 
-#include "gtest/gtest.h"
+#include "generated/cellml_1_2.h"
 
-//! Test version number is as expected.
-TEST(Version, Version) {
-  auto ver = libcellml::getVersion();
-  EXPECT_EQ("0.1.0", ver);
+namespace libcellml {
+
+std::string createXml(const libcellml::Model&) {
+  cellml12::Model modelXml;
+
+  std::ostringstream oss;
+  cellml12::serializeModel(oss, modelXml);
+  return oss.str();
 }
+
+}  // namespace libcellml

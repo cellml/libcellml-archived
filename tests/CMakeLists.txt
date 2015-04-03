@@ -15,26 +15,29 @@
 # This adds another subdirectory, which has 'project(gtest)'.
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/gtest-1.7.0)
 
-# Include the gtest library. gtest_SOURCE_DIR is available due to
-# 'project(gtest)' above.
-include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR} "${PROJECT_SOURCE_DIR}/src/api"  "${PROJECT_BINARY_DIR}/src/api")
-
 add_executable (libcellmlTest
   ${CMAKE_CURRENT_SOURCE_DIR}/version_test.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/xml_serialisation_test.cpp
   ${HEADER_FILES}
 )
 
-# Standard linking to gtest stuff.
-target_link_libraries(libcellmlTest gtest gtest_main)
+# Add required include directories from gtest
+target_include_directories(libcellmlTest PRIVATE ${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
-# Extra linking for the project.
-target_link_libraries(libcellmlTest cellml)
+# Linking to required libraries.
+target_link_libraries(libcellmlTest gtest_main cellml)
+
+find_package (Boost)
+if (Boost_FOUND)
+  target_include_directories(libcellmlTest PRIVATE ${Boost_INCLUDE_DIRS})
+  target_link_libraries(libcellmlTest ${Boost_LIBRARIES})
+endif (Boost_FOUND)
+
+if(LIBCELLML_WARNINGS_TREATED_AS_ERRORS)
+  target_warnings_as_errors(libcellmlTest)
+endif()
 
 # test executable.
 add_test(libcellmlTest libcellmlTest)
 
-# To work around a bug conditionally set the CXX_STANDARD property
-if("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux")
-  set_target_properties(libcellmlTest PROPERTIES CXX_STANDARD 11 CXX_STANDARD_REQUIRED ON)
-endif()
-
+set_target_properties(libcellmlTest PROPERTIES CXX_STANDARD 11 CXX_STANDARD_REQUIRED ON)

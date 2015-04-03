@@ -14,13 +14,25 @@ See the License for the specific language governing permissions and
 limitations under the License.Some license of other
 */
 
-#include <iostream>
-#include "libcellml/version.h"
+#ifndef LIBCELLML_LIBCELLML_MODEL_H_
+#define LIBCELLML_LIBCELLML_MODEL_H_
 
-#include "gtest/gtest.h"
+#include <string>
 
-//! Test version number is as expected.
-TEST(Version, Version) {
-  auto ver = libcellml::getVersion();
-  EXPECT_EQ("0.1.0", ver);
-}
+#include "libcellml/libcellml_export.h"
+
+//! Everything in LibCellML is in this namespace.
+namespace libcellml {
+
+//! In-memory representation of a CellML model.
+class LIBCELLML_EXPORT Model {
+ public:
+  /**
+   * Default constructor.
+   */
+  Model();
+};
+
+}  // namespace libcellml
+
+#endif  // LIBCELLML_LIBCELLML_MODEL_H_

@@ -14,8 +14,8 @@ See the License for the specific language governing permissions and
 limitations under the License.Some license of other
 */
 
-#ifndef LIBCELLML_VERSION_H
-#define LIBCELLML_VERSION_H
+#ifndef LIBCELLML_LIBCELLML_VERSION_H_
+#define LIBCELLML_LIBCELLML_VERSION_H_
 
 #include <string>
 
@@ -28,10 +28,10 @@ namespace libcellml {
  * Get the version string.
  * The version string is in the format x.y.z, where the "."s are literal, and x,y and z represent counting numbers,
  * in which case x is the major version, y the minor version, and z the patch level.
- *  @return a string to represent the version
+ *  @return a string to represent the version.
  */
 LIBCELLML_EXPORT const std::string getVersion();
 
-} // namespace libcellml
+}  // namespace libcellml
 
-#endif /* LIBCELLML_VERSION_H */
+#endif  // LIBCELLML_LIBCELLML_VERSION_H_

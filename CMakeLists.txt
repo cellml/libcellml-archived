@@ -12,42 +12,57 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.cmake_minimum_required (VERSION 3.1)
 
-cmake_minimum_required (VERSION 3.1)
+
+cmake_minimum_required(VERSION 3.2)
 
 set(PROJECT_NAME libCellML)
 project(${PROJECT_NAME} CXX)
 
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+include(common)
+
 # Use the following variables when configuring the build from the command line to
 # set the corresponding cache variables.
 # TESTS ==> LIBCELLML_TESTS
-set( LIBCELLML_TESTS OFF CACHE BOOL "Enable build of automated LibCellML tests." )
+set(_PARAM_ANNOTATION "Enable build of automated LibCellML tests.")
+set( LIBCELLML_TESTS OFF CACHE BOOL ${_PARAM_ANNOTATION} )
 if( TESTS )
-  set( LIBCELLML_TESTS "${TESTS}" CACHE BOOL "Enable build of automated LibCellML tests." FORCE )
+  set( LIBCELLML_TESTS "${TESTS}" CACHE BOOL ${_PARAM_ANNOTATION} FORCE )
+endif()
+
+# WARNINGS_TREATED_AS_ERRORS ==> LIBCELLML_WARNINGS_TREATED_AS_ERRORS -- Note: This excludes third party code, where warnings are never treated as errors.
+set(_PARAM_ANNOTATION "Treat warnings as errors (note: warnings in 3rd party code are never treated as errors)")
+set( LIBCELLML_WARNINGS_TREATED_AS_ERRORS OFF CACHE BOOL ${_PARAM_ANNOTATION} )
+if( WARNINGS_TREATED_AS_ERRORS )
+  set( LIBCELLML_WARNINGS_TREATED_AS_ERRORS "${WARNINGS_TREATED_AS_ERRORS}" CACHE BOOL ${_PARAM_ANNOTATION} FORCE )
 endif()
 
 # BUILD_TYPE ==> LIBCELLML_BUILD_TYPE
-set( LIBCELLML_BUILD_TYPE "Release" CACHE STRING "Choose the type of build, options are: None(CMAKE_CXX_FLAGS or CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel." )
+set(_PARAM_ANNOTATION "Choose the type of build, options are: None(CMAKE_CXX_FLAGS or CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.")
+set( LIBCELLML_BUILD_TYPE "Release" CACHE STRING ${_PARAM_ANNOTATION} )
 if( BUILD_TYPE )
-  set( LIBCELLML_BUILD_TYPE ${BUILD_TYPE} CACHE STRING "Choose the type of build, options are: None(CMAKE_CXX_FLAGS or CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel." FORCE )
+  set( LIBCELLML_BUILD_TYPE ${BUILD_TYPE} CACHE STRING ${_PARAM_ANNOTATION} FORCE )
 endif()
 
 # INSTALL_PREFIX ==> LIBCELLML_INSTALL_PREFIX
-set( LIBCELLML_INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX} CACHE STRING "Install path prefix, prepended onto install directories." )
+set(_PARAM_ANNOTATION "Install path prefix, prepended onto install directories.")
+set( LIBCELLML_INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX} CACHE STRING ${_PARAM_ANNOTATION} )
 if( INSTALL_PREFIX )
-  set( LIBCELLML_INSTALL_PREFIX ${INSTALL_PREFIX} CACHE STRING "Install path prefix, prepended onto install directories." FORCE )
+  set( LIBCELLML_INSTALL_PREFIX ${INSTALL_PREFIX} CACHE STRING ${_PARAM_ANNOTATION} FORCE )
 endif()
 
 # BUILD_SHARED ==> LIBCELLML_BUILD_SHARED
-set( LIBCELLML_BUILD_SHARED OFF CACHE BOOL "Build shared libraries (so, dylib, DLLs)." )
+set(_PARAM_ANNOTATION "Build shared libraries (so, dylib, DLLs).")
+set( LIBCELLML_BUILD_SHARED OFF CACHE BOOL ${_PARAM_ANNOTATION} )
 if( BUILD_SHARED )
-  set( LIBCELLML_BUILD_SHARED ${BUILD_SHARED} CACHE BOOL "Build shared libraries (so, dylib, DLLs)." FORCE )
+  set( LIBCELLML_BUILD_SHARED ${BUILD_SHARED} CACHE BOOL ${_PARAM_ANNOTATION} FORCE )
 endif()
 
 # internalise some CMake variables
 set( CMAKE_INSTALL_PREFIX ${LIBCELLML_INSTALL_PREFIX} CACHE INTERNAL "Internalise CMAKE_INSTALL_PREFIX, manipulate via LIBCELLML_INSTALL_PREFIX" FORCE )
 set( CMAKE_BUILD_TYPE ${LIBCELLML_BUILD_TYPE} CACHE INTERNAL "Internalise CMAKE_BUILD_TYPE, manipulate via LIBCELLML_BUILD_TYPE" FORCE )
 set( BUILD_SHARED_LIBS ${LIBCELLML_BUILD_SHARED} CACHE INTERNAL "Internalise BUILD_SHARED_LIBS, manipulate via LIBCELLML_BUILD_SHARED" FORCE )
-set( CMAKE_CODEBLOCKS_EXECUTABLE "" CACHE INTERNAL "Internalise BUILD_SHARED_LIBS" FORCE )
+set( CMAKE_CODEBLOCKS_EXECUTABLE "" CACHE INTERNAL "The CodeBlocks executable" FORCE )
 
 # The version number.
 set(LIBCELLML_VERSION_MAJOR 0)
