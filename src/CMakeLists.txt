@@ -54,7 +54,6 @@ target_include_directories(cellml
   $<INSTALL_INTERFACE:include/>
   PRIVATE
   ${CMAKE_CURRENT_SOURCE_DIR}/../extdep/libxsd
-  ${CMAKE_CURRENT_SOURCE_DIR}/generated
   ${CMAKE_CURRENT_BINARY_DIR}
 )
 
